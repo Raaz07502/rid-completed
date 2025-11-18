@@ -557,10 +557,6 @@
 
  ]
 
-
-
-
-
 let currentQuestion = 0; 
 let language = "en";
 // let timeLeft = 180 * 60; // 180 minutes

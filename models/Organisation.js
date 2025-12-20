@@ -1,58 +1,14 @@
 const mongoose = require("mongoose");
 
-const OrganisationSchema = new mongoose.Schema(
+const organisationSchema = new mongoose.Schema(
   {
-    organisationName: {
-      type: String,
-      required: true,
-      trim: true,
-      minlength: 2,
-      maxlength: 100,
-      unique: true,
-    },
-    city: {
-      type: String,
-      required: true,
-      trim: true,
-      minlength: 2,
-      maxlength: 50,
-    },
-    state: {
-      type: String,
-      required: true,
-      trim: true,
-      minlength: 2,
-      maxlength: 50,
-    },
-    ownerName: {
-      type: String,
-      required: true,
-      trim: true,
-      minlength: 2,
-      maxlength: 100,
-    },
-    contactNumber: {
-      type: String,
-      required: true,
-      validate: {
-        validator: (v) => /^\+?[1-9]\d{1,14}$/.test(v),
-        message: (props) => `${props.value} is not a valid phone number!`,
-      },
-    },
-    registrationNumber: { type: String, unique: true, sparse: true },
-    websiteLink: {
-      type: String,
-      validate: {
-        validator: (v) =>
-          /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/.test(v),
-        message: (props) => `${props.value} is not a valid URL!`,
-      },
-    },
-    certificateFile1: { data: Buffer, contentType: String },
-    certificateFile2: { data: Buffer, contentType: String },
-    certificateFile3: { data: Buffer, contentType: String },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    phone: { type: String, required: true },
+    role: { type: String, required: true }, // organisation
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Organisation", OrganisationSchema);
+module.exports = mongoose.model("Organisation", organisationSchema);

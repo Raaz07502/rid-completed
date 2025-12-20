@@ -1,555 +1,449 @@
 const questions=[
   {
     "num": 1,
-    "question_en": "Which module is used to handle file system operations in Node.js?",
-    "question_hi": "Node.js में फाइल सिस्टम ऑपरेशन्स को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["fs", "path", "http", "os"],
-    "options_hi": ["fs", "path", "http", "os"],
-    "answer_en": "fs",
-    "answer_hi": "fs",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module provides cryptographic functionality in Node.js?",
+    "question_hi": "Node.js में cryptographic functionality देने वाला module कौन सा है?",
+    "options_en": ["crypto", "hash", "security", "tls"],
+    "options_hi": ["crypto", "hash", "security", "tls"],
+    "answer_en": "crypto",
+    "answer_hi": "crypto"
   },
   {
     "num": 2,
-    "question_en": "Which method is used to create a new HTTP server in Node.js?",
-    "question_hi": "Node.js में एक नया HTTP सर्वर बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["http.createServer()", "http.newServer()", "http.server()", "http.initServer()"],
-    "options_hi": ["http.createServer()", "http.newServer()", "http.server()", "http.initServer()"],
-    "answer_en": "http.createServer()",
-    "answer_hi": "http.createServer()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which method generates a random UUID in Node.js?",
+    "question_hi": "Node.js में random UUID generate करने का method कौन सा है?",
+    "options_en": ["crypto.randomUUID()", "crypto.uuid()", "uuid.generate()", "crypto.randomBytes()"],
+    "options_hi": ["crypto.randomUUID()", "crypto.uuid()", "uuid.generate()", "crypto.randomBytes()"],
+    "answer_en": "crypto.randomUUID()",
+    "answer_hi": "crypto.randomUUID()"
   },
   {
     "num": 3,
-    "question_en": "What is the default port for a local Node.js server?",
-    "question_hi": "स्थानीय Node.js सर्वर के लिए डिफ़ॉल्ट पोर्ट क्या है?",
-    "options_en": ["3000", "8080", "80", "5000"],
-    "options_hi": ["3000", "8080", "80", "5000"],
-    "answer_en": "3000",
-    "answer_hi": "3000",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module handles TLS/SSL networking in Node.js?",
+    "question_hi": "TLS/SSL networking के लिए Node.js module कौन सा है?",
+    "options_en": ["tls", "https", "net", "crypto"],
+    "options_hi": ["tls", "https", "net", "crypto"],
+    "answer_en": "tls",
+    "answer_hi": "tls"
   },
   {
     "num": 4,
-    "question_en": "Which global object in Node.js holds information about the current module?",
-    "question_hi": "Node.js में कौन सा ग्लोबल ऑब्जेक्ट करंट मॉड्यूल के बारे में जानकारी रखता है?",
-    "options_en": ["module", "exports", "require", "global"],
-    "options_hi": ["module", "exports", "require", "global"],
-    "answer_en": "module",
-    "answer_hi": "module",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module provides HTTP/2 support in Node.js?",
+    "question_hi": "Node.js में HTTP/2 support देने वाला module कौन सा है?",
+    "options_en": ["http2", "http", "https", "net"],
+    "options_hi": ["http2", "http", "https", "net"],
+    "answer_en": "http2",
+    "answer_hi": "http2"
   },
   {
     "num": 5,
-    "question_en": "Which function is used to include external modules in Node.js?",
-    "question_hi": "Node.js में एक्सटर्नल मॉड्यूल्स को इनक्लूड करने के लिए कौन सा फंक्शन उपयोग किया जाता है?",
-    "options_en": ["require()", "import()", "include()", "use()"],
-    "options_hi": ["require()", "import()", "include()", "use()"],
-    "answer_en": "require()",
-    "answer_hi": "require()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module is used to spawn child processes?",
+    "question_hi": "Child processes spawn करने के लिए Node.js module कौन सा है?",
+    "options_en": ["child_process", "cluster", "worker_threads", "process"],
+    "options_hi": ["child_process", "cluster", "worker_threads", "process"],
+    "answer_en": "child_process",
+    "answer_hi": "child_process"
   },
   {
     "num": 6,
-    "question_en": "Which method is used to read environment variables in Node.js?",
-    "question_hi": "Node.js में एन्वायरनमेंट वेरिएबल्स को पढ़ने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["process.env", "env.get", "process.getEnv", "global.env"],
-    "options_hi": ["process.env", "env.get", "process.getEnv", "global.env"],
-    "answer_en": "process.env",
-    "answer_hi": "process.env",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which method executes a command in a shell asynchronously?",
+    "question_hi": "Shell में asynchronously command execute करने वाला method कौन सा है?",
+    "options_en": ["child_process.exec()", "child_process.spawn()", "exec()", "run()"],
+    "options_hi": ["child_process.exec()", "child_process.spawn()", "exec()", "run()"],
+    "answer_en": "child_process.exec()",
+    "answer_hi": "child_process.exec()"
   },
   {
     "num": 7,
-    "question_en": "Which module is used to create web applications in Node.js?",
-    "question_hi": "Node.js में वेब एप्लिकेशन्स बनाने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["express", "http", "fs", "url"],
-    "options_hi": ["express", "http", "fs", "url"],
-    "answer_en": "express",
-    "answer_hi": "express",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module provides Worker Threads in Node.js?",
+    "question_hi": "Node.js में Worker Threads देने वाला module कौन सा है?",
+    "options_en": ["worker_threads", "threads", "cluster", "child_process"],
+    "options_hi": ["worker_threads", "threads", "cluster", "child_process"],
+    "answer_en": "worker_threads",
+    "answer_hi": "worker_threads"
   },
   {
     "num": 8,
-    "question_en": "What is the purpose of the `__dirname` variable in Node.js?",
-    "question_hi": "Node.js में `__dirname` वेरिएबल का उद्देश्य क्या है?",
-    "options_en": ["Returns the directory name of the current module", "Returns the filename of the current module", "Returns the global object", "Returns the process ID"],
-    "options_hi": ["करंट मॉड्यूल का डायरेक्टरी नाम रिटर्न करता है", "करंट मॉड्यूल का फाइलनाम रिटर्न करता है", "ग्लोबल ऑब्जेक्ट रिटर्न करता है", "प्रोसेस ID रिटर्न करता है"],
-    "answer_en": "Returns the directory name of the current module",
-    "answer_hi": "करंट मॉड्यूल का डायरेक्टरी नाम रिटर्न करता है",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which method creates a new worker thread?",
+    "question_hi": "New worker thread बनाने वाला method कौन सा है?",
+    "options_en": ["new Worker()", "Worker.create()", "worker_threads.spawn()", "thread.new()"],
+    "options_hi": ["new Worker()", "Worker.create()", "worker_threads.spawn()", "thread.new()"],
+    "answer_en": "new Worker()",
+    "answer_hi": "new Worker()"
   },
   {
     "num": 9,
-    "question_en": "Which method is used to execute a callback once the server starts listening?",
-    "question_hi": "सर्वर के लिसनिंग शुरू करने पर कॉलबैक एक्जीक्यूट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["server.listen()", "server.start()", "server.on()", "server.init()"],
-    "options_hi": ["server.listen()", "server.start()", "server.on()", "server.init()"],
-    "answer_en": "server.listen()",
-    "answer_hi": "server.listen()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module allows reading and writing files asynchronously?",
+    "question_hi": "Files asynchronously read और write करने वाला module कौन सा है?",
+    "options_en": ["fs", "file", "stream", "buffer"],
+    "options_hi": ["fs", "file", "stream", "buffer"],
+    "answer_en": "fs",
+    "answer_hi": "fs"
   },
   {
     "num": 10,
-    "question_en": "Which of the following is NOT a core module in Node.js?",
-    "question_hi": "निम्नलिखित में से कौन सा Node.js का कोर मॉड्यूल नहीं है?",
-    "options_en": ["express", "fs", "path", "http"],
-    "options_hi": ["express", "fs", "path", "http"],
-    "answer_en": "express",
-    "answer_hi": "express",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which fs method reads a file asynchronously?",
+    "question_hi": "Asynchronously file read करने का fs method कौन सा है?",
+    "options_en": ["fs.readFile()", "fs.read()", "fs.readAsync()", "fs.open()"],
+    "options_hi": ["fs.readFile()", "fs.read()", "fs.readAsync()", "fs.open()"],
+    "answer_en": "fs.readFile()",
+    "answer_hi": "fs.readFile()"
   },
   {
     "num": 11,
-    "question_en": "What does the `require.cache` object contain in Node.js?",
-    "question_hi": "Node.js में `require.cache` ऑब्जेक्ट में क्या होता है?",
-    "options_en": ["Cached modules", "Environment variables", "Event listeners", "Server instances"],
-    "options_hi": ["कैश्ड मॉड्यूल्स", "एन्वायरनमेंट वेरिएबल्स", "इवेंट लिसनर्स", "सर्वर इंस्टेंसेस"],
-    "answer_en": "Cached modules",
-    "answer_hi": "कैश्ड मॉड्यूल्स",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which fs method writes data asynchronously to a file?",
+    "question_hi": "Data asynchronously write करने वाला fs method कौन सा है?",
+    "options_en": ["fs.writeFile()", "fs.write()", "fs.writeAsync()", "fs.save()"],
+    "options_hi": ["fs.writeFile()", "fs.write()", "fs.writeAsync()", "fs.save()"],
+    "answer_en": "fs.writeFile()",
+    "answer_hi": "fs.writeFile()"
   },
   {
     "num": 12,
-    "question_en": "Which method is used to read files asynchronously in Node.js?",
-    "question_hi": "Node.js में फाइल्स को एसिंक्रोनसली पढ़ने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["fs.readFile()", "fs.readFileSync()", "fs.read()", "fs.readAsync()"],
-    "options_hi": ["fs.readFile()", "fs.readFileSync()", "fs.read()", "fs.readAsync()"],
-    "answer_en": "fs.readFile()",
-    "answer_hi": "fs.readFile()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module allows event-driven programming in Node.js?",
+    "question_hi": "Event-driven programming के लिए Node.js module कौन सा है?",
+    "options_en": ["events", "async", "stream", "process"],
+    "options_hi": ["events", "async", "stream", "process"],
+    "answer_en": "events",
+    "answer_hi": "events"
   },
   {
     "num": 13,
-    "question_en": "Which event is emitted when a new TCP connection is made in a Node.js server?",
-    "question_hi": "Node.js सर्वर में नया TCP कनेक्शन बनने पर कौन सा इवेंट एमिट होता है?",
-    "options_en": ["connection", "connect", "request", "newConnection"],
-    "options_hi": ["connection", "connect", "request", "newConnection"],
-    "answer_en": "connection",
-    "answer_hi": "connection",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which method adds a listener to an EventEmitter?",
+    "question_hi": "EventEmitter में listener add करने का method कौन सा है?",
+    "options_en": ["on()", "addListener()", "listen()", "subscribe()"],
+    "options_hi": ["on()", "addListener()", "listen()", "subscribe()"],
+    "answer_en": "on()",
+    "answer_hi": "on()"
   },
   {
     "num": 14,
-    "question_en": "Which module is used to handle operating system-related operations in Node.js?",
-    "question_hi": "Node.js में ऑपरेटिंग सिस्टम से संबंधित ऑपरेशन्स को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["os", "path", "fs", "process"],
-    "options_hi": ["os", "path", "fs", "process"],
-    "answer_en": "os",
-    "answer_hi": "os",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which method removes a listener from an EventEmitter?",
+    "question_hi": "EventEmitter से listener remove करने का method कौन सा है?",
+    "options_en": ["removeListener()", "off()", "deleteListener()", "unsubscribe()"],
+    "options_hi": ["removeListener()", "off()", "deleteListener()", "unsubscribe()"],
+    "answer_en": "removeListener()",
+    "answer_hi": "removeListener()"
   },
   {
     "num": 15,
-    "question_en": "What is the purpose of the `exports` object in Node.js?",
-    "question_hi": "Node.js में `exports` ऑब्जेक्ट का उद्देश्य क्या है?",
-    "options_en": ["To expose functions/variables to other modules", "To import external modules", "To handle events", "To manage file operations"],
-    "options_hi": ["फंक्शन्स/वेरिएबल्स को अन्य मॉड्यूल्स में एक्सपोज़ करने के लिए", "एक्सटर्नल मॉड्यूल्स को इम्पोर्ट करने के लिए", "इवेंट्स को हैंडल करने के लिए", "फाइल ऑपरेशन्स को मैनेज करने के लिए"],
-    "answer_en": "To expose functions/variables to other modules",
-    "answer_hi": "फंक्शन्स/वेरिएबल्स को अन्य मॉड्यूल्स में एक्सपोज़ करने के लिए",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module provides readable and writable streams?",
+    "question_hi": "Readable और writable streams देने वाला module कौन सा है?",
+    "options_en": ["stream", "fs", "buffer", "events"],
+    "options_hi": ["stream", "fs", "buffer", "events"],
+    "answer_en": "stream",
+    "answer_hi": "stream"
   },
   {
     "num": 16,
-    "question_en": "Which method is used to parse JSON data in Node.js?",
-    "question_hi": "Node.js में JSON डेटा को पार्स करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["JSON.parse()", "JSON.decode()", "JSON.stringify()", "JSON.read()"],
-    "options_hi": ["JSON.parse()", "JSON.decode()", "JSON.stringify()", "JSON.read()"],
-    "answer_en": "JSON.parse()",
-    "answer_hi": "JSON.parse()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which stream type allows reading data sequentially?",
+    "question_hi": "Sequentially data read करने वाला stream type कौन सा है?",
+    "options_en": ["Readable", "Writable", "Duplex", "Transform"],
+    "options_hi": ["Readable", "Writable", "Duplex", "Transform"],
+    "answer_en": "Readable",
+    "answer_hi": "Readable"
   },
   {
     "num": 17,
-    "question_en": "Which method is used to handle GET requests in Express.js?",
-    "question_hi": "Express.js में GET रिक्वेस्ट्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["app.get()", "app.use()", "app.post()", "app.handleGet()"],
-    "options_hi": ["app.get()", "app.use()", "app.post()", "app.handleGet()"],
-    "answer_en": "app.get()",
-    "answer_hi": "app.get()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which stream type allows writing data sequentially?",
+    "question_hi": "Sequentially data write करने वाला stream type कौन सा है?",
+    "options_en": ["Writable", "Readable", "Duplex", "Transform"],
+    "options_hi": ["Writable", "Readable", "Duplex", "Transform"],
+    "answer_en": "Writable",
+    "answer_hi": "Writable"
   },
   {
     "num": 18,
-    "question_en": "What is the purpose of the `next` parameter in Express.js middleware?",
-    "question_hi": "Express.js मिडलवेयर में `next` पैरामीटर का उद्देश्य क्या है?",
-    "options_en": ["To pass control to the next middleware", "To end the request-response cycle", "To skip the current middleware", "To handle errors"],
-    "options_hi": ["अगले मिडलवेयर को कंट्रोल पास करने के लिए", "रिक्वेस्ट-रिस्पॉन्स साइकल को समाप्त करने के लिए", "करंट मिडलवेयर को स्किप करने के लिए", "एरर्स को हैंडल करने के लिए"],
-    "answer_en": "To pass control to the next middleware",
-    "answer_hi": "अगले मिडलवेयर को कंट्रोल पास करने के लिए",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which stream type allows both read and write?",
+    "question_hi": "Read और Write दोनों करने वाला stream type कौन सा है?",
+    "options_en": ["Duplex", "Transform", "Writable", "Readable"],
+    "options_hi": ["Duplex", "Transform", "Writable", "Readable"],
+    "answer_en": "Duplex",
+    "answer_hi": "Duplex"
   },
   {
     "num": 19,
-    "question_en": "Which method is used to send a response in Express.js?",
-    "question_hi": "Express.js में रिस्पॉन्स भेजने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["res.send()", "res.write()", "res.end()", "res.json()"],
-    "options_hi": ["res.send()", "res.write()", "res.end()", "res.json()"],
-    "answer_en": "res.send()",
-    "answer_hi": "res.send()",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which stream type transforms data while reading/writing?",
+    "question_hi": "Data read/write करते समय transform करने वाला stream type कौन सा है?",
+    "options_en": ["Transform", "Duplex", "Readable", "Writable"],
+    "options_hi": ["Transform", "Duplex", "Readable", "Writable"],
+    "answer_en": "Transform",
+    "answer_hi": "Transform"
   },
   {
     "num": 20,
-    "question_en": "Which module is used to handle query strings in Node.js?",
-    "question_hi": "Node.js में क्वेरी स्ट्रिंग्स को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["querystring", "url", "http", "path"],
-    "options_hi": ["querystring", "url", "http", "path"],
-    "answer_en": "querystring",
-    "answer_hi": "querystring",
-    "attempted": false,
-    "selected": ""
+    "question_en": "Which module provides global timers in Node.js?",
+    "question_hi": "Global timers देने वाला module कौन सा है?",
+    "options_en": ["timers", "time", "schedule", "process"],
+    "options_hi": ["timers", "time", "schedule", "process"],
+    "answer_en": "timers",
+    "answer_hi": "timers"
   },
   {
     "num": 21,
-    "question_en": "Which method is used to create a directory in Node.js?",
-    "question_hi": "Node.js में डायरेक्टरी बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["fs.mkdir()", "fs.createDir()", "fs.newDir()", "fs.dir()"],
-    "options_hi": ["fs.mkdir()", "fs.createDir()", "fs.newDir()", "fs.dir()"],
-    "answer_en": "fs.mkdir()",
-    "answer_hi": "fs.mkdir()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 22,
-    "question_en": "Which method is used to delete a file in Node.js?",
-    "question_hi": "Node.js में फाइल डिलीट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["fs.unlink()", "fs.delete()", "fs.remove()", "fs.rm()"],
-    "options_hi": ["fs.unlink()", "fs.delete()", "fs.remove()", "fs.rm()"],
-    "answer_en": "fs.unlink()",
-    "answer_hi": "fs.unlink()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 23,
-    "question_en": "Which module is used to handle child processes in Node.js?",
-    "question_hi": "Node.js में चाइल्ड प्रोसेसेस को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["child_process", "process", "os", "worker_threads"],
-    "options_hi": ["child_process", "process", "os", "worker_threads"],
-    "answer_en": "child_process",
-    "answer_hi": "child_process",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 24,
-    "question_en": "Which method is used to spawn a new process in Node.js?",
-    "question_hi": "Node.js में नया प्रोसेस स्पॉन करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["child_process.spawn()", "child_process.fork()", "child_process.exec()", "child_process.run()"],
-    "options_hi": ["child_process.spawn()", "child_process.fork()", "child_process.exec()", "child_process.run()"],
-    "answer_en": "child_process.spawn()",
-    "answer_hi": "child_process.spawn()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 25,
-    "question_en": "Which method is used to handle POST requests in Express.js?",
-    "question_hi": "Express.js में POST रिक्वेस्ट्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["app.post()", "app.get()", "app.use()", "app.handlePost()"],
-    "options_hi": ["app.post()", "app.get()", "app.use()", "app.handlePost()"],
-    "answer_en": "app.post()",
-    "answer_hi": "app.post()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 26,
-    "question_en": "Which method is used to redirect a response in Express.js?",
-    "question_hi": "Express.js में रिस्पॉन्स को रीडायरेक्ट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["res.redirect()", "res.send()", "res.forward()", "res.next()"],
-    "options_hi": ["res.redirect()", "res.send()", "res.forward()", "res.next()"],
-    "answer_en": "res.redirect()",
-    "answer_hi": "res.redirect()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 27,
-    "question_en": "Which method is used to set HTTP headers in Express.js?",
-    "question_hi": "Express.js में HTTP हेडर्स सेट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["res.set()", "res.header()", "res.writeHead()", "res.headers()"],
-    "options_hi": ["res.set()", "res.header()", "res.writeHead()", "res.headers()"],
-    "answer_en": "res.set()",
-    "answer_hi": "res.set()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 28,
-    "question_en": "Which method is used to read data from a stream in Node.js?",
-    "question_hi": "Node.js में स्ट्रीम से डेटा पढ़ने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["stream.read()", "stream.on('data')", "stream.get()", "stream.pipe()"],
-    "options_hi": ["stream.read()", "stream.on('data')", "stream.get()", "stream.pipe()"],
-    "answer_en": "stream.on('data')",
-    "answer_hi": "stream.on('data')",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 29,
-    "question_en": "Which method is used to write data to a stream in Node.js?",
-    "question_hi": "Node.js में स्ट्रीम में डेटा लिखने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["stream.write()", "stream.send()", "stream.emit()", "stream.push()"],
-    "options_hi": ["stream.write()", "stream.send()", "stream.emit()", "stream.push()"],
-    "answer_en": "stream.write()",
-    "answer_hi": "stream.write()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 30,
-    "question_en": "Which method is used to chain streams in Node.js?",
-    "question_hi": "Node.js में स्ट्रीम्स को चेन करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["stream.pipe()", "stream.chain()", "stream.connect()", "stream.link()"],
-    "options_hi": ["stream.pipe()", "stream.chain()", "stream.connect()", "stream.link()"],
-    "answer_en": "stream.pipe()",
-    "answer_hi": "stream.pipe()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 31,
-    "question_en": "Which module is used to handle cryptographic operations in Node.js?",
-    "question_hi": "Node.js में क्रिप्टोग्राफिक ऑपरेशन्स को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["crypto", "hash", "encrypt", "security"],
-    "options_hi": ["crypto", "hash", "encrypt", "security"],
-    "answer_en": "crypto",
-    "answer_hi": "crypto",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 32,
-    "question_en": "Which method is used to create a hash in Node.js?",
-    "question_hi": "Node.js में हैश बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["crypto.createHash()", "crypto.hash()", "crypto.generateHash()", "crypto.encrypt()"],
-    "options_hi": ["crypto.createHash()", "crypto.hash()", "crypto.generateHash()", "crypto.encrypt()"],
-    "answer_en": "crypto.createHash()",
-    "answer_hi": "crypto.createHash()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 33,
-    "question_en": "Which method is used to handle errors in Express.js?",
-    "question_hi": "Express.js में एरर्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["app.use() with 4 parameters", "app.error()", "app.catch()", "app.handleError()"],
-    "options_hi": ["app.use() with 4 parameters", "app.error()", "app.catch()", "app.handleError()"],
-    "answer_en": "app.use() with 4 parameters",
-    "answer_hi": "4 पैरामीटर्स के साथ app.use()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 34,
-    "question_en": "Which method is used to set cookies in Express.js?",
-    "question_hi": "Express.js में कुकीज़ सेट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["res.cookie()", "res.setCookie()", "res.addCookie()", "res.sendCookie()"],
-    "options_hi": ["res.cookie()", "res.setCookie()", "res.addCookie()", "res.sendCookie()"],
-    "answer_en": "res.cookie()",
-    "answer_hi": "res.cookie()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 35,
-    "question_en": "Which method is used to parse incoming request bodies in Express.js?",
-    "question_hi": "Express.js में इनकमिंग रिक्वेस्ट बॉडीज को पार्स करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["body-parser middleware", "express.json()", "req.parse()", "app.body()"],
-    "options_hi": ["body-parser middleware", "express.json()", "req.parse()", "app.body()"],
-    "answer_en": "body-parser middleware",
-    "answer_hi": "body-parser मिडलवेयर",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 36,
-    "question_en": "Which method is used to handle 404 errors in Express.js?",
-    "question_hi": "Express.js में 404 एरर्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["app.use() at the end", "app.error404()", "app.notFound()", "app.handle404()"],
-    "options_hi": ["अंत में app.use()", "app.error404()", "app.notFound()", "app.handle404()"],
-    "answer_en": "app.use() at the end",
-    "answer_hi": "अंत में app.use()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 37,
-    "question_en": "Which method is used to create a middleware in Express.js?",
-    "question_hi": "Express.js में मिडलवेयर बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["app.use()", "app.middleware()", "app.addMiddleware()", "app.handle()"],
-    "options_hi": ["app.use()", "app.middleware()", "app.addMiddleware()", "app.handle()"],
-    "answer_en": "app.use()",
-    "answer_hi": "app.use()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 38,
-    "question_en": "Which method is used to serve static files in Express.js?",
-    "question_hi": "Express.js में स्टैटिक फाइल्स सर्व करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["express.static()", "express.files()", "express.serve()", "express.public()"],
-    "options_hi": ["express.static()", "express.files()", "express.serve()", "express.public()"],
-    "answer_en": "express.static()",
-    "answer_hi": "express.static()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 39,
-    "question_en": "Which method is used to handle route parameters in Express.js?",
-    "question_hi": "Express.js में रूट पैरामीटर्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["req.params", "req.query", "req.body", "req.route"],
-    "options_hi": ["req.params", "req.query", "req.body", "req.route"],
-    "answer_en": "req.params",
-    "answer_hi": "req.params",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 40,
-    "question_en": "Which method is used to handle query parameters in Express.js?",
-    "question_hi": "Express.js में क्वेरी पैरामीटर्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["req.query", "req.params", "req.body", "req.search"],
-    "options_hi": ["req.query", "req.params", "req.body", "req.search"],
-    "answer_en": "req.query",
-    "answer_hi": "req.query",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 41,
-    "question_en": "Which method is used to create a WebSocket server in Node.js?",
-    "question_hi": "Node.js में WebSocket सर्वर बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["ws module", "http module", "socket.io", "net module"],
-    "options_hi": ["ws module", "http module", "socket.io", "net module"],
-    "answer_en": "ws module",
-    "answer_hi": "ws मॉड्यूल",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 42,
-    "question_en": "Which method is used to handle WebSocket connections in Node.js?",
-    "question_hi": "Node.js में WebSocket कनेक्शन्स को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["ws.on('connection')", "ws.connect()", "ws.open()", "ws.listen()"],
-    "options_hi": ["ws.on('connection')", "ws.connect()", "ws.open()", "ws.listen()"],
-    "answer_en": "ws.on('connection')",
-    "answer_hi": "ws.on('connection')",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 43,
-    "question_en": "Which method is used to send data over WebSocket in Node.js?",
-    "question_hi": "Node.js में WebSocket पर डेटा भेजने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["ws.send()", "ws.write()", "ws.emit()", "ws.post()"],
-    "options_hi": ["ws.send()", "ws.write()", "ws.emit()", "ws.post()"],
-    "answer_en": "ws.send()",
-    "answer_hi": "ws.send()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 44,
-    "question_en": "Which method is used to handle WebSocket messages in Node.js?",
-    "question_hi": "Node.js में WebSocket मैसेजेस को हैंडल करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["ws.on('message')", "ws.message()", "ws.onMessage()", "ws.listen()"],
-    "options_hi": ["ws.on('message')", "ws.message()", "ws.onMessage()", "ws.listen()"],
-    "answer_en": "ws.on('message')",
-    "answer_hi": "ws.on('message')",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 45,
-    "question_en": "Which method is used to close a WebSocket connection in Node.js?",
-    "question_hi": "Node.js में WebSocket कनेक्शन को बंद करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["ws.close()", "ws.end()", "ws.terminate()", "ws.disconnect()"],
-    "options_hi": ["ws.close()", "ws.end()", "ws.terminate()", "ws.disconnect()"],
-    "answer_en": "ws.close()",
-    "answer_hi": "ws.close()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 46,
-    "question_en": "Which module is used to handle buffers in Node.js?",
-    "question_hi": "Node.js में बफर्स को हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["Buffer", "buffer", "stream", "data"],
-    "options_hi": ["Buffer", "buffer", "stream", "data"],
-    "answer_en": "Buffer",
-    "answer_hi": "Buffer",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 47,
-    "question_en": "Which method is used to create a buffer in Node.js?",
-    "question_hi": "Node.js में बफर बनाने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["Buffer.from()", "Buffer.create()", "Buffer.new()", "Buffer.alloc()"],
-    "options_hi": ["Buffer.from()", "Buffer.create()", "Buffer.new()", "Buffer.alloc()"],
-    "answer_en": "Buffer.from()",
-    "answer_hi": "Buffer.from()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 48,
-    "question_en": "Which method is used to convert a buffer to a string in Node.js?",
-    "question_hi": "Node.js में बफर को स्ट्रिंग में कन्वर्ट करने के लिए कौन सी मेथड उपयोग की जाती है?",
-    "options_en": ["buffer.toString()", "buffer.toText()", "buffer.toJSON()", "buffer.string()"],
-    "options_hi": ["buffer.toString()", "buffer.toText()", "buffer.toJSON()", "buffer.string()"],
-    "answer_en": "buffer.toString()",
-    "answer_hi": "buffer.toString()",
-    "attempted": false,
-    "selected": ""
-  },
-    {
-    "num": 49,
-    "question_en": "Which method is used to schedule the execution of a one-time callback function in Node.js?",
-    "question_hi": "Node.js में एक बार के कॉलबैक फंक्शन को शेड्यूल करने के लिए कौन सी मेथड उपयोग की जाती है?",
+    "question_en": "Which method schedules a function to execute after delay in Node.js?",
+    "question_hi": "Node.js में function delay के बाद execute करने वाला method कौन सा है?",
     "options_en": ["setTimeout()", "setInterval()", "setImmediate()", "process.nextTick()"],
     "options_hi": ["setTimeout()", "setInterval()", "setImmediate()", "process.nextTick()"],
     "answer_en": "setTimeout()",
-    "answer_hi": "setTimeout()",
-    "attempted": false,
-    "selected": ""
+    "answer_hi": "setTimeout()"
   },
   {
-    "num": 50,
-    "question_en": "Which module is used to create and handle HTTP/HTTPS requests in Node.js?",
-    "question_hi": "Node.js में HTTP/HTTPS रिक्वेस्ट्स बनाने और हैंडल करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
-    "options_en": ["http/https", "request", "axios", "fetch"],
-    "options_hi": ["http/https", "request", "axios", "fetch"],
-    "answer_en": "http/https",
-    "answer_hi": "http/https",
-    "attempted": false,
-    "selected": ""
-  }
-];
+    "num": 22,
+    "question_en": "Which method repeatedly executes a function at interval?",
+    "question_hi": "Function को interval पर repeatedly execute करने वाला method कौन सा है?",
+    "options_en": ["setInterval()", "setTimeout()", "setImmediate()", "process.nextTick()"],
+    "options_hi": ["setInterval()", "setTimeout()", "setImmediate()", "process.nextTick()"],
+    "answer_en": "setInterval()",
+    "answer_hi": "setInterval()"
+  },
+  {
+    "num": 23,
+    "question_en": "Which method executes a function immediately after I/O events?",
+    "question_hi": "I/O events के बाद function immediately execute करने वाला method कौन सा है?",
+    "options_en": ["setImmediate()", "setTimeout()", "process.nextTick()", "setInterval()"],
+    "options_hi": ["setImmediate()", "setTimeout()", "process.nextTick()", "setInterval()"],
+    "answer_en": "setImmediate()",
+    "answer_hi": "setImmediate()"
+  },
+  {
+    "num": 24,
+    "question_en": "Which module provides URL utilities in Node.js?",
+    "question_hi": "URL utilities देने वाला Node.js module कौन सा है?",
+    "options_en": ["url", "querystring", "http", "net"],
+    "options_hi": ["url", "querystring", "http", "net"],
+    "answer_en": "url",
+    "answer_hi": "url"
+  },
+  {
+    "num": 25,
+    "question_en": "Which module provides query string parsing and formatting?",
+    "question_hi": "Query string parsing और formatting देने वाला module कौन सा है?",
+    "options_en": ["querystring", "url", "http", "util"],
+    "options_hi": ["querystring", "url", "http", "util"],
+    "answer_en": "querystring",
+    "answer_hi": "querystring"
+  },
+  {
+    "num": 26,
+    "question_en": "Which module provides buffer functionality in Node.js?",
+    "question_hi": "Buffer functionality देने वाला Node.js module कौन सा है?",
+    "options_en": ["buffer", "fs", "stream", "util"],
+    "options_hi": ["buffer", "fs", "stream", "util"],
+    "answer_en": "buffer",
+    "answer_hi": "buffer"
+  },
+  {
+    "num": 27,
+    "question_en": "Which method allocates a new buffer of specified size?",
+    "question_hi": "Specified size का नया buffer allocate करने वाला method कौन सा है?",
+    "options_en": ["Buffer.alloc()", "Buffer.create()", "new Buffer()", "Buffer.new()"],
+    "options_hi": ["Buffer.alloc()", "Buffer.create()", "new Buffer()", "Buffer.new()"],
+    "answer_en": "Buffer.alloc()",
+    "answer_hi": "Buffer.alloc()"
+  },
+  {
+    "num": 28,
+    "question_en": "Which method concatenates multiple buffers?",
+    "question_hi": "Multiple buffers को concatenate करने वाला method कौन सा है?",
+    "options_en": ["Buffer.concat()", "Buffer.merge()", "Buffer.join()", "Buffer.combine()"],
+    "options_hi": ["Buffer.concat()", "Buffer.merge()", "Buffer.join()", "Buffer.combine()"],
+    "answer_en": "Buffer.concat()",
+    "answer_hi": "Buffer.concat()"
+  },
+  {
+    "num": 29,
+    "question_en": "Which module provides path utilities in Node.js?",
+    "question_hi": "Path utilities देने वाला Node.js module कौन सा है?",
+    "options_en": ["path", "fs", "url", "util"],
+    "options_hi": ["path", "fs", "url", "util"],
+    "answer_en": "path",
+    "answer_hi": "path"
+  },
+  {
+    "num": 30,
+    "question_en": "Which method joins path segments into a single path?",
+    "question_hi": "Path segments को single path में join करने वाला method कौन सा है?",
+    "options_en": ["path.join()", "path.concat()", "path.resolve()", "path.combine()"],
+    "options_hi": ["path.join()", "path.concat()", "path.resolve()", "path.combine()"],
+    "answer_en": "path.join()",
+    "answer_hi": "path.join()"
+  },
+  {
+    "num": 31,
+    "question_en": "Which method resolves a sequence of paths into an absolute path?",
+    "question_hi": "Paths की sequence को absolute path में convert करने वाला method कौन सा है?",
+    "options_en": ["path.resolve()", "path.join()", "path.normalize()", "path.absolute()"],
+    "options_hi": ["path.resolve()", "path.join()", "path.normalize()", "path.absolute()"],
+    "answer_en": "path.resolve()",
+    "answer_hi": "path.resolve()"
+  },
+  {
+    "num": 32,
+    "question_en": "Which method normalizes a path, resolving '..' and '.' segments?",
+    "question_hi": "Path normalize करने वाला method कौन सा है?",
+    "options_en": ["path.normalize()", "path.join()", "path.resolve()", "path.clean()"],
+    "options_hi": ["path.normalize()", "path.join()", "path.resolve()", "path.clean()"],
+    "answer_en": "path.normalize()",
+    "answer_hi": "path.normalize()"
+  },
+  {
+    "num": 33,
+    "question_en": "Which module provides OS-related utility methods in Node.js?",
+    "question_hi": "OS-related utility methods देने वाला Node.js module कौन सा है?",
+    "options_en": ["os", "process", "util", "system"],
+    "options_hi": ["os", "process", "util", "system"],
+    "answer_en": "os",
+    "answer_hi": "os"
+  },
+  {
+    "num": 34,
+    "question_en": "Which method returns the platform Node.js is running on?",
+    "question_hi": "Node.js किस platform पर run हो रहा है ये बताने वाला method कौन सा है?",
+    "options_en": ["os.platform()", "os.type()", "process.platform", "process.os()"],
+    "options_hi": ["os.platform()", "os.type()", "process.platform", "process.os()"],
+    "answer_en": "os.platform()",
+    "answer_hi": "os.platform()"
+  },
+  {
+    "num": 35,
+    "question_en": "Which module provides utilities for inspecting objects in Node.js?",
+    "question_hi": "Objects inspect करने के लिए Node.js module कौन सा है?",
+    "options_en": ["util", "inspect", "os", "debug"],
+    "options_hi": ["util", "inspect", "os", "debug"],
+    "answer_en": "util",
+    "answer_hi": "util"
+  },
+  {
+    "num": 36,
+    "question_en": "Which method prints a formatted string in Node.js?",
+    "question_hi": "Formatted string print करने वाला method कौन सा है?",
+    "options_en": ["util.format()", "console.log()", "util.print()", "process.write()"],
+    "options_hi": ["util.format()", "console.log()", "util.print()", "process.write()"],
+    "answer_en": "util.format()",
+    "answer_hi": "util.format()"
+  },
+  {
+    "num": 37,
+    "question_en": "Which module allows creating custom readable and writable streams?",
+    "question_hi": "Custom readable और writable streams बनाने वाला module कौन सा है?",
+    "options_en": ["stream", "fs", "buffer", "events"],
+    "options_hi": ["stream", "fs", "buffer", "events"],
+    "answer_en": "stream",
+    "answer_hi": "stream"
+  },
+  {
+    "num": 38,
+    "question_en": "Which method reads a file synchronously in Node.js?",
+    "question_hi": "File को synchronously read करने वाला method कौन सा है?",
+    "options_en": ["fs.readFileSync()", "fs.readFile()", "fs.openSync()", "fs.readSync()"],
+    "options_hi": ["fs.readFileSync()", "fs.readFile()", "fs.openSync()", "fs.readSync()"],
+    "answer_en": "fs.readFileSync()",
+    "answer_hi": "fs.readFileSync()"
+  },
+  {
+    "num": 39,
+    "question_en": "Which method writes a file synchronously in Node.js?",
+    "question_hi": "File को synchronously write करने वाला method कौन सा है?",
+    "options_en": ["fs.writeFileSync()", "fs.writeFile()", "fs.writeSync()", "fs.saveSync()"],
+    "options_hi": ["fs.writeFileSync()", "fs.writeFile()", "fs.writeSync()", "fs.saveSync()"],
+    "answer_en": "fs.writeFileSync()",
+    "answer_hi": "fs.writeFileSync()"
+  },
+  {
+    "num": 40,
+    "question_en": "Which module provides child process utilities to execute system commands?",
+    "question_hi": "System commands execute करने के लिए Node.js module कौन सा है?",
+    "options_en": ["child_process", "process", "cluster", "worker_threads"],
+    "options_hi": ["child_process", "process", "cluster", "worker_threads"],
+    "answer_en": "child_process",
+    "answer_hi": "child_process"
+  },
+  {
+    "num": 41,
+    "question_en": "Which method spawns a new process asynchronously in Node.js?",
+    "question_hi": "New process asynchronously spawn करने वाला method कौन सा है?",
+    "options_en": ["child_process.spawn()", "child_process.exec()", "process.spawn()", "cluster.fork()"],
+    "options_hi": ["child_process.spawn()", "child_process.exec()", "process.spawn()", "cluster.fork()"],
+    "answer_en": "child_process.spawn()",
+    "answer_hi": "child_process.spawn()"
+  },
+  {
+    "num": 42,
+    "question_en": "Which module provides the cluster functionality in Node.js?",
+    "question_hi": "Cluster functionality देने वाला Node.js module कौन सा है?",
+    "options_en": ["cluster", "child_process", "worker_threads", "process"],
+    "options_hi": ["cluster", "child_process", "worker_threads", "process"],
+    "answer_en": "cluster",
+    "answer_hi": "cluster"
+  },
+  {
+    "num": 43,
+    "question_en": "Which method forks a new worker in a cluster?",
+    "question_hi": "Cluster में new worker fork करने वाला method कौन सा है?",
+    "options_en": ["cluster.fork()", "cluster.spawn()", "cluster.create()", "worker_threads.fork()"],
+    "options_hi": ["cluster.fork()", "cluster.spawn()", "cluster.create()", "worker_threads.fork()"],
+    "answer_en": "cluster.fork()",
+    "answer_hi": "cluster.fork()"
+  },
+  {
+    "num": 44,
+    "question_en": "Which module allows you to perform high-resolution time measurements?",
+    "question_hi": "High-resolution time measurements देने वाला Node.js module कौन सा है?",
+    "options_en": ["process", "os", "timers", "util"],
+    "options_hi": ["process", "os", "timers", "util"],
+    "answer_en": "process",
+    "answer_hi": "process"
+  },
+  {
+    "num": 45,
+    "question_en": "Which method returns the current high-resolution real time in Node.js?",
+    "question_hi": "Current high-resolution real time देने वाला method कौन सा है?",
+    "options_en": ["process.hrtime()", "process.time()", "Date.now()", "os.uptime()"],
+    "options_hi": ["process.hrtime()", "process.time()", "Date.now()", "os.uptime()"],
+    "answer_en": "process.hrtime()",
+    "answer_hi": "process.hrtime()"
+  },
+  {
+    "num": 46,
+    "question_en": "Which module provides methods for operating system memory and CPU info?",
+    "question_hi": "OS memory और CPU info देने वाला module कौन सा है?",
+    "options_en": ["os", "process", "util", "system"],
+    "options_hi": ["os", "process", "util", "system"],
+    "answer_en": "os",
+    "answer_hi": "os"
+  },
+  {
+    "num": 47,
+    "question_en": "Which method returns the total system memory in bytes?",
+    "question_hi": "Total system memory bytes में देने वाला method कौन सा है?",
+    "options_en": ["os.totalmem()", "os.freemem()", "process.memoryUsage()", "os.memory()"],
+    "options_hi": ["os.totalmem()", "os.freemem()", "process.memoryUsage()", "os.memory()"],
+    "answer_en": "os.totalmem()",
+    "answer_hi": "os.totalmem()"
+  },
+  {
+    "num": 48,
+    "question_en": "Which method returns the free system memory in bytes?",
+    "question_hi": "Free system memory bytes में देने वाला method कौन सा है?",
+    "options_en": ["os.freemem()", "os.totalmem()", "process.memoryUsage()", "os.memory()"],
+    "options_hi": ["os.freemem()", "os.totalmem()", "process.memoryUsage()", "os.memory()"],
+    "answer_en": "os.freemem()",
+    "answer_hi": "os.freemem()"
+  },
+  {
+    "num": 49,
+    "question_en": "Which module provides the EventEmitter class in Node.js?",
+    "question_hi": "EventEmitter class देने वाला module कौन सा है?",
+    "options_en": ["events", "stream", "util", "process"],
+    "options_hi": ["events", "stream", "util", "process"],
+    "answer_en": "events",
+    "answer_hi": "events"
+  },
+
+]
+
+
   
 
 // --------------------------- GLOBAL VARS -----------------------------

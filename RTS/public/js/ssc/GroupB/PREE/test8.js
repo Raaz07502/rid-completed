@@ -1,1054 +1,554 @@
 const questions = [
-   {
-       "num": 1,
-        "question_en": "What is 96 + 95?",
-        "question_hi": "96 + 95 कितना होता है?",
-        "options_en": [
-            "194",
-            "191",
-            "190",
-            "192"
-        ],
-        "options_hi": [
-            "194",
-            "191",
-            "190",
-            "192"
-        ],
-        "answer_en": "191",
-        "answer_hi": "191",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is the integer division 73 ÷ 43?",
-        "question_hi": "73 ÷ 43 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is 60 × 70?",
-        "question_hi": "60 × 70 कितना होता है?",
-        "options_en": [
-            "4200",
-            "4201",
-            "4203",
-            "4199"
-        ],
-        "options_hi": [
-            "4200",
-            "4201",
-            "4203",
-            "4199"
-        ],
-        "answer_en": "4200",
-        "answer_hi": "4200",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 80 - 63?",
-        "question_hi": "80 - 63 कितना होता है?",
-        "options_en": [
-            "17",
-            "16",
-            "20",
-            "18"
-        ],
-        "options_hi": [
-            "17",
-            "16",
-            "20",
-            "18"
-        ],
-        "answer_en": "17",
-        "answer_hi": "17",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is 30 × 40?",
-        "question_hi": "30 × 40 कितना होता है?",
-        "options_en": [
-            "1200",
-            "1203",
-            "1199",
-            "1201"
-        ],
-        "options_hi": [
-            "1200",
-            "1203",
-            "1199",
-            "1201"
-        ],
-        "answer_en": "1200",
-        "answer_hi": "1200",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is 42 × 63?",
-        "question_hi": "42 × 63 कितना होता है?",
-        "options_en": [
-            "2649",
-            "2646",
-            "2647",
-            "2645"
-        ],
-        "options_hi": [
-            "2649",
-            "2646",
-            "2647",
-            "2645"
-        ],
-        "answer_en": "2646",
-        "answer_hi": "2646",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is the integer division 75 ÷ 88?",
-        "question_hi": "75 ÷ 88 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 39 × 7?",
-        "question_hi": "39 × 7 कितना होता है?",
-        "options_en": [
-            "276",
-            "272",
-            "274",
-            "273"
-        ],
-        "options_hi": [
-            "276",
-            "272",
-            "274",
-            "273"
-        ],
-        "answer_en": "273",
-        "answer_hi": "273",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is the integer division 85 ÷ 34?",
-        "question_hi": "85 ÷ 34 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "5",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "5",
-            "2",
-            "3"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 73 × 91?",
-        "question_hi": "73 × 91 कितना होता है?",
-        "options_en": [
-            "6646",
-            "6642",
-            "6643",
-            "6644"
-        ],
-        "options_hi": [
-            "6646",
-            "6642",
-            "6643",
-            "6644"
-        ],
-        "answer_en": "6643",
-        "answer_hi": "6643",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 33 - 8?",
-        "question_hi": "33 - 8 कितना होता है?",
-        "options_en": [
-            "28",
-            "24",
-            "25",
-            "26"
-        ],
-        "options_hi": [
-            "28",
-            "24",
-            "25",
-            "26"
-        ],
-        "answer_en": "25",
-        "answer_hi": "25",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is the integer division 54 ÷ 44?",
-        "question_hi": "54 ÷ 44 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "4",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "4",
-            "0",
-            "1"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is 2 - 72?",
-        "question_hi": "2 - 72 कितना होता है?",
-        "options_en": [
-            "-70",
-            "-69",
-            "-68",
-            "-67"
-        ],
-        "options_hi": [
-            "-70",
-            "-69",
-            "-68",
-            "-67"
-        ],
-        "answer_en": "-70",
-        "answer_hi": "-70",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is 63 - 85?",
-        "question_hi": "63 - 85 कितना होता है?",
-        "options_en": [
-            "-22",
-            "-19",
-            "-21",
-            "-20"
-        ],
-        "options_hi": [
-            "-22",
-            "-19",
-            "-21",
-            "-20"
-        ],
-        "answer_en": "-22",
-        "answer_hi": "-22",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is 84 + 9?",
-        "question_hi": "84 + 9 कितना होता है?",
-        "options_en": [
-            "96",
-            "93",
-            "92",
-            "94"
-        ],
-        "options_hi": [
-            "96",
-            "93",
-            "92",
-            "94"
-        ],
-        "answer_en": "93",
-        "answer_hi": "93",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 24 - 55?",
-        "question_hi": "24 - 55 कितना होता है?",
-        "options_en": [
-            "-28",
-            "-29",
-            "-30",
-            "-31"
-        ],
-        "options_hi": [
-            "-28",
-            "-29",
-            "-30",
-            "-31"
-        ],
-        "answer_en": "-31",
-        "answer_hi": "-31",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is 25 × 97?",
-        "question_hi": "25 × 97 कितना होता है?",
-        "options_en": [
-            "2424",
-            "2426",
-            "2428",
-            "2425"
-        ],
-        "options_hi": [
-            "2424",
-            "2426",
-            "2428",
-            "2425"
-        ],
-        "answer_en": "2425",
-        "answer_hi": "2425",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 74 + 79?",
-        "question_hi": "74 + 79 कितना होता है?",
-        "options_en": [
-            "153",
-            "156",
-            "154",
-            "152"
-        ],
-        "options_hi": [
-            "153",
-            "156",
-            "154",
-            "152"
-        ],
-        "answer_en": "153",
-        "answer_hi": "153",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is the integer division 84 ÷ 71?",
-        "question_hi": "84 ÷ 71 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "4",
-            "0",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "4",
-            "0",
-            "2"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is 36 + 26?",
-        "question_hi": "36 + 26 कितना होता है?",
-        "options_en": [
-            "65",
-            "63",
-            "62",
-            "61"
-        ],
-        "options_hi": [
-            "65",
-            "63",
-            "62",
-            "61"
-        ],
-        "answer_en": "62",
-        "answer_hi": "62",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 84 - 34?",
-        "question_hi": "84 - 34 कितना होता है?",
-        "options_en": [
-            "53",
-            "51",
-            "49",
-            "50"
-        ],
-        "options_hi": [
-            "53",
-            "51",
-            "49",
-            "50"
-        ],
-        "answer_en": "50",
-        "answer_hi": "50",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 39 - 74?",
-        "question_hi": "39 - 74 कितना होता है?",
-        "options_en": [
-            "-35",
-            "-32",
-            "-33",
-            "-34"
-        ],
-        "options_hi": [
-            "-35",
-            "-32",
-            "-33",
-            "-34"
-        ],
-        "answer_en": "-35",
-        "answer_hi": "-35",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is 56 × 67?",
-        "question_hi": "56 × 67 कितना होता है?",
-        "options_en": [
-            "3751",
-            "3755",
-            "3753",
-            "3752"
-        ],
-        "options_hi": [
-            "3751",
-            "3755",
-            "3753",
-            "3752"
-        ],
-        "answer_en": "3752",
-        "answer_hi": "3752",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is the integer division 25 ÷ 19?",
-        "question_hi": "25 ÷ 19 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "4",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "4",
-            "1",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 35 - 51?",
-        "question_hi": "35 - 51 कितना होता है?",
-        "options_en": [
-            "-16",
-            "-14",
-            "-15",
-            "-13"
-        ],
-        "options_hi": [
-            "-16",
-            "-14",
-            "-15",
-            "-13"
-        ],
-        "answer_en": "-16",
-        "answer_hi": "-16",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 40 + 76?",
-        "question_hi": "40 + 76 कितना होता है?",
-        "options_en": [
-            "116",
-            "117",
-            "119",
-            "115"
-        ],
-        "options_hi": [
-            "116",
-            "117",
-            "119",
-            "115"
-        ],
-        "answer_en": "116",
-        "answer_hi": "116",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 90 + 32?",
-        "question_hi": "90 + 32 कितना होता है?",
-        "options_en": [
-            "125",
-            "121",
-            "123",
-            "122"
-        ],
-        "options_hi": [
-            "125",
-            "121",
-            "123",
-            "122"
-        ],
-        "answer_en": "122",
-        "answer_hi": "122",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 22 × 53?",
-        "question_hi": "22 × 53 कितना होता है?",
-        "options_en": [
-            "1169",
-            "1167",
-            "1165",
-            "1166"
-        ],
-        "options_hi": [
-            "1169",
-            "1167",
-            "1165",
-            "1166"
-        ],
-        "answer_en": "1166",
-        "answer_hi": "1166",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is 49 - 80?",
-        "question_hi": "49 - 80 कितना होता है?",
-        "options_en": [
-            "-29",
-            "-28",
-            "-31",
-            "-30"
-        ],
-        "options_hi": [
-            "-29",
-            "-28",
-            "-31",
-            "-30"
-        ],
-        "answer_en": "-31",
-        "answer_hi": "-31",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is 21 × 60?",
-        "question_hi": "21 × 60 कितना होता है?",
-        "options_en": [
-            "1260",
-            "1261",
-            "1259",
-            "1263"
-        ],
-        "options_hi": [
-            "1260",
-            "1261",
-            "1259",
-            "1263"
-        ],
-        "answer_en": "1260",
-        "answer_hi": "1260",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 98 - 70?",
-        "question_hi": "98 - 70 कितना होता है?",
-        "options_en": [
-            "31",
-            "28",
-            "27",
-            "29"
-        ],
-        "options_hi": [
-            "31",
-            "28",
-            "27",
-            "29"
-        ],
-        "answer_en": "28",
-        "answer_hi": "28",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 69 × 59?",
-        "question_hi": "69 × 59 कितना होता है?",
-        "options_en": [
-            "4072",
-            "4074",
-            "4070",
-            "4071"
-        ],
-        "options_hi": [
-            "4072",
-            "4074",
-            "4070",
-            "4071"
-        ],
-        "answer_en": "4071",
-        "answer_hi": "4071",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is 9 - 72?",
-        "question_hi": "9 - 72 कितना होता है?",
-        "options_en": [
-            "-61",
-            "-60",
-            "-63",
-            "-62"
-        ],
-        "options_hi": [
-            "-61",
-            "-60",
-            "-63",
-            "-62"
-        ],
-        "answer_en": "-63",
-        "answer_hi": "-63",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 68 + 58?",
-        "question_hi": "68 + 58 कितना होता है?",
-        "options_en": [
-            "126",
-            "129",
-            "125",
-            "127"
-        ],
-        "options_hi": [
-            "126",
-            "129",
-            "125",
-            "127"
-        ],
-        "answer_en": "126",
-        "answer_hi": "126",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is the integer division 13 ÷ 67?",
-        "question_hi": "13 ÷ 67 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "3",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "3",
-            "1",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is the integer division 67 ÷ 55?",
-        "question_hi": "67 ÷ 55 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "2",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "4",
-            "2",
-            "0",
-            "1"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 88 + 41?",
-        "question_hi": "88 + 41 कितना होता है?",
-        "options_en": [
-            "128",
-            "129",
-            "130",
-            "132"
-        ],
-        "options_hi": [
-            "128",
-            "129",
-            "130",
-            "132"
-        ],
-        "answer_en": "129",
-        "answer_hi": "129",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is 97 + 29?",
-        "question_hi": "97 + 29 कितना होता है?",
-        "options_en": [
-            "129",
-            "125",
-            "127",
-            "126"
-        ],
-        "options_hi": [
-            "129",
-            "125",
-            "127",
-            "126"
-        ],
-        "answer_en": "126",
-        "answer_hi": "126",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 39,
-        "question_en": "What is 91 + 10?",
-        "question_hi": "91 + 10 कितना होता है?",
-        "options_en": [
-            "100",
-            "104",
-            "102",
-            "101"
-        ],
-        "options_hi": [
-            "100",
-            "104",
-            "102",
-            "101"
-        ],
-        "answer_en": "101",
-        "answer_hi": "101",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is 38 - 54?",
-        "question_hi": "38 - 54 कितना होता है?",
-        "options_en": [
-            "-16",
-            "-13",
-            "-14",
-            "-15"
-        ],
-        "options_hi": [
-            "-16",
-            "-13",
-            "-14",
-            "-15"
-        ],
-        "answer_en": "-16",
-        "answer_hi": "-16",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is the integer division 49 ÷ 50?",
-        "question_hi": "49 ÷ 50 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "What is 89 - 86?",
-        "question_hi": "89 - 86 कितना होता है?",
-        "options_en": [
-            "4",
-            "6",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "4",
-            "6",
-            "3",
-            "2"
-        ],
-        "answer_en": "3",
-        "answer_hi": "3",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "What is 70 - 52?",
-        "question_hi": "70 - 52 कितना होता है?",
-        "options_en": [
-            "21",
-            "17",
-            "18",
-            "19"
-        ],
-        "options_hi": [
-            "21",
-            "17",
-            "18",
-            "19"
-        ],
-        "answer_en": "18",
-        "answer_hi": "18",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "What is the integer division 40 ÷ 61?",
-        "question_hi": "40 ÷ 61 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "0",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "0",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "What is 60 - 46?",
-        "question_hi": "60 - 46 कितना होता है?",
-        "options_en": [
-            "15",
-            "17",
-            "14",
-            "13"
-        ],
-        "options_hi": [
-            "15",
-            "17",
-            "14",
-            "13"
-        ],
-        "answer_en": "14",
-        "answer_hi": "14",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "What is the integer division 6 ÷ 86?",
-        "question_hi": "6 ÷ 86 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "What is 10 + 14?",
-        "question_hi": "10 + 14 कितना होता है?",
-        "options_en": [
-            "25",
-            "24",
-            "23",
-            "27"
-        ],
-        "options_hi": [
-            "25",
-            "24",
-            "23",
-            "27"
-        ],
-        "answer_en": "24",
-        "answer_hi": "24",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "What is 33 + 96?",
-        "question_hi": "33 + 96 कितना होता है?",
-        "options_en": [
-            "128",
-            "129",
-            "130",
-            "132"
-        ],
-        "options_hi": [
-            "128",
-            "129",
-            "130",
-            "132"
-        ],
-        "answer_en": "129",
-        "answer_hi": "129",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "What is 71 + 29?",
-        "question_hi": "71 + 29 कितना होता है?",
-        "options_en": [
-            "100",
-            "103",
-            "99",
-            "101"
-        ],
-        "options_hi": [
-            "100",
-            "103",
-            "99",
-            "101"
-        ],
-        "answer_en": "100",
-        "answer_hi": "100",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "What is 31 × 95?",
-        "question_hi": "31 × 95 कितना होता है?",
-        "options_en": [
-            "2948",
-            "2946",
-            "2945",
-            "2944"
-        ],
-        "options_hi": [
-            "2948",
-            "2946",
-            "2945",
-            "2944"
-        ],
-        "answer_en": "2945",
-        "answer_hi": "2945",
-        "attempted": false,
-        "selected": ""
-    }
+  {
+    "num": 1,
+    "question_en": "Who is known as the 'Father of the Indian Constitution'?",
+    "question_hi": "'भारतीय संविधान के जनक' के रूप में किसे जाना जाता है?",
+    "options_en": ["Dr. B.R. Ambedkar", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel"],
+    "options_hi": ["डॉ. बी.आर. अंबेडकर", "जवाहरलाल नेहरू", "महात्मा गांधी", "सरदार पटेल"],
+    "answer_en": "Dr. B.R. Ambedkar",
+    "answer_hi": "डॉ. बी.आर. अंबेडकर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "The Constitution of India was adopted on:",
+    "question_hi": "भारत का संविधान कब अपनाया गया था?",
+    "options_en": ["26 January 1950", "26 November 1949", "15 August 1947", "26 January 1949"],
+    "options_hi": ["26 जनवरी 1950", "26 नवंबर 1949", "15 अगस्त 1947", "26 जनवरी 1949"],
+    "answer_en": "26 November 1949",
+    "answer_hi": "26 नवंबर 1949",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "How many Fundamental Rights are guaranteed by the Indian Constitution?",
+    "question_hi": "भारतीय संविधान द्वारा कितने मौलिक अधिकारों की गारंटी दी गई है?",
+    "options_en": ["6", "7", "8", "9"],
+    "options_hi": ["6", "7", "8", "9"],
+    "answer_en": "6",
+    "answer_hi": "6",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "Who is the head of the Union Executive in India?",
+    "question_hi": "भारत में संघीय कार्यपालिका का प्रमुख कौन है?",
+    "options_en": ["President", "Prime Minister", "Chief Justice", "Speaker"],
+    "options_hi": ["राष्ट्रपति", "प्रधानमंत्री", "मुख्य न्यायाधीश", "अध्यक्ष"],
+    "answer_en": "President",
+    "answer_hi": "राष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "The Parliament of India consists of:",
+    "question_hi": "भारत की संसद में शामिल हैं:",
+    "options_en": ["President, Lok Sabha and Rajya Sabha", "Lok Sabha and Rajya Sabha only", "President and Lok Sabha", "President and Rajya Sabha"],
+    "options_hi": ["राष्ट्रपति, लोकसभा और राज्यसभा", "केवल लोकसभा और राज्यसभा", "राष्ट्रपति और लोकसभा", "राष्ट्रपति और राज्यसभा"],
+    "answer_en": "President, Lok Sabha and Rajya Sabha",
+    "answer_hi": "राष्ट्रपति, लोकसभा और राज्यसभा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "Which article of the Constitution deals with the President's power to grant pardons?",
+    "question_hi": "संविधान का कौन सा अनुच्छेद राष्ट्रपति की क्षमादान की शक्ति से संबंधित है?",
+    "options_en": ["Article 72", "Article 123", "Article 356", "Article 360"],
+    "options_hi": ["अनुच्छेद 72", "अनुच्छेद 123", "अनुच्छेद 356", "अनुच्छेद 360"],
+    "answer_en": "Article 72",
+    "answer_hi": "अनुच्छेद 72",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "The maximum strength of the Lok Sabha is:",
+    "question_hi": "लोकसभा की अधिकतम सदस्य संख्या है:",
+    "options_en": ["545", "552", "550", "545 (543 elected + 2 nominated)"],
+    "options_hi": ["545", "552", "550", "545 (543 निर्वाचित + 2 मनोनीत)"],
+    "answer_en": "545 (543 elected + 2 nominated)",
+    "answer_hi": "545 (543 निर्वाचित + 2 मनोनीत)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "Who appoints the Chief Justice of India?",
+    "question_hi": "भारत के मुख्य न्यायाधीश की नियुक्ति कौन करता है?",
+    "options_en": ["President", "Prime Minister", "Parliament", "Supreme Court Collegium"],
+    "options_hi": ["राष्ट्रपति", "प्रधानमंत्री", "संसद", "सर्वोच्च न्यायालय का कॉलेजियम"],
+    "answer_en": "President",
+    "answer_hi": "राष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "The Directive Principles of State Policy are inspired by the constitution of which country?",
+    "question_hi": "राज्य के नीति निर्देशक तत्व किस देश के संविधान से प्रेरित हैं?",
+    "options_en": ["USA", "UK", "Ireland", "Canada"],
+    "options_hi": ["यूएसए", "यूके", "आयरलैंड", "कनाडा"],
+    "answer_en": "Ireland",
+    "answer_hi": "आयरलैंड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "Which schedule of the Indian Constitution contains the list of recognized languages?",
+    "question_hi": "भारतीय संविधान की कौन सी अनुसूची में मान्यता प्राप्त भाषाओं की सूची है?",
+    "options_en": ["Eighth Schedule", "Seventh Schedule", "First Schedule", "Tenth Schedule"],
+    "options_hi": ["आठवीं अनुसूची", "सातवीं अनुसूची", "पहली अनुसूची", "दसवीं अनुसूची"],
+    "answer_en": "Eighth Schedule",
+    "answer_hi": "आठवीं अनुसूची",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "The 'Basic Structure Doctrine' was established by the Supreme Court in which case?",
+    "question_hi": "'मूल संरचना सिद्धांत' सर्वोच्च न्यायालय द्वारा किस मामले में स्थापित किया गया था?",
+    "options_en": ["Kesavananda Bharati case (1973)", "Golaknath case (1967)", "Minerva Mills case (1980)", "S.R. Bommai case (1994)"],
+    "options_hi": ["केसवानंद भारती मामला (1973)", "गोलकनाथ मामला (1967)", "मिनर्वा मिल्स मामला (1980)", "एस.आर. बोम्मई मामला (1994)"],
+    "answer_en": "Kesavananda Bharati case (1973)",
+    "answer_hi": "केसवानंद भारती मामला (1973)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "Which article of the Constitution deals with the establishment of a Finance Commission?",
+    "question_hi": "संविधान का कौन सा अनुच्छेद वित्त आयोग की स्थापना से संबंधित है?",
+    "options_en": ["Article 280", "Article 324", "Article 356", "Article 360"],
+    "options_hi": ["अनुच्छेद 280", "अनुच्छेद 324", "अनुच्छेद 356", "अनुच्छेद 360"],
+    "answer_en": "Article 280",
+    "answer_hi": "अनुच्छेद 280",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "The term of office of a Rajya Sabha member is:",
+    "question_hi": "राज्यसभा सदस्य का कार्यकाल है:",
+    "options_en": ["5 years", "6 years", "4 years", "3 years"],
+    "options_hi": ["5 वर्ष", "6 वर्ष", "4 वर्ष", "3 वर्ष"],
+    "answer_en": "6 years",
+    "answer_hi": "6 वर्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "Who has the power to declare a financial emergency in India?",
+    "question_hi": "भारत में वित्तीय आपातकाल घोषित करने की शक्ति किसके पास है?",
+    "options_en": ["President", "Prime Minister", "Finance Minister", "Parliament"],
+    "options_hi": ["राष्ट्रपति", "प्रधानमंत्री", "वित्त मंत्री", "संसद"],
+    "answer_en": "President",
+    "answer_hi": "राष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "Which amendment to the Constitution lowered the voting age from 21 to 18 years?",
+    "question_hi": "संविधान में किस संशोधन ने मतदान की आयु 21 से घटाकर 18 वर्ष कर दी?",
+    "options_en": ["61st Amendment", "73rd Amendment", "86th Amendment", "44th Amendment"],
+    "options_hi": ["61वां संशोधन", "73वां संशोधन", "86वां संशोधन", "44वां संशोधन"],
+    "answer_en": "61st Amendment",
+    "answer_hi": "61वां संशोधन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "The concept of 'Judicial Review' in India is borrowed from:",
+    "question_hi": "भारत में 'न्यायिक पुनरीक्षण' की अवधारणा कहाँ से ली गई है?",
+    "options_en": ["USA", "UK", "France", "Canada"],
+    "options_hi": ["यूएसए", "यूके", "फ्रांस", "कनाडा"],
+    "answer_en": "USA",
+    "answer_hi": "यूएसए",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Which article deals with the right to constitutional remedies?",
+    "question_hi": "कौन सा अनुच्छेद संवैधानिक उपचारों के अधिकार से संबंधित है?",
+    "options_en": ["Article 32", "Article 21", "Article 14", "Article 19"],
+    "options_hi": ["अनुच्छेद 32", "अनुच्छेद 21", "अनुच्छेद 14", "अनुच्छेद 19"],
+    "answer_en": "Article 32",
+    "answer_hi": "अनुच्छेद 32",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "The 'Council of Ministers' is collectively responsible to:",
+    "question_hi": "'मंत्रिपरिषद' सामूहिक रूप से किसके प्रति उत्तरदायी है?",
+    "options_en": ["Lok Sabha", "Rajya Sabha", "President", "Prime Minister"],
+    "options_hi": ["लोकसभा", "राज्यसभा", "राष्ट्रपति", "प्रधानमंत्री"],
+    "answer_en": "Lok Sabha",
+    "answer_hi": "लोकसभा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "Which constitutional amendment added the words 'Socialist' and 'Secular' to the Preamble?",
+    "question_hi": "किस संवैधानिक संशोधन ने प्रस्तावना में 'समाजवादी' और 'धर्मनिरपेक्ष' शब्द जोड़े?",
+    "options_en": ["42nd Amendment", "44th Amendment", "52nd Amendment", "73rd Amendment"],
+    "options_hi": ["42वां संशोधन", "44वां संशोधन", "52वां संशोधन", "73वां संशोधन"],
+    "answer_en": "42nd Amendment",
+    "answer_hi": "42वां संशोधन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "Who is the ex-officio Chairman of the Rajya Sabha?",
+    "question_hi": "राज्यसभा का पदेन अध्यक्ष कौन होता है?",
+    "options_en": ["Vice-President", "President", "Prime Minister", "Speaker"],
+    "options_hi": ["उपराष्ट्रपति", "राष्ट्रपति", "प्रधानमंत्री", "अध्यक्ष"],
+    "answer_en": "Vice-President",
+    "answer_hi": "उपराष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "The minimum age required to become a member of Rajya Sabha is:",
+    "question_hi": "राज्यसभा का सदस्य बनने के लिए न्यूनतम आयु आवश्यक है:",
+    "options_en": ["25 years", "30 years", "35 years", "21 years"],
+    "options_hi": ["25 वर्ष", "30 वर्ष", "35 वर्ष", "21 वर्ष"],
+    "answer_en": "30 years",
+    "answer_hi": "30 वर्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Which article deals with the appointment of the Prime Minister?",
+    "question_hi": "प्रधानमंत्री की नियुक्ति से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 75", "Article 76", "Article 77", "Article 78"],
+    "options_hi": ["अनुच्छेद 75", "अनुच्छेद 76", "अनुच्छेद 77", "अनुच्छेद 78"],
+    "answer_en": "Article 75",
+    "answer_hi": "अनुच्छेद 75",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "The concept of 'Rule of Law' in the Indian Constitution is borrowed from:",
+    "question_hi": "भारतीय संविधान में 'कानून का शासन' की अवधारणा कहाँ से ली गई है?",
+    "options_en": ["UK", "USA", "France", "Canada"],
+    "options_hi": ["यूके", "यूएसए", "फ्रांस", "कनाडा"],
+    "answer_en": "UK",
+    "answer_hi": "यूके",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Which article deals with the President's rule in states?",
+    "question_hi": "राज्यों में राष्ट्रपति शासन से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 356", "Article 352", "Article 360", "Article 370"],
+    "options_hi": ["अनुच्छेद 356", "अनुच्छेद 352", "अनुच्छेद 360", "अनुच्छेद 370"],
+    "answer_en": "Article 356",
+    "answer_hi": "अनुच्छेद 356",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "The First Law Minister of independent India was:",
+    "question_hi": "स्वतंत्र भारत के पहले कानून मंत्री थे:",
+    "options_en": ["Dr. B.R. Ambedkar", "Jawaharlal Nehru", "Sardar Patel", "Maulana Azad"],
+    "options_hi": ["डॉ. बी.आर. अंबेडकर", "जवाहरलाल नेहरू", "सरदार पटेल", "मौलाना आज़ाद"],
+    "answer_en": "Dr. B.R. Ambedkar",
+    "answer_hi": "डॉ. बी.आर. अंबेडकर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "Which schedule of the Constitution contains the forms of oaths and affirmations?",
+    "question_hi": "संविधान की कौन सी अनुसूची में शपथ और प्रतिज्ञान के प्रपत्र हैं?",
+    "options_en": ["Third Schedule", "Fourth Schedule", "Fifth Schedule", "Sixth Schedule"],
+    "options_hi": ["तीसरी अनुसूची", "चौथी अनुसूची", "पाँचवीं अनुसूची", "छठी अनुसूची"],
+    "answer_en": "Third Schedule",
+    "answer_hi": "तीसरी अनुसूची",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "The 'Zero Hour' in Parliament starts at:",
+    "question_hi": "संसद में 'शून्य काल' कब शुरू होता है?",
+    "options_en": ["12:00 Noon", "11:00 AM", "1:00 PM", "2:00 PM"],
+    "options_hi": ["12:00 दोपहर", "11:00 पूर्वाह्न", "1:00 अपराह्न", "2:00 अपराह्न"],
+    "answer_en": "12:00 Noon",
+    "answer_hi": "12:00 दोपहर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "Which article of the Constitution deals with the right to education?",
+    "question_hi": "संविधान का कौन सा अनुच्छेद शिक्षा के अधिकार से संबंधित है?",
+    "options_en": ["Article 21A", "Article 45", "Article 51A", "Article 30"],
+    "options_hi": ["अनुच्छेद 21ए", "अनुच्छेद 45", "अनुच्छेद 51ए", "अनुच्छेद 30"],
+    "answer_en": "Article 21A",
+    "answer_hi": "अनुच्छेद 21ए",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "The Union List contains how many subjects?",
+    "question_hi": "संघ सूची में कितने विषय हैं?",
+    "options_en": ["97", "66", "47", "100"],
+    "options_hi": ["97", "66", "47", "100"],
+    "answer_en": "97",
+    "answer_hi": "97",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Who has the power to dissolve the Lok Sabha?",
+    "question_hi": "लोकसभा को भंग करने की शक्ति किसके पास है?",
+    "options_en": ["President", "Prime Minister", "Speaker", "Chief Justice"],
+    "options_hi": ["राष्ट्रपति", "प्रधानमंत्री", "अध्यक्ष", "मुख्य न्यायाधीश"],
+    "answer_en": "President",
+    "answer_hi": "राष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "The concept of 'Single Citizenship' in India is borrowed from:",
+    "question_hi": "भारत में 'एकल नागरिकता' की अवधारणा कहाँ से ली गई है?",
+    "options_en": ["UK", "USA", "Canada", "Australia"],
+    "options_hi": ["यूके", "यूएसए", "कनाडा", "ऑस्ट्रेलिया"],
+    "answer_en": "UK",
+    "answer_hi": "यूके",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "Which article deals with the impeachment of the President?",
+    "question_hi": "राष्ट्रपति के महाभियोग से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 61", "Article 71", "Article 52", "Article 74"],
+    "options_hi": ["अनुच्छेद 61", "अनुच्छेद 71", "अनुच्छेद 52", "अनुच्छेद 74"],
+    "answer_en": "Article 61",
+    "answer_hi": "अनुच्छेद 61",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "The 'Writ of Mandamus' is issued by:",
+    "question_hi": "'परमादेश रिट' किसके द्वारा जारी की जाती है?",
+    "options_en": ["Supreme Court or High Court", "President", "Parliament", "Prime Minister"],
+    "options_hi": ["सर्वोच्च न्यायालय या उच्च न्यायालय", "राष्ट्रपति", "संसद", "प्रधानमंत्री"],
+    "answer_en": "Supreme Court or High Court",
+    "answer_hi": "सर्वोच्च न्यायालय या उच्च न्यायालय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "Which constitutional body advises the President on the distribution of revenue between Union and States?",
+    "question_hi": "कौन सा संवैधानिक निकाय केंद्र और राज्यों के बीच राजस्व के वितरण पर राष्ट्रपति को सलाह देता है?",
+    "options_en": ["Finance Commission", "Planning Commission", "NITI Aayog", "Election Commission"],
+    "options_hi": ["वित्त आयोग", "योजना आयोग", "नीति आयोग", "चुनाव आयोग"],
+    "answer_en": "Finance Commission",
+    "answer_hi": "वित्त आयोग",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "The 'Concurrent List' contains how many subjects?",
+    "question_hi": "समवर्ती सूची में कितने विषय हैं?",
+    "options_en": ["52", "47", "97", "66"],
+    "options_hi": ["52", "47", "97", "66"],
+    "answer_en": "52",
+    "answer_hi": "52",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "Who appoints the Attorney General of India?",
+    "question_hi": "भारत के अटॉर्नी जनरल की नियुक्ति कौन करता है?",
+    "options_en": ["President", "Prime Minister", "Chief Justice", "Parliament"],
+    "options_hi": ["राष्ट्रपति", "प्रधानमंत्री", "मुख्य न्यायाधीश", "संसद"],
+    "answer_en": "President",
+    "answer_hi": "राष्ट्रपति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "The term 'Federal' is used in the Indian Constitution in:",
+    "question_hi": "भारतीय संविधान में 'संघीय' शब्द का प्रयोग किया गया है:",
+    "options_en": ["Nowhere", "Preamble", "Article 1", "Seventh Schedule"],
+    "options_hi": ["कहीं नहीं", "प्रस्तावना", "अनुच्छेद 1", "सातवीं अनुसूची"],
+    "answer_en": "Nowhere",
+    "answer_hi": "कहीं नहीं",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "Which article deals with the Fundamental Duties?",
+    "question_hi": "मौलिक कर्तव्यों से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 51A", "Article 21", "Article 14", "Article 19"],
+    "options_hi": ["अनुच्छेद 51ए", "अनुच्छेद 21", "अनुच्छेद 14", "अनुच्छेद 19"],
+    "answer_en": "Article 51A",
+    "answer_hi": "अनुच्छेद 51ए",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "The first woman Chief Justice of India was:",
+    "question_hi": "भारत की पहली महिला मुख्य न्यायाधीश थीं:",
+    "options_en": ["Justice Leila Seth", "Justice Ruma Pal", "Justice Gita Mittal", "Justice Indu Malhotra"],
+    "options_hi": ["न्यायमूर्ति लीला सेठ", "न्यायमूर्ति रूमा पाल", "न्यायमूर्ति गीता मित्तल", "न्यायमूर्ति इंदु मल्होत्रा"],
+    "answer_en": "Justice Leila Seth",
+    "answer_hi": "न्यायमूर्ति लीला सेठ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "Which article deals with the establishment of the Supreme Court?",
+    "question_hi": "सर्वोच्च न्यायालय की स्थापना से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 124", "Article 32", "Article 226", "Article 142"],
+    "options_hi": ["अनुच्छेद 124", "अनुच्छेद 32", "अनुच्छेद 226", "अनुच्छेद 142"],
+    "answer_en": "Article 124",
+    "answer_hi": "अनुच्छेद 124",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "The 'State List' contains how many subjects?",
+    "question_hi": "राज्य सूची में कितने विषय हैं?",
+    "options_en": ["66", "97", "52", "47"],
+    "options_hi": ["66", "97", "52", "47"],
+    "answer_en": "66",
+    "answer_hi": "66",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "Who presides over the joint sitting of Parliament?",
+    "question_hi": "संसद के संयुक्त अधिवेशन की अध्यक्षता कौन करता है?",
+    "options_en": ["Speaker of Lok Sabha", "President", "Vice-President", "Prime Minister"],
+    "options_hi": ["लोकसभा अध्यक्ष", "राष्ट्रपति", "उपराष्ट्रपति", "प्रधानमंत्री"],
+    "answer_en": "Speaker of Lok Sabha",
+    "answer_hi": "लोकसभा अध्यक्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "The 'Doctrine of Eclipse' is related to:",
+    "question_hi": "'ग्रहण सिद्धांत' किससे संबंधित है?",
+    "options_en": ["Fundamental Rights", "Directive Principles", "Emergency Provisions", "Constitutional Amendments"],
+    "options_hi": ["मौलिक अधिकार", "निर्देशक सिद्धांत", "आपातकालीन प्रावधान", "संवैधानिक संशोधन"],
+    "answer_en": "Fundamental Rights",
+    "answer_hi": "मौलिक अधिकार",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "Which article deals with the abolition of untouchability?",
+    "question_hi": "अस्पृश्यता उन्मूलन से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 17", "Article 15", "Article 16", "Article 23"],
+    "options_hi": ["अनुच्छेद 17", "अनुच्छेद 15", "अनुच्छेद 16", "अनुच्छेद 23"],
+    "answer_en": "Article 17",
+    "answer_hi": "अनुच्छेद 17",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "The minimum age for becoming a member of Lok Sabha is:",
+    "question_hi": "लोकसभा का सदस्य बनने के लिए न्यूनतम आयु है:",
+    "options_en": ["25 years", "30 years", "21 years", "35 years"],
+    "options_hi": ["25 वर्ष", "30 वर्ष", "21 वर्ष", "35 वर्ष"],
+    "answer_en": "25 years",
+    "answer_hi": "25 वर्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "Which article deals with the protection of life and personal liberty?",
+    "question_hi": "जीवन और व्यक्तिगत स्वतंत्रता की सुरक्षा से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 21", "Article 19", "Article 14", "Article 32"],
+    "options_hi": ["अनुच्छेद 21", "अनुच्छेद 19", "अनुच्छेद 14", "अनुच्छेद 32"],
+    "answer_en": "Article 21",
+    "answer_hi": "अनुच्छेद 21",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "The 'Question Hour' in Parliament starts at:",
+    "question_hi": "संसद में 'प्रश्न काल' कब शुरू होता है?",
+    "options_en": ["11:00 AM", "12:00 Noon", "10:00 AM", "2:00 PM"],
+    "options_hi": ["11:00 पूर्वाह्न", "12:00 दोपहर", "10:00 पूर्वाह्न", "2:00 अपराह्न"],
+    "answer_en": "11:00 AM",
+    "answer_hi": "11:00 पूर्वाह्न",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Which article deals with the right to freedom of religion?",
+    "question_hi": "धर्म की स्वतंत्रता के अधिकार से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 25", "Article 26", "Article 27", "Article 28"],
+    "options_hi": ["अनुच्छेद 25", "अनुच्छेद 26", "अनुच्छेद 27", "अनुच्छेद 28"],
+    "answer_en": "Article 25",
+    "answer_hi": "अनुच्छेद 25",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "Who administers the oath of office to the President?",
+    "question_hi": "राष्ट्रपति को पद की शपथ कौन दिलाता है?",
+    "options_en": ["Chief Justice of India", "Prime Minister", "Speaker", "Vice-President"],
+    "options_hi": ["भारत के मुख्य न्यायाधीश", "प्रधानमंत्री", "अध्यक्ष", "उपराष्ट्रपति"],
+    "answer_en": "Chief Justice of India",
+    "answer_hi": "भारत के मुख्य न्यायाधीश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "The Constitution of India describes India as:",
+    "question_hi": "भारत का संविधान भारत को किस रूप में वर्णित करता है?",
+    "options_en": ["A Union of States", "A Federation", "A Confederation", "A Unitary State"],
+    "options_hi": ["राज्यों का संघ", "एक संघ", "एक परिसंघ", "एकात्मक राज्य"],
+    "answer_en": "A Union of States",
+    "answer_hi": "राज्यों का संघ",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 
 let currentQuestion = 0;

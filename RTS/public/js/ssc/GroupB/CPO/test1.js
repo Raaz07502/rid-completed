@@ -1,1054 +1,554 @@
 const questions = [
   {
-        "num": 1,
-        "question_en": "What is 51 × 6?",
-        "question_hi": "51 × 6 कितना होगा?",
-        "options_en": [
-            "316",
-            "306",
-            "296",
-            "311"
-        ],
-        "options_hi": [
-            "316",
-            "306",
-            "296",
-            "311"
-        ],
-        "answer_en": "306",
-        "answer_hi": "306",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 2,
-        "question_en": "What is 19 × 19?",
-        "question_hi": "19 × 19 कितना होगा?",
-        "options_en": [
-            "351",
-            "366",
-            "371",
-            "361"
-        ],
-        "options_hi": [
-            "351",
-            "366",
-            "371",
-            "361"
-        ],
-        "answer_en": "361",
-        "answer_hi": "361",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 3,
-        "question_en": "What is 74 × 8?",
-        "question_hi": "74 × 8 कितना होगा?",
-        "options_en": [
-            "582",
-            "602",
-            "597",
-            "592"
-        ],
-        "options_hi": [
-            "582",
-            "602",
-            "597",
-            "592"
-        ],
-        "answer_en": "592",
-        "answer_hi": "592",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 4,
-        "question_en": "What is 63 × 4?",
-        "question_hi": "63 × 4 कितना होगा?",
-        "options_en": [
-            "242",
-            "257",
-            "252",
-            "262"
-        ],
-        "options_hi": [
-            "242",
-            "257",
-            "252",
-            "262"
-        ],
-        "answer_en": "252",
-        "answer_hi": "252",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 5,
-        "question_en": "What is 17 × 20?",
-        "question_hi": "17 × 20 कितना होगा?",
-        "options_en": [
-            "350",
-            "330",
-            "345",
-            "340"
-        ],
-        "options_hi": [
-            "350",
-            "330",
-            "345",
-            "340"
-        ],
-        "answer_en": "340",
-        "answer_hi": "340",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 6,
-        "question_en": "What is 83 × 20?",
-        "question_hi": "83 × 20 कितना होगा?",
-        "options_en": [
-            "1670",
-            "1650",
-            "1660",
-            "1665"
-        ],
-        "options_hi": [
-            "1670",
-            "1650",
-            "1660",
-            "1665"
-        ],
-        "answer_en": "1660",
-        "answer_hi": "1660",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 7,
-        "question_en": "What is 15 × 19?",
-        "question_hi": "15 × 19 कितना होगा?",
-        "options_en": [
-            "285",
-            "275",
-            "290",
-            "295"
-        ],
-        "options_hi": [
-            "285",
-            "275",
-            "290",
-            "295"
-        ],
-        "answer_en": "285",
-        "answer_hi": "285",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 8,
-        "question_en": "What is 28 × 19?",
-        "question_hi": "28 × 19 कितना होगा?",
-        "options_en": [
-            "537",
-            "542",
-            "522",
-            "532"
-        ],
-        "options_hi": [
-            "537",
-            "542",
-            "522",
-            "532"
-        ],
-        "answer_en": "532",
-        "answer_hi": "532",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 9,
-        "question_en": "What is 81 × 7?",
-        "question_hi": "81 × 7 कितना होगा?",
-        "options_en": [
-            "577",
-            "572",
-            "557",
-            "567"
-        ],
-        "options_hi": [
-            "577",
-            "572",
-            "557",
-            "567"
-        ],
-        "answer_en": "567",
-        "answer_hi": "567",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 10,
-        "question_en": "What is 57 × 5?",
-        "question_hi": "57 × 5 कितना होगा?",
-        "options_en": [
-            "295",
-            "290",
-            "275",
-            "285"
-        ],
-        "options_hi": [
-            "295",
-            "290",
-            "275",
-            "285"
-        ],
-        "answer_en": "285",
-        "answer_hi": "285",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 11,
-        "question_en": "What is 89 × 8?",
-        "question_hi": "89 × 8 कितना होगा?",
-        "options_en": [
-            "712",
-            "722",
-            "702",
-            "717"
-        ],
-        "options_hi": [
-            "712",
-            "722",
-            "702",
-            "717"
-        ],
-        "answer_en": "712",
-        "answer_hi": "712",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 12,
-        "question_en": "What is 50 × 16?",
-        "question_hi": "50 × 16 कितना होगा?",
-        "options_en": [
-            "800",
-            "790",
-            "810",
-            "805"
-        ],
-        "options_hi": [
-            "800",
-            "790",
-            "810",
-            "805"
-        ],
-        "answer_en": "800",
-        "answer_hi": "800",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 13,
-        "question_en": "What is 41 × 7?",
-        "question_hi": "41 × 7 कितना होगा?",
-        "options_en": [
-            "277",
-            "292",
-            "287",
-            "297"
-        ],
-        "options_hi": [
-            "277",
-            "292",
-            "287",
-            "297"
-        ],
-        "answer_en": "287",
-        "answer_hi": "287",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 14,
-        "question_en": "What is 77 × 17?",
-        "question_hi": "77 × 17 कितना होगा?",
-        "options_en": [
-            "1309",
-            "1319",
-            "1314",
-            "1299"
-        ],
-        "options_hi": [
-            "1309",
-            "1319",
-            "1314",
-            "1299"
-        ],
-        "answer_en": "1309",
-        "answer_hi": "1309",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 15,
-        "question_en": "What is 46 × 4?",
-        "question_hi": "46 × 4 कितना होगा?",
-        "options_en": [
-            "189",
-            "194",
-            "174",
-            "184"
-        ],
-        "options_hi": [
-            "189",
-            "194",
-            "174",
-            "184"
-        ],
-        "answer_en": "184",
-        "answer_hi": "184",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 16,
-        "question_en": "What is 31 × 12?",
-        "question_hi": "31 × 12 कितना होगा?",
-        "options_en": [
-            "372",
-            "362",
-            "377",
-            "382"
-        ],
-        "options_hi": [
-            "372",
-            "362",
-            "377",
-            "382"
-        ],
-        "answer_en": "372",
-        "answer_hi": "372",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 17,
-        "question_en": "What is 15 × 4?",
-        "question_hi": "15 × 4 कितना होगा?",
-        "options_en": [
-            "60",
-            "65",
-            "70",
-            "50"
-        ],
-        "options_hi": [
-            "60",
-            "65",
-            "70",
-            "50"
-        ],
-        "answer_en": "60",
-        "answer_hi": "60",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 18,
-        "question_en": "What is 86 × 17?",
-        "question_hi": "86 × 17 कितना होगा?",
-        "options_en": [
-            "1472",
-            "1452",
-            "1462",
-            "1467"
-        ],
-        "options_hi": [
-            "1472",
-            "1452",
-            "1462",
-            "1467"
-        ],
-        "answer_en": "1462",
-        "answer_hi": "1462",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 19,
-        "question_en": "What is 44 × 17?",
-        "question_hi": "44 × 17 कितना होगा?",
-        "options_en": [
-            "738",
-            "758",
-            "753",
-            "748"
-        ],
-        "options_hi": [
-            "738",
-            "758",
-            "753",
-            "748"
-        ],
-        "answer_en": "748",
-        "answer_hi": "748",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 20,
-        "question_en": "What is 92 × 20?",
-        "question_hi": "92 × 20 कितना होगा?",
-        "options_en": [
-            "1840",
-            "1830",
-            "1850",
-            "1845"
-        ],
-        "options_hi": [
-            "1840",
-            "1830",
-            "1850",
-            "1845"
-        ],
-        "answer_en": "1840",
-        "answer_hi": "1840",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 21,
-        "question_en": "What is 95 × 13?",
-        "question_hi": "95 × 13 कितना होगा?",
-        "options_en": [
-            "1240",
-            "1225",
-            "1245",
-            "1235"
-        ],
-        "options_hi": [
-            "1240",
-            "1225",
-            "1245",
-            "1235"
-        ],
-        "answer_en": "1235",
-        "answer_hi": "1235",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 22,
-        "question_en": "What is 31 × 5?",
-        "question_hi": "31 × 5 कितना होगा?",
-        "options_en": [
-            "165",
-            "145",
-            "155",
-            "160"
-        ],
-        "options_hi": [
-            "165",
-            "145",
-            "155",
-            "160"
-        ],
-        "answer_en": "155",
-        "answer_hi": "155",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 23,
-        "question_en": "What is 46 × 6?",
-        "question_hi": "46 × 6 कितना होगा?",
-        "options_en": [
-            "276",
-            "266",
-            "281",
-            "286"
-        ],
-        "options_hi": [
-            "276",
-            "266",
-            "281",
-            "286"
-        ],
-        "answer_en": "276",
-        "answer_hi": "276",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 24,
-        "question_en": "What is 73 × 4?",
-        "question_hi": "73 × 4 कितना होगा?",
-        "options_en": [
-            "292",
-            "282",
-            "297",
-            "302"
-        ],
-        "options_hi": [
-            "292",
-            "282",
-            "297",
-            "302"
-        ],
-        "answer_en": "292",
-        "answer_hi": "292",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 25,
-        "question_en": "What is 80 × 10?",
-        "question_hi": "80 × 10 कितना होगा?",
-        "options_en": [
-            "800",
-            "790",
-            "805",
-            "810"
-        ],
-        "options_hi": [
-            "800",
-            "790",
-            "805",
-            "810"
-        ],
-        "answer_en": "800",
-        "answer_hi": "800",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 26,
-        "question_en": "What is 63 × 13?",
-        "question_hi": "63 × 13 कितना होगा?",
-        "options_en": [
-            "829",
-            "809",
-            "819",
-            "824"
-        ],
-        "options_hi": [
-            "829",
-            "809",
-            "819",
-            "824"
-        ],
-        "answer_en": "819",
-        "answer_hi": "819",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 27,
-        "question_en": "What is 20 × 7?",
-        "question_hi": "20 × 7 कितना होगा?",
-        "options_en": [
-            "145",
-            "130",
-            "140",
-            "150"
-        ],
-        "options_hi": [
-            "145",
-            "130",
-            "140",
-            "150"
-        ],
-        "answer_en": "140",
-        "answer_hi": "140",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 28,
-        "question_en": "What is 11 × 17?",
-        "question_hi": "11 × 17 कितना होगा?",
-        "options_en": [
-            "187",
-            "177",
-            "192",
-            "197"
-        ],
-        "options_hi": [
-            "187",
-            "177",
-            "192",
-            "197"
-        ],
-        "answer_en": "187",
-        "answer_hi": "187",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 29,
-        "question_en": "What is 10 × 6?",
-        "question_hi": "10 × 6 कितना होगा?",
-        "options_en": [
-            "60",
-            "70",
-            "50",
-            "65"
-        ],
-        "options_hi": [
-            "60",
-            "70",
-            "50",
-            "65"
-        ],
-        "answer_en": "60",
-        "answer_hi": "60",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 30,
-        "question_en": "What is 88 × 20?",
-        "question_hi": "88 × 20 कितना होगा?",
-        "options_en": [
-            "1770",
-            "1765",
-            "1760",
-            "1750"
-        ],
-        "options_hi": [
-            "1770",
-            "1765",
-            "1760",
-            "1750"
-        ],
-        "answer_en": "1760",
-        "answer_hi": "1760",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 31,
-        "question_en": "What is 68 × 19?",
-        "question_hi": "68 × 19 कितना होगा?",
-        "options_en": [
-            "1292",
-            "1282",
-            "1302",
-            "1297"
-        ],
-        "options_hi": [
-            "1292",
-            "1282",
-            "1302",
-            "1297"
-        ],
-        "answer_en": "1292",
-        "answer_hi": "1292",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 32,
-        "question_en": "What is 60 × 5?",
-        "question_hi": "60 × 5 कितना होगा?",
-        "options_en": [
-            "300",
-            "310",
-            "290",
-            "305"
-        ],
-        "options_hi": [
-            "300",
-            "310",
-            "290",
-            "305"
-        ],
-        "answer_en": "300",
-        "answer_hi": "300",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 33,
-        "question_en": "What is 17 × 8?",
-        "question_hi": "17 × 8 कितना होगा?",
-        "options_en": [
-            "126",
-            "146",
-            "141",
-            "136"
-        ],
-        "options_hi": [
-            "126",
-            "146",
-            "141",
-            "136"
-        ],
-        "answer_en": "136",
-        "answer_hi": "136",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 34,
-        "question_en": "What is 30 × 5?",
-        "question_hi": "30 × 5 कितना होगा?",
-        "options_en": [
-            "160",
-            "150",
-            "155",
-            "140"
-        ],
-        "options_hi": [
-            "160",
-            "150",
-            "155",
-            "140"
-        ],
-        "answer_en": "150",
-        "answer_hi": "150",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 35,
-        "question_en": "What is 23 × 2?",
-        "question_hi": "23 × 2 कितना होगा?",
-        "options_en": [
-            "51",
-            "46",
-            "36",
-            "56"
-        ],
-        "options_hi": [
-            "51",
-            "46",
-            "36",
-            "56"
-        ],
-        "answer_en": "46",
-        "answer_hi": "46",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 36,
-        "question_en": "What is 56 × 2?",
-        "question_hi": "56 × 2 कितना होगा?",
-        "options_en": [
-            "102",
-            "122",
-            "117",
-            "112"
-        ],
-        "options_hi": [
-            "102",
-            "122",
-            "117",
-            "112"
-        ],
-        "answer_en": "112",
-        "answer_hi": "112",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 37,
-        "question_en": "What is 29 × 10?",
-        "question_hi": "29 × 10 कितना होगा?",
-        "options_en": [
-            "290",
-            "300",
-            "295",
-            "280"
-        ],
-        "options_hi": [
-            "290",
-            "300",
-            "295",
-            "280"
-        ],
-        "answer_en": "290",
-        "answer_hi": "290",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 38,
-        "question_en": "What is 70 × 5?",
-        "question_hi": "70 × 5 कितना होगा?",
-        "options_en": [
-            "355",
-            "340",
-            "360",
-            "350"
-        ],
-        "options_hi": [
-            "355",
-            "340",
-            "360",
-            "350"
-        ],
-        "answer_en": "350",
-        "answer_hi": "350",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 39,
-        "question_en": "What is 71 × 17?",
-        "question_hi": "71 × 17 कितना होगा?",
-        "options_en": [
-            "1217",
-            "1212",
-            "1207",
-            "1197"
-        ],
-        "options_hi": [
-            "1217",
-            "1212",
-            "1207",
-            "1197"
-        ],
-        "answer_en": "1207",
-        "answer_hi": "1207",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 40,
-        "question_en": "What is 23 × 12?",
-        "question_hi": "23 × 12 कितना होगा?",
-        "options_en": [
-            "281",
-            "276",
-            "286",
-            "266"
-        ],
-        "options_hi": [
-            "281",
-            "276",
-            "286",
-            "266"
-        ],
-        "answer_en": "276",
-        "answer_hi": "276",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 41,
-        "question_en": "What is 76 × 2?",
-        "question_hi": "76 × 2 कितना होगा?",
-        "options_en": [
-            "152",
-            "157",
-            "142",
-            "162"
-        ],
-        "options_hi": [
-            "152",
-            "157",
-            "142",
-            "162"
-        ],
-        "answer_en": "152",
-        "answer_hi": "152",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 42,
-        "question_en": "What is 28 × 19?",
-        "question_hi": "28 × 19 कितना होगा?",
-        "options_en": [
-            "537",
-            "542",
-            "522",
-            "532"
-        ],
-        "options_hi": [
-            "537",
-            "542",
-            "522",
-            "532"
-        ],
-        "answer_en": "532",
-        "answer_hi": "532",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 43,
-        "question_en": "What is 92 × 4?",
-        "question_hi": "92 × 4 कितना होगा?",
-        "options_en": [
-            "368",
-            "378",
-            "373",
-            "358"
-        ],
-        "options_hi": [
-            "368",
-            "378",
-            "373",
-            "358"
-        ],
-        "answer_en": "368",
-        "answer_hi": "368",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 44,
-        "question_en": "What is 31 × 13?",
-        "question_hi": "31 × 13 कितना होगा?",
-        "options_en": [
-            "403",
-            "408",
-            "393",
-            "413"
-        ],
-        "options_hi": [
-            "403",
-            "408",
-            "393",
-            "413"
-        ],
-        "answer_en": "403",
-        "answer_hi": "403",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 45,
-        "question_en": "What is 91 × 9?",
-        "question_hi": "91 × 9 कितना होगा?",
-        "options_en": [
-            "809",
-            "824",
-            "819",
-            "829"
-        ],
-        "options_hi": [
-            "809",
-            "824",
-            "819",
-            "829"
-        ],
-        "answer_en": "819",
-        "answer_hi": "819",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 46,
-        "question_en": "What is 39 × 8?",
-        "question_hi": "39 × 8 कितना होगा?",
-        "options_en": [
-            "302",
-            "312",
-            "322",
-            "317"
-        ],
-        "options_hi": [
-            "302",
-            "312",
-            "322",
-            "317"
-        ],
-        "answer_en": "312",
-        "answer_hi": "312",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 47,
-        "question_en": "What is 13 × 10?",
-        "question_hi": "13 × 10 कितना होगा?",
-        "options_en": [
-            "120",
-            "130",
-            "140",
-            "135"
-        ],
-        "options_hi": [
-            "120",
-            "130",
-            "140",
-            "135"
-        ],
-        "answer_en": "130",
-        "answer_hi": "130",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 48,
-        "question_en": "What is 98 × 13?",
-        "question_hi": "98 × 13 कितना होगा?",
-        "options_en": [
-            "1274",
-            "1284",
-            "1264",
-            "1279"
-        ],
-        "options_hi": [
-            "1274",
-            "1284",
-            "1264",
-            "1279"
-        ],
-        "answer_en": "1274",
-        "answer_hi": "1274",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 49,
-        "question_en": "What is 56 × 4?",
-        "question_hi": "56 × 4 कितना होगा?",
-        "options_en": [
-            "229",
-            "214",
-            "224",
-            "234"
-        ],
-        "options_hi": [
-            "229",
-            "214",
-            "224",
-            "234"
-        ],
-        "answer_en": "224",
-        "answer_hi": "224",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 50,
-        "question_en": "What is 70 × 8?",
-        "question_hi": "70 × 8 कितना होगा?",
-        "options_en": [
-            "565",
-            "570",
-            "560",
-            "550"
-        ],
-        "options_hi": [
-            "565",
-            "570",
-            "560",
-            "550"
-        ],
-        "answer_en": "560",
-        "answer_hi": "560",
-        "attempted": false,
-        "selected": ""
-    },
+    "num":1,
+    "question_en": "Which Indian state recently launched 'Mukhyamantri Kisan Kalyan Pradarshini Yojana'?",
+    "question_hi": "किस भारतीय राज्य ने हाल ही में 'मुख्यमंत्री किसान कल्याण प्रदर्शनी योजना' शुरू की?",
+    "options_en": ["Madhya Pradesh", "Uttar Pradesh", "Rajasthan", "Gujarat"],
+    "options_hi": ["मध्य प्रदेश", "उत्तर प्रदेश", "राजस्थान", "गुजरात"],
+    "answer_en": "Madhya Pradesh",
+    "answer_hi": "मध्य प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":2,
+    "question_en": "Who was appointed as the new Chief of the National Disaster Response Force (NDRF) in 2024?",
+    "question_hi": "2024 में राष्ट्रीय आपदा मोचन बल (एनडीआरएफ) के नए प्रमुख के रूप में किसे नियुक्त किया गया?",
+    "options_en": ["Atul Karwal", "S.N. Pradhan", "O.P. Singh", "Not announced yet"],
+    "options_hi": ["अतुल करवाल", "एस.एन. प्रधान", "ओ.पी. सिंह", "अभी घोषित नहीं हुआ"],
+    "answer_en": "Atul Karwal",
+    "answer_hi": "अतुल करवाल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":3,
+    "question_en": "Which country recently changed its name from 'Republic of Congo' to 'Congo Republic'?",
+    "question_hi": "हाल ही में किस देश ने अपना नाम 'कांगो गणराज्य' से 'कांगो रिपब्लिक' बदला?",
+    "options_en": ["Republic of the Congo", "Democratic Republic of the Congo", "Congo-Brazzaville", "No official change"],
+    "options_hi": ["कांगो गणराज्य", "कांगो लोकतांत्रिक गणराज्य", "कांगो-ब्राजाविल", "कोई आधिकारिक परिवर्तन नहीं"],
+    "answer_en": "No official change",
+    "answer_hi": "कोई आधिकारिक परिवर्तन नहीं",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":4,
+    "question_en": "Who won the 2024 Padma Vibhushan award in the field of literature?",
+    "question_hi": "साहित्य के क्षेत्र में 2024 का पद्म विभूषण पुरस्कार किसने जीता?",
+    "options_en": ["Multiple recipients", "Ruskin Bond", "Mahasweta Devi", "Not announced yet"],
+    "options_hi": ["कई प्राप्तकर्ता", "रस्किन बॉन्ड", "महाश्वेता देवी", "अभी घोषित नहीं हुआ"],
+    "answer_en": "Multiple recipients",
+    "answer_hi": "कई प्राप्तकर्ता",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":5,
+    "question_en": "Which Indian city hosted the 'G20 Education Ministers Meeting' in 2023?",
+    "question_hi": "2023 में 'जी20 शिक्षा मंत्रियों की बैठक' की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Pune", "Chennai", "Bangalore", "Hyderabad"],
+    "options_hi": ["पुणे", "चेन्नई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "Pune",
+    "answer_hi": "पुणे",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":6,
+    "question_en": "Who is the current Union Minister of Textiles?",
+    "question_hi": "वर्तमान केंद्रीय वस्त्र मंत्री कौन हैं?",
+    "options_en": ["Piyush Goyal", "Smriti Irani", "Santosh Gangwar", "Kiran Rijiju"],
+    "options_hi": ["पीयूष गोयल", "स्मृति ईरानी", "संतोष गंगवार", "किरण रिजिजू"],
+    "answer_en": "Piyush Goyal",
+    "answer_hi": "पीयूष गोयल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":7,
+    "question_en": "Which country recently launched 'Hera' mission for asteroid defense study?",
+    "question_hi": "हाल ही में क्षुद्रग्रह रक्षा अध्ययन के लिए 'हेरा' मिशन किस देश ने लॉन्च किया?",
+    "options_en": ["European Space Agency", "NASA", "JAXA", "Roscosmos"],
+    "options_hi": ["यूरोपीय अंतरिक्ष एजेंसी", "नासा", "जाक्सा", "रोस्कोसमोस"],
+    "answer_en": "European Space Agency",
+    "answer_hi": "यूरोपीय अंतरिक्ष एजेंसी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":8,
+    "question_en": "Who won the 2024 Nobel Prize in Economics?",
+    "question_hi": "2024 का अर्थशास्त्र का नोबेल पुरस्कार किसने जीता?",
+    "options_en": ["To be announced", "Claudia Goldin", "Ben Bernanke", "Douglas Diamond"],
+    "options_hi": ["घोषित किया जाना है", "क्लाउडिया गोल्डिन", "बेन बर्नान्के", "डगलस डायमंड"],
+    "answer_en": "To be announced",
+    "answer_hi": "घोषित किया जाना है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":9,
+    "question_en": "Which Indian state implemented 'Mukhyamantri Shiksha Sudhar Abhiyan'?",
+    "question_hi": "'मुख्यमंत्री शिक्षा सुधार अभियान' किस भारतीय राज्य ने लागू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "मध्य प्रदेश", "राजस्थान"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":10,
+    "question_en": "Who is the current Prime Minister of Monaco?",
+    "question_hi": "मोनाको के वर्तमान प्रधानमंत्री कौन हैं?",
+    "options_en": ["Pierre Dartout", "Serge Telle", "Michel Roger", "Jean-Paul Proust"],
+    "options_hi": ["पियरे डार्टौट", "सेर्ज टेले", "मिशेल रोजर", "जीन-पॉल प्रूस्ट"],
+    "answer_en": "Pierre Dartout",
+    "answer_hi": "पियरे डार्टौट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":11,
+    "question_en": "Which city will host the 2025 World Boxing Championships?",
+    "question_hi": "2025 विश्व बॉक्सिंग चैंपियनशिप की मेजबानी कौन सा शहर करेगा?",
+    "options_en": ["Tashkent, Uzbekistan", "Belgrade, Serbia", "Not decided yet", "Cancelled"],
+    "options_hi": ["ताशकंद, उज्बेकिस्तान", "बेलग्रेड, सर्बिया", "अभी तय नहीं हुआ", "रद्द"],
+    "answer_en": "Tashkent, Uzbekistan",
+    "answer_hi": "ताशकंद, उज्बेकिस्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":12,
+    "question_en": "Who won the 2024 Arjuna Award for shooting?",
+    "question_hi": "शूटिंग के लिए 2024 का अर्जुन पुरस्कार किसने जीता?",
+    "options_en": ["To be announced", "Abhinav Bindra", "Gagan Narang", "Multiple shooters"],
+    "options_hi": ["घोषित किया जाना है", "अभिनव बिंद्रा", "गगन नारंग", "कई शूटर"],
+    "answer_en": "To be announced",
+    "answer_hi": "घोषित किया जाना है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":13,
+    "question_en": "Which Indian state launched 'Mukhyamantri Yuva Swavalamban Protsahan Yojana'?",
+    "question_hi": "'मुख्यमंत्री युवा स्वावलंबन प्रोत्साहन योजना' किस भारतीय राज्य ने शुरू की?",
+    "options_en": ["Gujarat", "Maharashtra", "Karnataka", "Telangana"],
+    "options_hi": ["गुजरात", "महाराष्ट्र", "कर्नाटक", "तेलंगाना"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":14,
+    "question_en": "Who is the current President of Armenia?",
+    "question_hi": "आर्मेनिया के वर्तमान राष्ट्रपति कौन हैं?",
+    "options_en": ["Vahagn Khachaturyan", "Armen Sarkissian", "Serzh Sargsyan", "Robert Kocharyan"],
+    "options_hi": ["वाहग्न खाचातुर्यान", "आर्मेन सरकिसियन", "सेर्ज सर्ग्सयान", "रॉबर्ट कोचेरियन"],
+    "answer_en": "Vahagn Khachaturyan",
+    "answer_hi": "वाहग्न खाचातुर्यान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":15,
+    "question_en": "Which country recently launched 'Lunar Gateway' international space station project?",
+    "question_hi": "हाल ही में 'लूनर गेटवे' अंतर्राष्ट्रीय अंतरिक्ष स्टेशन परियोजना किस देश ने लॉन्च की?",
+    "options_en": ["NASA (International collaboration)", "China", "Russia", "European Space Agency"],
+    "options_hi": ["नासा (अंतर्राष्ट्रीय सहयोग)", "चीन", "रूस", "यूरोपीय अंतरिक्ष एजेंसी"],
+    "answer_en": "NASA (International collaboration)",
+    "answer_hi": "नासा (अंतर्राष्ट्रीय सहयोग)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":16,
+    "question_en": "Who won the 2024 ICC Women's T20 World Cup?",
+    "question_hi": "2024 आईसीसी महिला टी20 विश्व कप किसने जीता?",
+    "options_en": ["Australia", "England", "India", "South Africa"],
+    "options_hi": ["ऑस्ट्रेलिया", "इंग्लैंड", "भारत", "दक्षिण अफ्रीका"],
+    "answer_en": "Australia",
+    "answer_hi": "ऑस्ट्रेलिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":17,
+    "question_en": "Which Indian city is known as the 'City of Forts'?",
+    "question_hi": "किस भारतीय शहर को 'किलों का शहर' कहा जाता है?",
+    "options_en": ["Jaisalmer", "Jaipur", "Delhi", "Agra"],
+    "options_hi": ["जैसलमेर", "जयपुर", "दिल्ली", "आगरा"],
+    "answer_en": "Jaisalmer",
+    "answer_hi": "जैसलमेर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":18,
+    "question_en": "Who is the current Union Minister of Labour and Employment?",
+    "question_hi": "वर्तमान केंद्रीय श्रम और रोजगार मंत्री कौन हैं?",
+    "options_en": ["Bhupender Yadav", "Santosh Gangwar", "Mallikarjun Kharge", "Bandaru Dattatreya"],
+    "options_hi": ["भूपेंद्र यादव", "संतोष गंगवार", "मल्लिकार्जुन खड़गे", "बंदारू दत्तात्रेय"],
+    "answer_en": "Bhupender Yadav",
+    "answer_hi": "भूपेंद्र यादव",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":19,
+    "question_en": "Which country recently launched 'Shenzhou-18' manned space mission?",
+    "question_hi": "हाल ही में 'शेनझोउ-18' मानव अंतरिक्ष मिशन किस देश ने लॉन्च किया?",
+    "options_en": ["China", "USA", "Russia", "India"],
+    "options_hi": ["चीन", "यूएसए", "रूस", "भारत"],
+    "answer_en": "China",
+    "answer_hi": "चीन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":20,
+    "question_en": "Who won the 2024 French Open Mixed Doubles title?",
+    "question_hi": "2024 फ्रेंच ओपन मिश्रित युगल खिताब किसने जीता?",
+    "options_en": ["Miyu Kato & Tim Puetz", "Ivan Dodig & Latisha Chan", "Jean-Julien Rojer & Demi Schuurs", "Rajeev Ram & Barbora Krejcikova"],
+    "options_hi": ["मियू काटो और टिम पुएत्ज़", "इवान डोडिग और लतीशा चान", "जीन-जूलियन रोजर और डेमी शूर्स", "राजीव राम और बारबोरा क्रेजीकोवा"],
+    "answer_en": "Miyu Kato & Tim Puetz",
+    "answer_hi": "मियू काटो और टिम पुएत्ज़",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":21,
+    "question_en": "Which Indian state launched 'Mukhyamantri Kisan Sahayata Call Center Yojana'?",
+    "question_hi": "'मुख्यमंत्री किसान सहायता कॉल सेंटर योजना' किस भारतीय राज्य ने शुरू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "मध्य प्रदेश", "राजस्थान"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":22,
+    "question_en": "Who is the current Prime Minister of Andorra?",
+    "question_hi": "अंडोरा के वर्तमान प्रधानमंत्री कौन हैं?",
+    "options_en": ["Xavier Espot Zamora", "Antoni Martí", "Albert Pintat", "Marc Forné Molné"],
+    "options_hi": ["ज़ेवियर एस्पोट ज़ामोरा", "एंटोनी मार्टी", "अल्बर्ट पिंटाट", "मार्क फोर्ने मोलने"],
+    "answer_en": "Xavier Espot Zamora",
+    "answer_hi": "ज़ेवियर एस्पोट ज़ामोरा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":23,
+    "question_en": "Which city will host the 2026 Asian Winter Games?",
+    "question_hi": "2026 एशियाई शीतकालीन खेलों की मेजबानी कौन सा शहर करेगा?",
+    "options_en": ["Harbin, China", "Sapporo, Japan", "Almaty, Kazakhstan", "Not decided yet"],
+    "options_hi": ["हार्बिन, चीन", "सप्पोरो, जापान", "अल्माटी, कजाखस्तान", "अभी तय नहीं हुआ"],
+    "answer_en": "Harbin, China",
+    "answer_hi": "हार्बिन, चीन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":24,
+    "question_en": "Who won the 2024 Sahitya Akademi Award for Urdu?",
+    "question_hi": "उर्दू के लिए 2024 का साहित्य अकादमी पुरस्कार किसने जीता?",
+    "options_en": ["To be announced", "Gulzar", "Javed Akhtar", "Shamsur Rahman Faruqi"],
+    "options_hi": ["घोषित किया जाना है", "गुलज़ार", "जावेद अख्तर", "शम्सुर रहमान फारूकी"],
+    "answer_en": "To be announced",
+    "answer_hi": "घोषित किया जाना है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":25,
+    "question_en": "Which Indian state implemented 'Mukhyamantri Jan Kalyan Kendra Yojana'?",
+    "question_hi": "'मुख्यमंत्री जन कल्याण केंद्र योजना' किस भारतीय राज्य ने लागू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Jharkhand", "Chhattisgarh"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "झारखंड", "छत्तीसगढ़"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":26,
+    "question_en": "Who is the current President of Azerbaijan?",
+    "question_hi": "अजरबैजान के वर्तमान राष्ट्रपति कौन हैं?",
+    "options_en": ["Ilham Aliyev", "Heydar Aliyev", "Abulfaz Elchibey", "Ayaz Mutalibov"],
+    "options_hi": ["इल्हाम अलीयेव", "हेयदर अलीयेव", "अबुलफज एलचिबे", "अयाज मुतालिबोव"],
+    "answer_en": "Ilham Aliyev",
+    "answer_hi": "इल्हाम अलीयेव",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":27,
+    "question_en": "Which country recently launched 'Lunar IceCube' mission?",
+    "question_hi": "हाल ही में 'लूनर आइसक्यूब' मिशन किस देश ने लॉन्च किया?",
+    "options_en": ["NASA", "European Space Agency", "India", "China"],
+    "options_hi": ["नासा", "यूरोपीय अंतरिक्ष एजेंसी", "भारत", "चीन"],
+    "answer_en": "NASA",
+    "answer_hi": "नासा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":28,
+    "question_en": "Who won the 2024 US Open Mixed Doubles title?",
+    "question_hi": "2024 यूएस ओपन मिश्रित युगल खिताब किसने जीता?",
+    "options_en": ["Anna Danilina & Harri Heliovaara", "Gabriela Dabrowski & Max Purcell", "Desirae Krawczyk & Neal Skupski", "Storm Sanders & John Peers"],
+    "options_hi": ["अन्ना दानिलिना और हैरी हेलिओवारा", "गैब्रिएला डबरोव्स्की और मैक्स पर्सेल", "डेजिरे क्रॉचिक और नील स्कुप्स्की", "स्टॉर्म सैंडर्स और जॉन पीयर्स"],
+    "answer_en": "Anna Danilina & Harri Heliovaara",
+    "answer_hi": "अन्ना दानिलिना और हैरी हेलिओवारा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":29,
+    "question_en": "Which Indian city is known as the 'City of Philosophers'?",
+    "question_hi": "किस भारतीय शहर को 'दार्शनिकों का शहर' कहा जाता है?",
+    "options_en": ["Varanasi", "Allahabad", "Kolkata", "Delhi"],
+    "options_hi": ["वाराणसी", "इलाहाबाद", "कोलकाता", "दिल्ली"],
+    "answer_en": "Varanasi",
+    "answer_hi": "वाराणसी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":30,
+    "question_en": "Who is the current Union Minister of Communications?",
+    "question_hi": "वर्तमान केंद्रीय संचार मंत्री कौन हैं?",
+    "options_en": ["Ashwini Vaishnaw", "Ravi Shankar Prasad", "Manoj Sinha", "Dayanidhi Maran"],
+    "options_hi": ["अश्विनी वैष्णव", "रविशंकर प्रसाद", "मनोज सिन्हा", "दयानिधि मारन"],
+    "answer_en": "Ashwini Vaishnaw",
+    "answer_hi": "अश्विनी वैष्णव",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":31,
+    "question_en": "Which country recently launched 'EOS-06' Earth observation satellite?",
+    "question_hi": "हाल ही में 'ईओएस-06' पृथ्वी अवलोकन उपग्रह किस देश ने लॉन्च किया?",
+    "options_en": ["India", "USA", "European Union", "China"],
+    "options_hi": ["भारत", "यूएसए", "यूरोपीय संघ", "चीन"],
+    "answer_en": "India",
+    "answer_hi": "भारत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":32,
+    "question_en": "Who won the 2024 Australian Open Women's Doubles title?",
+    "question_hi": "2024 ऑस्ट्रेलियन ओपन महिला युगल खिताब किसने जीता?",
+    "options_en": ["Hsieh Su-wei & Elise Mertens", "Barbora Krejcikova & Katerina Siniakova", "Coco Gauff & Jessica Pegula", "Gabriela Dabrowski & Erin Routliffe"],
+    "options_hi": ["ह्सिएह सु-वेई और एलिस मर्टेंस", "बारबोरा क्रेजीकोवा और कैटरीना सिनियाकोवा", "कोको गॉफ और जेसिका पेगुला", "गैब्रिएला डबरोव्स्की और एरिन राउटलिफ"],
+    "answer_en": "Hsieh Su-wei & Elise Mertens",
+    "answer_hi": "ह्सिएह सु-वेई और एलिस मर्टेंस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":33,
+    "question_en": "Which Indian state launched 'Mukhyamantri Kisan Kalyan Pustakalaya Yojana'?",
+    "question_hi": "'मुख्यमंत्री किसान कल्याण पुस्तकालय योजना' किस भारतीय राज्य ने शुरू की?",
+    "options_en": ["Madhya Pradesh", "Uttar Pradesh", "Rajasthan", "Haryana"],
+    "options_hi": ["मध्य प्रदेश", "उत्तर प्रदेश", "राजस्थान", "हरियाणा"],
+    "answer_en": "Madhya Pradesh",
+    "answer_hi": "मध्य प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":34,
+    "question_en": "Who is the current Prime Minister of Liechtenstein?",
+    "question_hi": "लिक्टेंश्टाइन के वर्तमान प्रधानमंत्री कौन हैं?",
+    "options_en": ["Daniel Risch", "Adrian Hasler", "Klaus Tschütscher", "Otmar Hasler"],
+    "options_hi": ["डैनियल रिश", "एड्रियन हासलर", "क्लाउस ट्शुत्शर", "ओटमर हासलर"],
+    "answer_en": "Daniel Risch",
+    "answer_hi": "डैनियल रिश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":35,
+    "question_en": "Which city will host the 2027 World Swimming Championships?",
+    "question_hi": "2027 विश्व तैराकी चैंपियनशिप की मेजबानी कौन सा शहर करेगा?",
+    "options_en": ["Budapest, Hungary", "Fukuoka, Japan", "Doha, Qatar", "Not decided yet"],
+    "options_hi": ["बुडापेस्ट, हंगरी", "फुकुओका, जापान", "दोहा, कतर", "अभी तय नहीं हुआ"],
+    "answer_en": "Budapest, Hungary",
+    "answer_hi": "बुडापेस्ट, हंगरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":36,
+    "question_en": "Who won the 2024 Jnanpith Award for Tamil literature?",
+    "question_hi": "तमिल साहित्य के लिए 2024 का ज्ञानपीठ पुरस्कार किसने जीता?",
+    "options_en": ["To be announced", "Jayakanthan", "Sivasankari", "Kalki Krishnamurthy"],
+    "options_hi": ["घोषित किया जाना है", "जयकांतन", "शिवसांकरी", "कल्कि कृष्णमूर्ति"],
+    "answer_en": "To be announced",
+    "answer_hi": "घोषित किया जाना है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":37,
+    "question_en": "Which Indian state implemented 'Mukhyamantri Kisan Suraksha Prakoshth Yojana'?",
+    "question_hi": "'मुख्यमंत्री किसान सुरक्षा प्रकोष्ठ योजना' किस भारतीय राज्य ने लागू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "मध्य प्रदेश", "राजस्थान"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":38,
+    "question_en": "Who is the current President of Belarus?",
+    "question_hi": "बेलारूस के वर्तमान राष्ट्रपति कौन हैं?",
+    "options_en": ["Alexander Lukashenko", "Stanislav Shushkevich", "Vyacheslav Kebich", "No change since 1994"],
+    "options_hi": ["अलेक्जेंडर लुकाशेंको", "स्तानिस्लाव शुश्केविच", "व्याचेस्लाव केबिच", "1994 से कोई बदलाव नहीं"],
+    "answer_en": "Alexander Lukashenko",
+    "answer_hi": "अलेक्जेंडर लुकाशेंको",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":39,
+    "question_en": "Which country recently launched 'BepiColombo' second Mercury mission?",
+    "question_hi": "हाल ही में 'बेपीकोलंबो' दूसरा बुध मिशन किस देश ने लॉन्च किया?",
+    "options_en": ["ESA-JAXA Collaboration", "NASA", "Roscosmos", "CNSA"],
+    "options_hi": ["ईएसए-जाक्सा सहयोग", "नासा", "रोस्कोसमोस", "सीएनएसए"],
+    "answer_en": "ESA-JAXA Collaboration",
+    "answer_hi": "ईएसए-जाक्सा सहयोग",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":40,
+    "question_en": "Who won the 2024 French Open Men's Doubles title?",
+    "question_hi": "2024 फ्रेंच ओपन पुरुष युगल खिताब किसने जीता?",
+    "options_en": ["Marcelo Arevalo & Jean-Julien Rojer", "Rajeev Ram & Joe Salisbury", "Wesley Koolhof & Neal Skupski", "Ivan Dodig & Austin Krajicek"],
+    "options_hi": ["मार्सेलो अरेवालो और जीन-जूलियन रोजर", "राजीव राम और जो सैलिसबरी", "वेस्ले कोलहोफ और नील स्कुप्स्की", "इवान डोडिग और ऑस्टिन क्रैजिसेक"],
+    "answer_en": "Marcelo Arevalo & Jean-Julien Rojer",
+    "answer_hi": "मार्सेलो अरेवालो और जीन-जूलियन रोजर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":41,
+    "question_en": "Which Indian city is known as the 'City of Music'?",
+    "question_hi": "किस भारतीय शहर को 'संगीत का शहर' कहा जाता है?",
+    "options_en": ["Mumbai", "Chennai", "Kolkata", "Hyderabad"],
+    "options_hi": ["मुंबई", "चेन्नई", "कोलकाता", "हैदराबाद"],
+    "answer_en": "Chennai",
+    "answer_hi": "चेन्नई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":42,
+    "question_en": "Who is the current Union Minister of Electronics and Information Technology?",
+    "question_hi": "वर्तमान केंद्रीय इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्री कौन हैं?",
+    "options_en": ["Ashwini Vaishnaw", "Ravi Shankar Prasad", "Kiran Rijiju", "Rajeev Chandrasekhar"],
+    "options_hi": ["अश्विनी वैष्णव", "रविशंकर प्रसाद", "किरण रिजिजू", "राजीव चंद्रशेखर"],
+    "answer_en": "Ashwini Vaishnaw",
+    "answer_hi": "अश्विनी वैष्णव",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":43,
+    "question_en": "Which country recently launched 'Cartosat-3' high-resolution imaging satellite?",
+    "question_hi": "हाल ही में 'कार्टोसैट-3' उच्च रिज़ॉल्यूशन इमेजिंग उपग्रह किस देश ने लॉन्च किया?",
+    "options_en": ["India", "USA", "Israel", "Japan"],
+    "options_hi": ["भारत", "यूएसए", "इज़राइल", "जापान"],
+    "answer_en": "India",
+    "answer_hi": "भारत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":44,
+    "question_en": "Who won the 2024 Wimbledon Men's Doubles title?",
+    "question_hi": "2024 विंबलडन पुरुष युगल खिताब किसने जीता?",
+    "options_en": ["Wesley Koolhof & Neal Skupski", "Rajeev Ram & Joe Salisbury", "Mate Pavic & Nikola Mektic", "Marcelo Arevalo & Jean-Julien Rojer"],
+    "options_hi": ["वेस्ले कोलहोफ और नील स्कुप्स्की", "राजीव राम और जो सैलिसबरी", "माटे पाविक और निकोला मेक्टिक", "मार्सेलो अरेवालो और जीन-जूलियन रोजर"],
+    "answer_en": "Wesley Koolhof & Neal Skupski",
+    "answer_hi": "वेस्ले कोलहोफ और नील स्कुप्स्की",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":45,
+    "question_en": "Which Indian state launched 'Mukhyamantri Kisan Kalyan Sanrakshan Yojana'?",
+    "question_hi": "'मुख्यमंत्री किसान कल्याण संरक्षण योजना' किस भारतीय राज्य ने शुरू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "मध्य प्रदेश", "राजस्थान"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":46,
+    "question_en": "Who is the current Prime Minister of San Marino?",
+    "question_hi": "सैन मैरिनो के वर्तमान प्रधानमंत्री कौन हैं?",
+    "options_en": ["Alessandro Scarano & Adele Tonnini", "Francesco Mussoni & Giacomo Simoncini", "Luigi Lonfernini & Antonella Mularoni", "Paolo Rondelli & Oscar Mina"],
+    "options_hi": ["एलेस्सांद्रो स्कारानो और एडेले टोनिनी", "फ्रांसेस्को मुसोनी और जैकोमो सिमोनसिनी", "लुइगी लोंफर्निनी और एंटोनेला मुलरोनी", "पाओलो रोंडेली और ऑस्कर मीना"],
+    "answer_en": "Alessandro Scarano & Adele Tonnini",
+    "answer_hi": "एलेस्सांद्रो स्कारानो और एडेले टोनिनी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":47,
+    "question_en": "Which city will host the 2028 Summer Youth Olympics?",
+    "question_hi": "2028 ग्रीष्मकालीन युवा ओलंपिक की मेजबानी कौन सा शहर करेगा?",
+    "options_en": ["Dakar, Senegal", "Buenos Aires, Argentina", "Not confirmed yet", "Postponed"],
+    "options_hi": ["डकार, सेनेगल", "ब्यूनस आयर्स, अर्जेंटीना", "अभी पुष्टि नहीं हुई", "स्थगित"],
+    "answer_en": "Dakar, Senegal",
+    "answer_hi": "डकार, सेनेगल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":48,
+    "question_en": "Who won the 2024 National Film Award for Best Lyrics?",
+    "question_hi": "सर्वश्रेष्ठ गीत के लिए 2024 का राष्ट्रीय फिल्म पुरस्कार किसने जीता?",
+    "options_en": ["To be announced", "Gulzar", "Javed Akhtar", "Prasoon Joshi"],
+    "options_hi": ["घोषित किया जाना है", "गुलज़ार", "जावेद अख्तर", "प्रसून जोशी"],
+    "answer_en": "To be announced",
+    "answer_hi": "घोषित किया जाना है",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":49,
+    "question_en": "Which Indian state implemented 'Mukhyamantri Kisan Kalyan Prashasan Yojana'?",
+    "question_hi": "'मुख्यमंत्री किसान कल्याण प्रशासन योजना' किस भारतीय राज्य ने लागू की?",
+    "options_en": ["Uttar Pradesh", "Bihar", "Madhya Pradesh", "Rajasthan"],
+    "options_hi": ["उत्तर प्रदेश", "बिहार", "मध्य प्रदेश", "राजस्थान"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":50,
+    "question_en": "Who is the current President of Uzbekistan?",
+    "question_hi": "उज़्बेकिस्तान के वर्तमान राष्ट्रपति कौन हैं?",
+    "options_en": ["Shavkat Mirziyoyev", "Islam Karimov", "Abdulla Aripov", "Sadyr Japarov"],
+    "options_hi": ["शवकत मिर्ज़ियोयेव", "इस्लाम करीमोव", "अब्दुल्ला अरिपोव", "सादिर जापारोव"],
+    "answer_en": "Shavkat Mirziyoyev",
+    "answer_hi": "शवकत मिर्ज़ियोयेव",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 
 

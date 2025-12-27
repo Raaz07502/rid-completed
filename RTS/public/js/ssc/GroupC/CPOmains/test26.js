@@ -328,6 +328,226 @@ const questions = [
     answer_hi: "चांदी",
     attempted: false,
     selected: ""
+  },
+    {
+    "num":31,
+    "question_en": "Which Indian state is known as the Land of Rising Sun?",
+    "question_hi": "'उगते सूर्य की भूमि' किस राज्य को कहा जाता है?",
+    "options_en": ["Assam", "Arunachal Pradesh", "Sikkim", "Nagaland"],
+    "options_hi": ["असम", "अरुणाचल प्रदेश", "सिक्किम", "नागालैंड"],
+    "answer_en": "Arunachal Pradesh",
+    "answer_hi": "अरुणाचल प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":32,
+    "question_en": "Which metal is liquid at room temperature?",
+    "question_hi": "कौन सी धातु सामान्य ताप पर द्रव होती है?",
+    "options_en": ["Mercury", "Lead", "Zinc", "Tin"],
+    "options_hi": ["पारा", "सीसा", "जस्ता", "टिन"],
+    "answer_en": "Mercury",
+    "answer_hi": "पारा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":33,
+    "question_en": "Which Indian city is known as the Pink City?",
+    "question_hi": "'पिंक सिटी' किसे कहा जाता है?",
+    "options_en": ["Jaipur", "Jodhpur", "Udaipur", "Ajmer"],
+    "options_hi": ["जयपुर", "जोधपुर", "उदयपुर", "अजमेर"],
+    "answer_en": "Jaipur",
+    "answer_hi": "जयपुर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":34,
+    "question_en": "Which planet is closest to the Sun?",
+    "question_hi": "सूर्य के सबसे निकट कौन सा ग्रह है?",
+    "options_en": ["Venus", "Earth", "Mercury", "Mars"],
+    "options_hi": ["शुक्र", "पृथ्वी", "बुध", "मंगल"],
+    "answer_en": "Mercury",
+    "answer_hi": "बुध",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":35,
+    "question_en": "Which Indian river is the longest in India?",
+    "question_hi": "भारत की सबसे लंबी नदी कौन सी है?",
+    "options_en": ["Ganga", "Yamuna", "Godavari", "Brahmaputra"],
+    "options_hi": ["गंगा", "यमुना", "गोदावरी", "ब्रह्मपुत्र"],
+    "answer_en": "Ganga",
+    "answer_hi": "गंगा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":36,
+    "question_en": "Which vitamin helps in wound healing?",
+    "question_hi": "घाव भरने में कौन सा विटामिन सहायक है?",
+    "options_en": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    "options_hi": ["विटामिन A", "विटामिन C", "विटामिन D", "विटामिन K"],
+    "answer_en": "Vitamin C",
+    "answer_hi": "विटामिन C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":37,
+    "question_en": "Which Indian city is known as the City of Joy?",
+    "question_hi": "'सिटी ऑफ जॉय' किसे कहा जाता है?",
+    "options_en": ["Mumbai", "Kolkata", "Chennai", "Delhi"],
+    "options_hi": ["मुंबई", "कोलकाता", "चेन्नई", "दिल्ली"],
+    "answer_en": "Kolkata",
+    "answer_hi": "कोलकाता",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":38,
+    "question_en": "Which gas is released during respiration?",
+    "question_hi": "श्वसन के दौरान कौन सी गैस निकलती है?",
+    "options_en": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    "options_hi": ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"],
+    "answer_en": "Carbon Dioxide",
+    "answer_hi": "कार्बन डाइऑक्साइड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":39,
+    "question_en": "Which Indian state is the largest producer of wheat?",
+    "question_hi": "गेहूं का सबसे बड़ा उत्पादक राज्य कौन सा है?",
+    "options_en": ["Punjab", "Haryana", "Uttar Pradesh", "Madhya Pradesh"],
+    "options_hi": ["पंजाब", "हरियाणा", "उत्तर प्रदेश", "मध्य प्रदेश"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":40,
+    "question_en": "Which organ helps in breathing?",
+    "question_hi": "श्वसन में सहायक अंग कौन सा है?",
+    "options_en": ["Heart", "Lungs", "Kidney", "Liver"],
+    "options_hi": ["हृदय", "फेफड़े", "गुर्दा", "यकृत"],
+    "answer_en": "Lungs",
+    "answer_hi": "फेफड़े",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":41,
+    "question_en": "Which Indian state is known as the Land of Five Rivers?",
+    "question_hi": "'पांच नदियों की भूमि' किस राज्य को कहा जाता है?",
+    "options_en": ["Punjab", "Haryana", "Rajasthan", "Uttarakhand"],
+    "options_hi": ["पंजाब", "हरियाणा", "राजस्थान", "उत्तराखंड"],
+    "answer_en": "Punjab",
+    "answer_hi": "पंजाब",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":42,
+    "question_en": "Which metal is used for electrical wiring?",
+    "question_hi": "विद्युत तारों में कौन सी धातु प्रयोग होती है?",
+    "options_en": ["Iron", "Aluminium", "Copper", "Silver"],
+    "options_hi": ["लोहा", "एल्युमिनियम", "तांबा", "चांदी"],
+    "answer_en": "Copper",
+    "answer_hi": "तांबा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":43,
+    "question_en": "Which Indian city is known as the Blue City?",
+    "question_hi": "'ब्लू सिटी' किसे कहा जाता है?",
+    "options_en": ["Jodhpur", "Jaipur", "Udaipur", "Bikaner"],
+    "options_hi": ["जोधपुर", "जयपुर", "उदयपुर", "बीकानेर"],
+    "answer_en": "Jodhpur",
+    "answer_hi": "जोधपुर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":44,
+    "question_en": "Which planet is known as the Red Planet?",
+    "question_hi": "'लाल ग्रह' किसे कहा जाता है?",
+    "options_en": ["Mars", "Jupiter", "Venus", "Saturn"],
+    "options_hi": ["मंगल", "बृहस्पति", "शुक्र", "शनि"],
+    "answer_en": "Mars",
+    "answer_hi": "मंगल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":45,
+    "question_en": "Which Indian river flows through Varanasi?",
+    "question_hi": "वाराणसी से होकर कौन सी नदी बहती है?",
+    "options_en": ["Yamuna", "Ganga", "Son", "Ghaghara"],
+    "options_hi": ["यमुना", "गंगा", "सोन", "घाघरा"],
+    "answer_en": "Ganga",
+    "answer_hi": "गंगा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":46,
+    "question_en": "Which vitamin is essential for blood clotting?",
+    "question_hi": "रक्त के थक्के जमने के लिए कौन सा विटामिन आवश्यक है?",
+    "options_en": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    "options_hi": ["विटामिन A", "विटामिन C", "विटामिन D", "विटामिन K"],
+    "answer_en": "Vitamin K",
+    "answer_hi": "विटामिन K",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":47,
+    "question_en": "Which Indian city is known as the Manchester of India?",
+    "question_hi": "'भारत का मैनचेस्टर' किसे कहा जाता है?",
+    "options_en": ["Surat", "Ahmedabad", "Kanpur", "Coimbatore"],
+    "options_hi": ["सूरत", "अहमदाबाद", "कानपुर", "कोयंबटूर"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":48,
+    "question_en": "Which gas is filled in balloons?",
+    "question_hi": "गुब्बारों में कौन सी गैस भरी जाती है?",
+    "options_en": ["Hydrogen", "Oxygen", "Helium", "Nitrogen"],
+    "options_hi": ["हाइड्रोजन", "ऑक्सीजन", "हीलियम", "नाइट्रोजन"],
+    "answer_en": "Helium",
+    "answer_hi": "हीलियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":49,
+    "question_en": "Which Indian state is the largest producer of milk?",
+    "question_hi": "दूध का सबसे बड़ा उत्पादक राज्य कौन सा है?",
+    "options_en": ["Rajasthan", "Punjab", "Uttar Pradesh", "Haryana"],
+    "options_hi": ["राजस्थान", "पंजाब", "उत्तर प्रदेश", "हरियाणा"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":50,
+    "question_en": "Which organ stores bile?",
+    "question_hi": "पित्त का संग्रह कौन सा अंग करता है?",
+    "options_en": ["Liver", "Gall Bladder", "Pancreas", "Stomach"],
+    "options_hi": ["यकृत", "पित्ताशय", "अग्न्याशय", "आमाशय"],
+    "answer_en": "Gall Bladder",
+    "answer_hi": "पित्ताशय",
+    "attempted": false,
+    "selected": ""
   }
 ];
 

@@ -1,1054 +1,554 @@
 const questions = [
   {
-       "num": 1,
-        "question_en": "What is the integer division 5 ÷ 20?",
-        "question_hi": "5 ÷ 20 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is 32 × 84?",
-        "question_hi": "32 × 84 कितना होता है?",
-        "options_en": [
-            "2691",
-            "2688",
-            "2689",
-            "2687"
-        ],
-        "options_hi": [
-            "2691",
-            "2688",
-            "2689",
-            "2687"
-        ],
-        "answer_en": "2688",
-        "answer_hi": "2688",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is the integer division 79 ÷ 21?",
-        "question_hi": "79 ÷ 21 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "6",
-            "4",
-            "2"
-        ],
-        "options_hi": [
-            "3",
-            "6",
-            "4",
-            "2"
-        ],
-        "answer_en": "3",
-        "answer_hi": "3",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 99 - 11?",
-        "question_hi": "99 - 11 कितना होता है?",
-        "options_en": [
-            "88",
-            "91",
-            "89",
-            "87"
-        ],
-        "options_hi": [
-            "88",
-            "91",
-            "89",
-            "87"
-        ],
-        "answer_en": "88",
-        "answer_hi": "88",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is 85 - 37?",
-        "question_hi": "85 - 37 कितना होता है?",
-        "options_en": [
-            "49",
-            "47",
-            "51",
-            "48"
-        ],
-        "options_hi": [
-            "49",
-            "47",
-            "51",
-            "48"
-        ],
-        "answer_en": "48",
-        "answer_hi": "48",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is the integer division 65 ÷ 68?",
-        "question_hi": "65 ÷ 68 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "2",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "3",
-            "2",
-            "1",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is 92 - 59?",
-        "question_hi": "92 - 59 कितना होता है?",
-        "options_en": [
-            "33",
-            "34",
-            "36",
-            "32"
-        ],
-        "options_hi": [
-            "33",
-            "34",
-            "36",
-            "32"
-        ],
-        "answer_en": "33",
-        "answer_hi": "33",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 27 - 17?",
-        "question_hi": "27 - 17 कितना होता है?",
-        "options_en": [
-            "9",
-            "13",
-            "11",
-            "10"
-        ],
-        "options_hi": [
-            "9",
-            "13",
-            "11",
-            "10"
-        ],
-        "answer_en": "10",
-        "answer_hi": "10",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is 93 + 58?",
-        "question_hi": "93 + 58 कितना होता है?",
-        "options_en": [
-            "151",
-            "152",
-            "154",
-            "150"
-        ],
-        "options_hi": [
-            "151",
-            "152",
-            "154",
-            "150"
-        ],
-        "answer_en": "151",
-        "answer_hi": "151",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 92 × 10?",
-        "question_hi": "92 × 10 कितना होता है?",
-        "options_en": [
-            "921",
-            "923",
-            "920",
-            "919"
-        ],
-        "options_hi": [
-            "921",
-            "923",
-            "920",
-            "919"
-        ],
-        "answer_en": "920",
-        "answer_hi": "920",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 48 - 67?",
-        "question_hi": "48 - 67 कितना होता है?",
-        "options_en": [
-            "-18",
-            "-17",
-            "-16",
-            "-19"
-        ],
-        "options_hi": [
-            "-18",
-            "-17",
-            "-16",
-            "-19"
-        ],
-        "answer_en": "-19",
-        "answer_hi": "-19",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is 32 + 65?",
-        "question_hi": "32 + 65 कितना होता है?",
-        "options_en": [
-            "97",
-            "98",
-            "100",
-            "96"
-        ],
-        "options_hi": [
-            "97",
-            "98",
-            "100",
-            "96"
-        ],
-        "answer_en": "97",
-        "answer_hi": "97",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is 61 - 72?",
-        "question_hi": "61 - 72 कितना होता है?",
-        "options_en": [
-            "-9",
-            "-10",
-            "-8",
-            "-11"
-        ],
-        "options_hi": [
-            "-9",
-            "-10",
-            "-8",
-            "-11"
-        ],
-        "answer_en": "-11",
-        "answer_hi": "-11",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is the integer division 52 ÷ 93?",
-        "question_hi": "52 ÷ 93 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is 18 + 42?",
-        "question_hi": "18 + 42 कितना होता है?",
-        "options_en": [
-            "60",
-            "59",
-            "61",
-            "63"
-        ],
-        "options_hi": [
-            "60",
-            "59",
-            "61",
-            "63"
-        ],
-        "answer_en": "60",
-        "answer_hi": "60",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 18 - 72?",
-        "question_hi": "18 - 72 कितना होता है?",
-        "options_en": [
-            "-52",
-            "-54",
-            "-51",
-            "-53"
-        ],
-        "options_hi": [
-            "-52",
-            "-54",
-            "-51",
-            "-53"
-        ],
-        "answer_en": "-54",
-        "answer_hi": "-54",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is 17 - 68?",
-        "question_hi": "17 - 68 कितना होता है?",
-        "options_en": [
-            "-50",
-            "-48",
-            "-51",
-            "-49"
-        ],
-        "options_hi": [
-            "-50",
-            "-48",
-            "-51",
-            "-49"
-        ],
-        "answer_en": "-51",
-        "answer_hi": "-51",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 43 - 92?",
-        "question_hi": "43 - 92 कितना होता है?",
-        "options_en": [
-            "-49",
-            "-48",
-            "-46",
-            "-47"
-        ],
-        "options_hi": [
-            "-49",
-            "-48",
-            "-46",
-            "-47"
-        ],
-        "answer_en": "-49",
-        "answer_hi": "-49",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is 12 - 34?",
-        "question_hi": "12 - 34 कितना होता है?",
-        "options_en": [
-            "-19",
-            "-21",
-            "-22",
-            "-20"
-        ],
-        "options_hi": [
-            "-19",
-            "-21",
-            "-22",
-            "-20"
-        ],
-        "answer_en": "-22",
-        "answer_hi": "-22",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is 80 + 70?",
-        "question_hi": "80 + 70 कितना होता है?",
-        "options_en": [
-            "153",
-            "150",
-            "149",
-            "151"
-        ],
-        "options_hi": [
-            "153",
-            "150",
-            "149",
-            "151"
-        ],
-        "answer_en": "150",
-        "answer_hi": "150",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 23 × 86?",
-        "question_hi": "23 × 86 कितना होता है?",
-        "options_en": [
-            "1979",
-            "1977",
-            "1981",
-            "1978"
-        ],
-        "options_hi": [
-            "1979",
-            "1977",
-            "1981",
-            "1978"
-        ],
-        "answer_en": "1978",
-        "answer_hi": "1978",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 7 × 84?",
-        "question_hi": "7 × 84 कितना होता है?",
-        "options_en": [
-            "588",
-            "591",
-            "587",
-            "589"
-        ],
-        "options_hi": [
-            "588",
-            "591",
-            "587",
-            "589"
-        ],
-        "answer_en": "588",
-        "answer_hi": "588",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is 81 + 83?",
-        "question_hi": "81 + 83 कितना होता है?",
-        "options_en": [
-            "164",
-            "165",
-            "163",
-            "167"
-        ],
-        "options_hi": [
-            "164",
-            "165",
-            "163",
-            "167"
-        ],
-        "answer_en": "164",
-        "answer_hi": "164",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is the integer division 84 ÷ 40?",
-        "question_hi": "84 ÷ 40 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "5",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "5",
-            "1",
-            "3"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 40 + 60?",
-        "question_hi": "40 + 60 कितना होता है?",
-        "options_en": [
-            "99",
-            "101",
-            "103",
-            "100"
-        ],
-        "options_hi": [
-            "99",
-            "101",
-            "103",
-            "100"
-        ],
-        "answer_en": "100",
-        "answer_hi": "100",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is the integer division 55 ÷ 63?",
-        "question_hi": "55 ÷ 63 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 42 × 93?",
-        "question_hi": "42 × 93 कितना होता है?",
-        "options_en": [
-            "3909",
-            "3906",
-            "3907",
-            "3905"
-        ],
-        "options_hi": [
-            "3909",
-            "3906",
-            "3907",
-            "3905"
-        ],
-        "answer_en": "3906",
-        "answer_hi": "3906",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 99 + 49?",
-        "question_hi": "99 + 49 कितना होता है?",
-        "options_en": [
-            "151",
-            "149",
-            "148",
-            "147"
-        ],
-        "options_hi": [
-            "151",
-            "149",
-            "148",
-            "147"
-        ],
-        "answer_en": "148",
-        "answer_hi": "148",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is the integer division 17 ÷ 36?",
-        "question_hi": "17 ÷ 36 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "2",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "3",
-            "2",
-            "0",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is the integer division 8 ÷ 39?",
-        "question_hi": "8 ÷ 39 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "0",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "0",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 43 × 75?",
-        "question_hi": "43 × 75 कितना होता है?",
-        "options_en": [
-            "3224",
-            "3228",
-            "3225",
-            "3226"
-        ],
-        "options_hi": [
-            "3224",
-            "3228",
-            "3225",
-            "3226"
-        ],
-        "answer_en": "3225",
-        "answer_hi": "3225",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is the integer division 67 ÷ 61?",
-        "question_hi": "67 ÷ 61 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "1",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "4",
-            "1",
-            "2",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is the integer division 13 ÷ 52?",
-        "question_hi": "13 ÷ 52 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "3",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "3",
-            "0",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 8 × 8?",
-        "question_hi": "8 × 8 कितना होता है?",
-        "options_en": [
-            "64",
-            "65",
-            "63",
-            "67"
-        ],
-        "options_hi": [
-            "64",
-            "65",
-            "63",
-            "67"
-        ],
-        "answer_en": "64",
-        "answer_hi": "64",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 38 + 70?",
-        "question_hi": "38 + 70 कितना होता है?",
-        "options_en": [
-            "107",
-            "111",
-            "109",
-            "108"
-        ],
-        "options_hi": [
-            "107",
-            "111",
-            "109",
-            "108"
-        ],
-        "answer_en": "108",
-        "answer_hi": "108",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 35 × 95?",
-        "question_hi": "35 × 95 कितना होता है?",
-        "options_en": [
-            "3324",
-            "3325",
-            "3326",
-            "3328"
-        ],
-        "options_hi": [
-            "3324",
-            "3325",
-            "3326",
-            "3328"
-        ],
-        "answer_en": "3325",
-        "answer_hi": "3325",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 53 - 8?",
-        "question_hi": "53 - 8 कितना होता है?",
-        "options_en": [
-            "45",
-            "46",
-            "48",
-            "44"
-        ],
-        "options_hi": [
-            "45",
-            "46",
-            "48",
-            "44"
-        ],
-        "answer_en": "45",
-        "answer_hi": "45",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is the integer division 11 ÷ 51?",
-        "question_hi": "11 ÷ 51 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "What is the integer division 18 ÷ 14?",
-        "question_hi": "18 ÷ 14 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 40,
-        "question_en": "What is 98 - 20?",
-        "question_hi": "98 - 20 कितना होता है?",
-        "options_en": [
-            "79",
-            "78",
-            "77",
-            "81"
-        ],
-        "options_hi": [
-            "79",
-            "78",
-            "77",
-            "81"
-        ],
-        "answer_en": "78",
-        "answer_hi": "78",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 41,
-        "question_en": "What is 7 - 6?",
-        "question_hi": "7 - 6 कितना होता है?",
-        "options_en": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 42,
-        "question_en": "What is 21 - 79?",
-        "question_hi": "21 - 79 कितना होता है?",
-        "options_en": [
-            "-58",
-            "-57",
-            "-55",
-            "-56"
-        ],
-        "options_hi": [
-            "-58",
-            "-57",
-            "-55",
-            "-56"
-        ],
-        "answer_en": "-58",
-        "answer_hi": "-58",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 43,
-        "question_en": "What is 22 × 52?",
-        "question_hi": "22 × 52 कितना होता है?",
-        "options_en": [
-            "1144",
-            "1145",
-            "1147",
-            "1143"
-        ],
-        "options_hi": [
-            "1144",
-            "1145",
-            "1147",
-            "1143"
-        ],
-        "answer_en": "1144",
-        "answer_hi": "1144",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 44,
-        "question_en": "What is 92 × 74?",
-        "question_hi": "92 × 74 कितना होता है?",
-        "options_en": [
-            "6807",
-            "6809",
-            "6808",
-            "6811"
-        ],
-        "options_hi": [
-            "6807",
-            "6809",
-            "6808",
-            "6811"
-        ],
-        "answer_en": "6808",
-        "answer_hi": "6808",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 45,
-        "question_en": "What is 44 + 88?",
-        "question_hi": "44 + 88 कितना होता है?",
-        "options_en": [
-            "132",
-            "133",
-            "131",
-            "135"
-        ],
-        "options_hi": [
-            "132",
-            "133",
-            "131",
-            "135"
-        ],
-        "answer_en": "132",
-        "answer_hi": "132",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 46,
-        "question_en": "What is 94 + 90?",
-        "question_hi": "94 + 90 कितना होता है?",
-        "options_en": [
-            "183",
-            "184",
-            "185",
-            "187"
-        ],
-        "options_hi": [
-            "183",
-            "184",
-            "185",
-            "187"
-        ],
-        "answer_en": "184",
-        "answer_hi": "184",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 47,
-        "question_en": "What is the integer division 94 ÷ 8?",
-        "question_hi": "94 ÷ 8 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "11",
-            "14",
-            "10",
-            "12"
-        ],
-        "options_hi": [
-            "11",
-            "14",
-            "10",
-            "12"
-        ],
-        "answer_en": "11",
-        "answer_hi": "11",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 48,
-        "question_en": "What is 20 - 89?",
-        "question_hi": "20 - 89 कितना होता है?",
-        "options_en": [
-            "-68",
-            "-66",
-            "-67",
-            "-69"
-        ],
-        "options_hi": [
-            "-68",
-            "-66",
-            "-67",
-            "-69"
-        ],
-        "answer_en": "-69",
-        "answer_hi": "-69",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 49,
-        "question_en": "What is the integer division 26 ÷ 4?",
-        "question_hi": "26 ÷ 4 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "9",
-            "6",
-            "7",
-            "5"
-        ],
-        "options_hi": [
-            "9",
-            "6",
-            "7",
-            "5"
-        ],
-        "answer_en": "6",
-        "answer_hi": "6",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 50,
-        "question_en": "What is 54 - 90?",
-        "question_hi": "54 - 90 कितना होता है?",
-        "options_en": [
-            "-36",
-            "-35",
-            "-34",
-            "-33"
-        ],
-        "options_hi": [
-            "-36",
-            "-35",
-            "-34",
-            "-33"
-        ],
-        "answer_en": "-36",
-        "answer_hi": "-36",
-        "attempted": false,
-        "selected": ""
-    }
+    "num": 1,
+    "question_en": "Who was the first Mughal emperor of India?",
+    "question_hi": "भारत का पहला मुगल सम्राट कौन था?",
+    "options_en": ["Babur", "Akbar", "Humayun", "Sher Shah Suri"],
+    "options_hi": ["बाबर", "अकबर", "हुमायूँ", "शेरशाह सूरी"],
+    "answer_en": "Babur",
+    "answer_hi": "बाबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "The First Battle of Panipat was fought in which year?",
+    "question_hi": "पानीपत की पहली लड़ाई किस वर्ष लड़ी गई थी?",
+    "options_en": ["1526", "1556", "1761", "1857"],
+    "options_hi": ["1526", "1556", "1761", "1857"],
+    "answer_en": "1526",
+    "answer_hi": "1526",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "Who founded the Maurya Empire?",
+    "question_hi": "मौर्य साम्राज्य की स्थापना किसने की?",
+    "options_en": ["Chandragupta Maurya", "Ashoka", "Bindusara", "Chanakya"],
+    "options_hi": ["चंद्रगुप्त मौर्य", "अशोक", "बिंदुसार", "चाणक्य"],
+    "answer_en": "Chandragupta Maurya",
+    "answer_hi": "चंद्रगुप्त मौर्य",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "The Indus Valley Civilization is also known as:",
+    "question_hi": "सिंधु घाटी सभ्यता को किस नाम से भी जाना जाता है?",
+    "options_en": ["Vedic Civilization", "Harappan Civilization", "Aryan Civilization", "Dravidian Civilization"],
+    "options_hi": ["वैदिक सभ्यता", "हड़प्पा सभ्यता", "आर्य सभ्यता", "द्रविड़ सभ्यता"],
+    "answer_en": "Harappan Civilization",
+    "answer_hi": "हड़प्पा सभ्यता",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "Who was the founder of the Gupta Empire?",
+    "question_hi": "गुप्त साम्राज्य के संस्थापक कौन थे?",
+    "options_en": ["Chandragupta I", "Samudragupta", "Chandragupta II", "Skandagupta"],
+    "options_hi": ["चंद्रगुप्त प्रथम", "समुद्रगुप्त", "चंद्रगुप्त द्वितीय", "स्कंदगुप्त"],
+    "answer_en": "Chandragupta I",
+    "answer_hi": "चंद्रगुप्त प्रथम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "The Revolt of 1857 started from which city?",
+    "question_hi": "1857 का विद्रोह किस शहर से शुरू हुआ?",
+    "options_en": ["Delhi", "Meerut", "Kanpur", "Lucknow"],
+    "options_hi": ["दिल्ली", "मेरठ", "कानपुर", "लखनऊ"],
+    "answer_en": "Meerut",
+    "answer_hi": "मेरठ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Who was the first Governor-General of Bengal?",
+    "question_hi": "बंगाल के पहले गवर्नर-जनरल कौन थे?",
+    "options_en": ["Warren Hastings", "Lord Cornwallis", "Lord Wellesley", "Lord William Bentinck"],
+    "options_hi": ["वॉरेन हेस्टिंग्स", "लॉर्ड कॉर्नवॉलिस", "लॉर्ड वेलेस्ली", "लॉर्ड विलियम बेंटिक"],
+    "answer_en": "Warren Hastings",
+    "answer_hi": "वॉरेन हेस्टिंग्स",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "The ancient university of Nalanda was located in which present-day state?",
+    "question_hi": "प्राचीन नालंदा विश्वविद्यालय किस वर्तमान राज्य में स्थित था?",
+    "options_en": ["Bihar", "Uttar Pradesh", "Madhya Pradesh", "West Bengal"],
+    "options_hi": ["बिहार", "उत्तर प्रदेश", "मध्य प्रदेश", "पश्चिम बंगाल"],
+    "answer_en": "Bihar",
+    "answer_hi": "बिहार",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "Who built the Qutub Minar?",
+    "question_hi": "कुतुब मीनार का निर्माण किसने करवाया?",
+    "options_en": ["Qutb-ud-din Aibak", "Iltutmish", "Alauddin Khilji", "Firoz Shah Tughlaq"],
+    "options_hi": ["कुतुबुद्दीन ऐबक", "इल्तुतमिश", "अलाउद्दीन खिलजी", "फिरोज शाह तुगलक"],
+    "answer_en": "Qutb-ud-din Aibak",
+    "answer_hi": "कुतुबुद्दीन ऐबक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "The 'Doctrine of Lapse' was introduced by:",
+    "question_hi": "'हड़प नीति' किसके द्वारा लागू की गई थी?",
+    "options_en": ["Lord Dalhousie", "Lord Canning", "Lord Curzon", "Lord Ripon"],
+    "options_hi": ["लॉर्ड डलहौजी", "लॉर्ड कैनिंग", "लॉर्ड कर्जन", "लॉर्ड रिपन"],
+    "answer_en": "Lord Dalhousie",
+    "answer_hi": "लॉर्ड डलहौजी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "Who was the last Viceroy of India?",
+    "question_hi": "भारत के अंतिम वायसराय कौन थे?",
+    "options_en": ["Lord Mountbatten", "Lord Wavell", "Lord Linlithgow", "Lord Irwin"],
+    "options_hi": ["लॉर्ड माउंटबेटन", "लॉर्ड वेवेल", "लॉर्ड लिनलिथगो", "लॉर्ड इरविन"],
+    "answer_en": "Lord Mountbatten",
+    "answer_hi": "लॉर्ड माउंटबेटन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "The Battle of Plassey was fought in which year?",
+    "question_hi": "प्लासी की लड़ाई किस वर्ष लड़ी गई थी?",
+    "options_en": ["1757", "1764", "1775", "1857"],
+    "options_hi": ["1757", "1764", "1775", "1857"],
+    "answer_en": "1757",
+    "answer_hi": "1757",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "Who was known as the 'Iron Man of India'?",
+    "question_hi": "'भारत के लौह पुरुष' के रूप में किसे जाना जाता था?",
+    "options_en": ["Sardar Vallabhbhai Patel", "Jawaharlal Nehru", "Subhas Chandra Bose", "Bhagat Singh"],
+    "options_hi": ["सरदार वल्लभभाई पटेल", "जवाहरलाल नेहरू", "सुभाष चंद्र बोस", "भगत सिंह"],
+    "answer_en": "Sardar Vallabhbhai Patel",
+    "answer_hi": "सरदार वल्लभभाई पटेल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "The Indian National Congress was founded in which year?",
+    "question_hi": "भारतीय राष्ट्रीय कांग्रेस की स्थापना किस वर्ष हुई?",
+    "options_en": ["1885", "1905", "1919", "1947"],
+    "options_hi": ["1885", "1905", "1919", "1947"],
+    "answer_en": "1885",
+    "answer_hi": "1885",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "Who was the first Indian woman to become President of the Indian National Congress?",
+    "question_hi": "भारतीय राष्ट्रीय कांग्रेस की अध्यक्ष बनने वाली पहली भारतीय महिला कौन थीं?",
+    "options_en": ["Sarojini Naidu", "Annie Besant", "Vijayalakshmi Pandit", "Indira Gandhi"],
+    "options_hi": ["सरोजिनी नायडू", "एनी बेसेंट", "विजयलक्ष्मी पंडित", "इंदिरा गांधी"],
+    "answer_en": "Annie Besant",
+    "answer_hi": "एनी बेसेंट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "The ancient text 'Arthashastra' was written by:",
+    "question_hi": "प्राचीन ग्रंथ 'अर्थशास्त्र' किसके द्वारा लिखा गया था?",
+    "options_en": ["Chanakya", "Panini", "Kalidas", "Ved Vyas"],
+    "options_hi": ["चाणक्य", "पाणिनि", "कालिदास", "वेद व्यास"],
+    "answer_en": "Chanakya",
+    "answer_hi": "चाणक्य",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Who was the founder of the Sikh religion?",
+    "question_hi": "सिख धर्म के संस्थापक कौन थे?",
+    "options_en": ["Guru Nanak", "Guru Gobind Singh", "Guru Tegh Bahadur", "Guru Arjan Dev"],
+    "options_hi": ["गुरु नानक", "गुरु गोबिंद सिंह", "गुरु तेग बहादुर", "गुरु अर्जन देव"],
+    "answer_en": "Guru Nanak",
+    "answer_hi": "गुरु नानक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "The 'Salt March' or 'Dandi March' was led by:",
+    "question_hi": "'नमक मार्च' या 'दांडी मार्च' का नेतृत्व किसने किया?",
+    "options_en": ["Mahatma Gandhi", "Jawaharlal Nehru", "Subhas Chandra Bose", "Sardar Patel"],
+    "options_hi": ["महात्मा गांधी", "जवाहरलाल नेहरू", "सुभाष चंद्र बोस", "सरदार पटेल"],
+    "answer_en": "Mahatma Gandhi",
+    "answer_hi": "महात्मा गांधी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "The Battle of Haldighati was fought between:",
+    "question_hi": "हल्दीघाटी का युद्ध किसके बीच लड़ा गया था?",
+    "options_en": ["Akbar and Rana Pratap", "Babur and Ibrahim Lodi", "Sher Shah and Humayun", "Shivaji and Aurangzeb"],
+    "options_hi": ["अकबर और राणा प्रताप", "बाबर और इब्राहिम लोदी", "शेरशाह और हुमायूँ", "शिवाजी और औरंगजेब"],
+    "answer_en": "Akbar and Rana Pratap",
+    "answer_hi": "अकबर और राणा प्रताप",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "Who built the Red Fort in Delhi?",
+    "question_hi": "दिल्ली में लाल किला किसने बनवाया?",
+    "options_en": ["Shah Jahan", "Akbar", "Aurangzeb", "Jahangir"],
+    "options_hi": ["शाहजहाँ", "अकबर", "औरंगजेब", "जहाँगीर"],
+    "answer_en": "Shah Jahan",
+    "answer_hi": "शाहजहाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "The 'Jallianwala Bagh Massacre' occurred in which year?",
+    "question_hi": "'जलियांवाला बाग हत्याकांड' किस वर्ष हुआ?",
+    "options_en": ["1919", "1920", "1930", "1942"],
+    "options_hi": ["1919", "1920", "1930", "1942"],
+    "answer_en": "1919",
+    "answer_hi": "1919",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Who was the first woman to rule the Delhi Sultanate?",
+    "question_hi": "दिल्ली सल्तनत पर शासन करने वाली पहली महिला कौन थी?",
+    "options_en": ["Razia Sultana", "Nur Jahan", "Mumtaz Mahal", "Chand Bibi"],
+    "options_hi": ["रजिया सुल्तान", "नूरजहाँ", "मुमताज महल", "चाँद बीबी"],
+    "answer_en": "Razia Sultana",
+    "answer_hi": "रजिया सुल्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "The 'Quit India Movement' was launched in which year?",
+    "question_hi": "'भारत छोड़ो आंदोलन' किस वर्ष शुरू किया गया था?",
+    "options_en": ["1942", "1930", "1920", "1947"],
+    "options_hi": ["1942", "1930", "1920", "1947"],
+    "answer_en": "1942",
+    "answer_hi": "1942",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Who was the founder of the Maratha Empire?",
+    "question_hi": "मराठा साम्राज्य के संस्थापक कौन थे?",
+    "options_en": ["Shivaji", "Sambhaji", "Balaji Vishwanath", "Bajirao I"],
+    "options_hi": ["शिवाजी", "संभाजी", "बालाजी विश्वनाथ", "बाजीराव प्रथम"],
+    "answer_en": "Shivaji",
+    "answer_hi": "शिवाजी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "The 'Simon Commission' came to India in which year?",
+    "question_hi": "'साइमन कमीशन' भारत किस वर्ष आया?",
+    "options_en": ["1928", "1930", "1935", "1942"],
+    "options_hi": ["1928", "1930", "1935", "1942"],
+    "answer_en": "1928",
+    "answer_hi": "1928",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "Who was the first Sultan of Delhi?",
+    "question_hi": "दिल्ली का पहला सुल्तान कौन था?",
+    "options_en": ["Qutb-ud-din Aibak", "Iltutmish", "Balban", "Alauddin Khilji"],
+    "options_hi": ["कुतुबुद्दीन ऐबक", "इल्तुतमिश", "बलबन", "अलाउद्दीन खिलजी"],
+    "answer_en": "Qutb-ud-din Aibak",
+    "answer_hi": "कुतुबुद्दीन ऐबक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "The ancient city of Pataliputra is located in present-day:",
+    "question_hi": "प्राचीन शहर पाटलिपुत्र वर्तमान में कहाँ स्थित है?",
+    "options_en": ["Patna", "Delhi", "Allahabad", "Varanasi"],
+    "options_hi": ["पटना", "दिल्ली", "इलाहाबाद", "वाराणसी"],
+    "answer_en": "Patna",
+    "answer_hi": "पटना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "Who wrote the book 'India Wins Freedom'?",
+    "question_hi": "'इंडिया विंस फ्रीडम' पुस्तक किसने लिखी?",
+    "options_en": ["Maulana Abul Kalam Azad", "Jawaharlal Nehru", "Subhas Chandra Bose", "Bhagat Singh"],
+    "options_hi": ["मौलाना अबुल कलाम आज़ाद", "जवाहरलाल नेहरू", "सुभाष चंद्र बोस", "भगत सिंह"],
+    "answer_en": "Maulana Abul Kalam Azad",
+    "answer_hi": "मौलाना अबुल कलाम आज़ाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "The 'Chauri Chaura incident' occurred during which movement?",
+    "question_hi": "'चौरी चौरा घटना' किस आंदोलन के दौरान हुई?",
+    "options_en": ["Non-Cooperation Movement", "Civil Disobedience Movement", "Quit India Movement", "Swadeshi Movement"],
+    "options_hi": ["असहयोग आंदोलन", "सविनय अवज्ञा आंदोलन", "भारत छोड़ो आंदोलन", "स्वदेशी आंदोलन"],
+    "answer_en": "Non-Cooperation Movement",
+    "answer_hi": "असहयोग आंदोलन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Who was the last Hindu ruler of Delhi?",
+    "question_hi": "दिल्ली का अंतिम हिंदू शासक कौन था?",
+    "options_en": ["Prithviraj Chauhan", "Hemu", "Rana Sanga", "Vikramaditya"],
+    "options_hi": ["पृथ्वीराज चौहान", "हेमू", "राणा सांगा", "विक्रमादित्य"],
+    "answer_en": "Prithviraj Chauhan",
+    "answer_hi": "पृथ्वीराज चौहान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "The 'Permanent Settlement' was introduced in Bengal by:",
+    "question_hi": "'स्थायी बंदोबस्त' बंगाल में किसके द्वारा लागू किया गया था?",
+    "options_en": ["Lord Cornwallis", "Lord Wellesley", "Lord Hastings", "Lord Dalhousie"],
+    "options_hi": ["लॉर्ड कॉर्नवॉलिस", "लॉर्ड वेलेस्ली", "लॉर्ड हेस्टिंग्स", "लॉर्ड डलहौजी"],
+    "answer_en": "Lord Cornwallis",
+    "answer_hi": "लॉर्ड कॉर्नवॉलिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "Who founded the city of Jaipur?",
+    "question_hi": "जयपुर शहर की स्थापना किसने की?",
+    "options_en": ["Maharaja Sawai Jai Singh II", "Maharaja Man Singh I", "Maharaja Pratap Singh", "Maharaja Ram Singh II"],
+    "options_hi": ["महाराजा सवाई जय सिंह द्वितीय", "महाराजा मान सिंह प्रथम", "महाराजा प्रताप सिंह", "महाराजा राम सिंह द्वितीय"],
+    "answer_en": "Maharaja Sawai Jai Singh II",
+    "answer_hi": "महाराजा सवाई जय सिंह द्वितीय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "The 'Rowlatt Act' was passed in which year?",
+    "question_hi": "'रॉलेट एक्ट' किस वर्ष पारित किया गया था?",
+    "options_en": ["1919", "1920", "1930", "1942"],
+    "options_hi": ["1919", "1920", "1930", "1942"],
+    "answer_en": "1919",
+    "answer_hi": "1919",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "Who was the first Indian to win the Nobel Prize?",
+    "question_hi": "नोबेल पुरस्कार जीतने वाले पहले भारतीय कौन थे?",
+    "options_en": ["Rabindranath Tagore", "C.V. Raman", "Mother Teresa", "Har Gobind Khorana"],
+    "options_hi": ["रबींद्रनाथ टैगोर", "सी.वी. रमन", "मदर टेरेसा", "हर गोबिंद खुराना"],
+    "answer_en": "Rabindranath Tagore",
+    "answer_hi": "रबींद्रनाथ टैगोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "The 'Battle of Buxar' was fought in which year?",
+    "question_hi": "बक्सर का युद्ध किस वर्ष लड़ा गया था?",
+    "options_en": ["1764", "1757", "1775", "1857"],
+    "options_hi": ["1764", "1757", "1775", "1857"],
+    "answer_en": "1764",
+    "answer_hi": "1764",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "Who built the Buland Darwaza?",
+    "question_hi": "बुलंद दरवाजा किसने बनवाया?",
+    "options_en": ["Akbar", "Shah Jahan", "Aurangzeb", "Sher Shah Suri"],
+    "options_hi": ["अकबर", "शाहजहाँ", "औरंगजेब", "शेरशाह सूरी"],
+    "answer_en": "Akbar",
+    "answer_hi": "अकबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "The 'Partition of Bengal' took place in which year?",
+    "question_hi": "बंगाल का विभाजन किस वर्ष हुआ?",
+    "options_en": ["1905", "1911", "1947", "1971"],
+    "options_hi": ["1905", "1911", "1947", "1971"],
+    "answer_en": "1905",
+    "answer_hi": "1905",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "Who was the first Muslim woman to rule Delhi?",
+    "question_hi": "दिल्ली पर शासन करने वाली पहली मुस्लिम महिला कौन थी?",
+    "options_en": ["Razia Sultana", "Nur Jahan", "Mumtaz Mahal", "Chand Bibi"],
+    "options_hi": ["रजिया सुल्तान", "नूरजहाँ", "मुमताज महल", "चाँद बीबी"],
+    "answer_en": "Razia Sultana",
+    "answer_hi": "रजिया सुल्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "The 'Kalinga War' was fought by which emperor?",
+    "question_hi": "कलिंग युद्ध किस सम्राट द्वारा लड़ा गया था?",
+    "options_en": ["Ashoka", "Chandragupta Maurya", "Samudragupta", "Harsha"],
+    "options_hi": ["अशोक", "चंद्रगुप्त मौर्य", "समुद्रगुप्त", "हर्ष"],
+    "answer_en": "Ashoka",
+    "answer_hi": "अशोक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "Who founded the city of Hyderabad?",
+    "question_hi": "हैदराबाद शहर की स्थापना किसने की?",
+    "options_en": ["Muhammad Quli Qutb Shah", "Asaf Jah I", "Ibrahim Qutb Shah", "Qutb Shahi"],
+    "options_hi": ["मुहम्मद कुली कुतुब शाह", "आसफ जाह प्रथम", "इब्राहिम कुतुब शाह", "कुतुब शाही"],
+    "answer_en": "Muhammad Quli Qutb Shah",
+    "answer_hi": "मुहम्मद कुली कुतुब शाह",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "The 'Treaty of Seringapatam' was signed between Tipu Sultan and:",
+    "question_hi": "श्रीरंगपट्टनम की संधि टीपू सुल्तान और किसके बीच हुई?",
+    "options_en": ["British East India Company", "French", "Portuguese", "Dutch"],
+    "options_hi": ["ब्रिटिश ईस्ट इंडिया कंपनी", "फ्रांसीसी", "पुर्तगाली", "डच"],
+    "answer_en": "British East India Company",
+    "answer_hi": "ब्रिटिश ईस्ट इंडिया कंपनी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "Who was the founder of the Vijayanagara Empire?",
+    "question_hi": "विजयनगर साम्राज्य के संस्थापक कौन थे?",
+    "options_en": ["Harihara I and Bukka Raya I", "Krishnadevaraya", "Devaraya I", "Sadasiva Raya"],
+    "options_hi": ["हरिहर प्रथम और बुक्क राय प्रथम", "कृष्णदेवराय", "देवराय प्रथम", "सदाशिव राय"],
+    "answer_en": "Harihara I and Bukka Raya I",
+    "answer_hi": "हरिहर प्रथम और बुक्क राय प्रथम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "The 'Satyagraha' movement was started by:",
+    "question_hi": "'सत्याग्रह' आंदोलन किसने शुरू किया?",
+    "options_en": ["Mahatma Gandhi", "Jawaharlal Nehru", "Bal Gangadhar Tilak", "Subhas Chandra Bose"],
+    "options_hi": ["महात्मा गांधी", "जवाहरलाल नेहरू", "बाल गंगाधर तिलक", "सुभाष चंद्र बोस"],
+    "answer_en": "Mahatma Gandhi",
+    "answer_hi": "महात्मा गांधी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "Who built the Jama Masjid in Delhi?",
+    "question_hi": "दिल्ली में जामा मस्जिद किसने बनवाई?",
+    "options_en": ["Shah Jahan", "Akbar", "Aurangzeb", "Jahangir"],
+    "options_hi": ["शाहजहाँ", "अकबर", "औरंगजेब", "जहाँगीर"],
+    "answer_en": "Shah Jahan",
+    "answer_hi": "शाहजहाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "The 'Mughal Empire' was founded in India by:",
+    "question_hi": "'मुगल साम्राज्य' की स्थापना भारत में किसने की?",
+    "options_en": ["Babur", "Akbar", "Humayun", "Sher Shah Suri"],
+    "options_hi": ["बाबर", "अकबर", "हुमायूँ", "शेरशाह सूरी"],
+    "answer_en": "Babur",
+    "answer_hi": "बाबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "Who was the first British Governor-General of India?",
+    "question_hi": "भारत के पहले ब्रिटिश गवर्नर-जनरल कौन थे?",
+    "options_en": ["Warren Hastings", "Lord Cornwallis", "Lord Wellesley", "Lord William Bentinck"],
+    "options_hi": ["वॉरेन हेस्टिंग्स", "लॉर्ड कॉर्नवॉलिस", "लॉर्ड वेलेस्ली", "लॉर्ड विलियम बेंटिक"],
+    "answer_en": "Warren Hastings",
+    "answer_hi": "वॉरेन हेस्टिंग्स",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "The 'Battle of Talikota' was fought in which year?",
+    "question_hi": "तालिकोटा का युद्ध किस वर्ष लड़ा गया था?",
+    "options_en": ["1565", "1526", "1556", "1605"],
+    "options_hi": ["1565", "1526", "1556", "1605"],
+    "answer_en": "1565",
+    "answer_hi": "1565",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Who was the first President of the Indian National Congress?",
+    "question_hi": "भारतीय राष्ट्रीय कांग्रेस के पहले अध्यक्ष कौन थे?",
+    "options_en": ["W.C. Bonnerjee", "Dadabhai Naoroji", "A.O. Hume", "Badruddin Tyabji"],
+    "options_hi": ["डब्ल्यू.सी. बनर्जी", "दादाभाई नौरोजी", "ए.ओ. ह्यूम", "बदरुद्दीन तैयबजी"],
+    "answer_en": "W.C. Bonnerjee",
+    "answer_hi": "डब्ल्यू.सी. बनर्जी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "The 'Khilafat Movement' was started in India to support:",
+    "question_hi": "'खिलाफत आंदोलन' भारत में किसका समर्थन करने के लिए शुरू किया गया था?",
+    "options_en": ["Ottoman Caliphate", "Indian Muslims", "Hindu-Muslim unity", "British government"],
+    "options_hi": ["ऑटोमन खिलाफत", "भारतीय मुसलमान", "हिंदू-मुस्लिम एकता", "ब्रिटिश सरकार"],
+    "answer_en": "Ottoman Caliphate",
+    "answer_hi": "ऑटोमन खिलाफत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "Who was the last Mughal emperor of India?",
+    "question_hi": "भारत का अंतिम मुगल सम्राट कौन था?",
+    "options_en": ["Bahadur Shah Zafar", "Aurangzeb", "Shah Alam II", "Akbar II"],
+    "options_hi": ["बहादुर शाह ज़फर", "औरंगजेब", "शाह आलम द्वितीय", "अकबर द्वितीय"],
+    "answer_en": "Bahadur Shah Zafar",
+    "answer_hi": "बहादुर शाह ज़फर",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 
 // --------------------------- GLOBAL VARS -----------------------------

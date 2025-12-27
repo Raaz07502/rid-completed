@@ -1,1054 +1,557 @@
 const questions = [
+    {
+    "num": 1,
+    "question_en": "Which Act ended the rule of the East India Company in India?",
+    "question_hi": "किस अधिनियम ने भारत में ईस्ट इंडिया कंपनी के शासन का अंत किया?",
+    "options_en": ["Government of India Act 1858", "Regulating Act 1773", "Charter Act 1833", "Indian Councils Act 1909"],
+    "options_hi": ["भारत सरकार अधिनियम 1858", "नियामक अधिनियम 1773", "चार्टर अधिनियम 1833", "भारतीय परिषद अधिनियम 1909"],
+    "answer_en": "Government of India Act 1858",
+    "answer_hi": "भारत सरकार अधिनियम 1858",
+    "attempted": false,
+    "selected": ""
+  },
   {
-       "num": 1,
-        "question_en": "What is 9 - 37?",
-        "question_hi": "9 - 37 कितना होता है?",
-        "options_en": [
-            "-25",
-            "-26",
-            "-28",
-            "-27"
-        ],
-        "options_hi": [
-            "-25",
-            "-26",
-            "-28",
-            "-27"
-        ],
-        "answer_en": "-28",
-        "answer_hi": "-28",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is 93 - 43?",
-        "question_hi": "93 - 43 कितना होता है?",
-        "options_en": [
-            "49",
-            "50",
-            "51",
-            "53"
-        ],
-        "options_hi": [
-            "49",
-            "50",
-            "51",
-            "53"
-        ],
-        "answer_en": "50",
-        "answer_hi": "50",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is 75 × 82?",
-        "question_hi": "75 × 82 कितना होता है?",
-        "options_en": [
-            "6150",
-            "6149",
-            "6151",
-            "6153"
-        ],
-        "options_hi": [
-            "6150",
-            "6149",
-            "6151",
-            "6153"
-        ],
-        "answer_en": "6150",
-        "answer_hi": "6150",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 11 + 83?",
-        "question_hi": "11 + 83 कितना होता है?",
-        "options_en": [
-            "94",
-            "95",
-            "93",
-            "97"
-        ],
-        "options_hi": [
-            "94",
-            "95",
-            "93",
-            "97"
-        ],
-        "answer_en": "94",
-        "answer_hi": "94",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is the integer division 90 ÷ 49?",
-        "question_hi": "90 ÷ 49 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is the integer division 95 ÷ 13?",
-        "question_hi": "95 ÷ 13 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "10",
-            "8",
-            "7",
-            "6"
-        ],
-        "options_hi": [
-            "10",
-            "8",
-            "7",
-            "6"
-        ],
-        "answer_en": "7",
-        "answer_hi": "7",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is 29 - 56?",
-        "question_hi": "29 - 56 कितना होता है?",
-        "options_en": [
-            "-27",
-            "-25",
-            "-26",
-            "-24"
-        ],
-        "options_hi": [
-            "-27",
-            "-25",
-            "-26",
-            "-24"
-        ],
-        "answer_en": "-27",
-        "answer_hi": "-27",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 38 - 45?",
-        "question_hi": "38 - 45 कितना होता है?",
-        "options_en": [
-            "-5",
-            "-7",
-            "-6",
-            "-4"
-        ],
-        "options_hi": [
-            "-5",
-            "-7",
-            "-6",
-            "-4"
-        ],
-        "answer_en": "-7",
-        "answer_hi": "-7",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is the integer division 7 ÷ 14?",
-        "question_hi": "7 ÷ 14 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 58 + 60?",
-        "question_hi": "58 + 60 कितना होता है?",
-        "options_en": [
-            "119",
-            "117",
-            "118",
-            "121"
-        ],
-        "options_hi": [
-            "119",
-            "117",
-            "118",
-            "121"
-        ],
-        "answer_en": "118",
-        "answer_hi": "118",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 85 - 40?",
-        "question_hi": "85 - 40 कितना होता है?",
-        "options_en": [
-            "48",
-            "46",
-            "45",
-            "44"
-        ],
-        "options_hi": [
-            "48",
-            "46",
-            "45",
-            "44"
-        ],
-        "answer_en": "45",
-        "answer_hi": "45",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is 34 × 12?",
-        "question_hi": "34 × 12 कितना होता है?",
-        "options_en": [
-            "407",
-            "411",
-            "408",
-            "409"
-        ],
-        "options_hi": [
-            "407",
-            "411",
-            "408",
-            "409"
-        ],
-        "answer_en": "408",
-        "answer_hi": "408",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is 82 - 41?",
-        "question_hi": "82 - 41 कितना होता है?",
-        "options_en": [
-            "42",
-            "41",
-            "40",
-            "44"
-        ],
-        "options_hi": [
-            "42",
-            "41",
-            "40",
-            "44"
-        ],
-        "answer_en": "41",
-        "answer_hi": "41",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is 92 + 14?",
-        "question_hi": "92 + 14 कितना होता है?",
-        "options_en": [
-            "105",
-            "106",
-            "109",
-            "107"
-        ],
-        "options_hi": [
-            "105",
-            "106",
-            "109",
-            "107"
-        ],
-        "answer_en": "106",
-        "answer_hi": "106",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is 18 - 77?",
-        "question_hi": "18 - 77 कितना होता है?",
-        "options_en": [
-            "-58",
-            "-57",
-            "-59",
-            "-56"
-        ],
-        "options_hi": [
-            "-58",
-            "-57",
-            "-59",
-            "-56"
-        ],
-        "answer_en": "-59",
-        "answer_hi": "-59",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 91 + 45?",
-        "question_hi": "91 + 45 कितना होता है?",
-        "options_en": [
-            "137",
-            "136",
-            "135",
-            "139"
-        ],
-        "options_hi": [
-            "137",
-            "136",
-            "135",
-            "139"
-        ],
-        "answer_en": "136",
-        "answer_hi": "136",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is 63 - 11?",
-        "question_hi": "63 - 11 कितना होता है?",
-        "options_en": [
-            "53",
-            "51",
-            "52",
-            "55"
-        ],
-        "options_hi": [
-            "53",
-            "51",
-            "52",
-            "55"
-        ],
-        "answer_en": "52",
-        "answer_hi": "52",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 15 × 42?",
-        "question_hi": "15 × 42 कितना होता है?",
-        "options_en": [
-            "633",
-            "631",
-            "630",
-            "629"
-        ],
-        "options_hi": [
-            "633",
-            "631",
-            "630",
-            "629"
-        ],
-        "answer_en": "630",
-        "answer_hi": "630",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is 98 - 19?",
-        "question_hi": "98 - 19 कितना होता है?",
-        "options_en": [
-            "80",
-            "82",
-            "78",
-            "79"
-        ],
-        "options_hi": [
-            "80",
-            "82",
-            "78",
-            "79"
-        ],
-        "answer_en": "79",
-        "answer_hi": "79",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is 80 - 85?",
-        "question_hi": "80 - 85 कितना होता है?",
-        "options_en": [
-            "-3",
-            "-5",
-            "-4",
-            "-2"
-        ],
-        "options_hi": [
-            "-3",
-            "-5",
-            "-4",
-            "-2"
-        ],
-        "answer_en": "-5",
-        "answer_hi": "-5",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 82 - 97?",
-        "question_hi": "82 - 97 कितना होता है?",
-        "options_en": [
-            "-15",
-            "-14",
-            "-13",
-            "-12"
-        ],
-        "options_hi": [
-            "-15",
-            "-14",
-            "-13",
-            "-12"
-        ],
-        "answer_en": "-15",
-        "answer_hi": "-15",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 29 + 13?",
-        "question_hi": "29 + 13 कितना होता है?",
-        "options_en": [
-            "41",
-            "45",
-            "42",
-            "43"
-        ],
-        "options_hi": [
-            "41",
-            "45",
-            "42",
-            "43"
-        ],
-        "answer_en": "42",
-        "answer_hi": "42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is 46 × 56?",
-        "question_hi": "46 × 56 कितना होता है?",
-        "options_en": [
-            "2575",
-            "2579",
-            "2576",
-            "2577"
-        ],
-        "options_hi": [
-            "2575",
-            "2579",
-            "2576",
-            "2577"
-        ],
-        "answer_en": "2576",
-        "answer_hi": "2576",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is 84 - 12?",
-        "question_hi": "84 - 12 कितना होता है?",
-        "options_en": [
-            "73",
-            "72",
-            "75",
-            "71"
-        ],
-        "options_hi": [
-            "73",
-            "72",
-            "75",
-            "71"
-        ],
-        "answer_en": "72",
-        "answer_hi": "72",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 86 - 40?",
-        "question_hi": "86 - 40 कितना होता है?",
-        "options_en": [
-            "46",
-            "49",
-            "45",
-            "47"
-        ],
-        "options_hi": [
-            "46",
-            "49",
-            "45",
-            "47"
-        ],
-        "answer_en": "46",
-        "answer_hi": "46",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 39 + 84?",
-        "question_hi": "39 + 84 कितना होता है?",
-        "options_en": [
-            "123",
-            "122",
-            "126",
-            "124"
-        ],
-        "options_hi": [
-            "123",
-            "122",
-            "126",
-            "124"
-        ],
-        "answer_en": "123",
-        "answer_hi": "123",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is the integer division 16 ÷ 32?",
-        "question_hi": "16 ÷ 32 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 48 - 42?",
-        "question_hi": "48 - 42 कितना होता है?",
-        "options_en": [
-            "6",
-            "7",
-            "5",
-            "9"
-        ],
-        "options_hi": [
-            "6",
-            "7",
-            "5",
-            "9"
-        ],
-        "answer_en": "6",
-        "answer_hi": "6",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is 48 - 71?",
-        "question_hi": "48 - 71 कितना होता है?",
-        "options_en": [
-            "-22",
-            "-21",
-            "-23",
-            "-20"
-        ],
-        "options_hi": [
-            "-22",
-            "-21",
-            "-23",
-            "-20"
-        ],
-        "answer_en": "-23",
-        "answer_hi": "-23",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is 77 + 10?",
-        "question_hi": "77 + 10 कितना होता है?",
-        "options_en": [
-            "88",
-            "90",
-            "87",
-            "86"
-        ],
-        "options_hi": [
-            "88",
-            "90",
-            "87",
-            "86"
-        ],
-        "answer_en": "87",
-        "answer_hi": "87",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 9 × 52?",
-        "question_hi": "9 × 52 कितना होता है?",
-        "options_en": [
-            "468",
-            "467",
-            "469",
-            "471"
-        ],
-        "options_hi": [
-            "468",
-            "467",
-            "469",
-            "471"
-        ],
-        "answer_en": "468",
-        "answer_hi": "468",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 12 - 83?",
-        "question_hi": "12 - 83 कितना होता है?",
-        "options_en": [
-            "-68",
-            "-70",
-            "-71",
-            "-69"
-        ],
-        "options_hi": [
-            "-68",
-            "-70",
-            "-71",
-            "-69"
-        ],
-        "answer_en": "-71",
-        "answer_hi": "-71",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is 12 - 67?",
-        "question_hi": "12 - 67 कितना होता है?",
-        "options_en": [
-            "-55",
-            "-52",
-            "-53",
-            "-54"
-        ],
-        "options_hi": [
-            "-55",
-            "-52",
-            "-53",
-            "-54"
-        ],
-        "answer_en": "-55",
-        "answer_hi": "-55",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 52 + 77?",
-        "question_hi": "52 + 77 कितना होता है?",
-        "options_en": [
-            "129",
-            "130",
-            "132",
-            "128"
-        ],
-        "options_hi": [
-            "129",
-            "130",
-            "132",
-            "128"
-        ],
-        "answer_en": "129",
-        "answer_hi": "129",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 95 + 32?",
-        "question_hi": "95 + 32 कितना होता है?",
-        "options_en": [
-            "126",
-            "130",
-            "127",
-            "128"
-        ],
-        "options_hi": [
-            "126",
-            "130",
-            "127",
-            "128"
-        ],
-        "answer_en": "127",
-        "answer_hi": "127",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 16 + 60?",
-        "question_hi": "16 + 60 कितना होता है?",
-        "options_en": [
-            "77",
-            "76",
-            "79",
-            "75"
-        ],
-        "options_hi": [
-            "77",
-            "76",
-            "79",
-            "75"
-        ],
-        "answer_en": "76",
-        "answer_hi": "76",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 17 - 3?",
-        "question_hi": "17 - 3 कितना होता है?",
-        "options_en": [
-            "13",
-            "15",
-            "17",
-            "14"
-        ],
-        "options_hi": [
-            "13",
-            "15",
-            "17",
-            "14"
-        ],
-        "answer_en": "14",
-        "answer_hi": "14",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is 46 × 68?",
-        "question_hi": "46 × 68 कितना होता है?",
-        "options_en": [
-            "3127",
-            "3128",
-            "3131",
-            "3129"
-        ],
-        "options_hi": [
-            "3127",
-            "3128",
-            "3131",
-            "3129"
-        ],
-        "answer_en": "3128",
-        "answer_hi": "3128",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "What is 97 + 36?",
-        "question_hi": "97 + 36 कितना होता है?",
-        "options_en": [
-            "136",
-            "132",
-            "134",
-            "133"
-        ],
-        "options_hi": [
-            "136",
-            "132",
-            "134",
-            "133"
-        ],
-        "answer_en": "133",
-        "answer_hi": "133",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 540,
-        "question_en": "What is 36 + 69?",
-        "question_hi": "36 + 69 कितना होता है?",
-        "options_en": [
-            "106",
-            "105",
-            "108",
-            "104"
-        ],
-        "options_hi": [
-            "106",
-            "105",
-            "108",
-            "104"
-        ],
-        "answer_en": "105",
-        "answer_hi": "105",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 541,
-        "question_en": "What is 65 × 60?",
-        "question_hi": "65 × 60 कितना होता है?",
-        "options_en": [
-            "3899",
-            "3903",
-            "3901",
-            "3900"
-        ],
-        "options_hi": [
-            "3899",
-            "3903",
-            "3901",
-            "3900"
-        ],
-        "answer_en": "3900",
-        "answer_hi": "3900",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 542,
-        "question_en": "What is 49 × 22?",
-        "question_hi": "49 × 22 कितना होता है?",
-        "options_en": [
-            "1079",
-            "1081",
-            "1077",
-            "1078"
-        ],
-        "options_hi": [
-            "1079",
-            "1081",
-            "1077",
-            "1078"
-        ],
-        "answer_en": "1078",
-        "answer_hi": "1078",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 543,
-        "question_en": "What is 31 + 96?",
-        "question_hi": "31 + 96 कितना होता है?",
-        "options_en": [
-            "128",
-            "126",
-            "130",
-            "127"
-        ],
-        "options_hi": [
-            "128",
-            "126",
-            "130",
-            "127"
-        ],
-        "answer_en": "127",
-        "answer_hi": "127",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 544,
-        "question_en": "What is 7 × 62?",
-        "question_hi": "7 × 62 कितना होता है?",
-        "options_en": [
-            "435",
-            "433",
-            "434",
-            "437"
-        ],
-        "options_hi": [
-            "435",
-            "433",
-            "434",
-            "437"
-        ],
-        "answer_en": "434",
-        "answer_hi": "434",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 545,
-        "question_en": "What is the integer division 6 ÷ 72?",
-        "question_hi": "6 ÷ 72 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 546,
-        "question_en": "What is 55 × 94?",
-        "question_hi": "55 × 94 कितना होता है?",
-        "options_en": [
-            "5173",
-            "5171",
-            "5170",
-            "5169"
-        ],
-        "options_hi": [
-            "5173",
-            "5171",
-            "5170",
-            "5169"
-        ],
-        "answer_en": "5170",
-        "answer_hi": "5170",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 547,
-        "question_en": "What is 17 + 66?",
-        "question_hi": "17 + 66 कितना होता है?",
-        "options_en": [
-            "86",
-            "82",
-            "83",
-            "84"
-        ],
-        "options_hi": [
-            "86",
-            "82",
-            "83",
-            "84"
-        ],
-        "answer_en": "83",
-        "answer_hi": "83",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 548,
-        "question_en": "What is the integer division 53 ÷ 10?",
-        "question_hi": "53 ÷ 10 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "5",
-            "8",
-            "6",
-            "4"
-        ],
-        "options_hi": [
-            "5",
-            "8",
-            "6",
-            "4"
-        ],
-        "answer_en": "5",
-        "answer_hi": "5",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 549,
-        "question_en": "What is the integer division 13 ÷ 72?",
-        "question_hi": "13 ÷ 72 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "3",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "3",
-            "1",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "What is 39 × 74?",
-        "question_hi": "39 × 74 कितना होता है?",
-        "options_en": [
-            "2886",
-            "2885",
-            "2889",
-            "2887"
-        ],
-        "options_hi": [
-            "2886",
-            "2885",
-            "2889",
-            "2887"
-        ],
-        "answer_en": "2886",
-        "answer_hi": "2886",
-        "attempted": false,
-        "selected": ""
-    }
+    "num": 2,
+    "question_en": "Who was the first President of the Indian National Congress?",
+    "question_hi": "भारतीय राष्ट्रीय कांग्रेस के पहले अध्यक्ष कौन थे?",
+    "options_en": ["W.C. Bonnerjee", "Dadabhai Naoroji", "A.O. Hume", "Surendranath Banerjee"],
+    "options_hi": ["डब्ल्यू.सी. बनर्जी", "दादाभाई नौरोजी", "ए.ओ. ह्यूम", "सुरेंद्रनाथ बनर्जी"],
+    "answer_en": "W.C. Bonnerjee",
+    "answer_hi": "डब्ल्यू.सी. बनर्जी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "Which Article of the Constitution deals with protection of life and personal liberty?",
+    "question_hi": "जीवन और व्यक्तिगत स्वतंत्रता के संरक्षण से कौन सा अनुच्छेद संबंधित है?",
+    "options_en": ["Article 19", "Article 20", "Article 21", "Article 22"],
+    "options_hi": ["अनुच्छेद 19", "अनुच्छेद 20", "अनुच्छेद 21", "अनुच्छेद 22"],
+    "answer_en": "Article 21",
+    "answer_hi": "अनुच्छेद 21",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "Who introduced the policy of 'Divide and Rule' in India?",
+    "question_hi": "भारत में 'फूट डालो और राज करो' नीति किसने अपनाई?",
+    "options_en": ["Lord Curzon", "Lord Dalhousie", "Lord Wellesley", "Lord Ripon"],
+    "options_hi": ["लॉर्ड कर्ज़न", "लॉर्ड डलहौजी", "लॉर्ड वेलेजली", "लॉर्ड रिपन"],
+    "answer_en": "Lord Curzon",
+    "answer_hi": "लॉर्ड कर्ज़न",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "Who was known as the 'Grand Old Man of India'?",
+    "question_hi": "'भारत के वृद्ध पुरुष' के नाम से कौन प्रसिद्ध थे?",
+    "options_en": ["Dadabhai Naoroji", "Gopal Krishna Gokhale", "Bal Gangadhar Tilak", "Surendranath Banerjee"],
+    "options_hi": ["दादाभाई नौरोजी", "गोपाल कृष्ण गोखले", "बाल गंगाधर तिलक", "सुरेंद्रनाथ बनर्जी"],
+    "answer_en": "Dadabhai Naoroji",
+    "answer_hi": "दादाभाई नौरोजी",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 6,
+    "question_en": "Which Mughal emperor introduced the Din-i-Ilahi?",
+    "question_hi": "दीन-ए-इलाही किस मुगल शासक ने शुरू किया?",
+    "options_en": ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    "options_hi": ["अकबर", "जहाँगीर", "शाहजहाँ", "औरंगजेब"],
+    "answer_en": "Akbar",
+    "answer_hi": "अकबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Which Article deals with Freedom of Religion?",
+    "question_hi": "धर्म की स्वतंत्रता से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 25", "Article 26", "Article 27", "Article 28"],
+    "options_hi": ["अनुच्छेद 25", "अनुच्छेद 26", "अनुच्छेद 27", "अनुच्छेद 28"],
+    "answer_en": "Article 25",
+    "answer_hi": "अनुच्छेद 25",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "Who founded the Muslim League in 1906?",
+    "question_hi": "1906 में मुस्लिम लीग की स्थापना किसने की?",
+    "options_en": ["Aga Khan", "Mohammad Ali Jinnah", "Liaquat Ali Khan", "Syed Ahmad Khan"],
+    "options_hi": ["आगा खान", "मोहम्मद अली जिन्ना", "लियाकत अली खान", "सर सैयद अहमद खान"],
+    "answer_en": "Aga Khan",
+    "answer_hi": "आगा खान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "Which Five-Year Plan emphasized agriculture?",
+    "question_hi": "किस पंचवर्षीय योजना में कृषि पर विशेष बल दिया गया?",
+    "options_en": ["First Five-Year Plan", "Second Five-Year Plan", "Third Five-Year Plan", "Fourth Five-Year Plan"],
+    "options_hi": ["प्रथम पंचवर्षीय योजना", "द्वितीय पंचवर्षीय योजना", "तृतीय पंचवर्षीय योजना", "चतुर्थ पंचवर्षीय योजना"],
+    "answer_en": "First Five-Year Plan",
+    "answer_hi": "प्रथम पंचवर्षीय योजना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "Who was the first Chief Election Commissioner of India?",
+    "question_hi": "भारत के पहले मुख्य चुनाव आयुक्त कौन थे?",
+    "options_en": ["Sukumar Sen", "T.N. Seshan", "R.V.S. Peri Sastri", "M.S. Gill"],
+    "options_hi": ["सुकुमार सेन", "टी.एन. शेषन", "आर.वी.एस. पेरी शास्त्री", "एम.एस. गिल"],
+    "answer_en": "Sukumar Sen",
+    "answer_hi": "सुकुमार सेन",
+    "attempted": false,
+    "selected": ""
+  },
+   {
+    "num": 11,
+    "question_en": "Which Governor-General introduced the Doctrine of Lapse?",
+    "question_hi": "राज्य हड़प नीति (Doctrine of Lapse) किस गवर्नर-जनरल ने लागू की?",
+    "options_en": ["Lord Dalhousie", "Lord Wellesley", "Lord Cornwallis", "Lord Curzon"],
+    "options_hi": ["लॉर्ड डलहौजी", "लॉर्ड वेलेजली", "लॉर्ड कॉर्नवालिस", "लॉर्ड कर्ज़न"],
+    "answer_en": "Lord Dalhousie",
+    "answer_hi": "लॉर्ड डलहौजी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "Which Article of the Constitution deals with the Comptroller and Auditor General?",
+    "question_hi": "नियंत्रक एवं महालेखा परीक्षक से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 148", "Article 149", "Article 150", "Article 151"],
+    "options_hi": ["अनुच्छेद 148", "अनुच्छेद 149", "अनुच्छेद 150", "अनुच्छेद 151"],
+    "answer_en": "Article 148",
+    "answer_hi": "अनुच्छेद 148",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "Who was the founder of the Aligarh Movement?",
+    "question_hi": "अलीगढ़ आंदोलन के संस्थापक कौन थे?",
+    "options_en": ["Sir Syed Ahmad Khan", "Maulana Azad", "Aga Khan", "Mohammad Ali Jinnah"],
+    "options_hi": ["सर सैयद अहमद खान", "मौलाना आज़ाद", "आगा खान", "मोहम्मद अली जिन्ना"],
+    "answer_en": "Sir Syed Ahmad Khan",
+    "answer_hi": "सर सैयद अहमद खान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "Which Mughal ruler introduced the Mansabdari system?",
+    "question_hi": "मनसबदारी व्यवस्था किस मुगल शासक ने प्रारंभ की?",
+    "options_en": ["Akbar", "Babur", "Humayun", "Jahangir"],
+    "options_hi": ["अकबर", "बाबर", "हुमायूँ", "जहाँगीर"],
+    "answer_en": "Akbar",
+    "answer_hi": "अकबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "Which Amendment Act made education a Fundamental Right?",
+    "question_hi": "किस संशोधन द्वारा शिक्षा को मौलिक अधिकार बनाया गया?",
+    "options_en": ["86th Amendment", "73rd Amendment", "74th Amendment", "42nd Amendment"],
+    "options_hi": ["86वां संशोधन", "73वां संशोधन", "74वां संशोधन", "42वां संशोधन"],
+    "answer_en": "86th Amendment",
+    "answer_hi": "86वां संशोधन",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 16,
+    "question_en": "Who was the first Indian woman Chief Minister?",
+    "question_hi": "भारत की पहली महिला मुख्यमंत्री कौन थीं?",
+    "options_en": ["Sucheta Kriplani", "Indira Gandhi", "Sarojini Naidu", "Vijaya Lakshmi Pandit"],
+    "options_hi": ["सुचेता कृपलानी", "इंदिरा गांधी", "सरोजिनी नायडू", "विजयलक्ष्मी पंडित"],
+    "answer_en": "Sucheta Kriplani",
+    "answer_hi": "सुचेता कृपलानी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Which Viceroy partitioned Bengal in 1905?",
+    "question_hi": "1905 में बंगाल का विभाजन किस वायसराय ने किया?",
+    "options_en": ["Lord Curzon", "Lord Ripon", "Lord Lytton", "Lord Hardinge"],
+    "options_hi": ["लॉर्ड कर्ज़न", "लॉर्ड रिपन", "लॉर्ड लिटन", "लॉर्ड हार्डिंग"],
+    "answer_en": "Lord Curzon",
+    "answer_hi": "लॉर्ड कर्ज़न",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "Which Article deals with Emergency due to failure of constitutional machinery?",
+    "question_hi": "संवैधानिक तंत्र की विफलता से संबंधित आपातकाल किस अनुच्छेद में है?",
+    "options_en": ["Article 352", "Article 356", "Article 360", "Article 365"],
+    "options_hi": ["अनुच्छेद 352", "अनुच्छेद 356", "अनुच्छेद 360", "अनुच्छेद 365"],
+    "answer_en": "Article 356",
+    "answer_hi": "अनुच्छेद 356",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "Who established the Asiatic Society of Bengal?",
+    "question_hi": "एशियाटिक सोसाइटी ऑफ बंगाल की स्थापना किसने की?",
+    "options_en": ["William Jones", "Max Muller", "James Prinsep", "Charles Wilkins"],
+    "options_hi": ["विलियम जोन्स", "मैक्स मूलर", "जेम्स प्रिंसेप", "चार्ल्स विल्किंस"],
+    "answer_en": "William Jones",
+    "answer_hi": "विलियम जोन्स",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "Which Five-Year Plan is also known as the 'Gadgil Yojana'?",
+    "question_hi": "कौन सी पंचवर्षीय योजना 'गाडगिल योजना' के नाम से जानी जाती है?",
+    "options_en": ["Fourth Five-Year Plan", "Fifth Five-Year Plan", "Sixth Five-Year Plan", "Third Five-Year Plan"],
+    "options_hi": ["चतुर्थ पंचवर्षीय योजना", "पंचम पंचवर्षीय योजना", "षष्ठ पंचवर्षीय योजना", "तृतीय पंचवर्षीय योजना"],
+    "answer_en": "Fourth Five-Year Plan",
+    "answer_hi": "चतुर्थ पंचवर्षीय योजना",
+    "attempted": false,
+    "selected": ""
+  },
+
+  {
+    "num": 21,
+    "question_en": "Who was the first Indian to become Governor of RBI?",
+    "question_hi": "RBI के पहले भारतीय गवर्नर कौन थे?",
+    "options_en": ["C.D. Deshmukh", "B.R. Ambedkar", "P.C. Mahalanobis", "John Mathai"],
+    "options_hi": ["सी.डी. देशमुख", "बी.आर. अंबेडकर", "पी.सी. महालनोबिस", "जॉन मथाई"],
+    "answer_en": "C.D. Deshmukh",
+    "answer_hi": "सी.डी. देशमुख",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Which movement is associated with the slogan 'Do or Die'?",
+    "question_hi": "'करो या मरो' नारा किस आंदोलन से जुड़ा है?",
+    "options_en": ["Quit India Movement", "Civil Disobedience Movement", "Non-Cooperation Movement", "Swadeshi Movement"],
+    "options_hi": ["भारत छोड़ो आंदोलन", "सविनय अवज्ञा आंदोलन", "असहयोग आंदोलन", "स्वदेशी आंदोलन"],
+    "answer_en": "Quit India Movement",
+    "answer_hi": "भारत छोड़ो आंदोलन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "Which Article provides for the Finance Commission?",
+    "question_hi": "वित्त आयोग से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 280", "Article 281", "Article 282", "Article 283"],
+    "options_hi": ["अनुच्छेद 280", "अनुच्छेद 281", "अनुच्छेद 282", "अनुच्छेद 283"],
+    "answer_en": "Article 280",
+    "answer_hi": "अनुच्छेद 280",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Who was the last Governor-General of independent India?",
+    "question_hi": "स्वतंत्र भारत के अंतिम गवर्नर-जनरल कौन थे?",
+    "options_en": ["C. Rajagopalachari", "Lord Mountbatten", "Rajendra Prasad", "Jawaharlal Nehru"],
+    "options_hi": ["सी. राजगोपालाचारी", "लॉर्ड माउंटबेटन", "डॉ. राजेंद्र प्रसाद", "जवाहरलाल नेहरू"],
+    "answer_en": "C. Rajagopalachari",
+    "answer_hi": "सी. राजगोपालाचारी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "Which Mughal ruler translated the Mahabharata into Persian?",
+    "question_hi": "महाभारत का फारसी अनुवाद किस मुगल शासक ने कराया?",
+    "options_en": ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
+    "options_hi": ["अकबर", "जहाँगीर", "शाहजहाँ", "औरंगजेब"],
+    "answer_en": "Akbar",
+    "answer_hi": "अकबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "Which committee recommended the establishment of the Planning Commission?",
+    "question_hi": "योजना आयोग की स्थापना की सिफारिश किस समिति ने की थी?",
+    "options_en": ["Advisory Planning Board", "Gadgil Committee", "Balwant Rai Mehta Committee", "Sarkaria Commission"],
+    "options_hi": ["सलाहकार योजना बोर्ड", "गाडगिल समिति", "बलवंत राय मेहता समिति", "सरकारिया आयोग"],
+    "answer_en": "Advisory Planning Board",
+    "answer_hi": "सलाहकार योजना बोर्ड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "Who presides over the joint sitting of Parliament?",
+    "question_hi": "संसद की संयुक्त बैठक की अध्यक्षता कौन करता है?",
+    "options_en": ["Speaker of Lok Sabha", "Vice-President", "President", "Deputy Speaker"],
+    "options_hi": ["लोकसभा अध्यक्ष", "उपराष्ट्रपति", "राष्ट्रपति", "उपाध्यक्ष"],
+    "answer_en": "Speaker of Lok Sabha",
+    "answer_hi": "लोकसभा अध्यक्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "Which Mughal emperor built the Jama Masjid of Delhi?",
+    "question_hi": "दिल्ली की जामा मस्जिद का निर्माण किस मुगल शासक ने कराया?",
+    "options_en": ["Shah Jahan", "Akbar", "Aurangzeb", "Jahangir"],
+    "options_hi": ["शाहजहाँ", "अकबर", "औरंगजेब", "जहाँगीर"],
+    "answer_en": "Shah Jahan",
+    "answer_hi": "शाहजहाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "Which Article deals with the impeachment of the President?",
+    "question_hi": "राष्ट्रपति के महाभियोग से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 61", "Article 62", "Article 72", "Article 74"],
+    "options_hi": ["अनुच्छेद 61", "अनुच्छेद 62", "अनुच्छेद 72", "अनुच्छेद 74"],
+    "answer_en": "Article 61",
+    "answer_hi": "अनुच्छेद 61",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Who introduced the Permanent Settlement in India?",
+    "question_hi": "भारत में स्थायी बंदोबस्त किसने लागू किया?",
+    "options_en": ["Lord Cornwallis", "Lord Wellesley", "Lord Dalhousie", "Lord Hastings"],
+    "options_hi": ["लॉर्ड कॉर्नवालिस", "लॉर्ड वेलेजली", "लॉर्ड डलहौजी", "लॉर्ड हेस्टिंग्स"],
+    "answer_en": "Lord Cornwallis",
+    "answer_hi": "लॉर्ड कॉर्नवालिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "Which constitutional body conducts elections in India?",
+    "question_hi": "भारत में चुनाव कौन सा संवैधानिक निकाय कराता है?",
+    "options_en": ["Election Commission", "Union Public Service Commission", "Finance Commission", "Planning Commission"],
+    "options_hi": ["चुनाव आयोग", "संघ लोक सेवा आयोग", "वित्त आयोग", "योजना आयोग"],
+    "answer_en": "Election Commission",
+    "answer_hi": "चुनाव आयोग",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "Who was the first Speaker of Lok Sabha?",
+    "question_hi": "लोकसभा के पहले अध्यक्ष कौन थे?",
+    "options_en": ["G.V. Mavalankar", "M.A. Ayyangar", "Hukam Singh", "Neelam Sanjiva Reddy"],
+    "options_hi": ["जी.वी. मावलंकर", "एम.ए. अयंगर", "हुकम सिंह", "नीलम संजीव रेड्डी"],
+    "answer_en": "G.V. Mavalankar",
+    "answer_hi": "जी.वी. मावलंकर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "Which movement led to the formation of the Muslim League?",
+    "question_hi": "किस आंदोलन के परिणामस्वरूप मुस्लिम लीग की स्थापना हुई?",
+    "options_en": ["Partition of Bengal", "Khilafat Movement", "Non-Cooperation Movement", "Home Rule Movement"],
+    "options_hi": ["बंगाल विभाजन", "खिलाफत आंदोलन", "असहयोग आंदोलन", "होम रूल आंदोलन"],
+    "answer_en": "Partition of Bengal",
+    "answer_hi": "बंगाल विभाजन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "Which Article deals with the Attorney General of India?",
+    "question_hi": "भारत के महान्यायवादी से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 76", "Article 77", "Article 78", "Article 79"],
+    "options_hi": ["अनुच्छेद 76", "अनुच्छेद 77", "अनुच्छेद 78", "अनुच्छेद 79"],
+    "answer_en": "Article 76",
+    "answer_hi": "अनुच्छेद 76",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "Who founded the Indian National Army?",
+    "question_hi": "आजाद हिंद फौज की स्थापना किसने की?",
+    "options_en": ["Rash Behari Bose", "Subhas Chandra Bose", "Lala Lajpat Rai", "Bhagat Singh"],
+    "options_hi": ["रास बिहारी बोस", "सुभाष चंद्र बोस", "लाला लाजपत राय", "भगत सिंह"],
+    "answer_en": "Rash Behari Bose",
+    "answer_hi": "रास बिहारी बोस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "Which Mughal ruler shifted his capital from Agra to Delhi?",
+    "question_hi": "किस मुगल शासक ने राजधानी आगरा से दिल्ली स्थानांतरित की?",
+    "options_en": ["Shah Jahan", "Akbar", "Aurangzeb", "Babur"],
+    "options_hi": ["शाहजहाँ", "अकबर", "औरंगजेब", "बाबर"],
+    "answer_en": "Shah Jahan",
+    "answer_hi": "शाहजहाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "Which schedule of the Constitution deals with Union, State and Concurrent Lists?",
+    "question_hi": "संघ, राज्य और समवर्ती सूची किस अनुसूची में है?",
+    "options_en": ["Seventh Schedule", "Sixth Schedule", "Eighth Schedule", "Tenth Schedule"],
+    "options_hi": ["सातवीं अनुसूची", "छठी अनुसूची", "आठवीं अनुसूची", "दसवीं अनुसूची"],
+    "answer_en": "Seventh Schedule",
+    "answer_hi": "सातवीं अनुसूची",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "Who was known as the 'Iron Man of India'?",
+    "question_hi": "'भारत के लौह पुरुष' के नाम से कौन जाने जाते हैं?",
+    "options_en": ["Sardar Vallabhbhai Patel", "Jawaharlal Nehru", "B.R. Ambedkar", "Rajendra Prasad"],
+    "options_hi": ["सरदार वल्लभभाई पटेल", "जवाहरलाल नेहरू", "बी.आर. अंबेडकर", "राजेंद्र प्रसाद"],
+    "answer_en": "Sardar Vallabhbhai Patel",
+    "answer_hi": "सरदार वल्लभभाई पटेल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "Which Governor-General abolished Sati?",
+    "question_hi": "सती प्रथा को किस गवर्नर-जनरल ने समाप्त किया?",
+    "options_en": ["Lord William Bentinck", "Lord Dalhousie", "Lord Cornwallis", "Lord Hastings"],
+    "options_hi": ["लॉर्ड विलियम बेंटिंक", "लॉर्ड डलहौजी", "लॉर्ड कॉर्नवालिस", "लॉर्ड हेस्टिंग्स"],
+    "answer_en": "Lord William Bentinck",
+    "answer_hi": "लॉर्ड विलियम बेंटिंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "Which Article provides for the Supreme Court of India?",
+    "question_hi": "भारत के सर्वोच्च न्यायालय से संबंधित अनुच्छेद कौन सा है?",
+    "options_en": ["Article 124", "Article 125", "Article 126", "Article 127"],
+    "options_hi": ["अनुच्छेद 124", "अनुच्छेद 125", "अनुच्छेद 126", "अनुच्छेद 127"],
+    "answer_en": "Article 124",
+    "answer_hi": "अनुच्छेद 124",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "Who introduced the Ryotwari system?",
+    "question_hi": "रैयतवाड़ी व्यवस्था किसने शुरू की?",
+    "options_en": ["Thomas Munro", "Lord Cornwallis", "Lord Dalhousie", "Warren Hastings"],
+    "options_hi": ["थॉमस मुनरो", "लॉर्ड कॉर्नवालिस", "लॉर्ड डलहौजी", "वॉरेन हेस्टिंग्स"],
+    "answer_en": "Thomas Munro",
+    "answer_hi": "थॉमस मुनरो",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "Which body resolves disputes between Centre and States?",
+    "question_hi": "केंद्र और राज्यों के बीच विवाद कौन सुलझाता है?",
+    "options_en": ["Supreme Court", "High Court", "Inter-State Council", "Finance Commission"],
+    "options_hi": ["सर्वोच्च न्यायालय", "उच्च न्यायालय", "अंतर्राज्यीय परिषद", "वित्त आयोग"],
+    "answer_en": "Supreme Court",
+    "answer_hi": "सर्वोच्च न्यायालय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "Who was the author of 'Indica'?",
+    "question_hi": "'इंडिका' ग्रंथ के लेखक कौन थे?",
+    "options_en": ["Megasthenes", "Fa-Hien", "Hiuen Tsang", "Al-Biruni"],
+    "options_hi": ["मेगास्थनीज", "फाह्यान", "ह्वेनसांग", "अल-बिरूनी"],
+    "answer_en": "Megasthenes",
+    "answer_hi": "मेगास्थनीज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "Which Five-Year Plan focused on 'Garibi Hatao'?",
+    "question_hi": "'गरीबी हटाओ' किस पंचवर्षीय योजना का मुख्य उद्देश्य था?",
+    "options_en": ["Fifth Five-Year Plan", "Fourth Five-Year Plan", "Sixth Five-Year Plan", "Third Five-Year Plan"],
+    "options_hi": ["पंचम पंचवर्षीय योजना", "चतुर्थ पंचवर्षीय योजना", "षष्ठ पंचवर्षीय योजना", "तृतीय पंचवर्षीय योजना"],
+    "answer_en": "Fifth Five-Year Plan",
+    "answer_hi": "पंचम पंचवर्षीय योजना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "Who was the first Indian Chief Justice of India?",
+    "question_hi": "भारत के पहले भारतीय मुख्य न्यायाधीश कौन थे?",
+    "options_en": ["H.J. Kania", "M. Patanjali Sastri", "B.K. Mukherjea", "S.R. Das"],
+    "options_hi": ["एच.जे. कानिया", "एम. पातंजलि शास्त्री", "बी.के. मुखर्जी", "एस.आर. दास"],
+    "answer_en": "H.J. Kania",
+    "answer_hi": "एच.जे. कानिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "Which Mughal emperor wrote his autobiography?",
+    "question_hi": "किस मुगल शासक ने अपनी आत्मकथा लिखी?",
+    "options_en": ["Babur", "Akbar", "Jahangir", "Humayun"],
+    "options_hi": ["बाबर", "अकबर", "जहाँगीर", "हुमायूँ"],
+    "answer_en": "Babur",
+    "answer_hi": "बाबर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "Which Article deals with the National Emergency?",
+    "question_hi": "राष्ट्रीय आपातकाल किस अनुच्छेद में वर्णित है?",
+    "options_en": ["Article 352", "Article 356", "Article 360", "Article 365"],
+    "options_hi": ["अनुच्छेद 352", "अनुच्छेद 356", "अनुच्छेद 360", "अनुच्छेद 365"],
+    "answer_en": "Article 352",
+    "answer_hi": "अनुच्छेद 352",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Who was associated with the 'Young Bengal Movement'?",
+    "question_hi": "'यंग बंगाल आंदोलन' किससे संबंधित था?",
+    "options_en": ["Henry Vivian Derozio", "Raja Ram Mohan Roy", "Ishwar Chandra Vidyasagar", "Bankim Chandra Chatterjee"],
+    "options_hi": ["हेनरी विवियन डेरोज़ियो", "राजा राममोहन राय", "ईश्वरचंद्र विद्यासागर", "बंकिम चंद्र चट्टोपाध्याय"],
+    "answer_en": "Henry Vivian Derozio",
+    "answer_hi": "हेनरी विवियन डेरोज़ियो",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "Which body presents the Union Budget in Parliament?",
+    "question_hi": "संसद में केंद्रीय बजट कौन प्रस्तुत करता है?",
+    "options_en": ["Finance Minister", "Prime Minister", "President", "Speaker"],
+    "options_hi": ["वित्त मंत्री", "प्रधानमंत्री", "राष्ट्रपति", "लोकसभा अध्यक्ष"],
+    "answer_en": "Finance Minister",
+    "answer_hi": "वित्त मंत्री",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "Which British Act ended the rule of the East India Company?",
+    "question_hi": "किस ब्रिटिश अधिनियम ने ईस्ट इंडिया कंपनी का शासन समाप्त किया?",
+    "options_en": ["Government of India Act 1858", "Regulating Act 1773", "Charter Act 1813", "Charter Act 1833"],
+    "options_hi": ["भारत सरकार अधिनियम 1858", "नियामक अधिनियम 1773", "चार्टर अधिनियम 1813", "चार्टर अधिनियम 1833"],
+    "answer_en": "Government of India Act 1858",
+    "answer_hi": "भारत सरकार अधिनियम 1858",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 
 let currentQuestion = 0;

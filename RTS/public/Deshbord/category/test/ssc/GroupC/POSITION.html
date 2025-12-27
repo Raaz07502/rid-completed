@@ -8,22 +8,89 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <link rel="stylesheet" href="/RTS/public/css/Deshbord.css">
-  <link rel="stylesheet" href="/RTS/public/css/navbar.css">
+  <link rel="stylesheet" href="/RTS/public/css/footer.css">
   <style>
-    .course-card {
-      width: 280px;
-
+    /* Additional CSS for improved search functionality */
+    .search-container {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 0 15px;
     }
-
-    img {
-      background-size: cover;
-
+    
+    .search-box {
+      position: relative;
+      width: 100%;
     }
+    
+    .search-box input {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .search-box input:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .search-box i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+    }
+    
+    /* Mobile search container - visible only on mobile */
+    .mobile-search-container {
+      display: none;
+      padding: 15px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-search-container {
+        display: block;
+      }
+      
+      .nav-container .search-box {
+        display: none;
+      }
+      
+      .search-container {
+        display: none;
+      }
+    }
+    
+    /* Desktop search in nav */
+    @media (min-width: 769px) {
+      .mobile-search-container {
+        display: none;
+      }
+      
+      .search-container {
+        display: block;
+      }
+    }
+    
+    /* Search results counter */
+    .search-results {
+      text-align: center;
+      margin: 10px 0 20px;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    
   </style>
 </head>
 
 <body>
-
   <header class="main-header">
     <!-- Top Info Bar -->
     <div class="header-info">
@@ -48,34 +115,33 @@
         <img src="/RTS/public/Deshbord/logo.svg" alt="RID Bharat Logo">
       </div>
 
-      <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-      </button>
-
-      <button class="menu-toggle" id="menuToggle">
+      <!-- Menu Toggle Button for Mobile -->
+      <button class="menu-toggle" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
 
       <div class="nav-menu" id="navMenu">
-        <!-- Search Box -->
+        <!-- Search Box for Desktop -->
         <div class="search-box">
-          <input type="text" placeholder="Search Anything...">
+          <input type="text" placeholder="Search courses..." id="searchInput" aria-label="Search courses">
           <i class="fas fa-search"></i>
         </div>
 
         <!-- Certificate and Profile Buttons -->
         <div class="nav-buttons">
-          <a href="#" class="btn"><i class="fas fa-award"></i> Certificate</a>
-          <a href="#" class="btn"><i class="fas fa-user"></i> Profile</a>
+          <a href="/Certificate-Verification/verify.html" class="btn">
+            <i class="fas fa-award"></i> Certificate
+          </a>
+          <a href="/RTS/public/profile.html" class="btn"><i class="fas fa-user"></i> Profile</a>
         </div>
 
         <!-- Mobile Navigation -->
         <ul class="mobile-nav" id="mobileNav">
-          <!-- Mobile Search Box -->
-          <li class="mobile-search-box">
-            <input type="text" placeholder="Search Anything...">
+          <!-- Mobile Search Box in Menu -->
+          <div class="mobile-search-box">
+            <input type="text" placeholder="Search courses..." id="mobileMenuSearchInput" aria-label="Search courses">
             <i class="fas fa-search"></i>
-          </li>
+          </div>
 
           <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
           <li><a href="#"><i class="fas fa-file-alt"></i> Research Papers</a></li>
@@ -98,7 +164,6 @@
       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
       <li><a href="#"><i class="fas fa-file-alt"></i> Research Papers</a></li>
       <li><a href="#" id="about-link"><i class="fas fa-users"></i> About Us</a></li>
-
       <li>
         <a href="#"><i class="fas fa-building"></i> Center <i class="fas fa-chevron-down"></i></a>
         <ul class="dropdown-menu">
@@ -111,241 +176,367 @@
     </ul>
   </header>
 
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // ========== MOBILE MENU TOGGLE ==========
-      const menuToggle = document.getElementById('menuToggle');
-      const navMenu = document.getElementById('navMenu');
-      const mobileNav = document.getElementById('mobileNav');
-
-      // Initialize menu state
-      let isMenuOpen = false;
-
-      // Toggle mobile menu
-      function toggleMobileMenu() {
-        isMenuOpen = !isMenuOpen;
-
-        // Toggle active class on mobile elements
-        navMenu.classList.toggle('active', isMenuOpen);
-        mobileNav.classList.toggle('active', isMenuOpen);
-
-        // Update icon
-        const icon = menuToggle.querySelector('i');
-        icon.classList.toggle('fa-bars', !isMenuOpen);
-        icon.classList.toggle('fa-times', isMenuOpen);
-
-        // Toggle body scroll
-        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-      }
-
-      // Close mobile menu
-      function closeMobileMenu() {
-        if (!isMenuOpen) return;
-        isMenuOpen = false;
-        navMenu.classList.remove('active');
-        mobileNav.classList.remove('active');
-        menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
-        document.body.style.overflow = '';
-      }
-
-      // ========== THEME TOGGLE ==========
-      const themeToggle = document.getElementById('themeToggle');
-      themeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-
-        // Update icon
-        const icon = themeToggle.querySelector('i');
-        if (document.body.classList.contains('dark-mode')) {
-          icon.classList.replace('fa-moon', 'fa-sun');
-        } else {
-          icon.classList.replace('fa-sun', 'fa-moon');
-        }
-      });
-
-      // ========== EVENT LISTENERS ==========
-      menuToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toggleMobileMenu();
-      });
-
-      document.addEventListener('click', function (e) {
-        if (isMenuOpen && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-          closeMobileMenu();
-        }
-      });
-
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && isMenuOpen) {
-          closeMobileMenu();
-        }
-      });
-
-      window.addEventListener('resize', function () {
-        if (window.innerWidth > 992) {
-          closeMobileMenu();
-        }
-      });
-    });
-  </script>
-
-
-  <!----side bar wala contain suru -->
-
-
-  <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+  <!----sidebar start -->
+  <button class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
   <aside class="sidebar">
     <h2 class="mainu">Main Menu</h2>
     <ul class="menu">
-      <li><i class="fas fa-home home-icon"></i><a href="/dasborde_main/Deshbord.html">Home</a></li>
+      <li><i class="fas fa-home home-icon"></i><a href="/RTS/public/Deshbord.html">Home</a></li>
       <li><i class="fas fa-user profile-icon"></i><a href="">My Profile</a></li>
-      <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html">Category</a>
-      </li>
-      <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/dasborde_main/my purchase/my_purchase.html">My
-          Purchase</a></li>
-      <li><i class="fas fa-comment-dots feedback-icon"></i><a
-          href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
-      <li><i class="fas fa-dollar-sign refund-icon"></i><a
-          href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
-      <li><i class="fas fa-shield-alt privacy-icon"></i><a
-          href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
-      <li><i class="fas fa-file-contract terms-icon"></i><a
-          href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
-      <li><i class="fas fa-star-half-alt rate-icon"></i><a href="#">Rate Us</a></li>
+      <li><i class="fas fa-star category-icon"></i><a href="/RTS/public/Deshbord/category/category.html">Category</a></li>
+      <li><i class="fas fa-shopping-cart purchase-icon"></i><a href="/dasborde_main/my purchase/my_purchase.html">My Purchase</a></li>
+      <li><i class="fas fa-comment-dots feedback-icon"></i><a href="/RTS/public/Deshbord/category/test/feedback/feedback.html">Feedback</a></li>
+      <li><i class="fas fa-dollar-sign refund-icon"></i><a href="/RTS/public/Deshbord/Refund_A_Can_P/refund.html">Refund/Cancellation Policy</a></li>
+      <li><i class="fas fa-shield-alt privacy-icon"></i><a href="/RTS/public/Deshbord/category/test/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a></li>
+      <li><i class="fas fa-file-contract terms-icon"></i><a href="/RTS/public/Deshbord/category/test/teamCon/tc.html">Terms and Conditions</a></li>
+      <li><i class="fas fa-star-half-alt rate-icon"></i><a href="/RTS/public/Deshbord/reating/reating.html">Rate Us</a></li>
       <li><i class="fas fa-sign-out-alt logout-icon"></i><a href="#">Logout</a></li>
     </ul>
   </aside><br>
+
   <main>
+    <!-- Mobile Search Container - Visible only on mobile -->
+    <div class="mobile-search-container">
+      <div class="search-box">
+        <input type="text" placeholder="Search courses..." id="mobileSearchInput" aria-label="Search courses">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="search-results" id="searchResults">Showing all courses</div>
+    </div>
+
+    <!-- Desktop Search Container - Centered -->
+    <div class="search-container" id="desktopSearchContainer">
+      <div class="search-box">
+        <input type="text" placeholder="Search courses..." id="desktopSearchInput" aria-label="Search courses">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="search-results" id="desktopSearchResults">Showing all courses</div>
+    </div>
 
     <section class="courses">
-      <div class="courses">
-        <div class="course-card">
-<img src="/RTS/public/images/image/groupb_pree.png" alt="Course Image">
-          <div class="course-content">
-            <h3>PREE</h3>
-            <div class="marquee">
-              <p>Beginner Basicss</span></p>
-            </div>
-            <div class="btn-container">
-              <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/PREE/purches.html" class="btn btn-light" id="drow" >More Details</a>
-            </div>
+      <div class="course-card" data-course="PREE">
+        <img src="/RTS/public/images/image/groupb_pree.png" alt="PREE Course">
+        <div class="course-content">
+          <h3>PREE</h3>
+          <div class="marquee">
+            <p>Beginner Basics</p>
+          </div>
+          <div class="btn-container">
+            <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/PREE/purches.html" class="btn btn-light" id="drow">More Details</a>
           </div>
         </div>
-        <div class="course-card">
-<img src="/RTS/public/images/image/cpomains.png" alt="Course Image">
-          <div class="course-content">
-            <h3>CPO</h3>
-            <div class="marquee">
-              <p>MAINS</span></p>
-            </div>
-            <div class="btn-container">
-              <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CPOmains/purches.html" class="btn btn-light" id="drow">More Details</a>
-            </div>
+      </div>
+      
+      <div class="course-card" data-course="CPO MAINS">
+        <img src="/RTS/public/images/image/cpomains.png" alt="CPO Mains Course">
+        <div class="course-content">
+          <h3>CPO</h3>
+          <div class="marquee">
+            <p>MAINS</p>
+          </div>
+          <div class="btn-container">
+            <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CPOmains/purches.html" class="btn btn-light" id="drow">More Details</a>
           </div>
         </div>
+      </div>
 
-        <div class="course-card">
-<img src="/RTS/public/images/image/cgl.png" alt="Course Image">
-          <div class="course-content">
-            <h3>CGL</h3>
-            <div class="marquee">
-              <p>DISTRUCTIVE</span></p>
-            </div>
-            <div class="btn-container">
-              <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CGL/purches.html" class="btn"> Purchase Now </a>
-            </div>
+      <div class="course-card" data-course="CGL">
+        <img src="/RTS/public/images/image/cgl.png" alt="CGL Course">
+        <div class="course-content">
+          <h3>CGL</h3>
+          <div class="marquee">
+            <p>DISTRUCTIVE</p>
+          </div>
+          <div class="btn-container">
+            <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CGL/purches.html" class="btn">More Details</a>
           </div>
         </div>
+      </div>
 
-
-        <div class="course-card">
-<img src="/RTS/public/images/image/cpo.png" alt="Course Image">
-          <div class="course-content">
-            <h3>CPO</h3>
-            <div class="marquee">
-             <p>Skill Test</p>
-            </div>
-            <div class="btn-container">
-              <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CPO/purches.html" class="btn btn-light" id="drow">More Details</a>
-            </div>
-
+      <div class="course-card" data-course="CPO SKILL">
+        <img src="/RTS/public/images/image/cpo.png" alt="CPO Skill Test Course">
+        <div class="course-content">
+          <h3>CPO</h3>
+          <div class="marquee">
+            <p>Skill Test</p>
+          </div>
+          <div class="btn-container">
+            <a href="/RTS/public/Deshbord/category/test/SSC/GroupC/CPO/purches.html" class="btn btn-light" id="drow">More Details</a>
           </div>
         </div>
-  </section>
+      </div>
+    </section>
   </main>
-  </div>
+
+  <!----------------------------------------------------------Footer parts in desbord---------------------------------------------------------------->
+  <section class="footer">
+    <footer>
+      <div class="left">
+        <img src="/RTS/public/Deshbord/logo.svg" alt="RID Bharat Logo">
+        <p>
+          Mig, 72, Rajiv Nagar, A Sector, Aayodhya Bypass Bhopal,
+          Madhya Pradesh, India (462022)
+        </p>
+        <div>
+          <a href="mailto:ridorg.in@gmail.com">
+            <i class="fas fa-envelope"></i> ridorg.in@gmail.com | Email
+          </a>
+          <a href="tel:+91 9202707903">
+            <i class="fas fa-phone"></i> +91 9202707903 | Mobile
+          </a>
+        </div>
+      </div>
+
+      <div class="links-head">
+        <h3>Research Topics</h3>
+        <hr>
+        <div class="links">
+          <div class="links-1">
+            <a href="#">Computers</a>
+            <a href="#">Tech National Affairs</a>
+            <a href="#">AI: Artificial Intelligence</a>
+            <a href="#">Race & Ethnicity</a>
+            <a href="#">Religion</a>
+            <a href="#">Age & Generations</a>
+            <a href="#">Gender & Equality</a>
+          </div>
+          <div class="links-2">
+            <a href="#">Space Engineering</a>
+            <a href="#">Economy & Work</a>
+            <a href="#">Science</a>
+            <a href="#">Internet & Technology</a>
+            <a href="#">News Habits & Media</a>
+            <a href="#">Methodological Research</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="links-social">
+        <h3>Social Links</h3>
+        <hr>
+        <div class="links">
+          <div class="links-1">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon> Facebook</a>
+            <a href="https://www.linkedin.com/in/rid-bharat-9a4517324">
+              <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+            </a>
+            <a href="https://youtube.com/@ridbharat">
+              <ion-icon name="logo-youtube"></ion-icon> YouTube
+            </a>
+          </div>
+          <div class="links-2">
+            <a href="https://www.instagram.com/ridbharat">
+              <ion-icon name="logo-instagram"></ion-icon> Instagram
+            </a>
+            <a href="mailto:ridorg.in@gmail.com">
+              <ion-icon name="mail-outline"></ion-icon> Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <p class="about-text">
+      <strong>ABOUT RESEARCH INNOVATION & DISCOVERY:</strong> RID Organization i.e. Research,
+      Innovation and Discovery Organization is an organization which is run by TWF (TWKSAA WELFARE FOUNDATION) NGO. The
+      main objective of which is that in the coming times, the discovery, publication and use of NEW (RID, PMS & TLR)
+      should be done first in Indian culture, civilization and language from this holy land of India.
+    </p>
+
+    <section class="copyrightsection">
+      <p>Copyright ©2024, RID | TWF (TWKSAA Welfare Foundation). All Rights Reserved.</p>
+      <div class="link">
+        <a href="#">About</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Feedback</a>
+      </div>
+    </section>
+  </section>
+
+  <!-- JavaScript Files -->
   <script>
-    function toggleSidebar() {
+    document.addEventListener('DOMContentLoaded', function () {
+      // ==========================
+      // TOGGLE FUNCTIONALITY
+      // ==========================
+      // Sidebar toggle
+      const sidebarToggle = document.querySelector('.sidebar-toggle');
       const sidebar = document.querySelector('.sidebar');
-      sidebar.classList.toggle('open');
+      if (sidebarToggle && sidebar) {
+        sidebarToggle.addEventListener('click', function() {
+          sidebar.classList.toggle('open');
+        });
+      }
 
-      // Optional: Prevent scrolling when sidebar is open
-      document.body.classList.toggle('no-scroll');
-    }
+      // Navbar toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.getElementById('navMenu');
+      const mobileNav = document.getElementById('mobileNav');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          mobileNav.classList.toggle('active');
+        });
+      }
 
-    // Close sidebar when clicking on a link (for mobile)
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', function () {
-        if (window.innerWidth <= 992) {
-          document.querySelector('.sidebar').classList.remove('open');
-          document.body.classList.remove('no-scroll');
-        }
+      // Close mobile nav when a link is clicked
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+          mobileNav.classList.remove('active');
+        });
       });
-    });
 
-    // Close sidebar when clicking outside (for mobile)
-    document.addEventListener('click', function (event) {
-      const sidebar = document.querySelector('.sidebar');
-      const toggleBtn = document.querySelector('.sidebar-toggle');
+      // Close sidebar when a link is clicked (on mobile)
+      const sidebarLinks = document.querySelectorAll('.sidebar a');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 992) {
+            sidebar.classList.remove('open');
+          }
+        });
+      });
 
-      if (window.innerWidth <= 992 &&
-        !sidebar.contains(event.target) &&
-        event.target !== toggleBtn &&
-        !toggleBtn.contains(event.target)) {
-        sidebar.classList.remove('open');
-        document.body.classList.remove('no-scroll');
+      // ==========================
+      // ENHANCED SEARCH FUNCTIONALITY
+      // ==========================
+      // All search inputs
+      const searchInput = document.getElementById("searchInput");
+      const mobileSearchInput = document.getElementById("mobileSearchInput");
+      const desktopSearchInput = document.getElementById("desktopSearchInput");
+      const mobileMenuSearchInput = document.getElementById("mobileMenuSearchInput");
+      
+      const courseCards = document.querySelectorAll(".course-card");
+      const mobileSearchResults = document.getElementById("searchResults");
+      const desktopSearchResults = document.getElementById("desktopSearchResults");
+
+      // Function to update search results counter
+      function updateResultsCounter(searchTerm, visibleCount) {
+        const totalCount = courseCards.length;
+        const resultsText = searchTerm ? 
+          `Showing ${visibleCount} of ${totalCount} courses for "${searchTerm}"` : 
+          `Showing all ${totalCount} courses`;
+        
+        if (mobileSearchResults) mobileSearchResults.textContent = resultsText;
+        if (desktopSearchResults) desktopSearchResults.textContent = resultsText;
+      }
+
+      // Function to filter courses
+      function filterCourses(searchTerm) {
+        searchTerm = searchTerm.toLowerCase().trim();
+        let visibleCount = 0;
+
+        courseCards.forEach(card => {
+          const title = card.querySelector("h3").innerText.toLowerCase();
+          const description = card.querySelector(".marquee p").innerText.toLowerCase();
+          const courseData = card.getAttribute('data-course') || '';
+          
+          // Search in title, description, and data-course attribute
+          if (title.includes(searchTerm) || 
+              description.includes(searchTerm) || 
+              courseData.toLowerCase().includes(searchTerm)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        updateResultsCounter(searchTerm, visibleCount);
+      }
+
+      // Function to clear search
+      function clearSearch() {
+        courseCards.forEach(card => {
+          card.classList.remove('hidden');
+        });
+        updateResultsCounter('', courseCards.length);
+      }
+
+      // Event listeners for all search inputs
+      function setupSearchInput(inputElement) {
+        if (inputElement) {
+          inputElement.addEventListener("keyup", function() {
+            filterCourses(this.value);
+          });
+          
+          // Clear search on 'Escape' key
+          inputElement.addEventListener("keydown", function(e) {
+            if (e.key === 'Escape') {
+              this.value = '';
+              clearSearch();
+            }
+          });
+        }
+      }
+
+      // Setup all search inputs
+      setupSearchInput(searchInput);
+      setupSearchInput(mobileSearchInput);
+      setupSearchInput(desktopSearchInput);
+      setupSearchInput(mobileMenuSearchInput);
+
+      // Initialize results counter
+      updateResultsCounter('', courseCards.length);
+
+      // ==========================
+      // RESPONSIVE SEARCH BEHAVIOR
+      // ==========================
+      function handleResponsiveSearch() {
+        const desktopSearchContainer = document.getElementById('desktopSearchContainer');
+        
+        if (window.innerWidth <= 768) {
+          // Mobile: Show only mobile search container
+          if (desktopSearchContainer) desktopSearchContainer.style.display = 'none';
+        } else {
+          // Desktop: Show only desktop search container
+          if (desktopSearchContainer) desktopSearchContainer.style.display = 'block';
+        }
+      }
+
+      // Initial call
+      handleResponsiveSearch();
+      
+      // Update on resize
+      window.addEventListener('resize', handleResponsiveSearch);
+      
+      // ==========================
+      // DROPDOWN FUNCTIONALITY
+      // ==========================
+      // Mobile dropdown
+      const mobileDropdownItems = document.querySelectorAll('.has-dropdown');
+      mobileDropdownItems.forEach(item => {
+        const link = item.querySelector('a');
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = item.querySelector('.mobile-dropdown');
+            dropdown.classList.toggle('show');
+          }
+        });
+      });
+      
+      // Desktop dropdown
+      const desktopDropdown = document.querySelector('.main-nav li:has(.dropdown-menu)');
+      if (desktopDropdown) {
+        const desktopLink = desktopDropdown.querySelector('a');
+        const dropdownMenu = desktopDropdown.querySelector('.dropdown-menu');
+        
+        desktopDropdown.addEventListener('mouseenter', function() {
+          if (window.innerWidth > 768) {
+            dropdownMenu.style.display = 'block';
+          }
+        });
+        
+        desktopDropdown.addEventListener('mouseleave', function() {
+          if (window.innerWidth > 768) {
+            dropdownMenu.style.display = 'none';
+          }
+        });
       }
     });
-
-    // Banner slider functionality
-    const banners = [
-      "images/main_5/b1 (1).jpg",
-      "images/main_5/b1 (2).jpg",
-      "images/main_5/b1 (3).jpg",
-      "images/main_5/b1 (4).jpg",
-      "images/main_5/b1 (5).jpg",
-      "images/main_5/b1 (6).jpg",
-      "images/main_5/b1 (7).jpg"
-    ];
-
-    let currentBanner = 0;
-
-    function changeBanner(index) {
-      currentBanner = index;
-      document.getElementById('bannerImage').src = banners[index];
-
-      // Update active dot
-      const dots = document.querySelectorAll('.dot');
-      dots.forEach((dot, i) => {
-        if (i === index) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    }
-
-    // Auto slide banners
-    setInterval(() => {
-      currentBanner = (currentBanner + 1) % banners.length;
-      changeBanner(currentBanner);
-    }, 3000);
   </script>
-
 </body>
-
 </html>
-
-
-
-  

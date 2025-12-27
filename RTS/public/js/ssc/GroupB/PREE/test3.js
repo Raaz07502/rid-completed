@@ -1,1054 +1,554 @@
 const questions = [
+    {
+    "num": 1,
+    "question_en": "What is the chemical symbol for Gold?",
+    "question_hi": "सोने का रासायनिक प्रतीक क्या है?",
+    "options_en": ["Ag", "Au", "Pb", "Fe"],
+    "options_hi": ["Ag", "Au", "Pb", "Fe"],
+    "answer_en": "Au",
+    "answer_hi": "Au",
+    "attempted": false,
+    "selected": ""
+  },
   {
-       "num": 1,
-        "question_en": "What is the integer division 8 ÷ 35?",
-        "question_hi": "8 ÷ 35 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "1",
-            "0",
-            "2"
-        ],
-        "options_hi": [
-            "3",
-            "1",
-            "0",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is the integer division 43 ÷ 45?",
-        "question_hi": "43 ÷ 45 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "3",
-            "1",
-            "2"
-        ],
-        "options_hi": [
-            "0",
-            "3",
-            "1",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is 12 + 62?",
-        "question_hi": "12 + 62 कितना होता है?",
-        "options_en": [
-            "73",
-            "77",
-            "75",
-            "74"
-        ],
-        "options_hi": [
-            "73",
-            "77",
-            "75",
-            "74"
-        ],
-        "answer_en": "74",
-        "answer_hi": "74",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 85 + 10?",
-        "question_hi": "85 + 10 कितना होता है?",
-        "options_en": [
-            "96",
-            "94",
-            "98",
-            "95"
-        ],
-        "options_hi": [
-            "96",
-            "94",
-            "98",
-            "95"
-        ],
-        "answer_en": "95",
-        "answer_hi": "95",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is 4 - 81?",
-        "question_hi": "4 - 81 कितना होता है?",
-        "options_en": [
-            "-75",
-            "-74",
-            "-77",
-            "-76"
-        ],
-        "options_hi": [
-            "-75",
-            "-74",
-            "-77",
-            "-76"
-        ],
-        "answer_en": "-77",
-        "answer_hi": "-77",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is 87 - 16?",
-        "question_hi": "87 - 16 कितना होता है?",
-        "options_en": [
-            "71",
-            "72",
-            "70",
-            "74"
-        ],
-        "options_hi": [
-            "71",
-            "72",
-            "70",
-            "74"
-        ],
-        "answer_en": "71",
-        "answer_hi": "71",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is 49 + 23?",
-        "question_hi": "49 + 23 कितना होता है?",
-        "options_en": [
-            "71",
-            "72",
-            "75",
-            "73"
-        ],
-        "options_hi": [
-            "71",
-            "72",
-            "75",
-            "73"
-        ],
-        "answer_en": "72",
-        "answer_hi": "72",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 76 × 5?",
-        "question_hi": "76 × 5 कितना होता है?",
-        "options_en": [
-            "379",
-            "380",
-            "381",
-            "383"
-        ],
-        "options_hi": [
-            "379",
-            "380",
-            "381",
-            "383"
-        ],
-        "answer_en": "380",
-        "answer_hi": "380",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is 11 - 77?",
-        "question_hi": "11 - 77 कितना होता है?",
-        "options_en": [
-            "-63",
-            "-65",
-            "-64",
-            "-66"
-        ],
-        "options_hi": [
-            "-63",
-            "-65",
-            "-64",
-            "-66"
-        ],
-        "answer_en": "-66",
-        "answer_hi": "-66",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 89 + 78?",
-        "question_hi": "89 + 78 कितना होता है?",
-        "options_en": [
-            "170",
-            "166",
-            "168",
-            "167"
-        ],
-        "options_hi": [
-            "170",
-            "166",
-            "168",
-            "167"
-        ],
-        "answer_en": "167",
-        "answer_hi": "167",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 86 + 49?",
-        "question_hi": "86 + 49 कितना होता है?",
-        "options_en": [
-            "138",
-            "136",
-            "135",
-            "134"
-        ],
-        "options_hi": [
-            "138",
-            "136",
-            "135",
-            "134"
-        ],
-        "answer_en": "135",
-        "answer_hi": "135",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 12,
-        "question_en": "What is the integer division 64 ÷ 15?",
-        "question_hi": "64 ÷ 15 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "5",
-            "7",
-            "3"
-        ],
-        "options_hi": [
-            "4",
-            "5",
-            "7",
-            "3"
-        ],
-        "answer_en": "4",
-        "answer_hi": "4",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 13,
-        "question_en": "What is the integer division 92 ÷ 21?",
-        "question_hi": "92 ÷ 21 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "7",
-            "3",
-            "5"
-        ],
-        "options_hi": [
-            "4",
-            "7",
-            "3",
-            "5"
-        ],
-        "answer_en": "4",
-        "answer_hi": "4",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 14,
-        "question_en": "What is the integer division 80 ÷ 70?",
-        "question_hi": "80 ÷ 70 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 15,
-        "question_en": "What is 43 + 33?",
-        "question_hi": "43 + 33 कितना होता है?",
-        "options_en": [
-            "79",
-            "76",
-            "77",
-            "75"
-        ],
-        "options_hi": [
-            "79",
-            "76",
-            "77",
-            "75"
-        ],
-        "answer_en": "76",
-        "answer_hi": "76",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is the integer division 98 ÷ 61?",
-        "question_hi": "98 ÷ 61 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "2",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "4",
-            "2",
-            "1",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is the integer division 43 ÷ 25?",
-        "question_hi": "43 ÷ 25 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 45 × 37?",
-        "question_hi": "45 × 37 कितना होता है?",
-        "options_en": [
-            "1666",
-            "1668",
-            "1664",
-            "1665"
-        ],
-        "options_hi": [
-            "1666",
-            "1668",
-            "1664",
-            "1665"
-        ],
-        "answer_en": "1665",
-        "answer_hi": "1665",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is the integer division 12 ÷ 32?",
-        "question_hi": "12 ÷ 32 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "2",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is the integer division 90 ÷ 62?",
-        "question_hi": "90 ÷ 62 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "4"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is the integer division 39 ÷ 30?",
-        "question_hi": "39 ÷ 30 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 62 × 72?",
-        "question_hi": "62 × 72 कितना होता है?",
-        "options_en": [
-            "4464",
-            "4465",
-            "4463",
-            "4467"
-        ],
-        "options_hi": [
-            "4464",
-            "4465",
-            "4463",
-            "4467"
-        ],
-        "answer_en": "4464",
-        "answer_hi": "4464",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is the integer division 47 ÷ 91?",
-        "question_hi": "47 ÷ 91 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "3",
-            "1",
-            "2"
-        ],
-        "options_hi": [
-            "0",
-            "3",
-            "1",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is 31 - 17?",
-        "question_hi": "31 - 17 कितना होता है?",
-        "options_en": [
-            "15",
-            "17",
-            "14",
-            "13"
-        ],
-        "options_hi": [
-            "15",
-            "17",
-            "14",
-            "13"
-        ],
-        "answer_en": "14",
-        "answer_hi": "14",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is the integer division 26 ÷ 29?",
-        "question_hi": "26 ÷ 29 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "3",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 14 × 26?",
-        "question_hi": "14 × 26 कितना होता है?",
-        "options_en": [
-            "363",
-            "364",
-            "367",
-            "365"
-        ],
-        "options_hi": [
-            "363",
-            "364",
-            "367",
-            "365"
-        ],
-        "answer_en": "364",
-        "answer_hi": "364",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 40 - 3?",
-        "question_hi": "40 - 3 कितना होता है?",
-        "options_en": [
-            "38",
-            "40",
-            "37",
-            "36"
-        ],
-        "options_hi": [
-            "38",
-            "40",
-            "37",
-            "36"
-        ],
-        "answer_en": "37",
-        "answer_hi": "37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 72 - 39?",
-        "question_hi": "72 - 39 कितना होता है?",
-        "options_en": [
-            "34",
-            "32",
-            "33",
-            "36"
-        ],
-        "options_hi": [
-            "34",
-            "32",
-            "33",
-            "36"
-        ],
-        "answer_en": "33",
-        "answer_hi": "33",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is the integer division 75 ÷ 38?",
-        "question_hi": "75 ÷ 38 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is 25 × 8?",
-        "question_hi": "25 × 8 कितना होता है?",
-        "options_en": [
-            "201",
-            "199",
-            "200",
-            "203"
-        ],
-        "options_hi": [
-            "201",
-            "199",
-            "200",
-            "203"
-        ],
-        "answer_en": "200",
-        "answer_hi": "200",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 53 + 64?",
-        "question_hi": "53 + 64 कितना होता है?",
-        "options_en": [
-            "118",
-            "116",
-            "120",
-            "117"
-        ],
-        "options_hi": [
-            "118",
-            "116",
-            "120",
-            "117"
-        ],
-        "answer_en": "117",
-        "answer_hi": "117",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 74 + 40?",
-        "question_hi": "74 + 40 कितना होता है?",
-        "options_en": [
-            "113",
-            "117",
-            "114",
-            "115"
-        ],
-        "options_hi": [
-            "113",
-            "117",
-            "114",
-            "115"
-        ],
-        "answer_en": "114",
-        "answer_hi": "114",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is 79 - 78?",
-        "question_hi": "79 - 78 कितना होता है?",
-        "options_en": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is the integer division 40 ÷ 77?",
-        "question_hi": "40 ÷ 77 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 80 + 96?",
-        "question_hi": "80 + 96 कितना होता है?",
-        "options_en": [
-            "179",
-            "176",
-            "175",
-            "177"
-        ],
-        "options_hi": [
-            "179",
-            "176",
-            "175",
-            "177"
-        ],
-        "answer_en": "176",
-        "answer_hi": "176",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 35 + 86?",
-        "question_hi": "35 + 86 कितना होता है?",
-        "options_en": [
-            "124",
-            "120",
-            "121",
-            "122"
-        ],
-        "options_hi": [
-            "124",
-            "120",
-            "121",
-            "122"
-        ],
-        "answer_en": "121",
-        "answer_hi": "121",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 72 - 11?",
-        "question_hi": "72 - 11 कितना होता है?",
-        "options_en": [
-            "64",
-            "60",
-            "62",
-            "61"
-        ],
-        "options_hi": [
-            "64",
-            "60",
-            "62",
-            "61"
-        ],
-        "answer_en": "61",
-        "answer_hi": "61",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is the integer division 90 ÷ 78?",
-        "question_hi": "90 ÷ 78 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "4",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "4",
-            "1",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "What is 38 × 92?",
-        "question_hi": "38 × 92 कितना होता है?",
-        "options_en": [
-            "3497",
-            "3495",
-            "3496",
-            "3499"
-        ],
-        "options_hi": [
-            "3497",
-            "3495",
-            "3496",
-            "3499"
-        ],
-        "answer_en": "3496",
-        "answer_hi": "3496",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 40,
-        "question_en": "What is 35 - 82?",
-        "question_hi": "35 - 82 कितना होता है?",
-        "options_en": [
-            "-46",
-            "-45",
-            "-47",
-            "-44"
-        ],
-        "options_hi": [
-            "-46",
-            "-45",
-            "-47",
-            "-44"
-        ],
-        "answer_en": "-47",
-        "answer_hi": "-47",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is 84 × 21?",
-        "question_hi": "84 × 21 कितना होता है?",
-        "options_en": [
-            "1767",
-            "1763",
-            "1764",
-            "1765"
-        ],
-        "options_hi": [
-            "1767",
-            "1763",
-            "1764",
-            "1765"
-        ],
-        "answer_en": "1764",
-        "answer_hi": "1764",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "What is 23 × 41?",
-        "question_hi": "23 × 41 कितना होता है?",
-        "options_en": [
-            "942",
-            "944",
-            "943",
-            "946"
-        ],
-        "options_hi": [
-            "942",
-            "944",
-            "943",
-            "946"
-        ],
-        "answer_en": "943",
-        "answer_hi": "943",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "What is the integer division 90 ÷ 40?",
-        "question_hi": "90 ÷ 40 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "3",
-            "5",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "3",
-            "5",
-            "1"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "What is 58 + 12?",
-        "question_hi": "58 + 12 कितना होता है?",
-        "options_en": [
-            "70",
-            "71",
-            "69",
-            "73"
-        ],
-        "options_hi": [
-            "70",
-            "71",
-            "69",
-            "73"
-        ],
-        "answer_en": "70",
-        "answer_hi": "70",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "What is 79 + 34?",
-        "question_hi": "79 + 34 कितना होता है?",
-        "options_en": [
-            "114",
-            "112",
-            "116",
-            "113"
-        ],
-        "options_hi": [
-            "114",
-            "112",
-            "116",
-            "113"
-        ],
-        "answer_en": "113",
-        "answer_hi": "113",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "What is 99 × 88?",
-        "question_hi": "99 × 88 कितना होता है?",
-        "options_en": [
-            "8711",
-            "8713",
-            "8715",
-            "8712"
-        ],
-        "options_hi": [
-            "8711",
-            "8713",
-            "8715",
-            "8712"
-        ],
-        "answer_en": "8712",
-        "answer_hi": "8712",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "What is the integer division 68 ÷ 85?",
-        "question_hi": "68 ÷ 85 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "1",
-            "0",
-            "2"
-        ],
-        "options_hi": [
-            "3",
-            "1",
-            "0",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "What is 83 + 64?",
-        "question_hi": "83 + 64 कितना होता है?",
-        "options_en": [
-            "147",
-            "146",
-            "148",
-            "150"
-        ],
-        "options_hi": [
-            "147",
-            "146",
-            "148",
-            "150"
-        ],
-        "answer_en": "147",
-        "answer_hi": "147",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "What is 44 + 43?",
-        "question_hi": "44 + 43 कितना होता है?",
-        "options_en": [
-            "87",
-            "86",
-            "90",
-            "88"
-        ],
-        "options_hi": [
-            "87",
-            "86",
-            "90",
-            "88"
-        ],
-        "answer_en": "87",
-        "answer_hi": "87",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "What is 90 × 65?",
-        "question_hi": "90 × 65 कितना होता है?",
-        "options_en": [
-            "5851",
-            "5850",
-            "5849",
-            "5853"
-        ],
-        "options_hi": [
-            "5851",
-            "5850",
-            "5849",
-            "5853"
-        ],
-        "answer_en": "5850",
-        "answer_hi": "5850",
-        "attempted": false,
-        "selected": ""
-    }
+    "num": 2,
+    "question_en": "Which organelle is known as the 'powerhouse of the cell'?",
+    "question_hi": "किस कोशिकांग को 'कोशिका का पावरहाउस' कहा जाता है?",
+    "options_en": ["Nucleus", "Mitochondria", "Ribosome", "Golgi apparatus"],
+    "options_hi": ["केंद्रक", "माइटोकॉन्ड्रिया", "राइबोसोम", "गॉल्जी उपकरण"],
+    "answer_en": "Mitochondria",
+    "answer_hi": "माइटोकॉन्ड्रिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "What is the pH value of pure water?",
+    "question_hi": "शुद्ध जल का pH मान क्या होता है?",
+    "options_en": ["5", "7", "8", "14"],
+    "options_hi": ["5", "7", "8", "14"],
+    "answer_en": "7",
+    "answer_hi": "7",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "The process of conversion of glucose into pyruvate is called:",
+    "question_hi": "ग्लूकोज के पाइरुवेट में रूपांतरण की प्रक्रिया कहलाती है:",
+    "options_en": ["Glycolysis", "Krebs cycle", "Photosynthesis", "Respiration"],
+    "options_hi": ["ग्लाइकोलाइसिस", "क्रेब्स चक्र", "प्रकाश संश्लेषण", "श्वसन"],
+    "answer_en": "Glycolysis",
+    "answer_hi": "ग्लाइकोलाइसिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "Which gas is released during photosynthesis?",
+    "question_hi": "प्रकाश संश्लेषण के दौरान कौन सी गैस निकलती है?",
+    "options_en": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    "options_hi": ["ऑक्सीजन", "कार्बन डाइऑक्साइड", "नाइट्रोजन", "हाइड्रोजन"],
+    "answer_en": "Oxygen",
+    "answer_hi": "ऑक्सीजन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "What is the atomic number of Carbon?",
+    "question_hi": "कार्बन की परमाणु संख्या क्या है?",
+    "options_en": ["4", "6", "12", "14"],
+    "options_hi": ["4", "6", "12", "14"],
+    "answer_en": "6",
+    "answer_hi": "6",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Which part of the human brain controls balance and coordination?",
+    "question_hi": "मानव मस्तिष्क का कौन सा भाग संतुलन और समन्वय को नियंत्रित करता है?",
+    "options_en": ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"],
+    "options_hi": ["सेरेब्रम", "सेरेबेलम", "मेडुला", "हाइपोथैलेमस"],
+    "answer_en": "Cerebellum",
+    "answer_hi": "सेरेबेलम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "What is the common name of NaOH?",
+    "question_hi": "NaOH का सामान्य नाम क्या है?",
+    "options_en": ["Baking soda", "Washing soda", "Caustic soda", "Bleaching powder"],
+    "options_hi": ["बेकिंग सोडा", "धावन सोडा", "कास्टिक सोडा", "ब्लीचिंग पाउडर"],
+    "answer_en": "Caustic soda",
+    "answer_hi": "कास्टिक सोडा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "Red blood cells are produced in:",
+    "question_hi": "लाल रक्त कोशिकाओं का उत्पादन कहाँ होता है?",
+    "options_en": ["Liver", "Spleen", "Bone marrow", "Kidneys"],
+    "options_hi": ["यकृत", "तिल्ली", "बोन मैरो (अस्थि मज्जा)", "गुर्दे"],
+    "answer_en": "Bone marrow",
+    "answer_hi": "बोन मैरो (अस्थि मज्जा)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "Which element is liquid at room temperature?",
+    "question_hi": "कौन सा तत्व कमरे के तापमान पर तरल होता है?",
+    "options_en": ["Mercury", "Bromine", "Both A and B", "None of these"],
+    "options_hi": ["पारा", "ब्रोमीन", "A और B दोनों", "इनमें से कोई नहीं"],
+    "answer_en": "Both A and B",
+    "answer_hi": "A और B दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "The process of breakdown of food in the cell with the release of energy is called:",
+    "question_hi": "कोशिका में ऊर्जा मुक्त करते हुए भोजन के टूटने की प्रक्रिया कहलाती है:",
+    "options_en": ["Digestion", "Respiration", "Excretion", "Circulation"],
+    "options_hi": ["पाचन", "श्वसन", "उत्सर्जन", "परिसंचरण"],
+    "answer_en": "Respiration",
+    "answer_hi": "श्वसन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "What is the chemical formula of Methane?",
+    "question_hi": "मीथेन का रासायनिक सूत्र क्या है?",
+    "options_en": ["CH₄", "C₂H₆", "C₃H₈", "C₄H₁₀"],
+    "options_hi": ["CH₄", "C₂H₆", "C₃H₈", "C₄H₁₀"],
+    "answer_en": "CH₄",
+    "answer_hi": "CH₄",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "Which vitamin is produced in the human body when exposed to sunlight?",
+    "question_hi": "सूर्य के प्रकाश के संपर्क में आने पर मानव शरीर में कौन सा विटामिन उत्पन्न होता है?",
+    "options_en": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    "options_hi": ["विटामिन A", "विटामिन C", "विटामिन D", "विटामिन K"],
+    "answer_en": "Vitamin D",
+    "answer_hi": "विटामिन D",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "What is the SI unit of amount of substance?",
+    "question_hi": "पदार्थ की मात्रा की SI इकाई क्या है?",
+    "options_en": ["Mole", "Gram", "Kilogram", "Liter"],
+    "options_hi": ["मोल", "ग्राम", "किलोग्राम", "लीटर"],
+    "answer_en": "Mole",
+    "answer_hi": "मोल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "The largest gland in the human body is:",
+    "question_hi": "मानव शरीर की सबसे बड़ी ग्रंथि है:",
+    "options_en": ["Pancreas", "Liver", "Thyroid", "Pituitary"],
+    "options_hi": ["अग्न्याशय", "यकृत", "थायरॉयड", "पिट्यूटरी"],
+    "answer_en": "Liver",
+    "answer_hi": "यकृत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "Which gas is known as 'Laughing Gas'?",
+    "question_hi": "किस गैस को 'हंसाने वाली गैस' कहा जाता है?",
+    "options_en": ["Nitrous oxide", "Carbon monoxide", "Sulfur dioxide", "Ammonia"],
+    "options_hi": ["नाइट्रस ऑक्साइड", "कार्बन मोनोऑक्साइड", "सल्फर डाइऑक्साइड", "अमोनिया"],
+    "answer_en": "Nitrous oxide",
+    "answer_hi": "नाइट्रस ऑक्साइड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Blood is a type of:",
+    "question_hi": "रक्त एक प्रकार का है:",
+    "options_en": ["Epithelial tissue", "Connective tissue", "Muscular tissue", "Nervous tissue"],
+    "options_hi": ["उपकला ऊतक", "संयोजी ऊतक", "पेशी ऊतक", "तंत्रिका ऊतक"],
+    "answer_en": "Connective tissue",
+    "answer_hi": "संयोजी ऊतक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "Which metal is present in chlorophyll?",
+    "question_hi": "क्लोरोफिल में कौन सी धातु उपस्थित होती है?",
+    "options_en": ["Iron", "Magnesium", "Copper", "Zinc"],
+    "options_hi": ["लोहा", "मैग्नीशियम", "तांबा", "जिंक"],
+    "answer_en": "Magnesium",
+    "answer_hi": "मैग्नीशियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "The smallest bone in the human body is found in the:",
+    "question_hi": "मानव शरीर की सबसे छोटी हड्डी कहाँ पाई जाती है?",
+    "options_en": ["Finger", "Ear", "Toe", "Nose"],
+    "options_hi": ["उंगली", "कान", "पैर की अंगुली", "नाक"],
+    "answer_en": "Ear",
+    "answer_hi": "कान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "What is the chemical formula of Common Salt?",
+    "question_hi": "सामान्य नमक का रासायनिक सूत्र क्या है?",
+    "options_en": ["NaCl", "KCl", "CaCO₃", "Na₂CO₃"],
+    "options_hi": ["NaCl", "KCl", "CaCO₃", "Na₂CO₃"],
+    "answer_en": "NaCl",
+    "answer_hi": "NaCl",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "Which part of the flower develops into fruit?",
+    "question_hi": "फूल का कौन सा भाग फल में विकसित होता है?",
+    "options_en": ["Ovary", "Stamen", "Petal", "Sepal"],
+    "options_hi": ["अंडाशय", "पुंकेसर", "पंखुड़ी", "बाह्यदल"],
+    "answer_en": "Ovary",
+    "answer_hi": "अंडाशय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Which acid is present in vinegar?",
+    "question_hi": "सिरका में कौन सा अम्ल उपस्थित होता है?",
+    "options_en": ["Acetic acid", "Citric acid", "Lactic acid", "Formic acid"],
+    "options_hi": ["एसिटिक अम्ल", "सिट्रिक अम्ल", "लैक्टिक अम्ल", "फॉर्मिक अम्ल"],
+    "answer_en": "Acetic acid",
+    "answer_hi": "एसिटिक अम्ल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "The process of cell division in somatic cells is called:",
+    "question_hi": "दैहिक कोशिकाओं में कोशिका विभाजन की प्रक्रिया कहलाती है:",
+    "options_en": ["Mitosis", "Meiosis", "Binary fission", "Budding"],
+    "options_hi": ["माइटोसिस", "मियोसिस", "द्विखंडन", "कलिका विधि"],
+    "answer_en": "Mitosis",
+    "answer_hi": "माइटोसिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Which gas is used in fire extinguishers?",
+    "question_hi": "आग बुझाने के यंत्रों में किस गैस का उपयोग किया जाता है?",
+    "options_en": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    "options_hi": ["ऑक्सीजन", "कार्बन डाइऑक्साइड", "नाइट्रोजन", "हाइड्रोजन"],
+    "answer_en": "Carbon dioxide",
+    "answer_hi": "कार्बन डाइऑक्साइड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "The study of fossils is called:",
+    "question_hi": "जीवाश्मों का अध्ययन कहलाता है:",
+    "options_en": ["Paleontology", "Archeology", "Geology", "Ecology"],
+    "options_hi": ["जीवाश्म विज्ञान", "पुरातत्व विज्ञान", "भूविज्ञान", "पारिस्थितिकी"],
+    "answer_en": "Paleontology",
+    "answer_hi": "जीवाश्म विज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "What is the chemical symbol for Potassium?",
+    "question_hi": "पोटेशियम का रासायनिक प्रतीक क्या है?",
+    "options_en": ["P", "Po", "K", "Ka"],
+    "options_hi": ["P", "Po", "K", "Ka"],
+    "answer_en": "K",
+    "answer_hi": "K",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "Which blood group is known as the universal donor?",
+    "question_hi": "किस रक्त समूह को सार्वत्रिक दाता के रूप में जाना जाता है?",
+    "options_en": ["A", "B", "AB", "O"],
+    "options_hi": ["A", "B", "AB", "O"],
+    "answer_en": "O",
+    "answer_hi": "O",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "Which of the following is a noble gas?",
+    "question_hi": "निम्नलिखित में से कौन सी एक उत्कृष्ट गैस है?",
+    "options_en": ["Oxygen", "Nitrogen", "Argon", "Chlorine"],
+    "options_hi": ["ऑक्सीजन", "नाइट्रोजन", "आर्गन", "क्लोरीन"],
+    "answer_en": "Argon",
+    "answer_hi": "आर्गन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "The hormone insulin is produced by:",
+    "question_hi": "हार्मोन इंसुलिन का उत्पादन किसके द्वारा होता है?",
+    "options_en": ["Liver", "Pancreas", "Kidney", "Thyroid"],
+    "options_hi": ["यकृत", "अग्न्याशय", "गुर्दा", "थायरॉयड"],
+    "answer_en": "Pancreas",
+    "answer_hi": "अग्न्याशय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Which element has the highest electronegativity?",
+    "question_hi": "किस तत्व की विद्युत ऋणात्मकता सबसे अधिक होती है?",
+    "options_en": ["Fluorine", "Chlorine", "Oxygen", "Nitrogen"],
+    "options_hi": ["फ्लोरीन", "क्लोरीन", "ऑक्सीजन", "नाइट्रोजन"],
+    "answer_en": "Fluorine",
+    "answer_hi": "फ्लोरीन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "The process of conversion of nitrogen compounds into free nitrogen is called:",
+    "question_hi": "नाइट्रोजन यौगिकों के मुक्त नाइट्रोजन में रूपांतरण की प्रक्रिया कहलाती है:",
+    "options_en": ["Nitrogen fixation", "Ammonification", "Denitrification", "Nitrification"],
+    "options_hi": ["नाइट्रोजन स्थिरीकरण", "अमोनीकरण", "विनाइट्रीकरण", "नाइट्रीकरण"],
+    "answer_en": "Denitrification",
+    "answer_hi": "विनाइट्रीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "What is the chemical formula of Ozone?",
+    "question_hi": "ओजोन का रासायनिक सूत्र क्या है?",
+    "options_en": ["O₂", "O₃", "O₄", "HO₂"],
+    "options_hi": ["O₂", "O₃", "O₄", "HO₂"],
+    "answer_en": "O₃",
+    "answer_hi": "O₃",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "Which part of the human eye controls the amount of light entering?",
+    "question_hi": "मानव आंख का कौन सा भाग प्रवेश करने वाले प्रकाश की मात्रा को नियंत्रित करता है?",
+    "options_en": ["Cornea", "Iris", "Retina", "Lens"],
+    "options_hi": ["कॉर्निया", "आइरिस", "रेटिना", "लेंस"],
+    "answer_en": "Iris",
+    "answer_hi": "आइरिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "Which metal is used in thermometers?",
+    "question_hi": "थर्मामीटर में किस धातु का उपयोग किया जाता है?",
+    "options_en": ["Mercury", "Silver", "Aluminum", "Copper"],
+    "options_hi": ["पारा", "चांदी", "एल्यूमीनियम", "तांबा"],
+    "answer_en": "Mercury",
+    "answer_hi": "पारा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "The smallest unit of life is:",
+    "question_hi": "जीवन की सबसे छोटी इकाई है:",
+    "options_en": ["Cell", "Tissue", "Organ", "Molecule"],
+    "options_hi": ["कोशिका", "ऊतक", "अंग", "अणु"],
+    "answer_en": "Cell",
+    "answer_hi": "कोशिका",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "What is the chemical name of Baking Soda?",
+    "question_hi": "बेकिंग सोडा का रासायनिक नाम क्या है?",
+    "options_en": ["Sodium bicarbonate", "Sodium carbonate", "Sodium hydroxide", "Sodium chloride"],
+    "options_hi": ["सोडियम बाइकार्बोनेट", "सोडियम कार्बोनेट", "सोडियम हाइड्रॉक्साइड", "सोडियम क्लोराइड"],
+    "answer_en": "Sodium bicarbonate",
+    "answer_hi": "सोडियम बाइकार्बोनेट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "Which blood vessel carries oxygenated blood from the lungs to the heart?",
+    "question_hi": "कौन सी रक्त वाहिका फेफड़ों से हृदय तक ऑक्सीजन युक्त रक्त ले जाती है?",
+    "options_en": ["Pulmonary artery", "Pulmonary vein", "Aorta", "Vena cava"],
+    "options_hi": ["फुफ्फुसीय धमनी", "फुफ्फुसीय शिरा", "महाधमनी", "महाशिरा"],
+    "answer_en": "Pulmonary vein",
+    "answer_hi": "फुफ्फुसीय शिरा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "Which gas is responsible for the greenhouse effect?",
+    "question_hi": "ग्रीनहाउस प्रभाव के लिए कौन सी गैस जिम्मेदार है?",
+    "options_en": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "options_hi": ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"],
+    "answer_en": "Carbon dioxide",
+    "answer_hi": "कार्बन डाइऑक्साइड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "The process of conversion of water vapor into water is called:",
+    "question_hi": "जल वाष्प के जल में रूपांतरण की प्रक्रिया कहलाती है:",
+    "options_en": ["Evaporation", "Condensation", "Sublimation", "Precipitation"],
+    "options_hi": ["वाष्पीकरण", "संघनन", "उर्ध्वपातन", "वर्षण"],
+    "answer_en": "Condensation",
+    "answer_hi": "संघनन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "What is the chemical symbol for Iron?",
+    "question_hi": "लोहे का रासायनिक प्रतीक क्या है?",
+    "options_en": ["Ir", "Fe", "Au", "Ag"],
+    "options_hi": ["Ir", "Fe", "Au", "Ag"],
+    "answer_en": "Fe",
+    "answer_hi": "Fe",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "Which part of the plant absorbs water and minerals from the soil?",
+    "question_hi": "पौधे का कौन सा भाग मिट्टी से पानी और खनिजों को अवशोषित करता है?",
+    "options_en": ["Stem", "Leaves", "Roots", "Flowers"],
+    "options_hi": ["तना", "पत्तियाँ", "जड़ें", "फूल"],
+    "answer_en": "Roots",
+    "answer_hi": "जड़ें",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "What is the chemical formula of Sulfuric Acid?",
+    "question_hi": "सल्फ्यूरिक अम्ल का रासायनिक सूत्र क्या है?",
+    "options_en": ["H₂SO₄", "HCl", "HNO₃", "CH₃COOH"],
+    "options_hi": ["H₂SO₄", "HCl", "HNO₃", "CH₃COOH"],
+    "answer_en": "H₂SO₄",
+    "answer_hi": "H₂SO₄",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "The largest artery in the human body is:",
+    "question_hi": "मानव शरीर की सबसे बड़ी धमनी है:",
+    "options_en": ["Pulmonary artery", "Aorta", "Coronary artery", "Carotid artery"],
+    "options_hi": ["फुफ्फुसीय धमनी", "महाधमनी", "कोरोनरी धमनी", "कैरोटिड धमनी"],
+    "answer_en": "Aorta",
+    "answer_hi": "महाधमनी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "Which of the following is an alkali metal?",
+    "question_hi": "निम्नलिखित में से कौन सी एक क्षारीय धातु है?",
+    "options_en": ["Calcium", "Sodium", "Aluminum", "Copper"],
+    "options_hi": ["कैल्शियम", "सोडियम", "एल्यूमीनियम", "तांबा"],
+    "answer_en": "Sodium",
+    "answer_hi": "सोडियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "The process of producing energy in the mitochondria is called:",
+    "question_hi": "माइटोकॉन्ड्रिया में ऊर्जा उत्पादन की प्रक्रिया कहलाती है:",
+    "options_en": ["Photosynthesis", "Respiration", "Digestion", "Fermentation"],
+    "options_hi": ["प्रकाश संश्लेषण", "श्वसन", "पाचन", "किण्वन"],
+    "answer_en": "Respiration",
+    "answer_hi": "श्वसन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "What is the chemical symbol for Silver?",
+    "question_hi": "चांदी का रासायनिक प्रतीक क्या है?",
+    "options_en": ["Si", "Ag", "Au", "S"],
+    "options_hi": ["Si", "Ag", "Au", "S"],
+    "answer_en": "Ag",
+    "answer_hi": "Ag",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "Which vitamin deficiency causes Scurvy?",
+    "question_hi": "किस विटामिन की कमी से स्कर्वी रोग होता है?",
+    "options_en": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "options_hi": ["विटामिन A", "विटामिन B", "विटामिन C", "विटामिन D"],
+    "answer_en": "Vitamin C",
+    "answer_hi": "विटामिन C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Which acid is present in our stomach?",
+    "question_hi": "हमारे पेट में कौन सा अम्ल उपस्थित होता है?",
+    "options_en": ["Hydrochloric acid", "Sulfuric acid", "Nitric acid", "Acetic acid"],
+    "options_hi": ["हाइड्रोक्लोरिक अम्ल", "सल्फ्यूरिक अम्ल", "नाइट्रिक अम्ल", "एसिटिक अम्ल"],
+    "answer_en": "Hydrochloric acid",
+    "answer_hi": "हाइड्रोक्लोरिक अम्ल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "The process of cell division that produces gametes is called:",
+    "question_hi": "कोशिका विभाजन की वह प्रक्रिया जो युग्मक उत्पन्न करती है, कहलाती है:",
+    "options_en": ["Mitosis", "Meiosis", "Binary fission", "Fragmentation"],
+    "options_hi": ["माइटोसिस", "मियोसिस", "द्विखंडन", "खंडन"],
+    "answer_en": "Meiosis",
+    "answer_hi": "मियोसिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "What is the chemical formula of Glucose?",
+    "question_hi": "ग्लूकोज का रासायनिक सूत्र क्या है?",
+    "options_en": ["C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₂H₅OH", "CH₄"],
+    "options_hi": ["C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₂H₅OH", "CH₄"],
+    "answer_en": "C₆H₁₂O₆",
+    "answer_hi": "C₆H₁₂O₆",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 // --------------------------- GLOBAL VARS -----------------------------
 // --------------------------- GLOBAL VARS -----------------------------

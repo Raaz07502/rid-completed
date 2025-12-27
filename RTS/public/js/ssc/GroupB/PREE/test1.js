@@ -1,1054 +1,554 @@
 const questions =[
+     {
+    "num": 1,
+    "question_en": "What is the SI unit of force?",
+    "question_hi": "बल का SI मात्रक क्या है?",
+    "options_en": ["Newton", "Joule", "Watt", "Pascal"],
+    "options_hi": ["न्यूटन", "जूल", "वाट", "पास्कल"],
+    "answer_en": "Newton",
+    "answer_hi": "न्यूटन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "The value of \( \frac{d}{dx}(x^3) \) is:",
+    "question_hi": "\( \frac{d}{dx}(x^3) \) का मान है:",
+    "options_en": ["3x^2", "x^2", "3x", "2x^3"],
+    "options_hi": ["3x^2", "x^2", "3x", "2x^3"],
+    "answer_en": "3x^2",
+    "answer_hi": "3x^2",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "Which law states that pressure applied to a confined fluid is transmitted equally in all directions?",
+    "question_hi": "कौन सा नियम कहता है कि एक सीमित द्रव पर लगाया गया दाब सभी दिशाओं में समान रूप से संचरित होता है?",
+    "options_en": ["Pascal's Law", "Newton's Law", "Archimedes' Principle", "Boyle's Law"],
+    "options_hi": ["पास्कल का नियम", "न्यूटन का नियम", "आर्किमिडीज का सिद्धांत", "बॉयल का नियम"],
+    "answer_en": "Pascal's Law",
+    "answer_hi": "पास्कल का नियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "If \( \sin \theta = \frac{1}{2} \), what is \( \cos \theta \) ?",
+    "question_hi": "यदि \( \sin \theta = \frac{1}{2} \), तो \( \cos \theta \) क्या है?",
+    "options_en": ["\( \frac{\sqrt{3}}{2} \)", "\( \frac{1}{2} \)", "1", "0"],
+    "options_hi": ["\( \frac{\sqrt{3}}{2} \)", "\( \frac{1}{2} \)", "1", "0"],
+    "answer_en": "\( \frac{\sqrt{3}}{2} \)",
+    "answer_hi": "\( \frac{\sqrt{3}}{2} \)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "What does Ohm's Law state?",
+    "question_hi": "ओम का नियम क्या बताता है?",
+    "options_en": ["V = IR", "P = VI", "F = ma", "E = mc²"],
+    "options_hi": ["V = IR", "P = VI", "F = ma", "E = mc²"],
+    "answer_en": "V = IR",
+    "answer_hi": "V = IR",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "What is the integral of \( \int 2x \, dx \)?",
+    "question_hi": "\( \int 2x \, dx \) का समाकल क्या है?",
+    "options_en": ["x^2 + C", "2x^2 + C", "x^2", "x + C"],
+    "options_hi": ["x^2 + C", "2x^2 + C", "x^2", "x + C"],
+    "answer_en": "x^2 + C",
+    "answer_hi": "x^2 + C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Which of the following is a vector quantity?",
+    "question_hi": "निम्नलिखित में से कौन सी सदिश राशि है?",
+    "options_en": ["Speed", "Distance", "Velocity", "Time"],
+    "options_hi": ["चाल", "दूरी", "वेग", "समय"],
+    "answer_en": "Velocity",
+    "answer_hi": "वेग",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "What is the value of \( \log_{10} 100 \)?",
+    "question_hi": "\( \log_{10} 100 \) का मान क्या है?",
+    "options_en": ["1", "2", "10", "100"],
+    "options_hi": ["1", "2", "10", "100"],
+    "answer_en": "2",
+    "answer_hi": "2",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "The unit of electric current is:",
+    "question_hi": "विद्युत धारा की इकाई है:",
+    "options_en": ["Ampere", "Volt", "Ohm", "Watt"],
+    "options_hi": ["एम्पियर", "वोल्ट", "ओम", "वाट"],
+    "answer_en": "Ampere",
+    "answer_hi": "एम्पियर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "If a triangle has angles 30°, 60°, 90°, what is the ratio of its sides?",
+    "question_hi": "यदि एक त्रिभुज के कोण 30°, 60°, 90° हैं, तो उसकी भुजाओं का अनुपात क्या है?",
+    "options_en": ["1:√3:2", "1:2:3", "1:1:√2", "3:4:5"],
+    "options_hi": ["1:√3:2", "1:2:3", "1:1:√2", "3:4:5"],
+    "answer_en": "1:√3:2",
+    "answer_hi": "1:√3:2",
+    "attempted": false,
+    "selected": ""
+  },
     {
-        "num": 1,
-        "question_en": "What is 83 + 16?",
-        "question_hi": "83 + 16 कितना होता है?",
-        "options_en": [
-            "100",
-            "102",
-            "99",
-            "98"
-        ],
-        "options_hi": [
-            "100",
-            "102",
-            "99",
-            "98"
-        ],
-        "answer_en": "99",
-        "answer_hi": "99",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 2,
-        "question_en": "What is 19 + 96?",
-        "question_hi": "19 + 96 कितना होता है?",
-        "options_en": [
-            "118",
-            "116",
-            "114",
-            "115"
-        ],
-        "options_hi": [
-            "118",
-            "116",
-            "114",
-            "115"
-        ],
-        "answer_en": "115",
-        "answer_hi": "115",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 3,
-        "question_en": "What is 6 + 5?",
-        "question_hi": "6 + 5 कितना होता है?",
-        "options_en": [
-            "14",
-            "10",
-            "11",
-            "12"
-        ],
-        "options_hi": [
-            "14",
-            "10",
-            "11",
-            "12"
-        ],
-        "answer_en": "11",
-        "answer_hi": "11",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 4,
-        "question_en": "What is the integer division 73 ÷ 27?",
-        "question_hi": "73 ÷ 27 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "1",
-            "5",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "1",
-            "5",
-            "3"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 5,
-        "question_en": "What is 2 - 99?",
-        "question_hi": "2 - 99 कितना होता है?",
-        "options_en": [
-            "-97",
-            "-95",
-            "-96",
-            "-94"
-        ],
-        "options_hi": [
-            "-97",
-            "-95",
-            "-96",
-            "-94"
-        ],
-        "answer_en": "-97",
-        "answer_hi": "-97",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 6,
-        "question_en": "What is 21 × 29?",
-        "question_hi": "21 × 29 कितना होता है?",
-        "options_en": [
-            "608",
-            "610",
-            "612",
-            "609"
-        ],
-        "options_hi": [
-            "608",
-            "610",
-            "612",
-            "609"
-        ],
-        "answer_en": "609",
-        "answer_hi": "609",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 7,
-        "question_en": "What is 14 × 47?",
-        "question_hi": "14 × 47 कितना होता है?",
-        "options_en": [
-            "661",
-            "659",
-            "658",
-            "657"
-        ],
-        "options_hi": [
-            "661",
-            "659",
-            "658",
-            "657"
-        ],
-        "answer_en": "658",
-        "answer_hi": "658",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 8,
-        "question_en": "What is the integer division 70 ÷ 17?",
-        "question_hi": "70 ÷ 17 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "7",
-            "5",
-            "3",
-            "4"
-        ],
-        "options_hi": [
-            "7",
-            "5",
-            "3",
-            "4"
-        ],
-        "answer_en": "4",
-        "answer_hi": "4",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 9,
-        "question_en": "What is 82 × 81?",
-        "question_hi": "82 × 81 कितना होता है?",
-        "options_en": [
-            "6645",
-            "6642",
-            "6641",
-            "6643"
-        ],
-        "options_hi": [
-            "6645",
-            "6642",
-            "6641",
-            "6643"
-        ],
-        "answer_en": "6642",
-        "answer_hi": "6642",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 10,
-        "question_en": "What is 7 - 86?",
-        "question_hi": "7 - 86 कितना होता है?",
-        "options_en": [
-            "-78",
-            "-76",
-            "-79",
-            "-77"
-        ],
-        "options_hi": [
-            "-78",
-            "-76",
-            "-79",
-            "-77"
-        ],
-        "answer_en": "-79",
-        "answer_hi": "-79",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 11,
-        "question_en": "What is 14 × 50?",
-        "question_hi": "14 × 50 कितना होता है?",
-        "options_en": [
-            "700",
-            "701",
-            "699",
-            "703"
-        ],
-        "options_hi": [
-            "700",
-            "701",
-            "699",
-            "703"
-        ],
-        "answer_en": "700",
-        "answer_hi": "700",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 12,
-        "question_en": "What is 22 × 49?",
-        "question_hi": "22 × 49 कितना होता है?",
-        "options_en": [
-            "1078",
-            "1081",
-            "1077",
-            "1079"
-        ],
-        "options_hi": [
-            "1078",
-            "1081",
-            "1077",
-            "1079"
-        ],
-        "answer_en": "1078",
-        "answer_hi": "1078",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 13,
-        "question_en": "What is 91 + 89?",
-        "question_hi": "91 + 89 कितना होता है?",
-        "options_en": [
-            "183",
-            "180",
-            "179",
-            "181"
-        ],
-        "options_hi": [
-            "183",
-            "180",
-            "179",
-            "181"
-        ],
-        "answer_en": "180",
-        "answer_hi": "180",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 14,
-        "question_en": "What is the integer division 22 ÷ 61?",
-        "question_hi": "22 ÷ 61 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "3",
-            "2"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 15,
-        "question_en": "What is 89 + 43?",
-        "question_hi": "89 + 43 कितना होता है?",
-        "options_en": [
-            "131",
-            "135",
-            "132",
-            "133"
-        ],
-        "options_hi": [
-            "131",
-            "135",
-            "132",
-            "133"
-        ],
-        "answer_en": "132",
-        "answer_hi": "132",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 16,
-        "question_en": "What is 53 + 36?",
-        "question_hi": "53 + 36 कितना होता है?",
-        "options_en": [
-            "89",
-            "92",
-            "88",
-            "90"
-        ],
-        "options_hi": [
-            "89",
-            "92",
-            "88",
-            "90"
-        ],
-        "answer_en": "89",
-        "answer_hi": "89",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 17,
-        "question_en": "What is the integer division 29 ÷ 85?",
-        "question_hi": "29 ÷ 85 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 18,
-        "question_en": "What is 20 - 35?",
-        "question_hi": "20 - 35 कितना होता है?",
-        "options_en": [
-            "-15",
-            "-12",
-            "-13",
-            "-14"
-        ],
-        "options_hi": [
-            "-15",
-            "-12",
-            "-13",
-            "-14"
-        ],
-        "answer_en": "-15",
-        "answer_hi": "-15",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 19,
-        "question_en": "What is the integer division 97 ÷ 76?",
-        "question_hi": "97 ÷ 76 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 20,
-        "question_en": "What is the integer division 19 ÷ 67?",
-        "question_hi": "19 ÷ 67 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 21,
-        "question_en": "What is 21 - 82?",
-        "question_hi": "21 - 82 कितना होता है?",
-        "options_en": [
-            "-60",
-            "-61",
-            "-59",
-            "-58"
-        ],
-        "options_hi": [
-            "-60",
-            "-61",
-            "-59",
-            "-58"
-        ],
-        "answer_en": "-61",
-        "answer_hi": "-61",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 22,
-        "question_en": "What is the integer division 51 ÷ 50?",
-        "question_hi": "51 ÷ 50 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "1",
-            "4",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "1",
-            "4",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 23,
-        "question_en": "What is 89 + 94?",
-        "question_hi": "89 + 94 कितना होता है?",
-        "options_en": [
-            "183",
-            "184",
-            "186",
-            "182"
-        ],
-        "options_hi": [
-            "183",
-            "184",
-            "186",
-            "182"
-        ],
-        "answer_en": "183",
-        "answer_hi": "183",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 24,
-        "question_en": "What is the integer division 16 ÷ 39?",
-        "question_hi": "16 ÷ 39 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 25,
-        "question_en": "What is 94 × 94?",
-        "question_hi": "94 × 94 कितना होता है?",
-        "options_en": [
-            "8839",
-            "8836",
-            "8835",
-            "8837"
-        ],
-        "options_hi": [
-            "8839",
-            "8836",
-            "8835",
-            "8837"
-        ],
-        "answer_en": "8836",
-        "answer_hi": "8836",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 26,
-        "question_en": "What is 82 - 40?",
-        "question_hi": "82 - 40 कितना होता है?",
-        "options_en": [
-            "41",
-            "42",
-            "45",
-            "43"
-        ],
-        "options_hi": [
-            "41",
-            "42",
-            "45",
-            "43"
-        ],
-        "answer_en": "42",
-        "answer_hi": "42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 27,
-        "question_en": "What is 71 + 69?",
-        "question_hi": "71 + 69 कितना होता है?",
-        "options_en": [
-            "143",
-            "140",
-            "141",
-            "139"
-        ],
-        "options_hi": [
-            "143",
-            "140",
-            "141",
-            "139"
-        ],
-        "answer_en": "140",
-        "answer_hi": "140",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 28,
-        "question_en": "What is 16 × 48?",
-        "question_hi": "16 × 48 कितना होता है?",
-        "options_en": [
-            "771",
-            "767",
-            "768",
-            "769"
-        ],
-        "options_hi": [
-            "771",
-            "767",
-            "768",
-            "769"
-        ],
-        "answer_en": "768",
-        "answer_hi": "768",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 29,
-        "question_en": "What is 74 + 12?",
-        "question_hi": "74 + 12 कितना होता है?",
-        "options_en": [
-            "87",
-            "85",
-            "86",
-            "89"
-        ],
-        "options_hi": [
-            "87",
-            "85",
-            "86",
-            "89"
-        ],
-        "answer_en": "86",
-        "answer_hi": "86",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 30,
-        "question_en": "What is the integer division 18 ÷ 86?",
-        "question_hi": "18 ÷ 86 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "2",
-            "3",
-            "1"
-        ],
-        "options_hi": [
-            "0",
-            "2",
-            "3",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 31,
-        "question_en": "What is 29 - 71?",
-        "question_hi": "29 - 71 कितना होता है?",
-        "options_en": [
-            "-42",
-            "-39",
-            "-41",
-            "-40"
-        ],
-        "options_hi": [
-            "-42",
-            "-39",
-            "-41",
-            "-40"
-        ],
-        "answer_en": "-42",
-        "answer_hi": "-42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 32,
-        "question_en": "What is the integer division 58 ÷ 68?",
-        "question_hi": "58 ÷ 68 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 33,
-        "question_en": "What is 10 + 45?",
-        "question_hi": "10 + 45 कितना होता है?",
-        "options_en": [
-            "58",
-            "55",
-            "54",
-            "56"
-        ],
-        "options_hi": [
-            "58",
-            "55",
-            "54",
-            "56"
-        ],
-        "answer_en": "55",
-        "answer_hi": "55",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 34,
-        "question_en": "What is 2 + 11?",
-        "question_hi": "2 + 11 कितना होता है?",
-        "options_en": [
-            "16",
-            "12",
-            "13",
-            "14"
-        ],
-        "options_hi": [
-            "16",
-            "12",
-            "13",
-            "14"
-        ],
-        "answer_en": "13",
-        "answer_hi": "13",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 35,
-        "question_en": "What is 44 - 11?",
-        "question_hi": "44 - 11 कितना होता है?",
-        "options_en": [
-            "33",
-            "34",
-            "36",
-            "32"
-        ],
-        "options_hi": [
-            "33",
-            "34",
-            "36",
-            "32"
-        ],
-        "answer_en": "33",
-        "answer_hi": "33",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 36,
-        "question_en": "What is 29 - 71?",
-        "question_hi": "29 - 71 कितना होता है?",
-        "options_en": [
-            "-40",
-            "-41",
-            "-42",
-            "-39"
-        ],
-        "options_hi": [
-            "-40",
-            "-41",
-            "-42",
-            "-39"
-        ],
-        "answer_en": "-42",
-        "answer_hi": "-42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 37,
-        "question_en": "What is 54 + 26?",
-        "question_hi": "54 + 26 कितना होता है?",
-        "options_en": [
-            "83",
-            "81",
-            "79",
-            "80"
-        ],
-        "options_hi": [
-            "83",
-            "81",
-            "79",
-            "80"
-        ],
-        "answer_en": "80",
-        "answer_hi": "80",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 38,
-        "question_en": "What is the integer division 47 ÷ 56?",
-        "question_hi": "47 ÷ 56 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "2",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 39,
-        "question_en": "What is 88 + 85?",
-        "question_hi": "88 + 85 कितना होता है?",
-        "options_en": [
-            "176",
-            "172",
-            "174",
-            "173"
-        ],
-        "options_hi": [
-            "176",
-            "172",
-            "174",
-            "173"
-        ],
-        "answer_en": "173",
-        "answer_hi": "173",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 40,
-        "question_en": "What is 15 - 33?",
-        "question_hi": "15 - 33 कितना होता है?",
-        "options_en": [
-            "-18",
-            "-15",
-            "-16",
-            "-17"
-        ],
-        "options_hi": [
-            "-18",
-            "-15",
-            "-16",
-            "-17"
-        ],
-        "answer_en": "-18",
-        "answer_hi": "-18",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 41,
-        "question_en": "What is 19 - 56?",
-        "question_hi": "19 - 56 कितना होता है?",
-        "options_en": [
-            "-34",
-            "-37",
-            "-36",
-            "-35"
-        ],
-        "options_hi": [
-            "-34",
-            "-37",
-            "-36",
-            "-35"
-        ],
-        "answer_en": "-37",
-        "answer_hi": "-37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 42,
-        "question_en": "What is 11 + 58?",
-        "question_hi": "11 + 58 कितना होता है?",
-        "options_en": [
-            "70",
-            "72",
-            "68",
-            "69"
-        ],
-        "options_hi": [
-            "70",
-            "72",
-            "68",
-            "69"
-        ],
-        "answer_en": "69",
-        "answer_hi": "69",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 43,
-        "question_en": "What is 13 - 98?",
-        "question_hi": "13 - 98 कितना होता है?",
-        "options_en": [
-            "-85",
-            "-83",
-            "-82",
-            "-84"
-        ],
-        "options_hi": [
-            "-85",
-            "-83",
-            "-82",
-            "-84"
-        ],
-        "answer_en": "-85",
-        "answer_hi": "-85",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 44,
-        "question_en": "What is the integer division 63 ÷ 29?",
-        "question_hi": "63 ÷ 29 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "3",
-            "5",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "3",
-            "5",
-            "2"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 45,
-        "question_en": "What is 2 × 51?",
-        "question_hi": "2 × 51 कितना होता है?",
-        "options_en": [
-            "102",
-            "101",
-            "103",
-            "105"
-        ],
-        "options_hi": [
-            "102",
-            "101",
-            "103",
-            "105"
-        ],
-        "answer_en": "102",
-        "answer_hi": "102",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 46,
-        "question_en": "What is the integer division 91 ÷ 95?",
-        "question_hi": "91 ÷ 95 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "3",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "3",
-            "0",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 47,
-        "question_en": "What is 29 + 9?",
-        "question_hi": "29 + 9 कितना होता है?",
-        "options_en": [
-            "39",
-            "41",
-            "38",
-            "37"
-        ],
-        "options_hi": [
-            "39",
-            "41",
-            "38",
-            "37"
-        ],
-        "answer_en": "38",
-        "answer_hi": "38",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 48,
-        "question_en": "What is 76 - 63?",
-        "question_hi": "76 - 63 कितना होता है?",
-        "options_en": [
-            "14",
-            "16",
-            "12",
-            "13"
-        ],
-        "options_hi": [
-            "14",
-            "16",
-            "12",
-            "13"
-        ],
-        "answer_en": "13",
-        "answer_hi": "13",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 49,
-        "question_en": "What is 25 + 10?",
-        "question_hi": "25 + 10 कितना होता है?",
-        "options_en": [
-            "34",
-            "35",
-            "38",
-            "36"
-        ],
-        "options_hi": [
-            "34",
-            "35",
-            "38",
-            "36"
-        ],
-        "answer_en": "35",
-        "answer_hi": "35",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 50,
-        "question_en": "What is 74 + 33?",
-        "question_hi": "74 + 33 कितना होता है?",
-        "options_en": [
-            "110",
-            "106",
-            "108",
-            "107"
-        ],
-        "options_hi": [
-            "110",
-            "106",
-            "108",
-            "107"
-        ],
-        "answer_en": "107",
-        "answer_hi": "107",
-        "attempted": false,
-        "selected": ""
-    },
+    "num": 11,
+    "question_en": "The phenomenon of bending of light around obstacles is called:",
+    "question_hi": "बाधाओं के चारों ओर प्रकाश के मुड़ने की घटना को कहा जाता है:",
+    "options_en": ["Diffraction", "Refraction", "Reflection", "Dispersion"],
+    "options_hi": ["विवर्तन", "अपवर्तन", "परावर्तन", "विक्षेपण"],
+    "answer_en": "Diffraction",
+    "answer_hi": "विवर्तन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "What is the value of \( \lim_{x \to 0} \frac{\sin x}{x} \)?",
+    "question_hi": "\( \lim_{x \to 0} \frac{\sin x}{x} \) का मान क्या है?",
+    "options_en": ["0", "1", "∞", "Does not exist"],
+    "options_hi": ["0", "1", "∞", "मौजूद नहीं है"],
+    "answer_en": "1",
+    "answer_hi": "1",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "Which particle has zero charge and almost zero mass?",
+    "question_hi": "किस कण का आवेश शून्य और द्रव्यमान लगभग शून्य होता है?",
+    "options_en": ["Neutron", "Proton", "Neutrino", "Electron"],
+    "options_hi": ["न्यूट्रॉन", "प्रोटॉन", "न्यूट्रिनो", "इलेक्ट्रॉन"],
+    "answer_en": "Neutrino",
+    "answer_hi": "न्यूट्रिनो",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "If \( A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix} \), what is the determinant of A?",
+    "question_hi": "यदि \( A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix} \), तो A का सारणिक क्या है?",
+    "options_en": ["5", "6", "7", "8"],
+    "options_hi": ["5", "6", "7", "8"],
+    "answer_en": "5",
+    "answer_hi": "5",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "The unit of inductance is:",
+    "question_hi": "प्रेरकत्व की इकाई है:",
+    "options_en": ["Farad", "Henry", "Tesla", "Weber"],
+    "options_hi": ["फैरड", "हेनरी", "टेस्ला", "वेबर"],
+    "answer_en": "Henry",
+    "answer_hi": "हेनरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "What is the derivative of \( e^{3x} \)?",
+    "question_hi": "\( e^{3x} \) का अवकलज क्या है?",
+    "options_en": ["3e^{3x}", "e^{3x}", "3e^{x}", "e^{x}"],
+    "options_hi": ["3e^{3x}", "e^{3x}", "3e^{x}", "e^{x}"],
+    "answer_en": "3e^{3x}",
+    "answer_hi": "3e^{3x}",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "In a convex lens, where is the image formed when the object is at infinity?",
+    "question_hi": "उत्तल लेंस में, जब वस्तु अनंत पर होती है तो प्रतिबिंब कहाँ बनता है?",
+    "options_en": ["At focus", "At 2F", "At infinity", "Beyond 2F"],
+    "options_hi": ["फोकस पर", "2F पर", "अनंत पर", "2F के परे"],
+    "answer_en": "At focus",
+    "answer_hi": "फोकस पर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "What is the sum of the first 10 natural numbers?",
+    "question_hi": "पहली 10 प्राकृतिक संख्याओं का योग क्या है?",
+    "options_en": ["45", "50", "55", "60"],
+    "options_hi": ["45", "50", "55", "60"],
+    "answer_en": "55",
+    "answer_hi": "55",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "Which electromagnetic waves have the shortest wavelength?",
+    "question_hi": "किस विद्युत चुंबकीय तरंग की तरंगदैर्ध्य सबसे कम होती है?",
+    "options_en": ["Radio waves", "Microwaves", "X-rays", "Gamma rays"],
+    "options_hi": ["रेडियो तरंगें", "माइक्रोवेव", "एक्स-रे", "गामा किरणें"],
+    "answer_en": "Gamma rays",
+    "answer_hi": "गामा किरणें",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "If \( \tan \theta = \frac{3}{4} \), what is \( \sin \theta \)?",
+    "question_hi": "यदि \( \tan \theta = \frac{3}{4} \), तो \( \sin \theta \) क्या है?",
+    "options_en": ["3/5", "4/5", "5/3", "5/4"],
+    "options_hi": ["3/5", "4/5", "5/3", "5/4"],
+    "answer_en": "3/5",
+    "answer_hi": "3/5",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "The work done in moving a unit positive charge from one point to another in an electric field is called:",
+    "question_hi": "विद्युत क्षेत्र में एक बिंदु से दूसरे बिंदु तक एकांक धन आवेश को ले जाने में किया गया कार्य कहलाता है:",
+    "options_en": ["Electric potential difference", "Electric current", "Resistance", "Capacitance"],
+    "options_hi": ["विद्युत विभवांतर", "विद्युत धारा", "प्रतिरोध", "धारिता"],
+    "answer_en": "Electric potential difference",
+    "answer_hi": "विद्युत विभवांतर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "What is \( \int_0^1 x^2 \, dx \)?",
+    "question_hi": "\( \int_0^1 x^2 \, dx \) क्या है?",
+    "options_en": ["1/2", "1/3", "1/4", "1"],
+    "options_hi": ["1/2", "1/3", "1/4", "1"],
+    "answer_en": "1/3",
+    "answer_hi": "1/3",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "A body is thrown vertically upward. At the highest point, its acceleration is:",
+    "question_hi": "एक पिंड को ऊर्ध्वाधर ऊपर की ओर फेंका जाता है। उच्चतम बिंदु पर उसका त्वरण है:",
+    "options_en": ["Zero", "Equal to g downward", "Equal to g upward", "Changing direction"],
+    "options_hi": ["शून्य", "g के बराबर नीचे की ओर", "g के बराबर ऊपर की ओर", "दिशा बदल रहा है"],
+    "answer_en": "Equal to g downward",
+    "answer_hi": "g के बराबर नीचे की ओर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "What is the value of \( i^{2023} \) where \( i = \sqrt{-1} \)?",
+    "question_hi": "\( i^{2023} \) का मान क्या है जहाँ \( i = \sqrt{-1} \)?",
+    "options_en": ["i", "-i", "1", "-1"],
+    "options_hi": ["i", "-i", "1", "-1"],
+    "answer_en": "-i",
+    "answer_hi": "-i",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "Which of the following is a good conductor of heat but a bad conductor of electricity?",
+    "question_hi": "निम्नलिखित में से कौन ऊष्मा का अच्छा संवाहक लेकिन विद्युत का कुचालक है?",
+    "options_en": ["Copper", "Silver", "Mica", "Graphite"],
+    "options_hi": ["तांबा", "चांदी", "अभ्रक", "ग्रेफाइट"],
+    "answer_en": "Mica",
+    "answer_hi": "अभ्रक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "The probability of getting a head when a fair coin is tossed once is:",
+    "question_hi": "एक निष्पक्ष सिक्के को एक बार उछालने पर चित आने की प्रायिकता है:",
+    "options_en": ["0", "1/4", "1/2", "1"],
+    "options_hi": ["0", "1/4", "1/2", "1"],
+    "answer_en": "1/2",
+    "answer_hi": "1/2",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "The SI unit of luminous intensity is:",
+    "question_hi": "ज्योति तीव्रता की SI इकाई है:",
+    "options_en": ["Lumen", "Candela", "Lux", "Watt"],
+    "options_hi": ["लुमेन", "कैंडेला", "लक्स", "वाट"],
+    "answer_en": "Candela",
+    "answer_hi": "कैंडेला",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "What is the solution of the equation \( x^2 - 5x + 6 = 0 \)?",
+    "question_hi": "समीकरण \( x^2 - 5x + 6 = 0 \) का हल क्या है?",
+    "options_en": ["2, 3", "1, 6", "-2, -3", "-1, -6"],
+    "options_hi": ["2, 3", "1, 6", "-2, -3", "-1, -6"],
+    "answer_en": "2, 3",
+    "answer_hi": "2, 3",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "A transformer works on the principle of:",
+    "question_hi": "ट्रांसफार्मर किस सिद्धांत पर कार्य करता है?",
+    "options_en": ["Electromagnetic induction", "Ohm's law", "Joule's law", "Faraday's law of electrolysis"],
+    "options_hi": ["विद्युत चुंबकीय प्रेरण", "ओम का नियम", "जूल का नियम", "फैराडे के विद्युत अपघटन का नियम"],
+    "answer_en": "Electromagnetic induction",
+    "answer_hi": "विद्युत चुंबकीय प्रेरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "What is the median of the data: 4, 7, 3, 9, 5?",
+    "question_hi": "डेटा: 4, 7, 3, 9, 5 का माध्यिका क्या है?",
+    "options_en": ["4", "5", "6", "7"],
+    "options_hi": ["4", "5", "6", "7"],
+    "answer_en": "5",
+    "answer_hi": "5",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "The critical angle for total internal reflection depends on:",
+    "question_hi": "पूर्ण आंतरिक परावर्तन के लिए क्रांतिक कोण निर्भर करता है:",
+    "options_en": ["Wavelength of light", "Angle of incidence", "Refractive indices of the two media", "Both A and C"],
+    "options_hi": ["प्रकाश की तरंगदैर्ध्य", "आपतन कोण", "दोनों माध्यमों के अपवर्तनांक", "A और C दोनों"],
+    "answer_en": "Both A and C",
+    "answer_hi": "A और C दोनों",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "If \( \log_2 x = 3 \), what is x?",
+    "question_hi": "यदि \( \log_2 x = 3 \), तो x क्या है?",
+    "options_en": ["6", "8", "9", "12"],
+    "options_hi": ["6", "8", "9", "12"],
+    "answer_en": "8",
+    "answer_hi": "8",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "Which of the following is not a fundamental force?",
+    "question_hi": "निम्नलिखित में से कौन सा मूलभूत बल नहीं है?",
+    "options_en": ["Gravitational force", "Electromagnetic force", "Frictional force", "Strong nuclear force"],
+    "options_hi": ["गुरुत्वाकर्षण बल", "विद्युत चुंबकीय बल", "घर्षण बल", "प्रबल नाभिकीय बल"],
+    "answer_en": "Frictional force",
+    "answer_hi": "घर्षण बल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "What is the area of a circle with radius 7 cm?",
+    "question_hi": "त्रिज्या 7 सेमी वाले वृत्त का क्षेत्रफल क्या है?",
+    "options_en": ["44 cm²", "154 cm²", "22 cm²", "49 cm²"],
+    "options_hi": ["44 सेमी²", "154 सेमी²", "22 सेमी²", "49 सेमी²"],
+    "answer_en": "154 cm²",
+    "answer_hi": "154 सेमी²",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "In a p-n junction diode, the current flows easily in:",
+    "question_hi": "p-n जंक्शन डायोड में, धारा आसानी से बहती है:",
+    "options_en": ["Forward bias", "Reverse bias", "Both directions equally", "No current flows"],
+    "options_hi": ["अग्र अभिनति", "पश्च अभिनति", "दोनों दिशाओं में समान रूप से", "कोई धारा नहीं बहती"],
+    "answer_en": "Forward bias",
+    "answer_hi": "अग्र अभिनति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "If \( a + b = 10 \) and \( a - b = 4 \), what is the value of ab?",
+    "question_hi": "यदि \( a + b = 10 \) और \( a - b = 4 \), तो ab का मान क्या है?",
+    "options_en": ["12", "21", "24", "30"],
+    "options_hi": ["12", "21", "24", "30"],
+    "answer_en": "21",
+    "answer_hi": "21",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "Which law of thermodynamics states that energy cannot be created or destroyed?",
+    "question_hi": "ऊष्मागतिकी का कौन सा नियम कहता है कि ऊर्जा न तो बनाई जा सकती है और न ही नष्ट की जा सकती है?",
+    "options_en": ["Zeroth law", "First law", "Second law", "Third law"],
+    "options_hi": ["शून्यवाँ नियम", "प्रथम नियम", "द्वितीय नियम", "तृतीय नियम"],
+    "answer_en": "First law",
+    "answer_hi": "प्रथम नियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "The sum of the angles in a pentagon is:",
+    "question_hi": "एक पंचभुज में कोणों का योग है:",
+    "options_en": ["360°", "540°", "720°", "900°"],
+    "options_hi": ["360°", "540°", "720°", "900°"],
+    "answer_en": "540°",
+    "answer_hi": "540°",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "The device used to measure atmospheric pressure is:",
+    "question_hi": "वायुमंडलीय दाब मापने के लिए उपयोग किया जाने वाला उपकरण है:",
+    "options_en": ["Barometer", "Hygrometer", "Thermometer", "Manometer"],
+    "options_hi": ["बैरोमीटर", "आर्द्रतामापी", "थर्मामीटर", "मैनोमीटर"],
+    "answer_en": "Barometer",
+    "answer_hi": "बैरोमीटर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "What is the value of \( \cos 60^\circ \)?",
+    "question_hi": "\( \cos 60^\circ \) का मान क्या है?",
+    "options_en": ["0", "1/2", "√3/2", "1"],
+    "options_hi": ["0", "1/2", "√3/2", "1"],
+    "answer_en": "1/2",
+    "answer_hi": "1/2",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "Which of the following is a scalar quantity?",
+    "question_hi": "निम्नलिखित में से कौन सी अदिश राशि है?",
+    "options_en": ["Force", "Velocity", "Acceleration", "Temperature"],
+    "options_hi": ["बल", "वेग", "त्वरण", "तापमान"],
+    "answer_en": "Temperature",
+    "answer_hi": "तापमान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "If \( f(x) = x^3 - 3x^2 + 2 \), what is f'(1)?",
+    "question_hi": "यदि \( f(x) = x^3 - 3x^2 + 2 \), तो f'(1) क्या है?",
+    "options_en": ["-3", "0", "3", "6"],
+    "options_hi": ["-3", "0", "3", "6"],
+    "answer_en": "-3",
+    "answer_hi": "-3",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "The time period of a simple pendulum depends on:",
+    "question_hi": "एक सरल लोलक का आवर्तकाल निर्भर करता है:",
+    "options_en": ["Mass of bob", "Length of pendulum", "Amplitude of oscillation", "Material of bob"],
+    "options_hi": ["गोलक का द्रव्यमान", "लोलक की लंबाई", "दोलन का आयाम", "गोलक की सामग्री"],
+    "answer_en": "Length of pendulum",
+    "answer_hi": "लोलक की लंबाई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "What is the HCF of 36 and 48?",
+    "question_hi": "36 और 48 का महत्तम समापवर्तक (HCF) क्या है?",
+    "options_en": ["6", "12", "18", "24"],
+    "options_hi": ["6", "12", "18", "24"],
+    "answer_en": "12",
+    "answer_hi": "12",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "In a nuclear reactor, the moderator is used to:",
+    "question_hi": "एक नाभिकीय रिएक्टर में, मंदक का उपयोग किया जाता है:",
+    "options_en": ["Absorb neutrons", "Speed up neutrons", "Slow down neutrons", "Reflect neutrons"],
+    "options_hi": ["न्यूट्रॉन को अवशोषित करने के लिए", "न्यूट्रॉन की गति बढ़ाने के लिए", "न्यूट्रॉन को धीमा करने के लिए", "न्यूट्रॉन को परावर्तित करने के लिए"],
+    "answer_en": "Slow down neutrons",
+    "answer_hi": "न्यूट्रॉन को धीमा करने के लिए",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "What is the value of \( \frac{d}{dx}(\ln x) \)?",
+    "question_hi": "\( \frac{d}{dx}(\ln x) \) का मान क्या है?",
+    "options_en": ["1/x", "x", "e^x", "0"],
+    "options_hi": ["1/x", "x", "e^x", "0"],
+    "answer_en": "1/x",
+    "answer_hi": "1/x",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "The color of light that scatters the most in the atmosphere is:",
+    "question_hi": "वायुमंडल में सबसे अधिक बिखरने वाले प्रकाश का रंग है:",
+    "options_en": ["Red", "Yellow", "Blue", "Green"],
+    "options_hi": ["लाल", "पीला", "नीला", "हरा"],
+    "answer_en": "Blue",
+    "answer_hi": "नीला",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "If the perimeter of a square is 40 cm, what is its area?",
+    "question_hi": "यदि एक वर्ग का परिमाप 40 सेमी है, तो उसका क्षेत्रफल क्या है?",
+    "options_en": ["100 cm²", "80 cm²", "160 cm²", "400 cm²"],
+    "options_hi": ["100 सेमी²", "80 सेमी²", "160 सेमी²", "400 सेमी²"],
+    "answer_en": "100 cm²",
+    "answer_hi": "100 सेमी²",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "The law that gives the direction of induced current is:",
+    "question_hi": "प्रेरित धारा की दिशा देने वाला नियम है:",
+    "options_en": ["Faraday's law", "Lenz's law", "Ohm's law", "Ampere's law"],
+    "options_hi": ["फैराडे का नियम", "लेंज का नियम", "ओम का नियम", "एम्पियर का नियम"],
+    "answer_en": "Lenz's law",
+    "answer_hi": "लेंज का नियम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "What is the value of \( \sqrt{64} \times \sqrt[3]{64} \)?",
+    "question_hi": "\( \sqrt{64} \times \sqrt[3]{64} \) का मान क्या है?",
+    "options_en": ["16", "32", "48", "64"],
+    "options_hi": ["16", "32", "48", "64"],
+    "answer_en": "32",
+    "answer_hi": "32",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 // --------------------------- GLOBAL VARS -----------------------------
 // --------------------------- GLOBAL VARS -----------------------------

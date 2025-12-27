@@ -1,1036 +1,543 @@
 const questions = [
+   {
+   "num": 1,
+    "question_en": "What is the powerhouse of the cell?",
+    "question_hi": "कोशिका का पावरहाउस क्या है?",
+    "options_en": ["Mitochondria", "Nucleus", "Ribosome", "Golgi apparatus"],
+    "options_hi": ["माइटोकॉन्ड्रिया", "केंद्रक", "राइबोसोम", "गॉल्जी उपकरण"],
+    "answer_en": "Mitochondria",
+    "answer_hi": "माइटोकॉन्ड्रिया",
+    "attempted": false,
+    "selected": ""
+  },
   {
-        "num": 1,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Madrid",
-            "Moscow",
-            "Rome"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "मैड्रिड",
-            "मॉस्को",
-            "रोम"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 2,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Paris",
-            "Brasilia",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "पेरिस",
-            "ब्रासीलिया",
-            "टोक्यो"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 3,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Tokyo",
-            "Ottawa",
-            "Berlin"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "टोक्यो",
-            "ऑटावा",
-            "बर्लिन"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 4,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Tokyo",
-            "Canberra",
-            "Rome"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "टोक्यो",
-            "कैनबरा",
-            "रोम"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 5,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Brasilia",
-            "New Delhi",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "ब्रासीलिया",
-            "नई दिल्ली",
-            "मॉस्को"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 6,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Brasilia",
-            "Ottawa",
-            "Paris"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "ब्रासीलिया",
-            "ऑटावा",
-            "पेरिस"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 7,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Berlin",
-            "Rome",
-            "Berlin"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "बर्लिन",
-            "रोम",
-            "बर्लिन"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 8,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "New Delhi",
-            "Paris",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "नई दिल्ली",
-            "पेरिस",
-            "ऑटावा"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 9,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "Madrid",
-            "Rome",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "रोम",
-            "मैड्रिड",
-            "रोम",
-            "टोक्यो"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 10,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Ottawa",
-            "Madrid",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "ऑटावा",
-            "मैड्रिड",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 11,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "New Delhi",
-            "Madrid",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "नई दिल्ली",
-            "मैड्रिड",
-            "मॉस्को"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 12,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Tokyo",
-            "Paris",
-            "Rome"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "टोक्यो",
-            "पेरिस",
-            "रोम"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 13,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Brasilia",
-            "Tokyo",
-            "Rome"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "ब्रासीलिया",
-            "टोक्यो",
-            "रोम"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 14,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Canberra",
-            "Ottawa",
-            "Canberra"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "कैनबरा",
-            "ऑटावा",
-            "कैनबरा"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 15,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "Brasilia",
-            "Madrid",
-            "Moscow"
-        ],
-        "options_hi": [
-            "रोम",
-            "ब्रासीलिया",
-            "मैड्रिड",
-            "मॉस्को"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 16,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "New Delhi",
-            "Canberra",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "नई दिल्ली",
-            "कैनबरा",
-            "ऑटावा"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 17,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Rome",
-            "Berlin",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "रोम",
-            "बर्लिन",
-            "टोक्यो"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 18,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Brasilia",
-            "Tokyo",
-            "Moscow"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "ब्रासीलिया",
-            "टोक्यो",
-            "मॉस्को"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 19,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Rome",
-            "Paris",
-            "Moscow"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "रोम",
-            "पेरिस",
-            "मॉस्को"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 20,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Tokyo",
-            "Berlin",
-            "Canberra"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "टोक्यो",
-            "बर्लिन",
-            "कैनबरा"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 21,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Tokyo",
-            "Moscow",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "टोक्यो",
-            "मॉस्को",
-            "नई दिल्ली"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 22,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Berlin",
-            "Paris",
-            "Paris"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "बर्लिन",
-            "पेरिस",
-            "पेरिस"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 23,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Tokyo",
-            "Paris",
-            "Madrid"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "टोक्यो",
-            "पेरिस",
-            "मैड्रिड"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 24,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Paris",
-            "Rome",
-            "Canberra"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "पेरिस",
-            "रोम",
-            "कैनबरा"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 25,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Madrid",
-            "Rome",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "मैड्रिड",
-            "रोम",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 26,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "New Delhi",
-            "Berlin",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "नई दिल्ली",
-            "बर्लिन",
-            "ऑटावा"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 27,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Paris",
-            "Berlin",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "पेरिस",
-            "बर्लिन",
-            "ऑटावा"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 28,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Moscow",
-            "Canberra",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "मॉस्को",
-            "कैनबरा",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 29,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Paris",
-            "New Delhi",
-            "Rome"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "पेरिस",
-            "नई दिल्ली",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 30,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Ottawa",
-            "Madrid",
-            "Madrid"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "ऑटावा",
-            "मैड्रिड",
-            "मैड्रिड"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 31,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Madrid",
-            "Brasilia",
-            "Rome"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "मैड्रिड",
-            "ब्रासीलिया",
-            "रोम"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 32,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Brasilia",
-            "Berlin",
-            "Madrid"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "ब्रासीलिया",
-            "बर्लिन",
-            "मैड्रिड"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 33,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Moscow",
-            "Tokyo",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "मॉस्को",
-            "टोक्यो",
-            "ऑटावा"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 34,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Canberra",
-            "Paris",
-            "Berlin"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "कैनबरा",
-            "पेरिस",
-            "बर्लिन"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 35,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Brasilia",
-            "Berlin",
-            "Canberra"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "ब्रासीलिया",
-            "बर्लिन",
-            "कैनबरा"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 36,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Tokyo",
-            "New Delhi",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "टोक्यो",
-            "नई दिल्ली",
-            "ऑटावा"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 37,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Paris",
-            "Madrid",
-            "Berlin"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "पेरिस",
-            "मैड्रिड",
-            "बर्लिन"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 38,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Paris",
-            "Ottawa",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "पेरिस",
-            "ऑटावा",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 39,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Rome",
-            "Madrid",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "रोम",
-            "मैड्रिड",
-            "टोक्यो"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 40,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Rome",
-            "Madrid",
-            "Canberra"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "रोम",
-            "मैड्रिड",
-            "कैनबरा"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 41,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "New Delhi",
-            "New Delhi",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "नई दिल्ली",
-            "नई दिल्ली",
-            "टोक्यो"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 42,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Paris",
-            "Tokyo",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "पेरिस",
-            "टोक्यो",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 43,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Berlin",
-            "New Delhi",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "बर्लिन",
-            "नई दिल्ली",
-            "टोक्यो"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 44,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "Madrid",
-            "Canberra",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "रोम",
-            "मैड्रिड",
-            "कैनबरा",
-            "ऑटावा"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 45,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Moscow",
-            "Brasilia",
-            "Berlin"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "मॉस्को",
-            "ब्रासीलिया",
-            "बर्लिन"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 
-        
-        
-        46,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Ottawa",
-            "Rome",
-            "Paris"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "ऑटावा",
-            "रोम",
-            "पेरिस"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 47,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Brasilia",
-            "Rome",
-            "Madrid"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "ब्रासीलिया",
-            "रोम",
-            "मैड्रिड"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 48,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Moscow",
-            "Ottawa",
-            "Moscow"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "मॉस्को",
-            "ऑटावा",
-            "मॉस्को"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 49,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Brasilia",
-            "Moscow",
-            "Rome"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "ब्रासीलिया",
-            "मॉस्को",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
+   "num": 2,
+    "question_en": "Which pigment is responsible for photosynthesis in plants?",
+    "question_hi": "पौधों में प्रकाश संश्लेषण के लिए कौन सा वर्णक उत्तरदायी है?",
+    "options_en": ["Chlorophyll", "Hemoglobin", "Melanin", "Carotene"],
+    "options_hi": ["क्लोरोफिल", "हीमोग्लोबिन", "मेलेनिन", "कैरोटीन"],
+    "answer_en": "Chlorophyll",
+    "answer_hi": "क्लोरोफिल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 3,
+    "question_en": "What is the study of insects called?",
+    "question_hi": "कीटों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Entomology", "Ornithology", "Ichthyology", "Herpetology"],
+    "options_hi": ["कीटविज्ञान", "पक्षीविज्ञान", "मत्स्यविज्ञान", "सरीसृपविज्ञान"],
+    "answer_en": "Entomology",
+    "answer_hi": "कीटविज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 4,
+    "question_en": "Which vitamin is also known as Ascorbic Acid?",
+    "question_hi": "किस विटामिन को एस्कॉर्बिक अम्ल के नाम से भी जाना जाता है?",
+    "options_en": ["Vitamin C", "Vitamin B", "Vitamin D", "Vitamin A"],
+    "options_hi": ["विटामिन C", "विटामिन B", "विटामिन D", "विटामिन A"],
+    "answer_en": "Vitamin C",
+    "answer_hi": "विटामिन C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 5,
+    "question_en": "What is the largest organ in the human body?",
+    "question_hi": "मानव शरीर का सबसे बड़ा अंग कौन सा है?",
+    "options_en": ["Skin", "Liver", "Heart", "Brain"],
+    "options_hi": ["त्वचा", "यकृत", "हृदय", "मस्तिष्क"],
+    "answer_en": "Skin",
+    "answer_hi": "त्वचा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 6,
+    "question_en": "Which blood group is known as the universal donor?",
+    "question_hi": "किस रक्त समूह को सार्वत्रिक दाता के रूप में जाना जाता है?",
+    "options_en": ["O-", "AB+", "B-", "A+"],
+    "options_hi": ["O-", "AB+", "B-", "A+"],
+    "answer_en": "O-",
+    "answer_hi": "O-",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 7,
+    "question_en": "What is the process of cell division in somatic cells called?",
+    "question_hi": "दैहिक कोशिकाओं में कोशिका विभाजन की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Mitosis", "Meiosis", "Binary fission", "Budding"],
+    "options_hi": ["माइटोसिस", "मियोसिस", "द्विखंडन", "कलिका विधि"],
+    "answer_en": "Mitosis",
+    "answer_hi": "माइटोसिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 8,
+    "question_en": "Which part of the human brain controls balance and coordination?",
+    "question_hi": "मानव मस्तिष्क का कौन सा भाग संतुलन और समन्वय को नियंत्रित करता है?",
+    "options_en": ["Cerebellum", "Cerebrum", "Medulla oblongata", "Hypothalamus"],
+    "options_hi": ["सेरेबेलम", "सेरेब्रम", "मेडुला ओब्लोंगेटा", "हाइपोथैलेमस"],
+    "answer_en": "Cerebellum",
+    "answer_hi": "सेरेबेलम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 9,
+    "question_en": "What is the scientific name of human beings?",
+    "question_hi": "मानव का वैज्ञानिक नाम क्या है?",
+    "options_en": ["Homo sapiens", "Panthera tigris", "Canis lupus", "Felis catus"],
+    "options_hi": ["होमो सेपियन्स", "पैंथेरा टाइग्रिस", "कैनिस ल्यूपस", "फेलिस कैटस"],
+    "answer_en": "Homo sapiens",
+    "answer_hi": "होमो सेपियन्स",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 10,
+    "question_en": "Which vitamin is produced by the human body when exposed to sunlight?",
+    "question_hi": "सूर्य के प्रकाश के संपर्क में आने पर मानव शरीर कौन सा विटामिन उत्पन्न करता है?",
+    "options_en": ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin K"],
+    "options_hi": ["विटामिन D", "विटामिन C", "विटामिन A", "विटामिन K"],
+    "answer_en": "Vitamin D",
+    "answer_hi": "विटामिन D",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 11,
+    "question_en": "What is the largest gland in the human body?",
+    "question_hi": "मानव शरीर की सबसे बड़ी ग्रंथि कौन सी है?",
+    "options_en": ["Liver", "Pancreas", "Thyroid", "Pituitary"],
+    "options_hi": ["यकृत", "अग्न्याशय", "थायरॉयड", "पिट्यूटरी"],
+    "answer_en": "Liver",
+    "answer_hi": "यकृत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 12,
+    "question_en": "Which blood vessels carry blood away from the heart?",
+    "question_hi": "कौन सी रक्त वाहिकाएं हृदय से रक्त को दूर ले जाती हैं?",
+    "options_en": ["Arteries", "Veins", "Capillaries", "Venules"],
+    "options_hi": ["धमनियाँ", "शिराएँ", "केशिकाएँ", "शिरिकाएँ"],
+    "answer_en": "Arteries",
+    "answer_hi": "धमनियाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 13,
+    "question_en": "What is the process of conversion of light energy into chemical energy in plants called?",
+    "question_hi": "पौधों में प्रकाश ऊर्जा का रासायनिक ऊर्जा में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Photosynthesis", "Respiration", "Transpiration", "Fermentation"],
+    "options_hi": ["प्रकाश संश्लेषण", "श्वसन", "वाष्पोत्सर्जन", "किण्वन"],
+    "answer_en": "Photosynthesis",
+    "answer_hi": "प्रकाश संश्लेषण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 14,
+    "question_en": "Which vitamin deficiency causes Night Blindness?",
+    "question_hi": "किस विटामिन की कमी से रतौंधी होती है?",
+    "options_en": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "options_hi": ["विटामिन A", "विटामिन B", "विटामिन C", "विटामिन D"],
+    "answer_en": "Vitamin A",
+    "answer_hi": "विटामिन A",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 15,
+    "question_en": "What is the smallest bone in the human body?",
+    "question_hi": "मानव शरीर की सबसे छोटी हड्डी कौन सी है?",
+    "options_en": ["Stapes", "Femur", "Tibia", "Radius"],
+    "options_hi": ["स्टेपीज", "फीमर", "टिबिया", "रेडियस"],
+    "answer_en": "Stapes",
+    "answer_hi": "स्टेपीज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 16,
+    "question_en": "Which hormone is produced by the pancreas and regulates blood sugar levels?",
+    "question_hi": "अग्न्याशय द्वारा कौन सा हार्मोन उत्पन्न होता है जो रक्त शर्करा स्तर को नियंत्रित करता है?",
+    "options_en": ["Insulin", "Adrenaline", "Thyroxine", "Estrogen"],
+    "options_hi": ["इंसुलिन", "एड्रेनालाईन", "थायरॉक्सिन", "एस्ट्रोजन"],
+    "answer_en": "Insulin",
+    "answer_hi": "इंसुलिन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 17,
+    "question_en": "What is the process of breaking down food into simpler substances called?",
+    "question_hi": "भोजन को सरल पदार्थों में तोड़ने की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Digestion", "Respiration", "Excretion", "Circulation"],
+    "options_hi": ["पाचन", "श्वसन", "उत्सर्जन", "परिसंचरण"],
+    "answer_en": "Digestion",
+    "answer_hi": "पाचन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 18,
+    "question_en": "Which vitamin deficiency causes Scurvy?",
+    "question_hi": "किस विटामिन की कमी से स्कर्वी रोग होता है?",
+    "options_en": ["Vitamin C", "Vitamin D", "Vitamin A", "Vitamin B"],
+    "options_hi": ["विटामिन C", "विटामिन D", "विटामिन A", "विटामिन B"],
+    "answer_en": "Vitamin C",
+    "answer_hi": "विटामिन C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 19,
+    "question_en": "What is the study of fossils called?",
+    "question_hi": "जीवाश्मों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Paleontology", "Archaeology", "Geology", "Meteorology"],
+    "options_hi": ["जीवाश्म विज्ञान", "पुरातत्व विज्ञान", "भूविज्ञान", "मौसम विज्ञान"],
+    "answer_en": "Paleontology",
+    "answer_hi": "जीवाश्म विज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 20,
+    "question_en": "Which part of the plant absorbs water and minerals from the soil?",
+    "question_hi": "पौधे का कौन सा भाग मिट्टी से पानी और खनिजों को अवशोषित करता है?",
+    "options_en": ["Roots", "Stem", "Leaves", "Flowers"],
+    "options_hi": ["जड़ें", "तना", "पत्तियाँ", "फूल"],
+    "answer_en": "Roots",
+    "answer_hi": "जड़ें",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 21,
+    "question_en": "What is the process of conversion of glucose into energy in cells called?",
+    "question_hi": "कोशिकाओं में ग्लूकोज का ऊर्जा में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Cellular respiration", "Photosynthesis", "Fermentation", "Glycolysis"],
+    "options_hi": ["कोशिकीय श्वसन", "प्रकाश संश्लेषण", "किण्वन", "ग्लाइकोलाइसिस"],
+    "answer_en": "Cellular respiration",
+    "answer_hi": "कोशिकीय श्वसन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 22,
+    "question_en": "Which vitamin deficiency causes Rickets?",
+    "question_hi": "किस विटामिन की कमी से रिकेट्स रोग होता है?",
+    "options_en": ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin B"],
+    "options_hi": ["विटामिन D", "विटामिन C", "विटामिन A", "विटामिन B"],
+    "answer_en": "Vitamin D",
+    "answer_hi": "विटामिन D",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 23,
+    "question_en": "What is the largest artery in the human body?",
+    "question_hi": "मानव शरीर की सबसे बड़ी धमनी कौन सी है?",
+    "options_en": ["Aorta", "Pulmonary artery", "Carotid artery", "Femoral artery"],
+    "options_hi": ["महाधमनी", "फुफ्फुसीय धमनी", "कैरोटिड धमनी", "फीमोरल धमनी"],
+    "answer_en": "Aorta",
+    "answer_hi": "महाधमनी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 24,
+    "question_en": "Which part of the human eye controls the amount of light entering?",
+    "question_hi": "मानव आंख का कौन सा भाग प्रवेश करने वाले प्रकाश की मात्रा को नियंत्रित करता है?",
+    "options_en": ["Iris", "Cornea", "Retina", "Lens"],
+    "options_hi": ["आइरिस", "कॉर्निया", "रेटिना", "लेंस"],
+    "answer_en": "Iris",
+    "answer_hi": "आइरिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 25,
+    "question_en": "What is the process of cell division that produces gametes called?",
+    "question_hi": "युग्मक उत्पन्न करने वाली कोशिका विभाजन की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Meiosis", "Mitosis", "Binary fission", "Budding"],
+    "options_hi": ["मियोसिस", "माइटोसिस", "द्विखंडन", "कलिका विधि"],
+    "answer_en": "Meiosis",
+    "answer_hi": "मियोसिस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 26,
+    "question_en": "Which vitamin deficiency causes Beriberi?",
+    "question_hi": "किस विटामिन की कमी से बेरीबेरी रोग होता है?",
+    "options_en": ["Vitamin B1", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "options_hi": ["विटामिन B1", "विटामिन C", "विटामिन D", "विटामिन A"],
+    "answer_en": "Vitamin B1",
+    "answer_hi": "विटामिन B1",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 27,
+    "question_en": "What is the study of birds called?",
+    "question_hi": "पक्षियों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Ornithology", "Entomology", "Ichthyology", "Herpetology"],
+    "options_hi": ["पक्षीविज्ञान", "कीटविज्ञान", "मत्स्यविज्ञान", "सरीसृपविज्ञान"],
+    "answer_en": "Ornithology",
+    "answer_hi": "पक्षीविज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 28,
+    "question_en": "Which part of the human brain controls breathing and heart rate?",
+    "question_hi": "मानव मस्तिष्क का कौन सा भाग श्वास और हृदय गति को नियंत्रित करता है?",
+    "options_en": ["Medulla oblongata", "Cerebellum", "Cerebrum", "Hypothalamus"],
+    "options_hi": ["मेडुला ओब्लोंगेटा", "सेरेबेलम", "सेरेब्रम", "हाइपोथैलेमस"],
+    "answer_en": "Medulla oblongata",
+    "answer_hi": "मेडुला ओब्लोंगेटा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 29,
+    "question_en": "What is the process of conversion of nitrogen compounds into free nitrogen called?",
+    "question_hi": "नाइट्रोजन यौगिकों के मुक्त नाइट्रोजन में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Denitrification", "Nitrogen fixation", "Ammonification", "Nitrification"],
+    "options_hi": ["विनाइट्रीकरण", "नाइट्रोजन स्थिरीकरण", "अमोनीकरण", "नाइट्रीकरण"],
+    "answer_en": "Denitrification",
+    "answer_hi": "विनाइट्रीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 30,
+    "question_en": "Which vitamin deficiency causes Pellagra?",
+    "question_hi": "किस विटामिन की कमी से पेलाग्रा रोग होता है?",
+    "options_en": ["Vitamin B3", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "options_hi": ["विटामिन B3", "विटामिन C", "विटामिन D", "विटामिन A"],
+    "answer_en": "Vitamin B3",
+    "answer_hi": "विटामिन B3",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 31,
+    "question_en": "What is the study of fishes called?",
+    "question_hi": "मछलियों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Ichthyology", "Ornithology", "Entomology", "Herpetology"],
+    "options_hi": ["मत्स्यविज्ञान", "पक्षीविज्ञान", "कीटविज्ञान", "सरीसृपविज्ञान"],
+    "answer_en": "Ichthyology",
+    "answer_hi": "मत्स्यविज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 32,
+    "question_en": "Which part of the plant is responsible for photosynthesis?",
+    "question_hi": "पौधे का कौन सा भाग प्रकाश संश्लेषण के लिए उत्तरदायी है?",
+    "options_en": ["Leaves", "Roots", "Stem", "Flowers"],
+    "options_hi": ["पत्तियाँ", "जड़ें", "तना", "फूल"],
+    "answer_en": "Leaves",
+    "answer_hi": "पत्तियाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 33,
+    "question_en": "What is the process of conversion of ammonia into nitrates called?",
+    "question_hi": "अमोनिया का नाइट्रेट में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Nitrification", "Denitrification", "Nitrogen fixation", "Ammonification"],
+    "options_hi": ["नाइट्रीकरण", "विनाइट्रीकरण", "नाइट्रोजन स्थिरीकरण", "अमोनीकरण"],
+    "answer_en": "Nitrification",
+    "answer_hi": "नाइट्रीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 34,
+    "question_en": "Which vitamin deficiency causes Hemorrhage?",
+    "question_hi": "किस विटामिन की कमी से रक्तस्राव होता है?",
+    "options_en": ["Vitamin K", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "options_hi": ["विटामिन K", "विटामिन C", "विटामिन D", "विटामिन A"],
+    "answer_en": "Vitamin K",
+    "answer_hi": "विटामिन K",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 35,
+    "question_en": "What is the study of reptiles and amphibians called?",
+    "question_hi": "सरीसृपों और उभयचरों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Herpetology", "Ichthyology", "Ornithology", "Entomology"],
+    "options_hi": ["सरीसृपविज्ञान", "मत्स्यविज्ञान", "पक्षीविज्ञान", "कीटविज्ञान"],
+    "answer_en": "Herpetology",
+    "answer_hi": "सरीसृपविज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 36,
+    "question_en": "Which part of the human ear is responsible for balance?",
+    "question_hi": "मानव कान का कौन सा भाग संतुलन के लिए उत्तरदायी है?",
+    "options_en": ["Semicircular canals", "Cochlea", "Eardrum", "Ossicles"],
+    "options_hi": ["अर्धवृत्ताकार नलिकाएँ", "कोक्लीया", "कान का पर्दा", "ओसीकल्स"],
+    "answer_en": "Semicircular canals",
+    "answer_hi": "अर्धवृत्ताकार नलिकाएँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 37,
+    "question_en": "What is the process of conversion of nitrates into free nitrogen called?",
+    "question_hi": "नाइट्रेट्स के मुक्त नाइट्रोजन में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Denitrification", "Nitrification", "Nitrogen fixation", "Ammonification"],
+    "options_hi": ["विनाइट्रीकरण", "नाइट्रीकरण", "नाइट्रोजन स्थिरीकरण", "अमोनीकरण"],
+    "answer_en": "Denitrification",
+    "answer_hi": "विनाइट्रीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 38,
+    "question_en": "Which vitamin deficiency causes Anemia?",
+    "question_hi": "किस विटामिन की कमी से एनीमिया होता है?",
+    "options_en": ["Vitamin B12", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "options_hi": ["विटामिन B12", "विटामिन C", "विटामिन D", "विटामिन A"],
+    "answer_en": "Vitamin B12",
+    "answer_hi": "विटामिन B12",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 39,
+    "question_en": "What is the study of fungi called?",
+    "question_hi": "कवकों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Mycology", "Phycology", "Bryology", "Pteridology"],
+    "options_hi": ["कवक विज्ञान", "शैवाल विज्ञान", "ब्रायोफाइट विज्ञान", "फर्न विज्ञान"],
+    "answer_en": "Mycology",
+    "answer_hi": "कवक विज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 40,
+    "question_en": "Which part of the human digestive system absorbs water?",
+    "question_hi": "मानव पाचन तंत्र का कौन सा भाग पानी को अवशोषित करता है?",
+    "options_en": ["Large intestine", "Small intestine", "Stomach", "Esophagus"],
+    "options_hi": ["बड़ी आंत", "छोटी आंत", "आमाशय", "ग्रासनली"],
+    "answer_en": "Large intestine",
+    "answer_hi": "बड़ी आंत",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 41,
+    "question_en": "What is the process of conversion of atmospheric nitrogen into nitrates called?",
+    "question_hi": "वायुमंडलीय नाइट्रोजन का नाइट्रेट में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Nitrogen fixation", "Nitrification", "Denitrification", "Ammonification"],
+    "options_hi": ["नाइट्रोजन स्थिरीकरण", "नाइट्रीकरण", "विनाइट्रीकरण", "अमोनीकरण"],
+    "answer_en": "Nitrogen fixation",
+    "answer_hi": "नाइट्रोजन स्थिरीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 42,
+    "question_en": "Which vitamin deficiency causes Goiter?",
+    "question_hi": "किस विटामिन की कमी से गण्डमाला (घेंघा) होता है?",
+    "options_en": ["Iodine deficiency", "Vitamin C", "Vitamin D", "Vitamin A"],
+    "options_hi": ["आयोडीन की कमी", "विटामिन C", "विटामिन D", "विटामिन A"],
+    "answer_en": "Iodine deficiency",
+    "answer_hi": "आयोडीन की कमी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 43,
+    "question_en": "What is the study of algae called?",
+    "question_hi": "शैवालों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Phycology", "Mycology", "Bryology", "Pteridology"],
+    "options_hi": ["शैवाल विज्ञान", "कवक विज्ञान", "ब्रायोफाइट विज्ञान", "फर्न विज्ञान"],
+    "answer_en": "Phycology",
+    "answer_hi": "शैवाल विज्ञान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 44,
+    "question_en": "Which part of the human respiratory system contains vocal cords?",
+    "question_hi": "मानव श्वसन तंत्र का कौन सा भाग वोकल कॉर्ड्स (स्वर तंत्रियाँ) को रखता है?",
+    "options_en": ["Larynx", "Trachea", "Bronchi", "Pharynx"],
+    "options_hi": ["स्वरयंत्र", "श्वासनली", "ब्रोंकाई", "ग्रसनी"],
+    "answer_en": "Larynx",
+    "answer_hi": "स्वरयंत्र",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 45,
+    "question_en": "What is the process of conversion of dead organic matter into ammonia called?",
+    "question_hi": "मृत कार्बनिक पदार्थ का अमोनिया में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Ammonification", "Nitrification", "Denitrification", "Nitrogen fixation"],
+    "options_hi": ["अमोनीकरण", "नाइट्रीकरण", "विनाइट्रीकरण", "नाइट्रोजन स्थिरीकरण"],
+    "answer_en": "Ammonification",
+    "answer_hi": "अमोनीकरण",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 46,
+    "question_en": "Which vitamin deficiency causes Osteomalacia?",
+    "question_hi": "किस विटामिन की कमी से ओस्टियोमलेशिया होता है?",
+    "options_en": ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin B"],
+    "options_hi": ["विटामिन D", "विटामिन C", "विटामिन A", "विटामिन B"],
+    "answer_en": "Vitamin D",
+    "answer_hi": "विटामिन D",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 47,
+    "question_en": "What is the study of viruses called?",
+    "question_hi": "वायरसों के अध्ययन को क्या कहा जाता है?",
+    "options_en": ["Virology", "Bacteriology", "Mycology", "Protozoology"],
+    "options_hi": ["वायरोलॉजी", "जीवाणु विज्ञान", "कवक विज्ञान", "प्रोटोजोआ विज्ञान"],
+    "answer_en": "Virology",
+    "answer_hi": "वायरोलॉजी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 48,
+    "question_en": "Which part of the human excretory system filters blood?",
+    "question_hi": "मानव उत्सर्जन तंत्र का कौन सा भाग रक्त को फिल्टर करता है?",
+    "options_en": ["Kidneys", "Liver", "Lungs", "Skin"],
+    "options_hi": ["गुर्दे", "यकृत", "फेफड़े", "त्वचा"],
+    "answer_en": "Kidneys",
+    "answer_hi": "गुर्दे",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 49,
+    "question_en": "What is the process of conversion of glucose into alcohol called?",
+    "question_hi": "ग्लूकोज का अल्कोहल में रूपांतरण की प्रक्रिया क्या कहलाती है?",
+    "options_en": ["Fermentation", "Respiration", "Photosynthesis", "Digestion"],
+    "options_hi": ["किण्वन", "श्वसन", "प्रकाश संश्लेषण", "पाचन"],
+    "answer_en": "Fermentation",
+    "answer_hi": "किण्वन",
+    "attempted": false,
+    "selected": ""
+  },
     {
         "num": 50,
         "question_en": "What is the capital of Spain?",

@@ -264,7 +264,7 @@ const questions = [
     selected: ""
   },
   {
-    num: 25,
+    num:25,
     question_en: "Which bird is known for its ability to mimic human speech?",
     question_hi: "कौन सा पक्षी मानव भाषा की नकल करने के लिए जाना जाता है?",
     options_en: ["Eagle", "Parrot", "Owl", "Pigeon"],
@@ -275,7 +275,7 @@ const questions = [
     selected: ""
   },
   {
-    num: 26,
+    num:26,
     question_en: "Which element is needed for breathing?",
     question_hi: "श्वसन के लिए किस तत्व की आवश्यकता होती है?",
     options_en: ["Oxygen", "Carbon", "Nitrogen", "Sulfur"],
@@ -286,7 +286,7 @@ const questions = [
     selected: ""
   },
   {
-    num: 27,
+    num:27,
     question_en: "What is the main ingredient in chocolate?",
     question_hi: "चॉकलेट में मुख्य घटक क्या होता है?",
     options_en: ["Sugar", "Milk", "Cocoa", "Flour"],
@@ -328,7 +328,227 @@ const questions = [
     answer_hi: "चांदी",
     attempted: false,
     selected: ""
-  }
+  },
+  {
+  num:31,
+  question_en: "India signed an MoU with which country for renewable energy cooperation in 2025?",
+  question_hi: "2025 में भारत ने नवीकरणीय ऊर्जा सहयोग के लिए किस देश के साथ MoU किया?",
+  options_en: ["Germany","USA","Japan","Australia"],
+  options_hi: ["जर्मनी","अमेरिका","जापान","ऑस्ट्रेलिया"],
+  answer_en: "Germany",
+  answer_hi: "जर्मनी",
+  attempted: false,
+  selected: ""
+},
+{
+  num:32,
+  question_en: "Which Indian city launched 'Smart Traffic Management' system in 2025?",
+  question_hi: "2025 में किस भारतीय शहर ने 'स्मार्ट ट्रैफिक मैनेजमेंट' सिस्टम लॉन्च किया?",
+  options_en: ["Delhi","Bengaluru","Mumbai","Hyderabad"],
+  options_hi: ["दिल्ली","बेंगलुरु","मुंबई","हैदराबाद"],
+  answer_en: "Delhi",
+  answer_hi: "दिल्ली",
+  attempted: false,
+  selected: ""
+},
+{
+  num:33,
+  question_en: "India launched which program to promote electric buses in 2025?",
+  question_hi: "2025 में भारत ने इलेक्ट्रिक बसों को बढ़ावा देने के लिए कौन-सा प्रोग्राम लॉन्च किया?",
+  options_en: ["Green Mobility India","Electric Bus Mission","EV Urban Project","Clean Transport Initiative"],
+  options_hi: ["ग्रीन मोबिलिटी इंडिया","इलेक्ट्रिक बस मिशन","ईवी अर्बन प्रोजेक्ट","क्लीन ट्रांसपोर्ट इनिशिएटिव"],
+  answer_en: "Electric Bus Mission",
+  answer_hi: "इलेक्ट्रिक बस मिशन",
+  attempted: false,
+  selected: ""
+},
+{
+  num:34,
+  question_en: "Which Indian cricketer became brand ambassador for fitness campaign 2025?",
+  question_hi: "2025 में फिटनेस अभियान के लिए कौन सा भारतीय क्रिकेटर ब्रांड एम्बेसडर बना?",
+  options_en: ["Virat Kohli","Rohit Sharma","Hardik Pandya","Shubman Gill"],
+  options_hi: ["विराट कोहली","रोहित शर्मा","हार्दिक पांड्या","शुभमन गिल"],
+  answer_en: "Virat Kohli",
+  answer_hi: "विराट कोहली",
+  attempted: false,
+  selected: ""
+},
+{
+  num:35,
+  question_en: "Which Indian state implemented 'Digital Literacy for Women' program in 2025?",
+  question_hi: "2025 में किस भारतीय राज्य ने 'महिलाओं के लिए डिजिटल साक्षरता' प्रोग्राम लागू किया?",
+  options_en: ["Maharashtra","Rajasthan","Uttar Pradesh","Gujarat"],
+  options_hi: ["महाराष्ट्र","राजस्थान","उत्तर प्रदेश","गुजरात"],
+  answer_en: "Rajasthan",
+  answer_hi: "राजस्थान",
+  attempted: false,
+  selected: ""
+},
+{
+  num:36,
+  question_en: "India launched which 'Smart Village Energy Project' in 2025?",
+  question_hi: "2025 में भारत ने कौन-सा 'स्मार्ट विलेज एनर्जी प्रोजेक्ट' लॉन्च किया?",
+  options_en: ["Green Village Mission","Smart Rural Energy","Solar Smart Villages","Digital Energy Hub"],
+  options_hi: ["ग्रीन विलेज मिशन","स्मार्ट रूरल एनर्जी","सोलर स्मार्ट विलेजेज","डिजिटल एनर्जी हब"],
+  answer_en: "Solar Smart Villages",
+  answer_hi: "सोलर स्मार्ट विलेजेज",
+  attempted: false,
+  selected: ""
+},
+{
+  num:37,
+  question_en: "Which Indian railway project launched 'Contactless Ticketing' in 2025?",
+  question_hi: "2025 में किस भारतीय रेलवे प्रोजेक्ट ने 'कॉन्टैक्टलेस टिकटिंग' शुरू किया?",
+  options_en: ["Delhi Metro","Mumbai Suburban Railway","Indian Railways National","Chennai Metro"],
+  options_hi: ["दिल्ली मेट्रो","मुंबई सबअर्बन रेलवे","इंडियन रेलवे नेशनल","चेन्नई मेट्रो"],
+  answer_en: "Indian Railways National",
+  answer_hi: "इंडियन रेलवे नेशनल",
+  attempted: false,
+  selected: ""
+},
+{
+  num:38,
+  question_en: "India hosted which global health summit in 2025?",
+  question_hi: "2025 में भारत ने कौन सा वैश्विक स्वास्थ्य सम्मेलन आयोजित किया?",
+  options_en: ["Global Health Summit","World Health Meet","India Health Forum","UN Health Conference"],
+  options_hi: ["ग्लोबल हेल्थ समिट","वर्ल्ड हेल्थ मीट","इंडिया हेल्थ फोरम","यूएन हेल्थ कॉन्फ्रेंस"],
+  answer_en: "Global Health Summit",
+  answer_hi: "ग्लोबल हेल्थ समिट",
+  attempted: false,
+  selected: ""
+},
+{
+  num:39,
+  question_en: "Which Indian city launched 'Smart Water Management' system in 2025?",
+  question_hi: "2025 में किस भारतीय शहर ने 'स्मार्ट वाटर मैनेजमेंट' सिस्टम लॉन्च किया?",
+  options_en: ["Pune","Hyderabad","Delhi","Bengaluru"],
+  options_hi: ["पुणे","हैदराबाद","दिल्ली","बेंगलुरु"],
+  answer_en: "Hyderabad",
+  answer_hi: "हैदराबाद",
+  attempted: false,
+  selected: ""
+},
+{
+  num:40,
+  question_en: "India signed a defence manufacturing agreement with which country in 2025?",
+  question_hi: "2025 में भारत ने किस देश के साथ रक्षा निर्माण समझौता किया?",
+  options_en: ["USA","France","Israel","Russia"],
+  options_hi: ["अमेरिका","फ्रांस","इज़राइल","रूस"],
+  answer_en: "France",
+  answer_hi: "फ्रांस",
+  attempted: false,
+  selected: ""
+},
+{
+  num:41,
+  question_en: "Which Indian state launched 'Digital Agriculture Hub' in 2025?",
+  question_hi: "2025 में किस भारतीय राज्य ने 'डिजिटल एग्रीकल्चर हब' लॉन्च किया?",
+  options_en: ["Maharashtra","Andhra Pradesh","Punjab","Karnataka"],
+  options_hi: ["महाराष्ट्र","आंध्र प्रदेश","पंजाब","कर्नाटक"],
+  answer_en: "Andhra Pradesh",
+  answer_hi: "आंध्र प्रदेश",
+  attempted: false,
+  selected: ""
+},
+{
+  num:42,
+  question_en: "India hosted which international startup summit in 2025?",
+  question_hi: "2025 में भारत ने कौन सा अंतरराष्ट्रीय स्टार्टअप सम्मेलन आयोजित किया?",
+  options_en: ["Global Startup Summit","Tech India 2025","Entrepreneur India","Startup World Forum"],
+  options_hi: ["ग्लोबल स्टार्टअप समिट","टेक इंडिया 2025","एंटरप्रेन्योर इंडिया","स्टार्टअप वर्ल्ड फोरम"],
+  answer_en: "Global Startup Summit",
+  answer_hi: "ग्लोबल स्टार्टअप समिट",
+  attempted: false,
+  selected: ""
+},
+{
+  num:43,
+  question_en: "Which Indian state launched 'Green Transport Mission' in 2025?",
+  question_hi: "2025 में किस भारतीय राज्य ने 'ग्रीन ट्रांसपोर्ट मिशन' लॉन्च किया?",
+  options_en: ["Maharashtra","Tamil Nadu","Karnataka","Gujarat"],
+  options_hi: ["महाराष्ट्र","तमिलनाडु","कर्नाटक","गुजरात"],
+  answer_en: "Tamil Nadu",
+  answer_hi: "तमिलनाडु",
+  attempted: false,
+  selected: ""
+},
+{
+  num:44,
+  question_en: "India launched which national AI platform for education in 2025?",
+  question_hi: "2025 में भारत ने शिक्षा के लिए कौन सा राष्ट्रीय एआई प्लेटफ़ॉर्म लॉन्च किया?",
+  options_en: ["EduAI","Digital Classroom AI","AI Shiksha","Smart Learning Hub"],
+  options_hi: ["एडुआआई","डिजिटल क्लासरूम एआई","एआई शिक्षा","स्मार्ट लर्निंग हब"],
+  answer_en: "EduAI",
+  answer_hi: "एडुआआई",
+  attempted: false,
+  selected: ""
+},
+{
+  num:45,
+  question_en: "Which Indian city launched 'Smart Waste Recycling' project in 2025?",
+  question_hi: "2025 में किस भारतीय शहर ने 'स्मार्ट वेस्ट रीसाइक्लिंग' प्रोजेक्ट लॉन्च किया?",
+  options_en: ["Mumbai","Delhi","Bengaluru","Pune"],
+  options_hi: ["मुंबई","दिल्ली","बेंगलुरु","पुणे"],
+  answer_en: "Bengaluru",
+  answer_hi: "बेंगलुरु",
+  attempted: false,
+  selected: ""
+},
+{
+  num:46,
+  question_en: "India signed an MoU with which country for water conservation in 2025?",
+  question_hi: "2025 में भारत ने जल संरक्षण के लिए किस देश के साथ MoU किया?",
+  options_en: ["Israel","USA","Australia","Germany"],
+  options_hi: ["इज़राइल","अमेरिका","ऑस्ट्रेलिया","जर्मनी"],
+  answer_en: "Israel",
+  answer_hi: "इज़राइल",
+  attempted: false,
+  selected: ""
+},
+{
+  num:47,
+  question_en: "Which Indian state launched 'Digital Health Village' program in 2025?",
+  question_hi: "2025 में किस भारतीय राज्य ने 'डिजिटल हेल्थ विलेज' प्रोग्राम लॉन्च किया?",
+  options_en: ["Kerala","Madhya Pradesh","Rajasthan","Uttar Pradesh"],
+  options_hi: ["केरल","मध्य प्रदेश","राजस्थान","उत्तर प्रदेश"],
+  answer_en: "Madhya Pradesh",
+  answer_hi: "मध्य प्रदेश",
+  attempted: false,
+  selected: ""
+},
+{
+  num:48,
+  question_en: "India hosted which global environment summit in 2025?",
+  question_hi: "2025 में भारत ने कौन सा वैश्विक पर्यावरण सम्मेलन आयोजित किया?",
+  options_en: ["World Environment Summit","Global Green Summit","Eco India 2025","UN Environment Meet"],
+  options_hi: ["वर्ल्ड एनवायरनमेंट समिट","ग्लोबल ग्रीन समिट","ईको इंडिया 2025","यूएन एनवायरनमेंट मीट"],
+  answer_en: "Global Green Summit",
+  answer_hi: "ग्लोबल ग्रीन समिट",
+  attempted: false,
+  selected: ""
+},
+{
+  num:49,
+  question_en: "Which Indian railway introduced 'Solar-Powered Trains' in 2025?",
+  question_hi: "2025 में किस भारतीय रेलवे ने 'सोलर-पावर्ड ट्रेन' लॉन्च की?",
+  options_en: ["Indian Railways National","Mumbai Suburban Railway","Delhi Metro","Chennai Metro"],
+  options_hi: ["इंडियन रेलवे नेशनल","मुंबई सबअर्बन रेलवे","दिल्ली मेट्रो","चेन्नई मेट्रो"],
+  answer_en: "Indian Railways National",
+  answer_hi: "इंडियन रेलवे नेशनल",
+  attempted: false,
+  selected: ""
+},
+{
+  num:50,
+  question_en: "Which Indian city launched 'Smart Education Hub' in 2025?",
+  question_hi: "2025 में किस भारतीय शहर ने 'स्मार्ट एजुकेशन हब' लॉन्च किया?",
+  options_en: ["Bengaluru","Hyderabad","Delhi","Mumbai"],
+  options_hi: ["बेंगलुरु","हैदराबाद","दिल्ली","मुंबई"],
+  answer_en: "Hyderabad",
+  answer_hi: "हैदराबाद",
+  attempted: false,
+  selected: ""
+}
 ];
 
 // --------------------------- GLOBAL VARS -----------------------------

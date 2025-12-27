@@ -1,1055 +1,555 @@
 const questions = [
   {
-       "num": 1,
-        "question_en": "What is 77 - 65?",
-        "question_hi": "77 - 65 कितना होता है?",
-        "options_en": [
-            "15",
-            "11",
-            "12",
-            "13"
-        ],
-        "options_hi": [
-            "15",
-            "11",
-            "12",
-            "13"
-        ],
-        "answer_en": "12",
-        "answer_hi": "12",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is 54 - 5?",
-        "question_hi": "54 - 5 कितना होता है?",
-        "options_en": [
-            "50",
-            "49",
-            "52",
-            "48"
-        ],
-        "options_hi": [
-            "50",
-            "49",
-            "52",
-            "48"
-        ],
-        "answer_en": "49",
-        "answer_hi": "49",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is the integer division 44 ÷ 2?",
-        "question_hi": "44 ÷ 2 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "23",
-            "25",
-            "22",
-            "21"
-        ],
-        "options_hi": [
-            "23",
-            "25",
-            "22",
-            "21"
-        ],
-        "answer_en": "22",
-        "answer_hi": "22",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is the integer division 69 ÷ 32?",
-        "question_hi": "69 ÷ 32 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "1",
-            "2",
-            "5"
-        ],
-        "options_hi": [
-            "3",
-            "1",
-            "2",
-            "5"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is 93 + 37?",
-        "question_hi": "93 + 37 कितना होता है?",
-        "options_en": [
-            "129",
-            "131",
-            "133",
-            "130"
-        ],
-        "options_hi": [
-            "129",
-            "131",
-            "133",
-            "130"
-        ],
-        "answer_en": "130",
-        "answer_hi": "130",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is the integer division 91 ÷ 49?",
-        "question_hi": "91 ÷ 49 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "4",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "4",
-            "0",
-            "1"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is the integer division 66 ÷ 19?",
-        "question_hi": "66 ÷ 19 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "6",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "4",
-            "6",
-            "2",
-            "3"
-        ],
-        "answer_en": "3",
-        "answer_hi": "3",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 57 - 86?",
-        "question_hi": "57 - 86 कितना होता है?",
-        "options_en": [
-            "-29",
-            "-27",
-            "-26",
-            "-28"
-        ],
-        "options_hi": [
-            "-29",
-            "-27",
-            "-26",
-            "-28"
-        ],
-        "answer_en": "-29",
-        "answer_hi": "-29",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is 42 × 52?",
-        "question_hi": "42 × 52 कितना होता है?",
-        "options_en": [
-            "2184",
-            "2187",
-            "2185",
-            "2183"
-        ],
-        "options_hi": [
-            "2184",
-            "2187",
-            "2185",
-            "2183"
-        ],
-        "answer_en": "2184",
-        "answer_hi": "2184",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 31 - 11?",
-        "question_hi": "31 - 11 कितना होता है?",
-        "options_en": [
-            "23",
-            "20",
-            "19",
-            "21"
-        ],
-        "options_hi": [
-            "23",
-            "20",
-            "19",
-            "21"
-        ],
-        "answer_en": "20",
-        "answer_hi": "20",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 21 - 15?",
-        "question_hi": "21 - 15 कितना होता है?",
-        "options_en": [
-            "6",
-            "5",
-            "7",
-            "9"
-        ],
-        "options_hi": [
-            "6",
-            "5",
-            "7",
-            "9"
-        ],
-        "answer_en": "6",
-        "answer_hi": "6",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is 54 × 17?",
-        "question_hi": "54 × 17 कितना होता है?",
-        "options_en": [
-            "918",
-            "917",
-            "921",
-            "919"
-        ],
-        "options_hi": [
-            "918",
-            "917",
-            "921",
-            "919"
-        ],
-        "answer_en": "918",
-        "answer_hi": "918",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is 61 + 35?",
-        "question_hi": "61 + 35 कितना होता है?",
-        "options_en": [
-            "95",
-            "97",
-            "99",
-            "96"
-        ],
-        "options_hi": [
-            "95",
-            "97",
-            "99",
-            "96"
-        ],
-        "answer_en": "96",
-        "answer_hi": "96",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is 92 + 91?",
-        "question_hi": "92 + 91 कितना होता है?",
-        "options_en": [
-            "182",
-            "183",
-            "186",
-            "184"
-        ],
-        "options_hi": [
-            "182",
-            "183",
-            "186",
-            "184"
-        ],
-        "answer_en": "183",
-        "answer_hi": "183",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is 13 - 93?",
-        "question_hi": "13 - 93 कितना होता है?",
-        "options_en": [
-            "-77",
-            "-80",
-            "-79",
-            "-78"
-        ],
-        "options_hi": [
-            "-77",
-            "-80",
-            "-79",
-            "-78"
-        ],
-        "answer_en": "-80",
-        "answer_hi": "-80",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 88 × 40?",
-        "question_hi": "88 × 40 कितना होता है?",
-        "options_en": [
-            "3519",
-            "3523",
-            "3520",
-            "3521"
-        ],
-        "options_hi": [
-            "3519",
-            "3523",
-            "3520",
-            "3521"
-        ],
-        "answer_en": "3520",
-        "answer_hi": "3520",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is 59 - 73?",
-        "question_hi": "59 - 73 कितना होता है?",
-        "options_en": [
-            "-12",
-            "-11",
-            "-13",
-            "-14"
-        ],
-        "options_hi": [
-            "-12",
-            "-11",
-            "-13",
-            "-14"
-        ],
-        "answer_en": "-14",
-        "answer_hi": "-14",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 19 + 17?",
-        "question_hi": "19 + 17 कितना होता है?",
-        "options_en": [
-            "37",
-            "35",
-            "39",
-            "36"
-        ],
-        "options_hi": [
-            "37",
-            "35",
-            "39",
-            "36"
-        ],
-        "answer_en": "36",
-        "answer_hi": "36",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is 27 × 53?",
-        "question_hi": "27 × 53 कितना होता है?",
-        "options_en": [
-            "1434",
-            "1432",
-            "1430",
-            "1431"
-        ],
-        "options_hi": [
-            "1434",
-            "1432",
-            "1430",
-            "1431"
-        ],
-        "answer_en": "1431",
-        "answer_hi": "1431",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is 11 + 4?",
-        "question_hi": "11 + 4 कितना होता है?",
-        "options_en": [
-            "15",
-            "18",
-            "14",
-            "16"
-        ],
-        "options_hi": [
-            "15",
-            "18",
-            "14",
-            "16"
-        ],
-        "answer_en": "15",
-        "answer_hi": "15",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 18 × 13?",
-        "question_hi": "18 × 13 कितना होता है?",
-        "options_en": [
-            "233",
-            "235",
-            "237",
-            "234"
-        ],
-        "options_hi": [
-            "233",
-            "235",
-            "237",
-            "234"
-        ],
-        "answer_en": "234",
-        "answer_hi": "234",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is the integer division 8 ÷ 23?",
-        "question_hi": "8 ÷ 23 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is the integer division 50 ÷ 89?",
-        "question_hi": "50 ÷ 89 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "3",
-            "1"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is 25 × 37?",
-        "question_hi": "25 × 37 कितना होता है?",
-        "options_en": [
-            "926",
-            "924",
-            "925",
-            "928"
-        ],
-        "options_hi": [
-            "926",
-            "924",
-            "925",
-            "928"
-        ],
-        "answer_en": "925",
-        "answer_hi": "925",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 80 - 81?",
-        "question_hi": "80 - 81 कितना होता है?",
-        "options_en": [
-            "-1",
-            "2",
-            "0",
-            "1"
-        ],
-        "options_hi": [
-            "-1",
-            "2",
-            "0",
-            "1"
-        ],
-        "answer_en": "-1",
-        "answer_hi": "-1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 72 + 63?",
-        "question_hi": "72 + 63 कितना होता है?",
-        "options_en": [
-            "138",
-            "134",
-            "136",
-            "135"
-        ],
-        "options_hi": [
-            "138",
-            "134",
-            "136",
-            "135"
-        ],
-        "answer_en": "135",
-        "answer_hi": "135",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 19 - 55?",
-        "question_hi": "19 - 55 कितना होता है?",
-        "options_en": [
-            "-33",
-            "-36",
-            "-34",
-            "-35"
-        ],
-        "options_hi": [
-            "-33",
-            "-36",
-            "-34",
-            "-35"
-        ],
-        "answer_en": "-36",
-        "answer_hi": "-36",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 50 × 93?",
-        "question_hi": "50 × 93 कितना होता है?",
-        "options_en": [
-            "4650",
-            "4651",
-            "4649",
-            "4653"
-        ],
-        "options_hi": [
-            "4650",
-            "4651",
-            "4649",
-            "4653"
-        ],
-        "answer_en": "4650",
-        "answer_hi": "4650",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is 46 × 74?",
-        "question_hi": "46 × 74 कितना होता है?",
-        "options_en": [
-            "3403",
-            "3404",
-            "3405",
-            "3407"
-        ],
-        "options_hi": [
-            "3403",
-            "3404",
-            "3405",
-            "3407"
-        ],
-        "answer_en": "3404",
-        "answer_hi": "3404",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is 5 - 42?",
-        "question_hi": "5 - 42 कितना होता है?",
-        "options_en": [
-            "-35",
-            "-34",
-            "-36",
-            "-37"
-        ],
-        "options_hi": [
-            "-35",
-            "-34",
-            "-36",
-            "-37"
-        ],
-        "answer_en": "-37",
-        "answer_hi": "-37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 62 × 69?",
-        "question_hi": "62 × 69 कितना होता है?",
-        "options_en": [
-            "4281",
-            "4277",
-            "4278",
-            "4279"
-        ],
-        "options_hi": [
-            "4281",
-            "4277",
-            "4278",
-            "4279"
-        ],
-        "answer_en": "4278",
-        "answer_hi": "4278",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 33 - 86?",
-        "question_hi": "33 - 86 कितना होता है?",
-        "options_en": [
-            "-52",
-            "-53",
-            "-50",
-            "-51"
-        ],
-        "options_hi": [
-            "-52",
-            "-53",
-            "-50",
-            "-51"
-        ],
-        "answer_en": "-53",
-        "answer_hi": "-53",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is the integer division 99 ÷ 30?",
-        "question_hi": "99 ÷ 30 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "4",
-            "6",
-            "3",
-            "2"
-        ],
-        "options_hi": [
-            "4",
-            "6",
-            "3",
-            "2"
-        ],
-        "answer_en": "3",
-        "answer_hi": "3",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 32 × 77?",
-        "question_hi": "32 × 77 कितना होता है?",
-        "options_en": [
-            "2465",
-            "2464",
-            "2467",
-            "2463"
-        ],
-        "options_hi": [
-            "2465",
-            "2464",
-            "2467",
-            "2463"
-        ],
-        "answer_en": "2464",
-        "answer_hi": "2464",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 92 × 91?",
-        "question_hi": "92 × 91 कितना होता है?",
-        "options_en": [
-            "8375",
-            "8372",
-            "8371",
-            "8373"
-        ],
-        "options_hi": [
-            "8375",
-            "8372",
-            "8371",
-            "8373"
-        ],
-        "answer_en": "8372",
-        "answer_hi": "8372",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 65 × 71?",
-        "question_hi": "65 × 71 कितना होता है?",
-        "options_en": [
-            "4614",
-            "4615",
-            "4618",
-            "4616"
-        ],
-        "options_hi": [
-            "4614",
-            "4615",
-            "4618",
-            "4616"
-        ],
-        "answer_en": "4615",
-        "answer_hi": "4615",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 13 - 9?",
-        "question_hi": "13 - 9 कितना होता है?",
-        "options_en": [
-            "3",
-            "7",
-            "4",
-            "5"
-        ],
-        "options_hi": [
-            "3",
-            "7",
-            "4",
-            "5"
-        ],
-        "answer_en": "4",
-        "answer_hi": "4",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is 2 - 44?",
-        "question_hi": "2 - 44 कितना होता है?",
-        "options_en": [
-            "-40",
-            "-42",
-            "-39",
-            "-41"
-        ],
-        "options_hi": [
-            "-40",
-            "-42",
-            "-39",
-            "-41"
-        ],
-        "answer_en": "-42",
-        "answer_hi": "-42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "What is 43 + 9?",
-        "question_hi": "43 + 9 कितना होता है?",
-        "options_en": [
-            "55",
-            "52",
-            "51",
-            "53"
-        ],
-        "options_hi": [
-            "55",
-            "52",
-            "51",
-            "53"
-        ],
-        "answer_en": "52",
-        "answer_hi": "52",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 40,
-        "question_en": "What is 16 × 69?",
-        "question_hi": "16 × 69 कितना होता है?",
-        "options_en": [
-            "1107",
-            "1103",
-            "1105",
-            "1104"
-        ],
-        "options_hi": [
-            "1107",
-            "1103",
-            "1105",
-            "1104"
-        ],
-        "answer_en": "1104",
-        "answer_hi": "1104",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is 77 × 14?",
-        "question_hi": "77 × 14 कितना होता है?",
-        "options_en": [
-            "1081",
-            "1078",
-            "1079",
-            "1077"
-        ],
-        "options_hi": [
-            "1081",
-            "1078",
-            "1079",
-            "1077"
-        ],
-        "answer_en": "1078",
-        "answer_hi": "1078",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "What is the integer division 22 ÷ 95?",
-        "question_hi": "22 ÷ 95 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "What is 24 × 92?",
-        "question_hi": "24 × 92 कितना होता है?",
-        "options_en": [
-            "2211",
-            "2208",
-            "2207",
-            "2209"
-        ],
-        "options_hi": [
-            "2211",
-            "2208",
-            "2207",
-            "2209"
-        ],
-        "answer_en": "2208",
-        "answer_hi": "2208",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "What is 50 × 41?",
-        "question_hi": "50 × 41 कितना होता है?",
-        "options_en": [
-            "2053",
-            "2049",
-            "2050",
-            "2051"
-        ],
-        "options_hi": [
-            "2053",
-            "2049",
-            "2050",
-            "2051"
-        ],
-        "answer_en": "2050",
-        "answer_hi": "2050",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "What is the integer division 91 ÷ 75?",
-        "question_hi": "91 ÷ 75 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "2",
-            "4",
-            "1"
-        ],
-        "options_hi": [
-            "0",
-            "2",
-            "4",
-            "1"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "What is 80 + 30?",
-        "question_hi": "80 + 30 कितना होता है?",
-        "options_en": [
-            "109",
-            "111",
-            "110",
-            "113"
-        ],
-        "options_hi": [
-            "109",
-            "111",
-            "110",
-            "113"
-        ],
-        "answer_en": "110",
-        "answer_hi": "110",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "What is 97 - 11?",
-        "question_hi": "97 - 11 कितना होता है?",
-        "options_en": [
-            "89",
-            "86",
-            "87",
-            "85"
-        ],
-        "options_hi": [
-            "89",
-            "86",
-            "87",
-            "85"
-        ],
-        "answer_en": "86",
-        "answer_hi": "86",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "What is 83 × 13?",
-        "question_hi": "83 × 13 कितना होता है?",
-        "options_en": [
-            "1078",
-            "1080",
-            "1079",
-            "1082"
-        ],
-        "options_hi": [
-            "1078",
-            "1080",
-            "1079",
-            "1082"
-        ],
-        "answer_en": "1079",
-        "answer_hi": "1079",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "What is 28 + 33?",
-        "question_hi": "28 + 33 कितना होता है?",
-        "options_en": [
-            "64",
-            "61",
-            "62",
-            "60"
-        ],
-        "options_hi": [
-            "64",
-            "61",
-            "62",
-            "60"
-        ],
-        "answer_en": "61",
-        "answer_hi": "61",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "What is 94 + 2?",
-        "question_hi": "94 + 2 कितना होता है?",
-        "options_en": [
-            "96",
-            "95",
-            "97",
-            "99"
-        ],
-        "options_hi": [
-            "96",
-            "95",
-            "97",
-            "99"
-        ],
-        "answer_en": "96",
-        "answer_hi": "96",
-        "attempted": false,
-        "selected": ""
-    }
-];
+    "num": 1,
+    "question_en": "Which is the longest river in India?",
+    "question_hi": "भारत की सबसे लंबी नदी कौन सी है?",
+    "options_en": ["Ganga", "Yamuna", "Godavari", "Brahmaputra"],
+    "options_hi": ["गंगा", "यमुना", "गोदावरी", "ब्रह्मपुत्र"],
+    "answer_en": "Ganga",
+    "answer_hi": "गंगा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "Which state in India has the longest coastline?",
+    "question_hi": "भारत के किस राज्य में सबसे लंबी तटरेखा है?",
+    "options_en": ["Gujarat", "Andhra Pradesh", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "आंध्र प्रदेश", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "The 'Sunderbans' delta is formed by which rivers?",
+    "question_hi": "'सुंदरबन' डेल्टा किन नदियों द्वारा निर्मित है?",
+    "options_en": ["Ganga and Brahmaputra", "Godavari and Krishna", "Mahanadi and Brahmani", "Narmada and Tapi"],
+    "options_hi": ["गंगा और ब्रह्मपुत्र", "गोदावरी और कृष्णा", "महानदी और ब्राह्मणी", "नर्मदा और तापी"],
+    "answer_en": "Ganga and Brahmaputra",
+    "answer_hi": "गंगा और ब्रह्मपुत्र",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "Which is the largest state in India by area?",
+    "question_hi": "क्षेत्रफल के हिसाब से भारत का सबसे बड़ा राज्य कौन सा है?",
+    "options_en": ["Rajasthan", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh"],
+    "options_hi": ["राजस्थान", "मध्य प्रदेश", "महाराष्ट्र", "उत्तर प्रदेश"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "The 'Thar Desert' is primarily located in which state?",
+    "question_hi": "'थार रेगिस्तान' मुख्य रूप से किस राज्य में स्थित है?",
+    "options_en": ["Rajasthan", "Gujarat", "Punjab", "Haryana"],
+    "options_hi": ["राजस्थान", "गुजरात", "पंजाब", "हरियाणा"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "Which is the highest mountain peak in India?",
+    "question_hi": "भारत की सबसे ऊँची पर्वत चोटी कौन सी है?",
+    "options_en": ["Kanchenjunga", "Nanda Devi", "Kamet", "Mount Everest"],
+    "options_hi": ["कंचनजंगा", "नंदा देवी", "कामेत", "माउंट एवरेस्ट"],
+    "answer_en": "Kanchenjunga",
+    "answer_hi": "कंचनजंगा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "The 'Silent Valley National Park' is located in which state?",
+    "question_hi": "'साइलेंट वैली नेशनल पार्क' किस राज्य में स्थित है?",
+    "options_en": ["Kerala", "Karnataka", "Tamil Nadu", "Andhra Pradesh"],
+    "options_hi": ["केरल", "कर्नाटक", "तमिलनाडु", "आंध्र प्रदेश"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "Which river is known as the 'Sorrow of Bihar'?",
+    "question_hi": "किस नदी को 'बिहार का शोक' कहा जाता है?",
+    "options_en": ["Kosi", "Gandak", "Son", "Ghaghara"],
+    "options_hi": ["कोसी", "गंडक", "सोन", "घाघरा"],
+    "answer_en": "Kosi",
+    "answer_hi": "कोसी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "The 'Kakrapar Atomic Power Station' is located in which state?",
+    "question_hi": "'काकरापार परमाणु ऊर्जा स्टेशन' किस राज्य में स्थित है?",
+    "options_en": ["Gujarat", "Maharashtra", "Tamil Nadu", "Rajasthan"],
+    "options_hi": ["गुजरात", "महाराष्ट्र", "तमिलनाडु", "राजस्थान"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "Which is the largest freshwater lake in India?",
+    "question_hi": "भारत की सबसे बड़ी मीठे पानी की झील कौन सी है?",
+    "options_en": ["Wular Lake", "Chilika Lake", "Dal Lake", "Loktak Lake"],
+    "options_hi": ["वुलर झील", "चिल्का झील", "डल झील", "लोकटक झील"],
+    "answer_en": "Wular Lake",
+    "answer_hi": "वुलर झील",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "The 'Deccan Plateau' is located between which mountain ranges?",
+    "question_hi": "'दक्कन पठार' किन पर्वत श्रृंखलाओं के बीच स्थित है?",
+    "options_en": ["Western Ghats and Eastern Ghats", "Himalayas and Vindhyas", "Aravalli and Satpura", "Nilgiri and Cardamom"],
+    "options_hi": ["पश्चिमी घाट और पूर्वी घाट", "हिमालय और विंध्य", "अरावली और सतपुड़ा", "नीलगिरी और इलायची"],
+    "answer_en": "Western Ghats and Eastern Ghats",
+    "answer_hi": "पश्चिमी घाट और पूर्वी घाट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "Which is the smallest state in India by area?",
+    "question_hi": "क्षेत्रफल के हिसाब से भारत का सबसे छोटा राज्य कौन सा है?",
+    "options_en": ["Goa", "Sikkim", "Tripura", "Nagaland"],
+    "options_hi": ["गोवा", "सिक्किम", "त्रिपुरा", "नागालैंड"],
+    "answer_en": "Goa",
+    "answer_hi": "गोवा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "The 'Chipko Movement' originated in which state?",
+    "question_hi": "'चिपको आंदोलन' की उत्पत्ति किस राज्य में हुई?",
+    "options_en": ["Uttarakhand", "Himachal Pradesh", "Uttar Pradesh", "Bihar"],
+    "options_hi": ["उत्तराखंड", "हिमाचल प्रदेश", "उत्तर प्रदेश", "बिहार"],
+    "answer_en": "Uttarakhand",
+    "answer_hi": "उत्तराखंड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "Which river forms the 'Dhuandhar Falls' near Jabalpur?",
+    "question_hi": "कौन सी नदी जबलपुर के निकट 'धुआँधार जलप्रपात' बनाती है?",
+    "options_en": ["Narmada", "Tapi", "Godavari", "Krishna"],
+    "options_hi": ["नर्मदा", "तापी", "गोदावरी", "कृष्णा"],
+    "answer_en": "Narmada",
+    "answer_hi": "नर्मदा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "The 'Kaziranga National Park' is famous for which animal?",
+    "question_hi": "'काजीरंगा राष्ट्रीय उद्यान' किस जानवर के लिए प्रसिद्ध है?",
+    "options_en": ["One-horned Rhinoceros", "Tiger", "Elephant", "Wild Buffalo"],
+    "options_hi": ["एक सींग वाला गैंडा", "बाघ", "हाथी", "जंगली भैंसा"],
+    "answer_en": "One-horned Rhinoceros",
+    "answer_hi": "एक सींग वाला गैंडा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "Which is the southernmost point of mainland India?",
+    "question_hi": "भारत की मुख्य भूमि का सबसे दक्षिणी बिंदु कौन सा है?",
+    "options_en": ["Kanyakumari", "Indira Point", "Rameswaram", "Kochi"],
+    "options_hi": ["कन्याकुमारी", "इंदिरा प्वाइंट", "रामेश्वरम", "कोच्चि"],
+    "answer_en": "Kanyakumari",
+    "answer_hi": "कन्याकुमारी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "The 'Tropic of Cancer' passes through how many Indian states?",
+    "question_hi": "'कर्क रेखा' कितने भारतीय राज्यों से होकर गुजरती है?",
+    "options_en": ["8", "7", "6", "5"],
+    "options_hi": ["8", "7", "6", "5"],
+    "answer_en": "8",
+    "answer_hi": "8",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "Which is the largest saltwater lake in India?",
+    "question_hi": "भारत की सबसे बड़ी खारे पानी की झील कौन सी है?",
+    "options_en": ["Chilika Lake", "Sambhar Lake", "Pulicat Lake", "Vembanad Lake"],
+    "options_hi": ["चिल्का झील", "सांभर झील", "पुलिकट झील", "वेम्बनाड झील"],
+    "answer_en": "Chilika Lake",
+    "answer_hi": "चिल्का झील",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "The 'Bandipur National Park' is located in which state?",
+    "question_hi": "'बांदीपुर राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+    "options_en": ["Karnataka", "Tamil Nadu", "Kerala", "Andhra Pradesh"],
+    "options_hi": ["कर्नाटक", "तमिलनाडु", "केरल", "आंध्र प्रदेश"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "Which river is known as the 'Dakshin Ganga'?",
+    "question_hi": "किस नदी को 'दक्षिण गंगा' कहा जाता है?",
+    "options_en": ["Godavari", "Krishna", "Kaveri", "Mahanadi"],
+    "options_hi": ["गोदावरी", "कृष्णा", "कावेरी", "महानदी"],
+    "answer_en": "Godavari",
+    "answer_hi": "गोदावरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "The 'Great Indian Desert' is also known as:",
+    "question_hi": "'महान भारतीय मरुस्थल' को किस नाम से भी जाना जाता है?",
+    "options_en": ["Thar Desert", "Rann of Kutch", "Ladakh Desert", "Deccan Desert"],
+    "options_hi": ["थार रेगिस्तान", "कच्छ का रन", "लद्दाख मरुस्थल", "दक्कन मरुस्थल"],
+    "answer_en": "Thar Desert",
+    "answer_hi": "थार रेगिस्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Which is the largest river island in India?",
+    "question_hi": "भारत का सबसे बड़ा नदी द्वीप कौन सा है?",
+    "options_en": ["Majuli", "Srirangam", "Umananda", "Bhavani Island"],
+    "options_hi": ["माजुली", "श्रीरंगम", "उमानंदा", "भवानी द्वीप"],
+    "answer_en": "Majuli",
+    "answer_hi": "माजुली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "The 'Dudhwa National Park' is located in which state?",
+    "question_hi": "'दुधवा राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+    "options_en": ["Uttar Pradesh", "Madhya Pradesh", "Uttarakhand", "Bihar"],
+    "options_hi": ["उत्तर प्रदेश", "मध्य प्रदेश", "उत्तराखंड", "बिहार"],
+    "answer_en": "Uttar Pradesh",
+    "answer_hi": "उत्तर प्रदेश",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Which is the largest waterfall in India?",
+    "question_hi": "भारत का सबसे बड़ा जलप्रपात कौन सा है?",
+    "options_en": ["Jog Falls", "Dudhsagar Falls", "Athirappilly Falls", "Shivanasamudra Falls"],
+    "options_hi": ["जोग जलप्रपात", "दूधसागर जलप्रपात", "अथिराप्पिली जलप्रपात", "शिवसमुद्र जलप्रपात"],
+    "answer_en": "Jog Falls",
+    "answer_hi": "जोग जलप्रपात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "The 'Sariska Tiger Reserve' is located in which state?",
+    "question_hi": "'सरिस्का टाइगर रिजर्व' किस राज्य में स्थित है?",
+    "options_en": ["Rajasthan", "Madhya Pradesh", "Uttarakhand", "Maharashtra"],
+    "options_hi": ["राजस्थान", "मध्य प्रदेश", "उत्तराखंड", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "Which is the largest delta in the world?",
+    "question_hi": "दुनिया का सबसे बड़ा डेल्टा कौन सा है?",
+    "options_en": ["Sunderbans Delta", "Nile Delta", "Mississippi Delta", "Ganges-Brahmaputra Delta"],
+    "options_hi": ["सुंदरबन डेल्टा", "नील डेल्टा", "मिसिसिपी डेल्टा", "गंगा-ब्रह्मपुत्र डेल्टा"],
+    "answer_en": "Ganges-Brahmaputra Delta",
+    "answer_hi": "गंगा-ब्रह्मपुत्र डेल्टा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "The 'Nanda Devi Peak' is located in which state?",
+    "question_hi": "'नंदा देवी चोटी' किस राज्य में स्थित है?",
+    "options_en": ["Uttarakhand", "Himachal Pradesh", "Sikkim", "Jammu and Kashmir"],
+    "options_hi": ["उत्तराखंड", "हिमाचल प्रदेश", "सिक्किम", "जम्मू और कश्मीर"],
+    "answer_en": "Uttarakhand",
+    "answer_hi": "उत्तराखंड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "Which is the largest man-made lake in India?",
+    "question_hi": "भारत की सबसे बड़ी मानव निर्मित झील कौन सी है?",
+    "options_en": ["Gobind Sagar", "Rana Pratap Sagar", "Hirakud Reservoir", "Nagarjuna Sagar"],
+    "options_hi": ["गोबिंद सागर", "राणा प्रताप सागर", "हीराकुंड जलाशय", "नागार्जुन सागर"],
+    "answer_en": "Gobind Sagar",
+    "answer_hi": "गोबिंद सागर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "The 'Valley of Flowers' is located in which state?",
+    "question_hi": "'फूलों की घाटी' किस राज्य में स्थित है?",
+    "options_en": ["Uttarakhand", "Himachal Pradesh", "Jammu and Kashmir", "Sikkim"],
+    "options_hi": ["उत्तराखंड", "हिमाचल प्रदेश", "जम्मू और कश्मीर", "सिक्किम"],
+    "answer_en": "Uttarakhand",
+    "answer_hi": "उत्तराखंड",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Which river originates from the Gangotri glacier?",
+    "question_hi": "कौन सी नदी गंगोत्री ग्लेशियर से निकलती है?",
+    "options_en": ["Ganga", "Yamuna", "Brahmaputra", "Indus"],
+    "options_hi": ["गंगा", "यमुना", "ब्रह्मपुत्र", "सिंधु"],
+    "answer_en": "Ganga",
+    "answer_hi": "गंगा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "The 'Simlipal National Park' is located in which state?",
+    "question_hi": "'सिमलीपाल राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+    "options_en": ["Odisha", "Jharkhand", "West Bengal", "Chhattisgarh"],
+    "options_hi": ["ओडिशा", "झारखंड", "पश्चिम बंगाल", "छत्तीसगढ़"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "Which is the largest mangrove forest in the world?",
+    "question_hi": "दुनिया का सबसे बड़ा मैंग्रोव वन कौन सा है?",
+    "options_en": ["Sunderbans", "Amazon Mangroves", "Bhitarkanika", "Pichavaram"],
+    "options_hi": ["सुंदरबन", "अमेज़न मैंग्रोव", "भितरकनिका", "पिचावरम"],
+    "answer_en": "Sunderbans",
+    "answer_hi": "सुंदरबन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "The 'Kolleru Lake' is located between which two rivers?",
+    "question_hi": "'कोलेरू झील' किन दो नदियों के बीच स्थित है?",
+    "options_en": ["Godavari and Krishna", "Krishna and Kaveri", "Mahanadi and Godavari", "Krishna and Tungabhadra"],
+    "options_hi": ["गोदावरी और कृष्णा", "कृष्णा और कावेरी", "महानदी और गोदावरी", "कृष्णा और तुंगभद्रा"],
+    "answer_en": "Godavari and Krishna",
+    "answer_hi": "गोदावरी और कृष्णा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "Which is the largest desert in Asia?",
+    "question_hi": "एशिया का सबसे बड़ा रेगिस्तान कौन सा है?",
+    "options_en": ["Gobi Desert", "Thar Desert", "Arabian Desert", "Karakum Desert"],
+    "options_hi": ["गोबी रेगिस्तान", "थार रेगिस्तान", "अरब रेगिस्तान", "कराकुम रेगिस्तान"],
+    "answer_en": "Gobi Desert",
+    "answer_hi": "गोबी रेगिस्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "The 'Pichavaram Mangrove Forest' is located in which state?",
+    "question_hi": "'पिचावरम मैंग्रोव वन' किस राज्य में स्थित है?",
+    "options_en": ["Tamil Nadu", "Kerala", "Andhra Pradesh", "Odisha"],
+    "options_hi": ["तमिलनाडु", "केरल", "आंध्र प्रदेश", "ओडिशा"],
+    "answer_en": "Tamil Nadu",
+    "answer_hi": "तमिलनाडु",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "Which is the largest glacier in India?",
+    "question_hi": "भारत का सबसे बड़ा ग्लेशियर कौन सा है?",
+    "options_en": ["Siachen Glacier", "Gangotri Glacier", "Zemu Glacier", "Bara Shigri Glacier"],
+    "options_hi": ["सियाचिन ग्लेशियर", "गंगोत्री ग्लेशियर", "जेमू ग्लेशियर", "बड़ा शिगरी ग्लेशियर"],
+    "answer_en": "Siachen Glacier",
+    "answer_hi": "सियाचिन ग्लेशियर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "The 'Loktak Lake' is famous for which unique feature?",
+    "question_hi": "'लोकटक झील' किस अनूठी विशेषता के लिए प्रसिद्ध है?",
+    "options_en": ["Floating islands (phumdis)", "Salt water lake", "Crater lake", "Glacial lake"],
+    "options_hi": ["तैरते द्वीप (फुमडी)", "खारे पानी की झील", "ज्वालामुखी झील", "हिमनदी झील"],
+    "answer_en": "Floating islands (phumdis)",
+    "answer_hi": "तैरते द्वीप (फुमडी)",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "Which river flows through the 'Grand Canyon' of India?",
+    "question_hi": "कौन सी नदी भारत के 'ग्रैंड कैन्यन' से होकर बहती है?",
+    "options_en": ["Indravati", "Narmada", "Godavari", "Krishna"],
+    "options_hi": ["इंद्रावती", "नर्मदा", "गोदावरी", "कृष्णा"],
+    "answer_en": "Indravati",
+    "answer_hi": "इंद्रावती",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "The 'Dal Lake' is located in which city?",
+    "question_hi": "'डल झील' किस शहर में स्थित है?",
+    "options_en": ["Srinagar", "Jammu", "Shimla", "Manali"],
+    "options_hi": ["श्रीनगर", "जम्मू", "शिमला", "मनाली"],
+    "answer_en": "Srinagar",
+    "answer_hi": "श्रीनगर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "Which is the largest natural port in India?",
+    "question_hi": "भारत का सबसे बड़ा प्राकृतिक बंदरगाह कौन सा है?",
+    "options_en": ["Mumbai", "Chennai", "Visakhapatnam", "Kochi"],
+    "options_hi": ["मुंबई", "चेन्नई", "विशाखापत्तनम", "कोच्चि"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "The 'Gir National Park' is famous for which animal?",
+    "question_hi": "'गिर राष्ट्रीय उद्यान' किस जानवर के लिए प्रसिद्ध है?",
+    "options_en": ["Asiatic Lion", "Bengal Tiger", "Indian Elephant", "Indian Leopard"],
+    "options_hi": ["एशियाई शेर", "बंगाल टाइगर", "भारतीय हाथी", "भारतीय तेंदुआ"],
+    "answer_en": "Asiatic Lion",
+    "answer_hi": "एशियाई शेर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "Which is the largest coral reef in India?",
+    "question_hi": "भारत की सबसे बड़ी प्रवाल भित्ति कौन सी है?",
+    "options_en": ["Gulf of Mannar", "Andaman and Nicobar Islands", "Lakshadweep Islands", "Gulf of Kutch"],
+    "options_hi": ["मन्नार की खाड़ी", "अंडमान और निकोबार द्वीप समूह", "लक्षद्वीप द्वीप समूह", "कच्छ की खाड़ी"],
+    "answer_en": "Gulf of Mannar",
+    "answer_hi": "मन्नार की खाड़ी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "The 'Keoladeo Ghana National Park' is located in which state?",
+    "question_hi": "'केवलादेव घाना राष्ट्रीय उद्यान' किस राज्य में स्थित है?",
+    "options_en": ["Rajasthan", "Madhya Pradesh", "Uttar Pradesh", "Haryana"],
+    "options_hi": ["राजस्थान", "मध्य प्रदेश", "उत्तर प्रदेश", "हरियाणा"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "Which is the largest riverine island in the world?",
+    "question_hi": "दुनिया का सबसे बड़ा नदी द्वीप कौन सा है?",
+    "options_en": ["Majuli", "Marajo", "Bananal", "Ilha Grande"],
+    "options_hi": ["माजुली", "मराजो", "बनानल", "इल्हा ग्रांडे"],
+    "answer_en": "Majuli",
+    "answer_hi": "माजुली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "The 'Nokrek National Park' is a UNESCO Biosphere Reserve in which state?",
+    "question_hi": "'नोकरेक राष्ट्रीय उद्यान' यूनेस्को बायोस्फीयर रिजर्व किस राज्य में है?",
+    "options_en": ["Meghalaya", "Assam", "Nagaland", "Manipur"],
+    "options_hi": ["मेघालय", "असम", "नागालैंड", "मणिपुर"],
+    "answer_en": "Meghalaya",
+    "answer_hi": "मेघालय",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "Which river is known as the 'Lifeline of Madhya Pradesh'?",
+    "question_hi": "किस नदी को 'मध्य प्रदेश की जीवनरेखा' कहा जाता है?",
+    "options_en": ["Narmada", "Tapi", "Chambal", "Betwa"],
+    "options_hi": ["नर्मदा", "तापी", "चंबल", "बेतवा"],
+    "answer_en": "Narmada",
+    "answer_hi": "नर्मदा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "The 'Rann of Kutch' is famous for which natural phenomenon?",
+    "question_hi": "'कच्छ का रन' किस प्राकृतिक घटना के लिए प्रसिद्ध है?",
+    "options_en": ["White Salt Desert", "Black Soil", "Red Sand Dunes", "Grasslands"],
+    "options_hi": ["सफेद नमक रेगिस्तान", "काली मिट्टी", "लाल रेत के टीले", "घास के मैदान"],
+    "answer_en": "White Salt Desert",
+    "answer_hi": "सफेद नमक रेगिस्तान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Which is the largest bird sanctuary in India?",
+    "question_hi": "भारत का सबसे बड़ा पक्षी अभयारण्य कौन सा है?",
+    "options_en": ["Keoladeo National Park", "Chilika Lake", "Sultanpur Bird Sanctuary", "Bharatpur Bird Sanctuary"],
+    "options_hi": ["केवलादेव राष्ट्रीय उद्यान", "चिल्का झील", "सुल्तानपुर पक्षी अभयारण्य", "भरतपुर पक्षी अभयारण्य"],
+    "answer_en": "Keoladeo National Park",
+    "answer_hi": "केवलादेव राष्ट्रीय उद्यान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "The 'Satpura Range' is located between which two rivers?",
+    "question_hi": "'सतपुड़ा श्रृंखला' किन दो नदियों के बीच स्थित है?",
+    "options_en": ["Narmada and Tapi", "Godavari and Krishna", "Ganga and Yamuna", "Brahmaputra and Barak"],
+    "options_hi": ["नर्मदा और तापी", "गोदावरी और कृष्णा", "गंगा और यमुना", "ब्रह्मपुत्र और बराक"],
+    "answer_en": "Narmada and Tapi",
+    "answer_hi": "नर्मदा और तापी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "Which is the highest dam in India?",
+    "question_hi": "भारत का सबसे ऊँचा बांध कौन सा है?",
+    "options_en": ["Tehri Dam", "Bhakra Dam", "Sardar Sarovar Dam", "Hirakud Dam"],
+    "options_hi": ["टिहरी बांध", "भाखड़ा बांध", "सरदार सरोवर बांध", "हीराकुंड बांध"],
+    "answer_en": "Tehri Dam",
+    "answer_hi": "टिहरी बांध",
+    "attempted": false,
+    "selected": ""
+  }
+]
 
 let currentQuestion = 0;
 let language = "en";

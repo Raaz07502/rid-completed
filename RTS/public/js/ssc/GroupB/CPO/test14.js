@@ -1,1054 +1,554 @@
 const questions = [
   {
-       "num": 1,
-        "question_en": "Find the next number: 5, 8, 11, 14, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 5, 8, 11, 14, ?",
-        "options_en": [
-            "17",
-            "18",
-            "20",
-            "14"
-        ],
-        "options_hi": [
-            "17",
-            "18",
-            "20",
-            "14"
-        ],
-        "answer_en": "17",
-        "answer_hi": "17",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "Find the next number: 17, 22, 27, 32, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 17, 22, 27, 32, ?",
-        "options_en": [
-            "37",
-            "42",
-            "38",
-            "32"
-        ],
-        "options_hi": [
-            "37",
-            "42",
-            "38",
-            "32"
-        ],
-        "answer_en": "37",
-        "answer_hi": "37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "Find the next number: 11, 13, 15, 17, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 11, 13, 15, 17, ?",
-        "options_en": [
-            "19",
-            "21",
-            "20",
-            "17"
-        ],
-        "options_hi": [
-            "19",
-            "21",
-            "20",
-            "17"
-        ],
-        "answer_en": "19",
-        "answer_hi": "19",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "Find the next number: 16, 26, 36, 46, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 16, 26, 36, 46, ?",
-        "options_en": [
-            "66",
-            "57",
-            "56",
-            "46"
-        ],
-        "options_hi": [
-            "66",
-            "57",
-            "56",
-            "46"
-        ],
-        "answer_en": "56",
-        "answer_hi": "56",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "Find the next number: 12, 16, 20, 24, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 12, 16, 20, 24, ?",
-        "options_en": [
-            "29",
-            "24",
-            "28",
-            "32"
-        ],
-        "options_hi": [
-            "29",
-            "24",
-            "28",
-            "32"
-        ],
-        "answer_en": "28",
-        "answer_hi": "28",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "Find the next number: 15, 23, 31, 39, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 15, 23, 31, 39, ?",
-        "options_en": [
-            "47",
-            "39",
-            "55",
-            "48"
-        ],
-        "options_hi": [
-            "47",
-            "39",
-            "55",
-            "48"
-        ],
-        "answer_en": "47",
-        "answer_hi": "47",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "Find the next number: 6, 9, 12, 15, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 6, 9, 12, 15, ?",
-        "options_en": [
-            "18",
-            "15",
-            "19",
-            "21"
-        ],
-        "options_hi": [
-            "18",
-            "15",
-            "19",
-            "21"
-        ],
-        "answer_en": "18",
-        "answer_hi": "18",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "Find the next number: 9, 19, 29, 39, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 9, 19, 29, 39, ?",
-        "options_en": [
-            "59",
-            "50",
-            "49",
-            "39"
-        ],
-        "options_hi": [
-            "59",
-            "50",
-            "49",
-            "39"
-        ],
-        "answer_en": "49",
-        "answer_hi": "49",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "Find the next number: 19, 22, 25, 28, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 19, 22, 25, 28, ?",
-        "options_en": [
-            "31",
-            "28",
-            "32",
-            "34"
-        ],
-        "options_hi": [
-            "31",
-            "28",
-            "32",
-            "34"
-        ],
-        "answer_en": "31",
-        "answer_hi": "31",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "Find the next number: 15, 22, 29, 36, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 15, 22, 29, 36, ?",
-        "options_en": [
-            "50",
-            "43",
-            "36",
-            "44"
-        ],
-        "options_hi": [
-            "50",
-            "43",
-            "36",
-            "44"
-        ],
-        "answer_en": "43",
-        "answer_hi": "43",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "Find the next number: 16, 23, 30, 37, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 16, 23, 30, 37, ?",
-        "options_en": [
-            "44",
-            "37",
-            "45",
-            "51"
-        ],
-        "options_hi": [
-            "44",
-            "37",
-            "45",
-            "51"
-        ],
-        "answer_en": "44",
-        "answer_hi": "44",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "Find the next number: 18, 20, 22, 24, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 18, 20, 22, 24, ?",
-        "options_en": [
-            "26",
-            "27",
-            "24",
-            "28"
-        ],
-        "options_hi": [
-            "26",
-            "27",
-            "24",
-            "28"
-        ],
-        "answer_en": "26",
-        "answer_hi": "26",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "Find the next number: 8, 10, 12, 14, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 8, 10, 12, 14, ?",
-        "options_en": [
-            "14",
-            "17",
-            "16",
-            "18"
-        ],
-        "options_hi": [
-            "14",
-            "17",
-            "16",
-            "18"
-        ],
-        "answer_en": "16",
-        "answer_hi": "16",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "Find the next number: 15, 20, 25, 30, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 15, 20, 25, 30, ?",
-        "options_en": [
-            "40",
-            "35",
-            "36",
-            "30"
-        ],
-        "options_hi": [
-            "40",
-            "35",
-            "36",
-            "30"
-        ],
-        "answer_en": "35",
-        "answer_hi": "35",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "Find the next number: 7, 12, 17, 22, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 7, 12, 17, 22, ?",
-        "options_en": [
-            "32",
-            "22",
-            "28",
-            "27"
-        ],
-        "options_hi": [
-            "32",
-            "22",
-            "28",
-            "27"
-        ],
-        "answer_en": "27",
-        "answer_hi": "27",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "Find the next number: 3, 6, 9, 12, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 3, 6, 9, 12, ?",
-        "options_en": [
-            "18",
-            "15",
-            "16",
-            "12"
-        ],
-        "options_hi": [
-            "18",
-            "15",
-            "16",
-            "12"
-        ],
-        "answer_en": "15",
-        "answer_hi": "15",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "Find the next number: 1, 6, 11, 16, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 1, 6, 11, 16, ?",
-        "options_en": [
-            "26",
-            "21",
-            "22",
-            "16"
-        ],
-        "options_hi": [
-            "26",
-            "21",
-            "22",
-            "16"
-        ],
-        "answer_en": "21",
-        "answer_hi": "21",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "Find the next number: 11, 13, 15, 17, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 11, 13, 15, 17, ?",
-        "options_en": [
-            "19",
-            "17",
-            "20",
-            "21"
-        ],
-        "options_hi": [
-            "19",
-            "17",
-            "20",
-            "21"
-        ],
-        "answer_en": "19",
-        "answer_hi": "19",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "Find the next number: 1, 10, 19, 28, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 1, 10, 19, 28, ?",
-        "options_en": [
-            "37",
-            "46",
-            "28",
-            "38"
-        ],
-        "options_hi": [
-            "37",
-            "46",
-            "28",
-            "38"
-        ],
-        "answer_en": "37",
-        "answer_hi": "37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "Find the next number: 6, 8, 10, 12, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 6, 8, 10, 12, ?",
-        "options_en": [
-            "16",
-            "12",
-            "14",
-            "15"
-        ],
-        "options_hi": [
-            "16",
-            "12",
-            "14",
-            "15"
-        ],
-        "answer_en": "14",
-        "answer_hi": "14",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "Find the next number: 20, 27, 34, 41, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 20, 27, 34, 41, ?",
-        "options_en": [
-            "48",
-            "55",
-            "41",
-            "49"
-        ],
-        "options_hi": [
-            "48",
-            "55",
-            "41",
-            "49"
-        ],
-        "answer_en": "48",
-        "answer_hi": "48",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "Find the next number: 9, 18, 27, 36, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 9, 18, 27, 36, ?",
-        "options_en": [
-            "36",
-            "54",
-            "46",
-            "45"
-        ],
-        "options_hi": [
-            "36",
-            "54",
-            "46",
-            "45"
-        ],
-        "answer_en": "45",
-        "answer_hi": "45",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "Find the next number: 19, 26, 33, 40, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 19, 26, 33, 40, ?",
-        "options_en": [
-            "48",
-            "40",
-            "54",
-            "47"
-        ],
-        "options_hi": [
-            "48",
-            "40",
-            "54",
-            "47"
-        ],
-        "answer_en": "47",
-        "answer_hi": "47",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "Find the next number: 6, 9, 12, 15, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 6, 9, 12, 15, ?",
-        "options_en": [
-            "21",
-            "15",
-            "19",
-            "18"
-        ],
-        "options_hi": [
-            "21",
-            "15",
-            "19",
-            "18"
-        ],
-        "answer_en": "18",
-        "answer_hi": "18",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "Find the next number: 5, 15, 25, 35, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 5, 15, 25, 35, ?",
-        "options_en": [
-            "46",
-            "35",
-            "55",
-            "45"
-        ],
-        "options_hi": [
-            "46",
-            "35",
-            "55",
-            "45"
-        ],
-        "answer_en": "45",
-        "answer_hi": "45",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "Find the next number: 14, 21, 28, 35, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 14, 21, 28, 35, ?",
-        "options_en": [
-            "42",
-            "43",
-            "35",
-            "49"
-        ],
-        "options_hi": [
-            "42",
-            "43",
-            "35",
-            "49"
-        ],
-        "answer_en": "42",
-        "answer_hi": "42",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "Find the next number: 8, 14, 20, 26, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 8, 14, 20, 26, ?",
-        "options_en": [
-            "26",
-            "38",
-            "32",
-            "33"
-        ],
-        "options_hi": [
-            "26",
-            "38",
-            "32",
-            "33"
-        ],
-        "answer_en": "32",
-        "answer_hi": "32",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "Find the next number: 18, 27, 36, 45, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 18, 27, 36, 45, ?",
-        "options_en": [
-            "54",
-            "55",
-            "63",
-            "45"
-        ],
-        "options_hi": [
-            "54",
-            "55",
-            "63",
-            "45"
-        ],
-        "answer_en": "54",
-        "answer_hi": "54",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "Find the next number: 5, 11, 17, 23, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 5, 11, 17, 23, ?",
-        "options_en": [
-            "30",
-            "35",
-            "23",
-            "29"
-        ],
-        "options_hi": [
-            "30",
-            "35",
-            "23",
-            "29"
-        ],
-        "answer_en": "29",
-        "answer_hi": "29",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "Find the next number: 4, 11, 18, 25, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 4, 11, 18, 25, ?",
-        "options_en": [
-            "33",
-            "32",
-            "25",
-            "39"
-        ],
-        "options_hi": [
-            "33",
-            "32",
-            "25",
-            "39"
-        ],
-        "answer_en": "32",
-        "answer_hi": "32",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "Find the next number: 13, 16, 19, 22, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 13, 16, 19, 22, ?",
-        "options_en": [
-            "28",
-            "26",
-            "22",
-            "25"
-        ],
-        "options_hi": [
-            "28",
-            "26",
-            "22",
-            "25"
-        ],
-        "answer_en": "25",
-        "answer_hi": "25",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "Find the next number: 4, 6, 8, 10, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 4, 6, 8, 10, ?",
-        "options_en": [
-            "13",
-            "12",
-            "10",
-            "14"
-        ],
-        "options_hi": [
-            "13",
-            "12",
-            "10",
-            "14"
-        ],
-        "answer_en": "12",
-        "answer_hi": "12",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "Find the next number: 9, 16, 23, 30, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 9, 16, 23, 30, ?",
-        "options_en": [
-            "38",
-            "30",
-            "37",
-            "44"
-        ],
-        "options_hi": [
-            "38",
-            "30",
-            "37",
-            "44"
-        ],
-        "answer_en": "37",
-        "answer_hi": "37",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "Find the next number: 17, 19, 21, 23, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 17, 19, 21, 23, ?",
-        "options_en": [
-            "27",
-            "25",
-            "26",
-            "23"
-        ],
-        "options_hi": [
-            "27",
-            "25",
-            "26",
-            "23"
-        ],
-        "answer_en": "25",
-        "answer_hi": "25",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "Find the next number: 15, 24, 33, 42, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 15, 24, 33, 42, ?",
-        "options_en": [
-            "51",
-            "52",
-            "42",
-            "60"
-        ],
-        "options_hi": [
-            "51",
-            "52",
-            "42",
-            "60"
-        ],
-        "answer_en": "51",
-        "answer_hi": "51",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "Find the next number: 13, 22, 31, 40, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 13, 22, 31, 40, ?",
-        "options_en": [
-            "40",
-            "49",
-            "50",
-            "58"
-        ],
-        "options_hi": [
-            "40",
-            "49",
-            "50",
-            "58"
-        ],
-        "answer_en": "49",
-        "answer_hi": "49",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "Find the next number: 4, 6, 8, 10, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 4, 6, 8, 10, ?",
-        "options_en": [
-            "13",
-            "14",
-            "10",
-            "12"
-        ],
-        "options_hi": [
-            "13",
-            "14",
-            "10",
-            "12"
-        ],
-        "answer_en": "12",
-        "answer_hi": "12",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "Find the next number: 12, 14, 16, 18, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 12, 14, 16, 18, ?",
-        "options_en": [
-            "20",
-            "21",
-            "18",
-            "22"
-        ],
-        "options_hi": [
-            "20",
-            "21",
-            "18",
-            "22"
-        ],
-        "answer_en": "20",
-        "answer_hi": "20",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "Find the next number: 14, 22, 30, 38, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 14, 22, 30, 38, ?",
-        "options_en": [
-            "38",
-            "47",
-            "46",
-            "54"
-        ],
-        "options_hi": [
-            "38",
-            "47",
-            "46",
-            "54"
-        ],
-        "answer_en": "46",
-        "answer_hi": "46",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 40,
-        "question_en": "Find the next number: 1, 7, 13, 19, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 1, 7, 13, 19, ?",
-        "options_en": [
-            "31",
-            "19",
-            "25",
-            "26"
-        ],
-        "options_hi": [
-            "31",
-            "19",
-            "25",
-            "26"
-        ],
-        "answer_en": "25",
-        "answer_hi": "25",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "Find the next number: 12, 17, 22, 27, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 12, 17, 22, 27, ?",
-        "options_en": [
-            "32",
-            "33",
-            "37",
-            "27"
-        ],
-        "options_hi": [
-            "32",
-            "33",
-            "37",
-            "27"
-        ],
-        "answer_en": "32",
-        "answer_hi": "32",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "Find the next number: 10, 19, 28, 37, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 10, 19, 28, 37, ?",
-        "options_en": [
-            "47",
-            "46",
-            "37",
-            "55"
-        ],
-        "options_hi": [
-            "47",
-            "46",
-            "37",
-            "55"
-        ],
-        "answer_en": "46",
-        "answer_hi": "46",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "Find the next number: 16, 22, 28, 34, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 16, 22, 28, 34, ?",
-        "options_en": [
-            "40",
-            "34",
-            "41",
-            "46"
-        ],
-        "options_hi": [
-            "40",
-            "34",
-            "41",
-            "46"
-        ],
-        "answer_en": "40",
-        "answer_hi": "40",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "Find the next number: 3, 10, 17, 24, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 3, 10, 17, 24, ?",
-        "options_en": [
-            "24",
-            "32",
-            "38",
-            "31"
-        ],
-        "options_hi": [
-            "24",
-            "32",
-            "38",
-            "31"
-        ],
-        "answer_en": "31",
-        "answer_hi": "31",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "Find the next number: 6, 13, 20, 27, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 6, 13, 20, 27, ?",
-        "options_en": [
-            "41",
-            "27",
-            "34",
-            "35"
-        ],
-        "options_hi": [
-            "41",
-            "27",
-            "34",
-            "35"
-        ],
-        "answer_en": "34",
-        "answer_hi": "34",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "Find the next number: 7, 14, 21, 28, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 7, 14, 21, 28, ?",
-        "options_en": [
-            "28",
-            "36",
-            "42",
-            "35"
-        ],
-        "options_hi": [
-            "28",
-            "36",
-            "42",
-            "35"
-        ],
-        "answer_en": "35",
-        "answer_hi": "35",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "Find the next number: 14, 18, 22, 26, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 14, 18, 22, 26, ?",
-        "options_en": [
-            "34",
-            "30",
-            "31",
-            "26"
-        ],
-        "options_hi": [
-            "34",
-            "30",
-            "31",
-            "26"
-        ],
-        "answer_en": "30",
-        "answer_hi": "30",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "Find the next number: 4, 8, 12, 16, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 4, 8, 12, 16, ?",
-        "options_en": [
-            "16",
-            "24",
-            "21",
-            "20"
-        ],
-        "options_hi": [
-            "16",
-            "24",
-            "21",
-            "20"
-        ],
-        "answer_en": "20",
-        "answer_hi": "20",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "Find the next number: 5, 15, 25, 35, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 5, 15, 25, 35, ?",
-        "options_en": [
-            "55",
-            "46",
-            "45",
-            "35"
-        ],
-        "options_hi": [
-            "55",
-            "46",
-            "45",
-            "35"
-        ],
-        "answer_en": "45",
-        "answer_hi": "45",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "Find the next number: 15, 23, 31, 39, ?",
-        "question_hi": "श्रृंखला में अगला अंक बताइए: 15, 23, 31, 39, ?",
-        "options_en": [
-            "48",
-            "39",
-            "55",
-            "47"
-        ],
-        "options_hi": [
-            "48",
-            "39",
-            "55",
-            "47"
-        ],
-        "answer_en": "47",
-        "answer_hi": "47",
-        "attempted": false,
-        "selected": ""
-    }
+    "num":1,
+    "question_en": "Which Indian state launched 'Digital Skill Development for Youth' program in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'युवाओं के लिए डिजिटल कौशल विकास' कार्यक्रम शुरू किया?",
+    "options_en": ["Maharashtra", "Kerala", "Telangana", "Gujarat"],
+    "options_hi": ["महाराष्ट्र", "केरल", "तेलंगाना", "गुजरात"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":2,
+    "question_en": "Which Indian city hosted the 2025 Global Renewable Energy Summit?",
+    "question_hi": "2025 में ग्लोबल नवीकरणीय ऊर्जा शिखर सम्मेलन की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":3,
+    "question_en": "Which Indian athlete won gold at the 2025 World Shooting Championship in Men’s 10m Air Rifle?",
+    "question_hi": "2025 में विश्व शूटिंग चैंपियनशिप में पुरुषों की 10 मीटर एयर राइफल में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Saurabh Chaudhary", "Divyansh Singh Panwar", "Apurvi Chandela", "Elavenil Valarivan"],
+    "options_hi": ["सौरभ चौधरी", "दिव्यांश सिंह पंवार", "अपुर्वी चंदेला", "एलेवेनिल वालारिवन"],
+    "answer_en": "Saurabh Chaudhary",
+    "answer_hi": "सौरभ चौधरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":4,
+    "question_en": "Which Indian state launched 'Smart Village Energy Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट विलेज एनर्जी प्रोग्राम' शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Maharashtra", "Karnataka"],
+    "options_hi": ["राजस्थान", "गुजरात", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":5,
+    "question_en": "Which Indian city hosted the 2025 International Smart Cities Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्मार्ट सिटीज़ कॉन्फ्रेंस की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Ahmedabad", "Bengaluru", "Hyderabad", "Pune"],
+    "options_hi": ["अहमदाबाद", "बैंगलोर", "हैदराबाद", "पुणे"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":6,
+    "question_en": "Which Indian bank launched 'AI-based Fraud Detection System' in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने 'AI-आधारित धोखाधड़ी पहचान प्रणाली' लॉन्च की?",
+    "options_en": ["SBI", "HDFC Bank", "ICICI Bank", "Axis Bank"],
+    "options_hi": ["एसबीआई", "एचडीएफसी बैंक", "आईसीआईसीआई बैंक", "एक्सिस बैंक"],
+    "answer_en": "ICICI Bank",
+    "answer_hi": "आईसीआईसीआई बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":7,
+    "question_en": "Which Indian city became the first 'Smart Health City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'स्मार्ट हेल्थ सिटी' बना?",
+    "options_en": ["Bengaluru", "Hyderabad", "Pune", "Ahmedabad"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "पुणे", "अहमदाबाद"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":8,
+    "question_en": "Which Indian athlete won gold at the 2025 World Wrestling Championship in 57kg category?",
+    "question_hi": "2025 में विश्व कुश्ती चैंपियनशिप में 57 किग्रा वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Bajrang Punia", "Sakshi Malik", "Deepak Punia", "Vinesh Phogat"],
+    "options_hi": ["बजरंग पुनिया", "साक्षी मलिक", "दीपक पुनिया", "विनेश फोगाट"],
+    "answer_en": "Bajrang Punia",
+    "answer_hi": "बजरंग पुनिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":9,
+    "question_en": "Which Indian state launched 'Green Transport Initiative' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'ग्रीन ट्रांसपोर्ट इनिशिएटिव' शुरू किया?",
+    "options_en": ["Maharashtra", "Gujarat", "Karnataka", "Rajasthan"],
+    "options_hi": ["महाराष्ट्र", "गुजरात", "कर्नाटक", "राजस्थान"],
+    "answer_en": "Maharashtra",
+    "answer_hi": "महाराष्ट्र",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":10,
+    "question_en": "Which Indian city hosted the 2025 Global Digital Governance Summit?",
+    "question_hi": "2025 में ग्लोबल डिजिटल गवर्नेंस समिट की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "बैंगलोर", "मुंबई", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":11,
+    "question_en": "Which Indian athlete won gold at the 2025 World Boxing Championship in 75kg category?",
+    "question_hi": "2025 में विश्व बॉक्सिंग चैंपियनशिप में 75 किग्रा वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Lovlina Borgohain", "Vijender Singh", "Amit Panghal", "Bachendri Pal"],
+    "options_hi": ["लवलीना बोरगोहैन", "विजेंदर सिंह", "अमित पंघल", "बचेंद्री पाल"],
+    "answer_en": "Lovlina Borgohain",
+    "answer_hi": "लवलीना बोरगोहैन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":12,
+    "question_en": "Which Indian state launched 'Smart Agriculture Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट एग्रीकल्चर प्रोग्राम' शुरू किया?",
+    "options_en": ["Punjab", "Haryana", "Maharashtra", "Karnataka"],
+    "options_hi": ["पंजाब", "हरियाणा", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Punjab",
+    "answer_hi": "पंजाब",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":13,
+    "question_en": "Which Indian city became the first 'AI-powered Smart City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'AI-पावर्ड स्मार्ट सिटी' बना?",
+    "options_en": ["Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "Delhi",
+    "answer_hi": "दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":14,
+    "question_en": "Which Indian state launched 'Women Entrepreneurship Development Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला उद्यमिता विकास कार्यक्रम' शुरू किया?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":15,
+    "question_en": "Which Indian city hosted the 2025 International Smart Education Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्मार्ट एजुकेशन कॉन्फ्रेंस की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Hyderabad", "Pune", "Ahmedabad"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "पुणे", "अहमदाबाद"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":16,
+    "question_en": "Which Indian athlete won gold at the 2025 World Archery Championship in Men’s Recurve?",
+    "question_hi": "2025 में विश्व तीरंदाजी चैंपियनशिप में पुरुषों के रीकर्व वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Atanu Das", "Deepika Kumari", "Tarundeep Rai", "Pravin Jadhav"],
+    "options_hi": ["अतनु दास", "दीपिका कुमारी", "तरुंदीप राय", "प्रवीन जाधव"],
+    "answer_en": "Atanu Das",
+    "answer_hi": "अतनु दास",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":17,
+    "question_en": "Which Indian bank launched 'Green Loan Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने 'ग्रीन लोन प्रोग्राम' लॉन्च किया?",
+    "options_en": ["HDFC Bank", "SBI", "ICICI Bank", "Axis Bank"],
+    "options_hi": ["एचडीएफसी बैंक", "एसबीआई", "आईसीआईसीआई बैंक", "एक्सिस बैंक"],
+    "answer_en": "HDFC Bank",
+    "answer_hi": "एचडीएफसी बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":18,
+    "question_en": "Which Indian state launched 'Digital Health and Wellness Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'डिजिटल स्वास्थ्य और वेलनेस प्रोग्राम' शुरू किया?",
+    "options_en": ["Kerala", "Telangana", "Maharashtra", "Gujarat"],
+    "options_hi": ["केरल", "तेलंगाना", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":19,
+    "question_en": "Which Indian city hosted the 2025 International Renewable Energy Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय नवीकरणीय ऊर्जा एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बैंगलोर", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":20,
+    "question_en": "Which Indian athlete won gold at the 2025 World Karate Championship?",
+    "question_hi": "2025 में विश्व कराटे चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Riya Sharma", "Siddhant Singh", "Aniket Choudhary", "Priya Gurjar"],
+    "options_hi": ["रिया शर्मा", "सिद्धांत सिंह", "अनिकेत चौधरी", "प्रिया गुर्जर"],
+    "answer_en": "Riya Sharma",
+    "answer_hi": "रिया शर्मा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":21,
+    "question_en": "Which Indian city became the first 'Smart Tourism City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'स्मार्ट टूरिज्म सिटी' बना?",
+    "options_en": ["Jaipur", "Bengaluru", "Hyderabad", "Mumbai"],
+    "options_hi": ["जयपुर", "बैंगलोर", "हैदराबाद", "मुंबई"],
+    "answer_en": "Jaipur",
+    "answer_hi": "जयपुर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":22,
+    "question_en": "Which Indian state launched 'Women Digital Leaders Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला डिजिटल लीडर्स प्रोग्राम' शुरू किया?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":23,
+    "question_en": "Which Indian city hosted the 2025 International Digital Governance Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय डिजिटल गवर्नेंस कॉन्फ्रेंस की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":24,
+    "question_en": "Which Indian athlete won gold at the 2025 World Weightlifting Championship?",
+    "question_hi": "2025 में विश्व भारोत्तोलन चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Mirabai Chanu", "Sukhen Dey", "Vikas Thakur", "Sandeep Singh"],
+    "options_hi": ["मीराबाई चानू", "सुखेन देय", "विकास ठाकुर", "संदीप सिंह"],
+    "answer_en": "Mirabai Chanu",
+    "answer_hi": "मीराबाई चानू",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":25,
+    "question_en": "Which Indian city hosted the 2025 International Smart Cities Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्मार्ट सिटीज़ एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Ahmedabad", "Bengaluru", "Hyderabad", "Pune"],
+    "options_hi": ["अहमदाबाद", "बैंगलोर", "हैदराबाद", "पुणे"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":26,
+    "question_en": "Which Indian bank launched 'AI-powered Risk Management System' in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने 'AI-आधारित रिस्क मैनेजमेंट सिस्टम' लॉन्च किया?",
+    "options_en": ["ICICI Bank", "HDFC Bank", "SBI", "Axis Bank"],
+    "options_hi": ["आईसीआईसीआई बैंक", "एचडीएफसी बैंक", "एसबीआई", "एक्सिस बैंक"],
+    "answer_en": "ICICI Bank",
+    "answer_hi": "आईसीआईसीआई बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":27,
+    "question_en": "Which Indian state launched 'Smart Digital Education Villages' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट डिजिटल एजुकेशन विलेजेस' शुरू किए?",
+    "options_en": ["Rajasthan", "Gujarat", "Maharashtra", "Karnataka"],
+    "options_hi": ["राजस्थान", "गुजरात", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":28,
+    "question_en": "Which Indian athlete won gold at the 2025 World Karate Championship?",
+    "question_hi": "2025 में विश्व कराटे चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Riya Sharma", "Siddhant Singh", "Aniket Choudhary", "Priya Gurjar"],
+    "options_hi": ["रिया शर्मा", "सिद्धांत सिंह", "अनिकेत चौधरी", "प्रिया गुर्जर"],
+    "answer_en": "Riya Sharma",
+    "answer_hi": "रिया शर्मा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":29,
+    "question_en": "Which Indian city became the first 'Smart Tourism City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'स्मार्ट टूरिज्म सिटी' बना?",
+    "options_en": ["Jaipur", "Bengaluru", "Hyderabad", "Mumbai"],
+    "options_hi": ["जयपुर", "बैंगलोर", "हैदराबाद", "मुंबई"],
+    "answer_en": "Jaipur",
+    "answer_hi": "जयपुर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":30,
+    "question_en": "Which Indian state launched 'Women Digital Leaders Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला डिजिटल लीडर्स प्रोग्राम' शुरू किया?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+   {
+    "num":31,
+    "question_en": "Which Indian city hosted the 2025 International Climate Change Summit?",
+    "question_hi": "2025 में अंतरराष्ट्रीय जलवायु परिवर्तन सम्मेलन की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":32,
+    "question_en": "Which Indian athlete won gold at the 2025 World Weightlifting Championship in 49kg category?",
+    "question_hi": "2025 में विश्व भारोत्तोलन चैंपियनशिप में 49 किग्रा वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Mirabai Chanu", "Sukhen Dey", "Vikas Thakur", "Sandeep Singh"],
+    "options_hi": ["मीराबाई चानू", "सुखेन देय", "विकास ठाकुर", "संदीप सिंह"],
+    "answer_en": "Mirabai Chanu",
+    "answer_hi": "मीराबाई चानू",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":33,
+    "question_en": "Which Indian state launched 'Digital Health Program for Rural Areas' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'ग्रामीण क्षेत्रों के लिए डिजिटल हेल्थ प्रोग्राम' शुरू किया?",
+    "options_en": ["Kerala", "Telangana", "Maharashtra", "Gujarat"],
+    "options_hi": ["केरल", "तेलंगाना", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":34,
+    "question_en": "Which Indian city hosted the 2025 Global Digital Transformation Summit?",
+    "question_hi": "2025 में ग्लोबल डिजिटल ट्रांसफॉर्मेशन समिट की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Hyderabad", "Mumbai", "New Delhi"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "मुंबई", "नई दिल्ली"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":35,
+    "question_en": "Which Indian athlete won gold at the 2025 World Boxing Championship in 51kg category?",
+    "question_hi": "2025 में विश्व बॉक्सिंग चैंपियनशिप में 51 किग्रा वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Lovlina Borgohain", "Vijender Singh", "Amit Panghal", "Bachendri Pal"],
+    "options_hi": ["लवलीना बोरगोहैन", "विजेंदर सिंह", "अमित पंघल", "बचेंद्री पाल"],
+    "answer_en": "Lovlina Borgohain",
+    "answer_hi": "लवलीना बोरगोहैन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":36,
+    "question_en": "Which Indian state launched 'Smart Agriculture Villages' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट एग्रीकल्चर विलेजेस' शुरू किए?",
+    "options_en": ["Punjab", "Haryana", "Maharashtra", "Karnataka"],
+    "options_hi": ["पंजाब", "हरियाणा", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Punjab",
+    "answer_hi": "पंजाब",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":37,
+    "question_en": "Which Indian city became the first 'AI-powered Smart City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'AI-पावर्ड स्मार्ट सिटी' बना?",
+    "options_en": ["Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "Delhi",
+    "answer_hi": "दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":38,
+    "question_en": "Which Indian state launched 'Women Entrepreneurship Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला उद्यमिता कार्यक्रम' शुरू किया?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":39,
+    "question_en": "Which Indian city hosted the 2025 International Smart Education Summit?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्मार्ट एजुकेशन समिट की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Hyderabad", "Pune", "Ahmedabad"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "पुणे", "अहमदाबाद"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":40,
+    "question_en": "Which Indian athlete won gold at the 2025 World Archery Championship in Women’s Recurve?",
+    "question_hi": "2025 में विश्व तीरंदाजी चैंपियनशिप में महिलाओं के रीकर्व वर्ग में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Deepika Kumari", "Atanu Das", "Tarundeep Rai", "Pravin Jadhav"],
+    "options_hi": ["दीपिका कुमारी", "अतनु दास", "तरुंदीप राय", "प्रवीन जाधव"],
+    "answer_en": "Deepika Kumari",
+    "answer_hi": "दीपिका कुमारी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":41,
+    "question_en": "Which Indian bank launched 'Green Loan Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने 'ग्रीन लोन प्रोग्राम' लॉन्च किया?",
+    "options_en": ["HDFC Bank", "SBI", "ICICI Bank", "Axis Bank"],
+    "options_hi": ["एचडीएफसी बैंक", "एसबीआई", "आईसीआईसीआई बैंक", "एक्सिस बैंक"],
+    "answer_en": "HDFC Bank",
+    "answer_hi": "एचडीएफसी बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":42,
+    "question_en": "Which Indian state launched 'Digital Health and Wellness Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'डिजिटल स्वास्थ्य और वेलनेस प्रोग्राम' शुरू किया?",
+    "options_en": ["Kerala", "Telangana", "Maharashtra", "Gujarat"],
+    "options_hi": ["केरल", "तेलंगाना", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":43,
+    "question_en": "Which Indian city hosted the 2025 International Renewable Energy Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय नवीकरणीय ऊर्जा एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बैंगलोर", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":44,
+    "question_en": "Which Indian athlete won gold at the 2025 World Karate Championship?",
+    "question_hi": "2025 में विश्व कराटे चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Riya Sharma", "Siddhant Singh", "Aniket Choudhary", "Priya Gurjar"],
+    "options_hi": ["रिया शर्मा", "सिद्धांत सिंह", "अनिकेत चौधरी", "प्रिया गुर्जर"],
+    "answer_en": "Riya Sharma",
+    "answer_hi": "रिया शर्मा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":45,
+    "question_en": "Which Indian city became the first 'Smart Tourism City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'स्मार्ट टूरिज्म सिटी' बना?",
+    "options_en": ["Jaipur", "Bengaluru", "Hyderabad", "Mumbai"],
+    "options_hi": ["जयपुर", "बैंगलोर", "हैदराबाद", "मुंबई"],
+    "answer_en": "Jaipur",
+    "answer_hi": "जयपुर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":46,
+    "question_en": "Which Indian state launched 'Women Digital Leaders Program' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला डिजिटल लीडर्स प्रोग्राम' शुरू किया?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":47,
+    "question_en": "Which Indian city hosted the 2025 International Digital Governance Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय डिजिटल गवर्नेंस कॉन्फ्रेंस की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":48,
+    "question_en": "Which Indian athlete won gold at the 2025 World Weightlifting Championship?",
+    "question_hi": "2025 में विश्व भारोत्तोलन चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Mirabai Chanu", "Sukhen Dey", "Vikas Thakur", "Sandeep Singh"],
+    "options_hi": ["मीराबाई चानू", "सुखेन देय", "विकास ठाकुर", "संदीप सिंह"],
+    "answer_en": "Mirabai Chanu",
+    "answer_hi": "मीराबाई चानू",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":49,
+    "question_en": "Which Indian city hosted the 2025 International Smart Cities Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्मार्ट सिटीज़ एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Ahmedabad", "Bengaluru", "Hyderabad", "Pune"],
+    "options_hi": ["अहमदाबाद", "बैंगलोर", "हैदराबाद", "पुणे"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":50,
+    "question_en": "Which Indian bank launched 'AI-powered Risk Management System' in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने 'AI-आधारित रिस्क मैनेजमेंट सिस्टम' लॉन्च किया?",
+    "options_en": ["ICICI Bank", "HDFC Bank", "SBI", "Axis Bank"],
+    "options_hi": ["आईसीआईसीआई बैंक", "एचडीएफसी बैंक", "एसबीआई", "एक्सिस बैंक"],
+    "answer_en": "ICICI Bank",
+    "answer_hi": "आईसीआईसीआई बैंक",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 
 // --------------------------- GLOBAL VARS -----------------------------

@@ -1,1054 +1,554 @@
 const questions = [
   {
-       "num": 1,
-        "question_en": "What is 60 × 13?",
-        "question_hi": "60 × 13 कितना होता है?",
-        "options_en": [
-            "783",
-            "780",
-            "781",
-            "779"
-        ],
-        "options_hi": [
-            "783",
-            "780",
-            "781",
-            "779"
-        ],
-        "answer_en": "780",
-        "answer_hi": "780",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 2,
-        "question_en": "What is 53 + 67?",
-        "question_hi": "53 + 67 कितना होता है?",
-        "options_en": [
-            "119",
-            "120",
-            "121",
-            "123"
-        ],
-        "options_hi": [
-            "119",
-            "120",
-            "121",
-            "123"
-        ],
-        "answer_en": "120",
-        "answer_hi": "120",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 3,
-        "question_en": "What is 26 × 68?",
-        "question_hi": "26 × 68 कितना होता है?",
-        "options_en": [
-            "1768",
-            "1769",
-            "1767",
-            "1771"
-        ],
-        "options_hi": [
-            "1768",
-            "1769",
-            "1767",
-            "1771"
-        ],
-        "answer_en": "1768",
-        "answer_hi": "1768",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 99 - 8?",
-        "question_hi": "99 - 8 कितना होता है?",
-        "options_en": [
-            "92",
-            "91",
-            "94",
-            "90"
-        ],
-        "options_hi": [
-            "92",
-            "91",
-            "94",
-            "90"
-        ],
-        "answer_en": "91",
-        "answer_hi": "91",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is the integer division 38 ÷ 58?",
-        "question_hi": "38 ÷ 58 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is 92 × 22?",
-        "question_hi": "92 × 22 कितना होता है?",
-        "options_en": [
-            "2027",
-            "2025",
-            "2023",
-            "2024"
-        ],
-        "options_hi": [
-            "2027",
-            "2025",
-            "2023",
-            "2024"
-        ],
-        "answer_en": "2024",
-        "answer_hi": "2024",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is 13 + 30?",
-        "question_hi": "13 + 30 कितना होता है?",
-        "options_en": [
-            "44",
-            "42",
-            "43",
-            "46"
-        ],
-        "options_hi": [
-            "44",
-            "42",
-            "43",
-            "46"
-        ],
-        "answer_en": "43",
-        "answer_hi": "43",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 65 × 93?",
-        "question_hi": "65 × 93 कितना होता है?",
-        "options_en": [
-            "6045",
-            "6048",
-            "6046",
-            "6044"
-        ],
-        "options_hi": [
-            "6045",
-            "6048",
-            "6046",
-            "6044"
-        ],
-        "answer_en": "6045",
-        "answer_hi": "6045",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is the integer division 62 ÷ 33?",
-        "question_hi": "62 ÷ 33 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "4",
-            "2"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "4",
-            "2"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 78 - 67?",
-        "question_hi": "78 - 67 कितना होता है?",
-        "options_en": [
-            "14",
-            "10",
-            "12",
-            "11"
-        ],
-        "options_hi": [
-            "14",
-            "10",
-            "12",
-            "11"
-        ],
-        "answer_en": "11",
-        "answer_hi": "11",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 45 × 66?",
-        "question_hi": "45 × 66 कितना होता है?",
-        "options_en": [
-            "2973",
-            "2969",
-            "2971",
-            "2970"
-        ],
-        "options_hi": [
-            "2973",
-            "2969",
-            "2971",
-            "2970"
-        ],
-        "answer_en": "2970",
-        "answer_hi": "2970",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is the integer division 77 ÷ 76?",
-        "question_hi": "77 ÷ 76 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "options_hi": [
-            "1",
-            "0",
-            "4",
-            "2"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is the integer division 46 ÷ 44?",
-        "question_hi": "46 ÷ 44 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "options_hi": [
-            "0",
-            "1",
-            "2",
-            "4"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is the integer division 91 ÷ 32?",
-        "question_hi": "91 ÷ 32 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "2",
-            "5",
-            "3"
-        ],
-        "options_hi": [
-            "1",
-            "2",
-            "5",
-            "3"
-        ],
-        "answer_en": "2",
-        "answer_hi": "2",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is the integer division 42 ÷ 97?",
-        "question_hi": "42 ÷ 97 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "options_hi": [
-            "2",
-            "0",
-            "1",
-            "3"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 65 - 6?",
-        "question_hi": "65 - 6 कितना होता है?",
-        "options_en": [
-            "62",
-            "60",
-            "59",
-            "58"
-        ],
-        "options_hi": [
-            "62",
-            "60",
-            "59",
-            "58"
-        ],
-        "answer_en": "59",
-        "answer_hi": "59",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 17,
-        "question_en": "What is the integer division 14 ÷ 69?",
-        "question_hi": "14 ÷ 69 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 18,
-        "question_en": "What is 54 - 85?",
-        "question_hi": "54 - 85 कितना होता है?",
-        "options_en": [
-            "-28",
-            "-29",
-            "-30",
-            "-31"
-        ],
-        "options_hi": [
-            "-28",
-            "-29",
-            "-30",
-            "-31"
-        ],
-        "answer_en": "-31",
-        "answer_hi": "-31",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 19,
-        "question_en": "What is the integer division 45 ÷ 81?",
-        "question_hi": "45 ÷ 81 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "3",
-            "2",
-            "1",
-            "0"
-        ],
-        "options_hi": [
-            "3",
-            "2",
-            "1",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is the integer division 42 ÷ 82?",
-        "question_hi": "42 ÷ 82 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "3",
-            "2",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 32 × 82?",
-        "question_hi": "32 × 82 कितना होता है?",
-        "options_en": [
-            "2627",
-            "2624",
-            "2623",
-            "2625"
-        ],
-        "options_hi": [
-            "2627",
-            "2624",
-            "2623",
-            "2625"
-        ],
-        "answer_en": "2624",
-        "answer_hi": "2624",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 57 + 14?",
-        "question_hi": "57 + 14 कितना होता है?",
-        "options_en": [
-            "70",
-            "72",
-            "71",
-            "74"
-        ],
-        "options_hi": [
-            "70",
-            "72",
-            "71",
-            "74"
-        ],
-        "answer_en": "71",
-        "answer_hi": "71",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is 5 × 7?",
-        "question_hi": "5 × 7 कितना होता है?",
-        "options_en": [
-            "38",
-            "34",
-            "36",
-            "35"
-        ],
-        "options_hi": [
-            "38",
-            "34",
-            "36",
-            "35"
-        ],
-        "answer_en": "35",
-        "answer_hi": "35",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is 49 - 57?",
-        "question_hi": "49 - 57 कितना होता है?",
-        "options_en": [
-            "-8",
-            "-5",
-            "-6",
-            "-7"
-        ],
-        "options_hi": [
-            "-8",
-            "-5",
-            "-6",
-            "-7"
-        ],
-        "answer_en": "-8",
-        "answer_hi": "-8",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 74 - 89?",
-        "question_hi": "74 - 89 कितना होता है?",
-        "options_en": [
-            "-12",
-            "-13",
-            "-15",
-            "-14"
-        ],
-        "options_hi": [
-            "-12",
-            "-13",
-            "-15",
-            "-14"
-        ],
-        "answer_en": "-15",
-        "answer_hi": "-15",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 80 - 50?",
-        "question_hi": "80 - 50 कितना होता है?",
-        "options_en": [
-            "31",
-            "30",
-            "29",
-            "33"
-        ],
-        "options_hi": [
-            "31",
-            "30",
-            "29",
-            "33"
-        ],
-        "answer_en": "30",
-        "answer_hi": "30",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 31 × 61?",
-        "question_hi": "31 × 61 कितना होता है?",
-        "options_en": [
-            "1890",
-            "1891",
-            "1892",
-            "1894"
-        ],
-        "options_hi": [
-            "1890",
-            "1891",
-            "1892",
-            "1894"
-        ],
-        "answer_en": "1891",
-        "answer_hi": "1891",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 61 - 38?",
-        "question_hi": "61 - 38 कितना होता है?",
-        "options_en": [
-            "26",
-            "22",
-            "24",
-            "23"
-        ],
-        "options_hi": [
-            "26",
-            "22",
-            "24",
-            "23"
-        ],
-        "answer_en": "23",
-        "answer_hi": "23",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is the integer division 77 ÷ 40?",
-        "question_hi": "77 ÷ 40 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "options_hi": [
-            "1",
-            "4",
-            "2",
-            "0"
-        ],
-        "answer_en": "1",
-        "answer_hi": "1",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is the integer division 27 ÷ 51?",
-        "question_hi": "27 ÷ 51 का पूर्णांक भाग क्या है?",
-        "options_en": [
-            "2",
-            "1",
-            "3",
-            "0"
-        ],
-        "options_hi": [
-            "2",
-            "1",
-            "3",
-            "0"
-        ],
-        "answer_en": "0",
-        "answer_hi": "0",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 75 × 47?",
-        "question_hi": "75 × 47 कितना होता है?",
-        "options_en": [
-            "3528",
-            "3526",
-            "3525",
-            "3524"
-        ],
-        "options_hi": [
-            "3528",
-            "3526",
-            "3525",
-            "3524"
-        ],
-        "answer_en": "3525",
-        "answer_hi": "3525",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 37 + 3?",
-        "question_hi": "37 + 3 कितना होता है?",
-        "options_en": [
-            "39",
-            "40",
-            "41",
-            "43"
-        ],
-        "options_hi": [
-            "39",
-            "40",
-            "41",
-            "43"
-        ],
-        "answer_en": "40",
-        "answer_hi": "40",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is 79 - 47?",
-        "question_hi": "79 - 47 कितना होता है?",
-        "options_en": [
-            "32",
-            "35",
-            "31",
-            "33"
-        ],
-        "options_hi": [
-            "32",
-            "35",
-            "31",
-            "33"
-        ],
-        "answer_en": "32",
-        "answer_hi": "32",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 88 - 98?",
-        "question_hi": "88 - 98 कितना होता है?",
-        "options_en": [
-            "-9",
-            "-7",
-            "-8",
-            "-10"
-        ],
-        "options_hi": [
-            "-9",
-            "-7",
-            "-8",
-            "-10"
-        ],
-        "answer_en": "-10",
-        "answer_hi": "-10",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 41 + 58?",
-        "question_hi": "41 + 58 कितना होता है?",
-        "options_en": [
-            "100",
-            "99",
-            "102",
-            "98"
-        ],
-        "options_hi": [
-            "100",
-            "99",
-            "102",
-            "98"
-        ],
-        "answer_en": "99",
-        "answer_hi": "99",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 13 × 39?",
-        "question_hi": "13 × 39 कितना होता है?",
-        "options_en": [
-            "508",
-            "506",
-            "507",
-            "510"
-        ],
-        "options_hi": [
-            "508",
-            "506",
-            "507",
-            "510"
-        ],
-        "answer_en": "507",
-        "answer_hi": "507",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 18 × 71?",
-        "question_hi": "18 × 71 कितना होता है?",
-        "options_en": [
-            "1281",
-            "1279",
-            "1278",
-            "1277"
-        ],
-        "options_hi": [
-            "1281",
-            "1279",
-            "1278",
-            "1277"
-        ],
-        "answer_en": "1278",
-        "answer_hi": "1278",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is 63 × 39?",
-        "question_hi": "63 × 39 कितना होता है?",
-        "options_en": [
-            "2456",
-            "2460",
-            "2458",
-            "2457"
-        ],
-        "options_hi": [
-            "2456",
-            "2460",
-            "2458",
-            "2457"
-        ],
-        "answer_en": "2457",
-        "answer_hi": "2457",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 39,
-        "question_en": "What is 20 - 98?",
-        "question_hi": "20 - 98 कितना होता है?",
-        "options_en": [
-            "-78",
-            "-77",
-            "-76",
-            "-75"
-        ],
-        "options_hi": [
-            "-78",
-            "-77",
-            "-76",
-            "-75"
-        ],
-        "answer_en": "-78",
-        "answer_hi": "-78",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 40,
-        "question_en": "What is 13 + 52?",
-        "question_hi": "13 + 52 कितना होता है?",
-        "options_en": [
-            "66",
-            "65",
-            "68",
-            "64"
-        ],
-        "options_hi": [
-            "66",
-            "65",
-            "68",
-            "64"
-        ],
-        "answer_en": "65",
-        "answer_hi": "65",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is 60 × 49?",
-        "question_hi": "60 × 49 कितना होता है?",
-        "options_en": [
-            "2940",
-            "2941",
-            "2939",
-            "2943"
-        ],
-        "options_hi": [
-            "2940",
-            "2941",
-            "2939",
-            "2943"
-        ],
-        "answer_en": "2940",
-        "answer_hi": "2940",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "What is 15 - 88?",
-        "question_hi": "15 - 88 कितना होता है?",
-        "options_en": [
-            "-71",
-            "-72",
-            "-73",
-            "-70"
-        ],
-        "options_hi": [
-            "-71",
-            "-72",
-            "-73",
-            "-70"
-        ],
-        "answer_en": "-73",
-        "answer_hi": "-73",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "What is 80 + 30?",
-        "question_hi": "80 + 30 कितना होता है?",
-        "options_en": [
-            "110",
-            "111",
-            "109",
-            "113"
-        ],
-        "options_hi": [
-            "110",
-            "111",
-            "109",
-            "113"
-        ],
-        "answer_en": "110",
-        "answer_hi": "110",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "What is 85 + 54?",
-        "question_hi": "85 + 54 कितना होता है?",
-        "options_en": [
-            "142",
-            "138",
-            "139",
-            "140"
-        ],
-        "options_hi": [
-            "142",
-            "138",
-            "139",
-            "140"
-        ],
-        "answer_en": "139",
-        "answer_hi": "139",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "What is 40 + 65?",
-        "question_hi": "40 + 65 कितना होता है?",
-        "options_en": [
-            "106",
-            "104",
-            "108",
-            "105"
-        ],
-        "options_hi": [
-            "106",
-            "104",
-            "108",
-            "105"
-        ],
-        "answer_en": "105",
-        "answer_hi": "105",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "What is 51 × 60?",
-        "question_hi": "51 × 60 कितना होता है?",
-        "options_en": [
-            "3061",
-            "3060",
-            "3059",
-            "3063"
-        ],
-        "options_hi": [
-            "3061",
-            "3060",
-            "3059",
-            "3063"
-        ],
-        "answer_en": "3060",
-        "answer_hi": "3060",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "What is 55 + 85?",
-        "question_hi": "55 + 85 कितना होता है?",
-        "options_en": [
-            "140",
-            "141",
-            "139",
-            "143"
-        ],
-        "options_hi": [
-            "140",
-            "141",
-            "139",
-            "143"
-        ],
-        "answer_en": "140",
-        "answer_hi": "140",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "What is 37 × 6?",
-        "question_hi": "37 × 6 कितना होता है?",
-        "options_en": [
-            "222",
-            "221",
-            "225",
-            "223"
-        ],
-        "options_hi": [
-            "222",
-            "221",
-            "225",
-            "223"
-        ],
-        "answer_en": "222",
-        "answer_hi": "222",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "What is 32 + 48?",
-        "question_hi": "32 + 48 कितना होता है?",
-        "options_en": [
-            "80",
-            "81",
-            "83",
-            "79"
-        ],
-        "options_hi": [
-            "80",
-            "81",
-            "83",
-            "79"
-        ],
-        "answer_en": "80",
-        "answer_hi": "80",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 50,
-        "question_en": "What is 9 × 52?",
-        "question_hi": "9 × 52 कितना होता है?",
-        "options_en": [
-            "467",
-            "471",
-            "468",
-            "469"
-        ],
-        "options_hi": [
-            "467",
-            "471",
-            "468",
-            "469"
-        ],
-        "answer_en": "468",
-        "answer_hi": "468",
-        "attempted": false,
-        "selected": ""
-    }
+    "num": 1,
+    "question_en": "Which planet is known as the 'Morning Star'?",
+    "question_hi": "किस ग्रह को 'सुबह का तारा' कहा जाता है?",
+    "options_en": ["Mars", "Venus", "Jupiter", "Mercury"],
+    "options_hi": ["मंगल", "शुक्र", "बृहस्पति", "बुध"],
+    "answer_en": "Venus",
+    "answer_hi": "शुक्र",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 2,
+    "question_en": "The 'Chipko Movement' was started to protect:",
+    "question_hi": "'चिपको आंदोलन' किसकी सुरक्षा के लिए शुरू किया गया था?",
+    "options_en": ["Wildlife", "Forests", "Water", "Soil"],
+    "options_hi": ["वन्यजीव", "वन", "जल", "मिट्टी"],
+    "answer_en": "Forests",
+    "answer_hi": "वन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 3,
+    "question_en": "Which is the longest river in the world?",
+    "question_hi": "दुनिया की सबसे लंबी नदी कौन सी है?",
+    "options_en": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+    "options_hi": ["अमेज़न", "नील", "यांग्त्ज़ी", "मिसिसिपी"],
+    "answer_en": "Nile",
+    "answer_hi": "नील",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 4,
+    "question_en": "Who was the first woman Prime Minister of India?",
+    "question_hi": "भारत की पहली महिला प्रधानमंत्री कौन थीं?",
+    "options_en": ["Indira Gandhi", "Pratibha Patil", "Sonia Gandhi", "Sarojini Naidu"],
+    "options_hi": ["इंदिरा गांधी", "प्रतिभा पाटिल", "सोनिया गांधी", "सरोजिनी नायडू"],
+    "answer_en": "Indira Gandhi",
+    "answer_hi": "इंदिरा गांधी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 5,
+    "question_en": "Which gas is most abundant in the Sun?",
+    "question_hi": "सूर्य में कौन सी गैस सबसे अधिक मात्रा में होती है?",
+    "options_en": ["Helium", "Hydrogen", "Oxygen", "Nitrogen"],
+    "options_hi": ["हीलियम", "हाइड्रोजन", "ऑक्सीजन", "नाइट्रोजन"],
+    "answer_en": "Hydrogen",
+    "answer_hi": "हाइड्रोजन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 6,
+    "question_en": "The 'Red Fort' is located in which city?",
+    "question_hi": "'लाल किला' किस शहर में स्थित है?",
+    "options_en": ["Delhi", "Agra", "Jaipur", "Mumbai"],
+    "options_hi": ["दिल्ली", "आगरा", "जयपुर", "मुंबई"],
+    "answer_en": "Delhi",
+    "answer_hi": "दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 7,
+    "question_en": "Which vitamin is essential for blood clotting?",
+    "question_hi": "रक्त के थक्के बनने के लिए कौन सा विटामिन आवश्यक है?",
+    "options_en": ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin D"],
+    "options_hi": ["विटामिन A", "विटामिन C", "विटामिन K", "विटामिन D"],
+    "answer_en": "Vitamin K",
+    "answer_hi": "विटामिन K",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 8,
+    "question_en": "The 'Great Barrier Reef' is located in which country?",
+    "question_hi": "'ग्रेट बैरियर रीफ' किस देश में स्थित है?",
+    "options_en": ["Australia", "USA", "Brazil", "South Africa"],
+    "options_hi": ["ऑस्ट्रेलिया", "यूएसए", "ब्राजील", "दक्षिण अफ्रीका"],
+    "answer_en": "Australia",
+    "answer_hi": "ऑस्ट्रेलिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 9,
+    "question_en": "Who invented the telephone?",
+    "question_hi": "टेलीफोन का आविष्कार किसने किया?",
+    "options_en": ["Thomas Edison", "Alexander Graham Bell", "Guglielmo Marconi", "Nikola Tesla"],
+    "options_hi": ["थॉमस एडिसन", "अलेक्जेंडर ग्राहम बेल", "गुग्लील्मो मार्कोनी", "निकोला टेस्ला"],
+    "answer_en": "Alexander Graham Bell",
+    "answer_hi": "अलेक्जेंडर ग्राहम बेल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 10,
+    "question_en": "Which is the smallest continent by area?",
+    "question_hi": "क्षेत्रफल के हिसाब से सबसे छोटा महाद्वीप कौन सा है?",
+    "options_en": ["Europe", "Australia", "Antarctica", "South America"],
+    "options_hi": ["यूरोप", "ऑस्ट्रेलिया", "अंटार्कटिका", "दक्षिण अमेरिका"],
+    "answer_en": "Australia",
+    "answer_hi": "ऑस्ट्रेलिया",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 11,
+    "question_en": "The currency of Japan is:",
+    "question_hi": "जापान की मुद्रा है:",
+    "options_en": ["Yuan", "Yen", "Won", "Ringgit"],
+    "options_hi": ["युआन", "येन", "वॉन", "रिंग्गिट"],
+    "answer_en": "Yen",
+    "answer_hi": "येन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 12,
+    "question_en": "Which gland in the human body is called the 'master gland'?",
+    "question_hi": "मानव शरीर में किस ग्रंथि को 'मास्टर ग्रंथि' कहा जाता है?",
+    "options_en": ["Thyroid", "Pituitary", "Pancreas", "Adrenal"],
+    "options_hi": ["थायरॉयड", "पिट्यूटरी", "अग्न्याशय", "अधिवृक्क"],
+    "answer_en": "Pituitary",
+    "answer_hi": "पिट्यूटरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 13,
+    "question_en": "The 'Taj Mahal' was built by which Mughal emperor?",
+    "question_hi": "'ताज महल' किस मुगल सम्राट ने बनवाया था?",
+    "options_en": ["Akbar", "Shah Jahan", "Aurangzeb", "Jahangir"],
+    "options_hi": ["अकबर", "शाहजहाँ", "औरंगजेब", "जहाँगीर"],
+    "answer_en": "Shah Jahan",
+    "answer_hi": "शाहजहाँ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 14,
+    "question_en": "Which metal is the best conductor of electricity?",
+    "question_hi": "कौन सी धातु विद्युत की सबसे अच्छी सुचालक है?",
+    "options_en": ["Copper", "Silver", "Gold", "Aluminum"],
+    "options_hi": ["तांबा", "चांदी", "सोना", "एल्यूमीनियम"],
+    "answer_en": "Silver",
+    "answer_hi": "चांदी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 15,
+    "question_en": "The 'Statue of Liberty' was gifted to the USA by which country?",
+    "question_hi": "'स्टैच्यू ऑफ लिबर्टी' यूएसए को किस देश ने उपहार में दी थी?",
+    "options_en": ["France", "UK", "Italy", "Spain"],
+    "options_hi": ["फ्रांस", "यूके", "इटली", "स्पेन"],
+    "answer_en": "France",
+    "answer_hi": "फ्रांस",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 16,
+    "question_en": "Which vitamin is also known as Ascorbic Acid?",
+    "question_hi": "किस विटामिन को एस्कॉर्बिक अम्ल के नाम से भी जाना जाता है?",
+    "options_en": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "options_hi": ["विटामिन A", "विटामिन B", "विटामिन C", "विटामिन D"],
+    "answer_en": "Vitamin C",
+    "answer_hi": "विटामिन C",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 17,
+    "question_en": "Which country is known as the 'Land of the Rising Sun'?",
+    "question_hi": "किस देश को 'उगते सूरज की भूमि' कहा जाता है?",
+    "options_en": ["China", "Japan", "Thailand", "South Korea"],
+    "options_hi": ["चीन", "जापान", "थाईलैंड", "दक्षिण कोरिया"],
+    "answer_en": "Japan",
+    "answer_hi": "जापान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 18,
+    "question_en": "The process of converting sugar into alcohol is called:",
+    "question_hi": "शर्करा को अल्कोहल में बदलने की प्रक्रिया कहलाती है:",
+    "options_en": ["Fermentation", "Distillation", "Evaporation", "Oxidation"],
+    "options_hi": ["किण्वन", "आसवन", "वाष्पीकरण", "ऑक्सीकरण"],
+    "answer_en": "Fermentation",
+    "answer_hi": "किण्वन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 19,
+    "question_en": "Who wrote the Indian National Anthem?",
+    "question_hi": "भारतीय राष्ट्रगान किसने लिखा?",
+    "options_en": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Mahatma Gandhi"],
+    "options_hi": ["रबींद्रनाथ टैगोर", "बंकिम चंद्र चटर्जी", "सरोजिनी नायडू", "महात्मा गांधी"],
+    "answer_en": "Rabindranath Tagore",
+    "answer_hi": "रबींद्रनाथ टैगोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 20,
+    "question_en": "Which planet has the most moons?",
+    "question_hi": "किस ग्रह के सबसे अधिक चंद्रमा हैं?",
+    "options_en": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+    "options_hi": ["बृहस्पति", "शनि", "यूरेनस", "नेप्च्यून"],
+    "answer_en": "Saturn",
+    "answer_hi": "शनि",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 21,
+    "question_en": "The 'Sunderbans' is famous for which animal?",
+    "question_hi": "'सुंदरबन' किस जानवर के लिए प्रसिद्ध है?",
+    "options_en": ["Elephant", "Tiger", "Lion", "Rhinoceros"],
+    "options_hi": ["हाथी", "बाघ", "शेर", "गैंडा"],
+    "answer_en": "Tiger",
+    "answer_hi": "बाघ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 22,
+    "question_en": "Which instrument is used to measure atmospheric pressure?",
+    "question_hi": "वायुमंडलीय दबाव मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+    "options_en": ["Hygrometer", "Barometer", "Thermometer", "Anemometer"],
+    "options_hi": ["आर्द्रतामापी", "बैरोमीटर", "थर्मामीटर", "एनीमोमीटर"],
+    "answer_en": "Barometer",
+    "answer_hi": "बैरोमीटर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 23,
+    "question_en": "The 'City of Joy' is the nickname of which Indian city?",
+    "question_hi": "'आनंद का शहर' किस भारतीय शहर का उपनाम है?",
+    "options_en": ["Mumbai", "Kolkata", "Delhi", "Chennai"],
+    "options_hi": ["मुंबई", "कोलकाता", "दिल्ली", "चेन्नई"],
+    "answer_en": "Kolkata",
+    "answer_hi": "कोलकाता",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 24,
+    "question_en": "Which vitamin deficiency causes Rickets?",
+    "question_hi": "किस विटामिन की कमी से रिकेट्स रोग होता है?",
+    "options_en": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+    "options_hi": ["विटामिन A", "विटामिन C", "विटामिन D", "विटामिन K"],
+    "answer_en": "Vitamin D",
+    "answer_hi": "विटामिन D",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 25,
+    "question_en": "Which is the largest desert in the world?",
+    "question_hi": "दुनिया का सबसे बड़ा रेगिस्तान कौन सा है?",
+    "options_en": ["Sahara", "Arabian", "Gobi", "Kalahari"],
+    "options_hi": ["सहारा", "अरबी", "गोबी", "कालाहारी"],
+    "answer_en": "Sahara",
+    "answer_hi": "सहारा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 26,
+    "question_en": "Who is known as the 'Father of the Indian Space Program'?",
+    "question_hi": "'भारतीय अंतरिक्ष कार्यक्रम के जनक' के रूप में किसे जाना जाता है?",
+    "options_en": ["Homi J. Bhabha", "Vikram Sarabhai", "A.P.J. Abdul Kalam", "Satish Dhawan"],
+    "options_hi": ["होमी जे. भाभा", "विक्रम साराभाई", "ए.पी.जे. अब्दुल कलाम", "सतीश धवन"],
+    "answer_en": "Vikram Sarabhai",
+    "answer_hi": "विक्रम साराभाई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 27,
+    "question_en": "Which metal is used in making mirrors?",
+    "question_hi": "दर्पण बनाने में किस धातु का उपयोग किया जाता है?",
+    "options_en": ["Silver", "Aluminum", "Mercury", "Copper"],
+    "options_hi": ["चांदी", "एल्यूमीनियम", "पारा", "तांबा"],
+    "answer_en": "Silver",
+    "answer_hi": "चांदी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 28,
+    "question_en": "The 'Gateway of India' is located in:",
+    "question_hi": "'गेटवे ऑफ इंडिया' कहाँ स्थित है?",
+    "options_en": ["Delhi", "Mumbai", "Kolkata", "Chennai"],
+    "options_hi": ["दिल्ली", "मुंबई", "कोलकाता", "चेन्नई"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 29,
+    "question_en": "Which gas is used in filling electric bulbs?",
+    "question_hi": "इलेक्ट्रिक बल्ब भरने में किस गैस का उपयोग किया जाता है?",
+    "options_en": ["Oxygen", "Hydrogen", "Argon", "Nitrogen"],
+    "options_hi": ["ऑक्सीजन", "हाइड्रोजन", "आर्गन", "नाइट्रोजन"],
+    "answer_en": "Argon",
+    "answer_hi": "आर्गन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 30,
+    "question_en": "Who was the first President of India?",
+    "question_hi": "भारत के पहले राष्ट्रपति कौन थे?",
+    "options_en": ["Rajendra Prasad", "S. Radhakrishnan", "Zakir Hussain", "V.V. Giri"],
+    "options_hi": ["राजेंद्र प्रसाद", "एस. राधाकृष्णन", "जाकिर हुसैन", "वी.वी. गिरि"],
+    "answer_en": "Rajendra Prasad",
+    "answer_hi": "राजेंद्र प्रसाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 31,
+    "question_en": "Which is the largest planet in our solar system?",
+    "question_hi": "हमारे सौर मंडल का सबसे बड़ा ग्रह कौन सा है?",
+    "options_en": ["Earth", "Jupiter", "Saturn", "Neptune"],
+    "options_hi": ["पृथ्वी", "बृहस्पति", "शनि", "नेप्च्यून"],
+    "answer_en": "Jupiter",
+    "answer_hi": "बृहस्पति",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 32,
+    "question_en": "The 'White Revolution' in India is associated with:",
+    "question_hi": "भारत में 'श्वेत क्रांति' किससे जुड़ी है?",
+    "options_en": ["Milk production", "Cotton production", "Rice production", "Fish production"],
+    "options_hi": ["दुग्ध उत्पादन", "कपास उत्पादन", "चावल उत्पादन", "मछली उत्पादन"],
+    "answer_en": "Milk production",
+    "answer_hi": "दुग्ध उत्पादन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 33,
+    "question_en": "Which part of the computer is called the 'brain' of the computer?",
+    "question_hi": "कंप्यूटर के किस भाग को कंप्यूटर का 'मस्तिष्क' कहा जाता है?",
+    "options_en": ["Monitor", "CPU", "Keyboard", "Hard Disk"],
+    "options_hi": ["मॉनिटर", "सीपीयू", "कीबोर्ड", "हार्ड डिस्क"],
+    "answer_en": "CPU",
+    "answer_hi": "सीपीयू",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 34,
+    "question_en": "The 'Kumbh Mela' is held after how many years?",
+    "question_hi": "'कुंभ मेला' कितने वर्षों बाद आयोजित किया जाता है?",
+    "options_en": ["6 years", "12 years", "3 years", "Every year"],
+    "options_hi": ["6 वर्ष", "12 वर्ष", "3 वर्ष", "प्रतिवर्ष"],
+    "answer_en": "12 years",
+    "answer_hi": "12 वर्ष",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 35,
+    "question_en": "Which vitamin is also known as Thiamine?",
+    "question_hi": "किस विटामिन को थायमिन के नाम से भी जाना जाता है?",
+    "options_en": ["Vitamin B1", "Vitamin B2", "Vitamin B6", "Vitamin B12"],
+    "options_hi": ["विटामिन B1", "विटामिन B2", "विटामिन B6", "विटामिन B12"],
+    "answer_en": "Vitamin B1",
+    "answer_hi": "विटामिन B1",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 36,
+    "question_en": "Which is the highest mountain peak in the world?",
+    "question_hi": "दुनिया की सबसे ऊँची पर्वत चोटी कौन सी है?",
+    "options_en": ["K2", "Kanchenjunga", "Mount Everest", "Makalu"],
+    "options_hi": ["K2", "कंचनजंगा", "माउंट एवरेस्ट", "मकालू"],
+    "answer_en": "Mount Everest",
+    "answer_hi": "माउंट एवरेस्ट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 37,
+    "question_en": "Who discovered penicillin?",
+    "question_hi": "पेनिसिलिन की खोज किसने की?",
+    "options_en": ["Alexander Fleming", "Louis Pasteur", "Robert Koch", "Marie Curie"],
+    "options_hi": ["अलेक्जेंडर फ्लेमिंग", "लुई पाश्चर", "रॉबर्ट कोच", "मैरी क्यूरी"],
+    "answer_en": "Alexander Fleming",
+    "answer_hi": "अलेक्जेंडर फ्लेमिंग",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 38,
+    "question_en": "The 'Silicon Valley' is located in which country?",
+    "question_hi": "'सिलिकॉन वैली' किस देश में स्थित है?",
+    "options_en": ["Japan", "USA", "China", "India"],
+    "options_hi": ["जापान", "यूएसए", "चीन", "भारत"],
+    "answer_en": "USA",
+    "answer_hi": "यूएसए",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 39,
+    "question_en": "Which acid is present in lemon?",
+    "question_hi": "नींबू में कौन सा अम्ल उपस्थित होता है?",
+    "options_en": ["Citric acid", "Acetic acid", "Tartaric acid", "Oxalic acid"],
+    "options_hi": ["सिट्रिक अम्ल", "एसिटिक अम्ल", "टार्टरिक अम्ल", "ऑक्सैलिक अम्ल"],
+    "answer_en": "Citric acid",
+    "answer_hi": "सिट्रिक अम्ल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 40,
+    "question_en": "The 'Seven Wonders of the World' list was created by:",
+    "question_hi": "'विश्व के सात आश्चर्यों' की सूची किसने बनाई?",
+    "options_en": ["UNESCO", "New7Wonders Foundation", "National Geographic", "Time Magazine"],
+    "options_hi": ["यूनेस्को", "न्यू7वंडर्स फाउंडेशन", "नेशनल ज्योग्राफिक", "टाइम मैगज़ीन"],
+    "answer_en": "New7Wonders Foundation",
+    "answer_hi": "न्यू7वंडर्स फाउंडेशन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 41,
+    "question_en": "Which gas is responsible for the blue color of the sky?",
+    "question_hi": "आकाश के नीले रंग के लिए कौन सी गैस जिम्मेदार है?",
+    "options_en": ["Oxygen", "Nitrogen", "Carbon dioxide", "Scattering of light"],
+    "options_hi": ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "प्रकाश का प्रकीर्णन"],
+    "answer_en": "Scattering of light",
+    "answer_hi": "प्रकाश का प्रकीर्णन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 42,
+    "question_en": "Who was the first woman to win a Nobel Prize?",
+    "question_hi": "नोबेल पुरस्कार जीतने वाली पहली महिला कौन थीं?",
+    "options_en": ["Marie Curie", "Mother Teresa", "Rosalind Franklin", "Jane Addams"],
+    "options_hi": ["मैरी क्यूरी", "मदर टेरेसा", "रोजालिंड फ्रैंकलिन", "जेन एडम्स"],
+    "answer_en": "Marie Curie",
+    "answer_hi": "मैरी क्यूरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 43,
+    "question_en": "Which is the fastest land animal?",
+    "question_hi": "सबसे तेज भूमि जानवर कौन सा है?",
+    "options_en": ["Cheetah", "Lion", "Leopard", "Horse"],
+    "options_hi": ["चीता", "शेर", "तेंदुआ", "घोड़ा"],
+    "answer_en": "Cheetah",
+    "answer_hi": "चीता",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 44,
+    "question_en": "The 'International Yoga Day' is celebrated on:",
+    "question_hi": "'अंतर्राष्ट्रीय योग दिवस' कब मनाया जाता है?",
+    "options_en": ["21 June", "15 August", "2 October", "26 January"],
+    "options_hi": ["21 जून", "15 अगस्त", "2 अक्टूबर", "26 जनवरी"],
+    "answer_en": "21 June",
+    "answer_hi": "21 जून",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 45,
+    "question_en": "Which vitamin deficiency causes Night Blindness?",
+    "question_hi": "किस विटामिन की कमी से रतौंधी होती है?",
+    "options_en": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "options_hi": ["विटामिन A", "विटामिन B", "विटामिन C", "विटामिन D"],
+    "answer_en": "Vitamin A",
+    "answer_hi": "विटामिन A",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 46,
+    "question_en": "The 'Big Ben' is located in which city?",
+    "question_hi": "'बिग बेन' किस शहर में स्थित है?",
+    "options_en": ["Paris", "London", "New York", "Tokyo"],
+    "options_hi": ["पेरिस", "लंदन", "न्यूयॉर्क", "टोक्यो"],
+    "answer_en": "London",
+    "answer_hi": "लंदन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 47,
+    "question_en": "Which is the national animal of India?",
+    "question_hi": "भारत का राष्ट्रीय पशु कौन सा है?",
+    "options_en": ["Lion", "Tiger", "Elephant", "Peacock"],
+    "options_hi": ["शेर", "बाघ", "हाथी", "मोर"],
+    "answer_en": "Tiger",
+    "answer_hi": "बाघ",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 48,
+    "question_en": "Who is known as the 'Missile Man of India'?",
+    "question_hi": "'भारत के मिसाइल मैन' के रूप में किसे जाना जाता है?",
+    "options_en": ["Homi Bhabha", "Vikram Sarabhai", "A.P.J. Abdul Kalam", "C.V. Raman"],
+    "options_hi": ["होमी भाभा", "विक्रम साराभाई", "ए.पी.जे. अब्दुल कलाम", "सी.वी. रमन"],
+    "answer_en": "A.P.J. Abdul Kalam",
+    "answer_hi": "ए.पी.जे. अब्दुल कलाम",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 49,
+    "question_en": "Which is the largest ocean in the world?",
+    "question_hi": "दुनिया का सबसे बड़ा महासागर कौन सा है?",
+    "options_en": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    "options_hi": ["अटलांटिक महासागर", "हिंद महासागर", "आर्कटिक महासागर", "प्रशांत महासागर"],
+    "answer_en": "Pacific Ocean",
+    "answer_hi": "प्रशांत महासागर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 50,
+    "question_en": "The 'Green Revolution' in India was led by:",
+    "question_hi": "भारत में 'हरित क्रांति' का नेतृत्व किसने किया?",
+    "options_en": ["M.S. Swaminathan", "Norman Borlaug", "C. Subramaniam", "All of the above"],
+    "options_hi": ["एम.एस. स्वामीनाथन", "नॉर्मन बोरलॉग", "सी. सुब्रह्मण्यम", "उपरोक्त सभी"],
+    "answer_en": "All of the above",
+    "answer_hi": "उपरोक्त सभी",
+    "attempted": false,
+    "selected": ""
+  }
 ];
 // --------------------------- GLOBAL VARS -----------------------------
 // --------------------------- GLOBAL VARS -----------------------------

@@ -1,1055 +1,556 @@
 const questions = [
   {
-        "num": 1,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Berlin",
-            "Ottawa",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "बर्लिन",
-            "ऑटावा",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
+   "num": 1,
+    "question_en": "Which Indian state launched 'Mukhyamantri Digital Skill Development Fund 2025'?",
+    "question_hi": "मुख्यमंत्री डिजिटल कौशल विकास फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Maharashtra", "Tamil Nadu"],
+    "options_hi": ["कर्नाटक", "गुजरात", "महाराष्ट्र", "तमिलनाडु"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 2,
+    "question_en": "Which Indian city hosted the 'National Renewable Energy & Innovation Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय अक्षय ऊर्जा और नवाचार नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 3,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Innovation & Entrepreneurship Fund 2025'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण नवाचार और उद्यमिता फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 4,
+    "question_en": "Which Indian city hosted the 'National Startup & FinTech Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय स्टार्टअप और फिनटेक नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 5,
+    "question_en": "Which Indian state launched 'Mukhyamantri Green Energy & Startup Fund 2025'?",
+    "question_hi": "मुख्यमंत्री हरित ऊर्जा और स्टार्टअप फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Maharashtra"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 6,
+    "question_en": "Which Indian city hosted the 'National Industrial & Digital Innovation Policy Forum 2025'?",
+    "question_hi": "'राष्ट्रीय औद्योगिक और डिजिटल नवाचार नीति फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["Mumbai", "New Delhi", "Bengaluru", "Ahmedabad"],
+    "options_hi": ["मुंबई", "नई दिल्ली", "बेंगलुरु", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 7,
+    "question_en": "Which Indian state launched 'Mukhyamantri Startup Accelerator Fund 2025'?",
+    "question_hi": "मुख्यमंत्री स्टार्टअप एक्सेलेरेटर फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 8,
+    "question_en": "Which Indian city hosted the 'National AI & Startup Policy Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय AI और स्टार्टअप नीति नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 9,
+    "question_en": "Which Indian state launched 'Mukhyamantri Women Entrepreneurs & Skill Fund 2025'?",
+    "question_hi": "मुख्यमंत्री महिला उद्यमी एवं कौशल फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Gujarat", "Karnataka", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "कर्नाटक", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 10,
+    "question_en": "Which Indian city hosted the 'National Digital Economy & Startup Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय डिजिटल अर्थव्यवस्था और स्टार्टअप नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
     {
-        "num": 2,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Paris",
-            "Paris",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "पेरिस",
-            "पेरिस",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
+   "num": 11,
+    "question_en": "Which Indian state launched 'Mukhyamantri Startup & Innovation Growth Fund 2025'?",
+    "question_hi": "मुख्यमंत्री स्टार्टअप और नवाचार विकास फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 12,
+    "question_en": "Which Indian city hosted the 'National AI & Digital Innovation Policy Forum 2025'?",
+    "question_hi": "'राष्ट्रीय AI और डिजिटल नवाचार नीति फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 13,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Startup Accelerator Fund 2025'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण स्टार्टअप एक्सेलेरेटर फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 14,
+    "question_en": "Which Indian city hosted the 'National Startup & Renewable Energy Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय स्टार्टअप और अक्षय ऊर्जा नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 15,
+    "question_en": "Which Indian state launched 'Mukhyamantri Women Startup Growth Fund 2025'?",
+    "question_hi": "मुख्यमंत्री महिला स्टार्टअप विकास फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Gujarat", "Karnataka", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "कर्नाटक", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 16,
+    "question_en": "Which Indian city hosted the 'National Industrial & Startup Policy Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय औद्योगिक और स्टार्टअप नीति नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Mumbai", "New Delhi", "Bengaluru", "Ahmedabad"],
+    "options_hi": ["मुंबई", "नई दिल्ली", "बेंगलुरु", "अहमदाबाद"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 17,
+    "question_en": "Which Indian state launched 'Mukhyamantri Digital Entrepreneurship Fund 2025'?",
+    "question_hi": "मुख्यमंत्री डिजिटल उद्यमिता फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 18,
+    "question_en": "Which Indian city hosted the 'National Women Startup & Innovation Policy Forum 2025'?",
+    "question_hi": "'राष्ट्रीय महिला स्टार्टअप और नवाचार नीति फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 19,
+    "question_en": "Which Indian state launched 'Mukhyamantri Green Technology Innovation Fund 2025'?",
+    "question_hi": "मुख्यमंत्री हरित तकनीक नवाचार फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Tamil Nadu"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "तमिलनाडु"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 20,
+    "question_en": "Which Indian city hosted the 'National Digital Startup & Innovation Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय डिजिटल स्टार्टअप और नवाचार नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 21,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Technology & Startup Fund 2025'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण तकनीक और स्टार्टअप फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 22,
+    "question_en": "Which Indian city hosted the 'National AI & Startup Policy Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय AI और स्टार्टअप नीति नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 23,
+    "question_en": "Which Indian state launched 'Mukhyamantri Women Startup & Skill Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री महिला स्टार्टअप और कौशल फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Gujarat", "Karnataka", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "कर्नाटक", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 24,
+    "question_en": "Which Indian city hosted the 'National Industrial Innovation & Startup Policy Forum 2025'?",
+    "question_hi": "'राष्ट्रीय औद्योगिक नवाचार और स्टार्टअप नीति फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["Mumbai", "New Delhi", "Bengaluru", "Ahmedabad"],
+    "options_hi": ["मुंबई", "नई दिल्ली", "बेंगलुरु", "अहमदाबाद"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 25,
+    "question_en": "Which Indian state launched 'Mukhyamantri Smart Technology Startup Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री स्मार्ट तकनीक स्टार्टअप फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 26,
+    "question_en": "Which Indian city hosted the 'National Women Entrepreneurship & Startup Innovation Forum 2025'?",
+    "question_hi": "'राष्ट्रीय महिला उद्यमिता और स्टार्टअप नवाचार फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 27,
+    "question_en": "Which Indian state launched 'Mukhyamantri Digital Innovation & Startup Fund 2025'?",
+    "question_hi": "मुख्यमंत्री डिजिटल नवाचार और स्टार्टअप फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 28,
+    "question_en": "Which Indian city hosted the 'National Startup & Green Technology Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय स्टार्टअप और हरित तकनीक नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 29,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Entrepreneurship & Innovation Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण उद्यमिता और नवाचार फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 30,
+    "question_en": "Which Indian city hosted the 'National AI & Women Entrepreneurship Policy Forum 2025'?",
+    "question_hi": "'राष्ट्रीय AI और महिला उद्यमिता नीति फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
     {
-        "num": 3,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Moscow",
-            "Tokyo",
-            "Berlin"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "मॉस्को",
-            "टोक्यो",
-            "बर्लिन"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 4,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "New Delhi",
-            "Paris",
-            "Berlin"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "नई दिल्ली",
-            "पेरिस",
-            "बर्लिन"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 5,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Brasilia",
-            "New Delhi",
-            "Madrid"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "ब्रासीलिया",
-            "नई दिल्ली",
-            "मैड्रिड"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 6,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Rome",
-            "Canberra",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "रोम",
-            "कैनबरा",
-            "मॉस्को"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 7,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Tokyo",
-            "Ottawa",
-            "Berlin"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "टोक्यो",
-            "ऑटावा",
-            "बर्लिन"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 8,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Ottawa",
-            "Canberra",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "ऑटावा",
-            "कैनबरा",
-            "मॉस्को"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 9,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Berlin",
-            "Rome",
-            "Canberra"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "बर्लिन",
-            "रोम",
-            "कैनबरा"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 10,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Paris",
-            "Madrid",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "पेरिस",
-            "मैड्रिड",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 11,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Tokyo",
-            "New Delhi",
-            "Moscow"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "टोक्यो",
-            "नई दिल्ली",
-            "मॉस्को"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 12,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Paris",
-            "Paris",
-            "Moscow"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "पेरिस",
-            "पेरिस",
-            "मॉस्को"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 13,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "New Delhi",
-            "Tokyo",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "नई दिल्ली",
-            "टोक्यो",
-            "टोक्यो"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 14,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Canberra",
-            "Ottawa",
-            "Rome"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "कैनबरा",
-            "ऑटावा",
-            "रोम"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 15,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Brasilia",
-            "Ottawa",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "ब्रासीलिया",
-            "ऑटावा",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 16,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Madrid",
-            "Ottawa",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "मैड्रिड",
-            "ऑटावा",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 17,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Berlin",
-            "Rome",
-            "Madrid"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "बर्लिन",
-            "रोम",
-            "मैड्रिड"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 18,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Rome",
-            "Paris",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "रोम",
-            "पेरिस",
-            "टोक्यो"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 19,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Rome",
-            "Ottawa",
-            "Rome"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "रोम",
-            "ऑटावा",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 20,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Madrid",
-            "Ottawa",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "मैड्रिड",
-            "ऑटावा",
-            "टोक्यो"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 21,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "New Delhi",
-            "Berlin",
-            "Canberra"
-        ],
-        "options_hi": [
-            "रोम",
-            "नई दिल्ली",
-            "बर्लिन",
-            "कैनबरा"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 22,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Madrid",
-            "Brasilia",
-            "Ottawa"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "मैड्रिड",
-            "ब्रासीलिया",
-            "ऑटावा"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 23,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Madrid",
-            "Rome",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "मैड्रिड",
-            "रोम",
-            "टोक्यो"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 24,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Canberra",
-            "Canberra",
-            "Paris"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "कैनबरा",
-            "कैनबरा",
-            "पेरिस"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 25,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "New Delhi",
-            "Brasilia",
-            "Berlin"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "नई दिल्ली",
-            "ब्रासीलिया",
-            "बर्लिन"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 26,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "New Delhi",
-            "Paris",
-            "Canberra"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "नई दिल्ली",
-            "पेरिस",
-            "कैनबरा"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 27,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Paris",
-            "New Delhi",
-            "Moscow"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "पेरिस",
-            "नई दिल्ली",
-            "मॉस्को"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 28,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Brasilia",
-            "New Delhi",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "ब्रासीलिया",
-            "नई दिल्ली",
-            "मॉस्को"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 29,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Paris",
-            "Canberra",
-            "Rome"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "पेरिस",
-            "कैनबरा",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 30,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Madrid",
-            "Berlin",
-            "Rome"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "मैड्रिड",
-            "बर्लिन",
-            "रोम"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 31,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Madrid",
-            "Tokyo",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "मैड्रिड",
-            "टोक्यो",
-            "नई दिल्ली"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 32,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Berlin",
-            "Paris",
-            "Paris",
-            "Moscow"
-        ],
-        "options_hi": [
-            "बर्लिन",
-            "पेरिस",
-            "पेरिस",
-            "मॉस्को"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 33,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Ottawa",
-            "Rome",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "ऑटावा",
-            "रोम",
-            "टोक्यो"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 34,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Rome",
-            "Ottawa",
-            "Madrid"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "रोम",
-            "ऑटावा",
-            "मैड्रिड"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 35,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Ottawa",
-            "Canberra",
-            "Rome"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "ऑटावा",
-            "कैनबरा",
-            "रोम"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 36,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Moscow",
-            "Ottawa",
-            "Rome"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "मॉस्को",
-            "ऑटावा",
-            "रोम"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 37,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Brasilia",
-            "Berlin",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "ब्रासीलिया",
-            "बर्लिन",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 38,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Ottawa",
-            "Canberra",
-            "Madrid",
-            "Moscow"
-        ],
-        "options_hi": [
-            "ऑटावा",
-            "कैनबरा",
-            "मैड्रिड",
-            "मॉस्को"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 39,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Madrid",
-            "Rome",
-            "Tokyo",
-            "Rome"
-        ],
-        "options_hi": [
-            "मैड्रिड",
-            "रोम",
-            "टोक्यो",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 40,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "Madrid",
-            "Ottawa",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "रोम",
-            "मैड्रिड",
-            "ऑटावा",
-            "टोक्यो"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 41,
-        "question_en": "What is the capital of India?",
-        "question_hi": "भारत की राजधानी क्या है?",
-        "options_en": [
-            "Rome",
-            "Canberra",
-            "Brasilia",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "रोम",
-            "कैनबरा",
-            "ब्रासीलिया",
-            "नई दिल्ली"
-        ],
-        "answer_en": "New Delhi",
-        "answer_hi": "नई दिल्ली",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 42,
-        "question_en": "What is the capital of France?",
-        "question_hi": "फ़्रांस की राजधानी क्या है?",
-        "options_en": [
-            "Paris",
-            "Paris",
-            "Madrid",
-            "Canberra"
-        ],
-        "options_hi": [
-            "पेरिस",
-            "पेरिस",
-            "मैड्रिड",
-            "कैनबरा"
-        ],
-        "answer_en": "Paris",
-        "answer_hi": "पेरिस",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 43,
-        "question_en": "What is the capital of Japan?",
-        "question_hi": "जापान की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Moscow",
-            "Paris",
-            "Tokyo"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "मॉस्को",
-            "पेरिस",
-            "टोक्यो"
-        ],
-        "answer_en": "Tokyo",
-        "answer_hi": "टोक्यो",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 44,
-        "question_en": "What is the capital of Australia?",
-        "question_hi": "ऑस्ट्रेलिया की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Ottawa",
-            "Paris",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "ऑटावा",
-            "पेरिस",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Canberra",
-        "answer_hi": "कैनबरा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 45,
-        "question_en": "What is the capital of Brazil?",
-        "question_hi": "ब्राजील की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Paris",
-            "Brasilia",
-            "New Delhi"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "पेरिस",
-            "ब्रासीलिया",
-            "नई दिल्ली"
-        ],
-        "answer_en": "Brasilia",
-        "answer_hi": "ब्रासीलिया",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 46,
-        "question_en": "What is the capital of Canada?",
-        "question_hi": "कनाडा की राजधानी क्या है?",
-        "options_en": [
-            "New Delhi",
-            "Ottawa",
-            "Ottawa",
-            "Rome"
-        ],
-        "options_hi": [
-            "नई दिल्ली",
-            "ऑटावा",
-            "ऑटावा",
-            "रोम"
-        ],
-        "answer_en": "Ottawa",
-        "answer_hi": "ऑटावा",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 47,
-        "question_en": "What is the capital of Germany?",
-        "question_hi": "जर्मनी की राजधानी क्या है?",
-        "options_en": [
-            "Tokyo",
-            "Berlin",
-            "New Delhi",
-            "Berlin"
-        ],
-        "options_hi": [
-            "टोक्यो",
-            "बर्लिन",
-            "नई दिल्ली",
-            "बर्लिन"
-        ],
-        "answer_en": "Berlin",
-        "answer_hi": "बर्लिन",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 48,
-        "question_en": "What is the capital of Russia?",
-        "question_hi": "रूस की राजधानी क्या है?",
-        "options_en": [
-            "Canberra",
-            "Berlin",
-            "Moscow",
-            "Brasilia"
-        ],
-        "options_hi": [
-            "कैनबरा",
-            "बर्लिन",
-            "मॉस्को",
-            "ब्रासीलिया"
-        ],
-        "answer_en": "Moscow",
-        "answer_hi": "मॉस्को",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 49,
-        "question_en": "What is the capital of Italy?",
-        "question_hi": "इटली की राजधानी क्या है?",
-        "options_en": [
-            "Moscow",
-            "Ottawa",
-            "Paris",
-            "Rome"
-        ],
-        "options_hi": [
-            "मॉस्को",
-            "ऑटावा",
-            "पेरिस",
-            "रोम"
-        ],
-        "answer_en": "Rome",
-        "answer_hi": "रोम",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-        "num": 50,
-        "question_en": "What is the capital of Spain?",
-        "question_hi": "स्पेन की राजधानी क्या है?",
-        "options_en": [
-            "Brasilia",
-            "Madrid",
-            "Paris",
-            "Berlin"
-        ],
-        "options_hi": [
-            "ब्रासीलिया",
-            "मैड्रिड",
-            "पेरिस",
-            "बर्लिन"
-        ],
-        "answer_en": "Madrid",
-        "answer_hi": "मैड्रिड",
-        "attempted": false,
-        "selected": ""
-    }
+   "num": 31,
+    "question_en": "Which Indian state launched 'Mukhyamantri Digital Green Fund 2025'?",
+    "question_hi": "मुख्यमंत्री डिजिटल ग्रीन फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Maharashtra"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 32,
+    "question_en": "Which Indian city hosted the 'National Startup & Entrepreneurship Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय स्टार्टअप और उद्यमिता नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 33,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Digital Entrepreneurship Fund 2025'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण डिजिटल उद्यमिता फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 34,
+    "question_en": "Which Indian city hosted the 'National AI & Digital Economy Innovation Summit 2025'?",
+    "question_hi": "'राष्ट्रीय AI और डिजिटल अर्थव्यवस्था नवाचार शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 35,
+    "question_en": "Which Indian state launched 'Mukhyamantri Women Digital & Startup Fund 2025'?",
+    "question_hi": "मुख्यमंत्री महिला डिजिटल एवं स्टार्टअप फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Gujarat", "Karnataka", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "कर्नाटक", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 36,
+    "question_en": "Which Indian city hosted the 'National Industrial Policy & Startup Innovation Forum 2025'?",
+    "question_hi": "'राष्ट्रीय औद्योगिक नीति और स्टार्टअप नवाचार फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["Mumbai", "New Delhi", "Bengaluru", "Ahmedabad"],
+    "options_hi": ["मुंबई", "नई दिल्ली", "बेंगलुरु", "अहमदाबाद"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 37,
+    "question_en": "Which Indian state launched 'Mukhyamantri Smart Digital Fund 2025'?",
+    "question_hi": "मुख्यमंत्री स्मार्ट डिजिटल फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 38,
+    "question_en": "Which Indian city hosted the 'National Women Entrepreneurship & Innovation Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय महिला उद्यमिता और नवाचार नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+  "num": 39,
+    "question_en": "Which Indian state launched 'Mukhyamantri Green Digital Startup Fund 2025'?",
+    "question_hi": "मुख्यमंत्री हरित डिजिटल स्टार्टअप फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Maharashtra"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+  "num": 40,
+    "question_en": "Which Indian city hosted the 'National Digital Innovation & Startup Forum 2025'?",
+    "question_hi": "'राष्ट्रीय डिजिटल नवाचार और स्टार्टअप फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 41,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Digital Innovation Fund 2025'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण डिजिटल नवाचार फंड 2025 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 42,
+    "question_en": "Which Indian city hosted the 'National AI & Women Innovation Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय AI और महिला नवाचार नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 43,
+    "question_en": "Which Indian state launched 'Mukhyamantri Women Digital Innovation Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री महिला डिजिटल नवाचार फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Gujarat", "Karnataka", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["गुजरात", "कर्नाटक", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 44,
+    "question_en": "Which Indian city hosted the 'National Industrial & Digital Innovation Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय औद्योगिक और डिजिटल नवाचार नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Mumbai", "New Delhi", "Bengaluru", "Ahmedabad"],
+    "options_hi": ["मुंबई", "नई दिल्ली", "बेंगलुरु", "अहमदाबाद"],
+    "answer_en": "Mumbai",
+    "answer_hi": "मुंबई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 45,
+    "question_en": "Which Indian state launched 'Mukhyamantri Smart Digital Startup Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री स्मार्ट डिजिटल स्टार्टअप फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Karnataka", "Gujarat", "Tamil Nadu", "Maharashtra"],
+    "options_hi": ["कर्नाटक", "गुजरात", "तमिलनाडु", "महाराष्ट्र"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 46,
+    "question_en": "Which Indian city hosted the 'National Women Startup & Digital Innovation Forum 2025'?",
+    "question_hi": "'राष्ट्रीय महिला स्टार्टअप और डिजिटल नवाचार फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 47,
+    "question_en": "Which Indian state launched 'Mukhyamantri Green Digital Innovation Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री हरित डिजिटल नवाचार फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Maharashtra"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 48,
+    "question_en": "Which Indian city hosted the 'National Startup & Digital Economy Innovation Forum 2025'?",
+    "question_hi": "'राष्ट्रीय स्टार्टअप और डिजिटल अर्थव्यवस्था नवाचार फोरम 2025' किस शहर में हुआ?",
+    "options_en": ["New Delhi", "Bengaluru", "Mumbai", "Ahmedabad"],
+    "options_hi": ["नई दिल्ली", "बेंगलुरु", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 49,
+    "question_en": "Which Indian state launched 'Mukhyamantri Rural Innovation & Digital Startup Fund 3.0'?",
+    "question_hi": "मुख्यमंत्री ग्रामीण नवाचार और डिजिटल स्टार्टअप फंड 3.0 किस राज्य ने शुरू किया?",
+    "options_en": ["Odisha", "Madhya Pradesh", "Chhattisgarh", "Bihar"],
+    "options_hi": ["ओडिशा", "मध्य प्रदेश", "छत्तीसगढ़", "बिहार"],
+    "answer_en": "Odisha",
+    "answer_hi": "ओडिशा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+   "num": 50,
+    "question_en": "Which Indian city hosted the 'National AI & Women Digital Entrepreneurship Policy Summit 2025'?",
+    "question_hi": "'राष्ट्रीय AI और महिला डिजिटल उद्यमिता नीति शिखर सम्मेलन 2025' किस शहर में हुआ?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Ahmedabad"],
+    "options_hi": ["बेंगलुरु", "नई दिल्ली", "मुंबई", "अहमदाबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  }
 ];
+
 
 let currentQuestion = 0;
 let language = "en";

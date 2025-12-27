@@ -1,1055 +1,556 @@
 const questions = [
   {
-       "num": 1,
-        "question_en": "What is 64 × 4?",
-        "question_hi": "64 × 4 कितना होगा?",
-        "options_en": [
-            "261",
-            "266",
-            "256",
-            "246"
-        ],
-        "options_hi": [
-            "261",
-            "266",
-            "256",
-            "246"
-        ],
-        "answer_en": "256",
-        "answer_hi": "256",
-        "attempted": false,
-        "selected": ""
-    },
+    "num":1,
+    "question_en": "Which Indian company launched the first indigenous electric commercial aircraft in 2025?",
+    "question_hi": "2025 में किस भारतीय कंपनी ने पहला स्वदेशी इलेक्ट्रिक वाणिज्यिक विमान लॉन्च किया?",
+    "options_en": ["Tata Group", "Mahindra Aerospace", "HAL", "Adani Group"],
+    "options_hi": ["टाटा समूह", "महिंद्रा एयरोस्पेस", "हल", "अडानी समूह"],
+    "answer_en": "HAL",
+    "answer_hi": "हल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":2,
+    "question_en": "Which Indian state became the first to implement AI-based traffic management in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय राज्य पहला AI-आधारित ट्रैफिक प्रबंधन लागू करने वाला बना?",
+    "options_en": ["Maharashtra", "Karnataka", "Tamil Nadu", "Delhi"],
+    "options_hi": ["महाराष्ट्र", "कर्नाटक", "तमिलनाडु", "दिल्ली"],
+    "answer_en": "Delhi",
+    "answer_hi": "दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":3,
+    "question_en": "Which Indian city hosted the 2025 International Robotics Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय रोबोटिक्स एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Pune", "Hyderabad", "Mumbai"],
+    "options_hi": ["बैंगलोर", "पुणे", "हैदराबाद", "मुंबई"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":4,
+    "question_en": "Which Indian sportswoman won gold in the 2025 World Wrestling Championship?",
+    "question_hi": "2025 में विश्व कुश्ती चैंपियनशिप में स्वर्ण पदक किस भारतीय महिला एथलीट ने जीता?",
+    "options_en": ["Vinesh Phogat", "Sakshi Malik", "Babita Kumari", "Anshu Malik"],
+    "options_hi": ["विनेश फोगाट", "साक्षी मलिक", "बबीता कुमारी", "अंशु मलिक"],
+    "answer_en": "Vinesh Phogat",
+    "answer_hi": "विनेश फोगाट",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":5,
+    "question_en": "Which Indian state government launched 'Startup India Yojana 2.0' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य सरकार ने 'स्टार्टअप इंडिया योजना 2.0' शुरू की?",
+    "options_en": ["Maharashtra", "Telangana", "Karnataka", "Gujarat"],
+    "options_hi": ["महाराष्ट्र", "तेलंगाना", "कर्नाटक", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":6,
+    "question_en": "Which Indian bank launched India's first AI-powered credit scoring system in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने भारत का पहला AI-पावर्ड क्रेडिट स्कोरिंग सिस्टम लॉन्च किया?",
+    "options_en": ["HDFC Bank", "ICICI Bank", "State Bank of India", "Axis Bank"],
+    "options_hi": ["एचडीएफसी बैंक", "आईसीआईसीआई बैंक", "स्टेट बैंक ऑफ इंडिया", "एक्सिस बैंक"],
+    "answer_en": "ICICI Bank",
+    "answer_hi": "आईसीआईसीआई बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":7,
+    "question_en": "Which Indian city became the first to implement 5G-based telemedicine in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 5G-आधारित टेलीमेडिसिन लागू करने वाला बना?",
+    "options_en": ["Hyderabad", "Mumbai", "Delhi", "Bengaluru"],
+    "options_hi": ["हैदराबाद", "मुंबई", "दिल्ली", "बैंगलोर"],
+    "answer_en": "Hyderabad",
+    "answer_hi": "हैदराबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":8,
+    "question_en": "Which Indian state became first to adopt drone delivery for medical supplies in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने मेडिकल सप्लाइज के लिए ड्रोन डिलीवरी को अपनाने वाला पहला राज्य बना?",
+    "options_en": ["Kerala", "Maharashtra", "Karnataka", "Telangana"],
+    "options_hi": ["केरल", "महाराष्ट्र", "कर्नाटक", "तेलंगाना"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":9,
+    "question_en": "Which Indian university was ranked first in NIRF 2025 for overall performance?",
+    "question_hi": "NIRF 2025 में कुल प्रदर्शन के लिए किस भारतीय विश्वविद्यालय को पहला स्थान मिला?",
+    "options_en": ["IIT Madras", "IIT Delhi", "IIT Bombay", "IISc Bangalore"],
+    "options_hi": ["आईआईटी मद्रास", "आईआईटी दिल्ली", "आईआईटी बॉम्बे", "आईआईएससी बैंगलोर"],
+    "answer_en": "IIT Madras",
+    "answer_hi": "आईआईटी मद्रास",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":10,
+    "question_en": "Which Indian athlete won silver at the 2025 World Boxing Championship?",
+    "question_hi": "2025 में विश्व बॉक्सिंग चैंपियनशिप में कौन सा भारतीय एथलीट रजत पदक जीता?",
+    "options_en": ["Lovlina Borgohain", "Nitu Ghanghas", "Pooja Rani", "Sangram Singh"],
+    "options_hi": ["लोवलिना बोरगोहैन", "नितु घोष", "पूजा रानी", "संग्राम सिंह"],
+    "answer_en": "Lovlina Borgohain",
+    "answer_hi": "लोवलिना बोरगोहैन",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":11,
+    "question_en": "Which Indian city hosted the 2025 International Startup Expo?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्टार्टअप एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Mumbai", "Hyderabad", "Pune"],
+    "options_hi": ["बैंगलोर", "मुंबई", "हैदराबाद", "पुणे"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":12,
+    "question_en": "Which Indian state launched 'Digital Literacy for Women' campaign in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिलाओं के लिए डिजिटल साक्षरता' अभियान शुरू किया?",
+    "options_en": ["Telangana", "Maharashtra", "Kerala", "Gujarat"],
+    "options_hi": ["तेलंगाना", "महाराष्ट्र", "केरल", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":13,
+    "question_en": "Which Indian IT company developed India's first AI-based medical diagnostic platform in 2025?",
+    "question_hi": "2025 में किस भारतीय IT कंपनी ने भारत का पहला AI-आधारित मेडिकल डायग्नोस्टिक प्लेटफॉर्म विकसित किया?",
+    "options_en": ["Infosys", "TCS", "Wipro", "HCL"],
+    "options_hi": ["इंफोसिस", "टाटा कंसल्टेंसी सर्विसेज", "विप्रो", "एचसीएल"],
+    "answer_en": "TCS",
+    "answer_hi": "टाटा कंसल्टेंसी सर्विसेज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":14,
+    "question_en": "Which Indian city became the first to have 100% LED street lighting in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर 100% LED स्ट्रीट लाइटिंग वाला पहला शहर बना?",
+    "options_en": ["Ahmedabad", "Pune", "Hyderabad", "Delhi"],
+    "options_hi": ["अहमदाबाद", "पुणे", "हैदराबाद", "दिल्ली"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":15,
+    "question_en": "Which Indian institute launched the first National Quantum Computing Lab in 2025?",
+    "question_hi": "2025 में किस भारतीय संस्थान ने पहला राष्ट्रीय क्वांटम कंप्यूटिंग लैब लॉन्च किया?",
+    "options_en": ["IISc Bangalore", "IIT Delhi", "IIT Bombay", "IIT Madras"],
+    "options_hi": ["आईआईएससी बैंगलोर", "आईआईटी दिल्ली", "आईआईटी बॉम्बे", "आईआईटी मद्रास"],
+    "answer_en": "IISc Bangalore",
+    "answer_hi": "आईआईएससी बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
     {
-       "num": 2,
-        "question_en": "What is 59 × 3?",
-        "question_hi": "59 × 3 कितना होगा?",
-        "options_en": [
-            "182",
-            "187",
-            "167",
-            "177"
-        ],
-        "options_hi": [
-            "182",
-            "187",
-            "167",
-            "177"
-        ],
-        "answer_en": "177",
-        "answer_hi": "177",
-        "attempted": false,
-        "selected": ""
-    },
+    "num":16,
+    "question_en": "Which Indian city hosted the 2025 Global Renewable Energy Summit?",
+    "question_hi": "2025 में ग्लोबल रिन्यूएबल एनर्जी समिट की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "New Delhi", "Mumbai", "Hyderabad"],
+    "options_hi": ["बैंगलोर", "नई दिल्ली", "मुंबई", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":17,
+    "question_en": "Which Indian state launched the 'Electric Vehicle Policy 2025'?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'इलेक्ट्रिक व्हीकल पॉलिसी 2025' शुरू की?",
+    "options_en": ["Maharashtra", "Kerala", "Tamil Nadu", "Karnataka"],
+    "options_hi": ["महाराष्ट्र", "केरल", "तमिलनाडु", "कर्नाटक"],
+    "answer_en": "Maharashtra",
+    "answer_hi": "महाराष्ट्र",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":18,
+    "question_en": "Which Indian cricketer became the fastest to 50 international centuries in 2025?",
+    "question_hi": "2025 में किस भारतीय क्रिकेटर ने सबसे तेजी से 50 अंतरराष्ट्रीय शतक बनाए?",
+    "options_en": ["Virat Kohli", "Rohit Sharma", "Shubman Gill", "KL Rahul"],
+    "options_hi": ["विराट कोहली", "रोहित शर्मा", "शुभमन गिल", "केएल राहुल"],
+    "answer_en": "Virat Kohli",
+    "answer_hi": "विराट कोहली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":19,
+    "question_en": "Which Indian university hosted the 2025 International AI Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय AI कॉन्फ्रेंस की मेजबानी किस भारतीय विश्वविद्यालय ने की?",
+    "options_en": ["IIT Delhi", "IIT Bombay", "IISc Bangalore", "IIT Madras"],
+    "options_hi": ["आईआईटी दिल्ली", "आईआईटी बॉम्बे", "आईआईएससी बैंगलोर", "आईआईटी मद्रास"],
+    "answer_en": "IIT Delhi",
+    "answer_hi": "आईआईटी दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":20,
+    "question_en": "Which Indian athlete won gold at the 2025 World Archery Championship?",
+    "question_hi": "2025 में विश्व तीरंदाजी चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Atanu Das", "Deepika Kumari", "Tarundeep Rai", "Pravin Jadhav"],
+    "options_hi": ["अतनु दास", "दीपिका कुमारी", "तरुंदीप राय", "प्रवीन जाधव"],
+    "answer_en": "Deepika Kumari",
+    "answer_hi": "दीपिका कुमारी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":21,
+    "question_en": "Which Indian state implemented the first blockchain-based land record system in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने पहला ब्लॉकचेन-आधारित भू-अभिलेख प्रणाली लागू की?",
+    "options_en": ["Gujarat", "Rajasthan", "Maharashtra", "Telangana"],
+    "options_hi": ["गुजरात", "राजस्थान", "महाराष्ट्र", "तेलंगाना"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":22,
+    "question_en": "Which Indian city became the first to implement smart waste management using AI in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर AI का उपयोग करके स्मार्ट कचरा प्रबंधन लागू करने वाला पहला शहर बना?",
+    "options_en": ["Pune", "Ahmedabad", "Bengaluru", "Hyderabad"],
+    "options_hi": ["पुणे", "अहमदाबाद", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":23,
+    "question_en": "Which Indian bank launched a digital-only branch for rural areas in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने ग्रामीण क्षेत्रों के लिए डिजिटल-ओनली शाखा शुरू की?",
+    "options_en": ["SBI", "ICICI Bank", "HDFC Bank", "Axis Bank"],
+    "options_hi": ["एसबीआई", "आईसीआईसीआई बैंक", "एचडीएफसी बैंक", "एक्सिस बैंक"],
+    "answer_en": "SBI",
+    "answer_hi": "एसबीआई",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":24,
+    "question_en": "Which Indian state launched 'Women Entrepreneurship Fund' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला उद्यमिता कोष' शुरू किया?",
+    "options_en": ["Telangana", "Maharashtra", "Kerala", "Gujarat"],
+    "options_hi": ["तेलंगाना", "महाराष्ट्र", "केरल", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":25,
+    "question_en": "Which Indian tech company developed a national COVID-19 vaccine monitoring AI system in 2025?",
+    "question_hi": "2025 में किस भारतीय टेक कंपनी ने राष्ट्रीय COVID-19 वैक्सीन मॉनिटरिंग AI सिस्टम विकसित किया?",
+    "options_en": ["TCS", "Infosys", "Wipro", "HCL"],
+    "options_hi": ["टाटा कंसल्टेंसी सर्विसेज", "इंफोसिस", "विप्रो", "एचसीएल"],
+    "answer_en": "TCS",
+    "answer_hi": "टाटा कंसल्टेंसी सर्विसेज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":26,
+    "question_en": "Which Indian city became the first to adopt 5G-based smart healthcare services in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर 5G-आधारित स्मार्ट हेल्थकेयर सेवाओं को अपनाने वाला पहला शहर बना?",
+    "options_en": ["Hyderabad", "Bengaluru", "Mumbai", "Delhi"],
+    "options_hi": ["हैदराबाद", "बैंगलोर", "मुंबई", "दिल्ली"],
+    "answer_en": "Hyderabad",
+    "answer_hi": "हैदराबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":27,
+    "question_en": "Which Indian state became the first to achieve 100% solar-powered government buildings in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय राज्य 100% सौर ऊर्जा संचालित सरकारी भवन प्राप्त करने वाला पहला राज्य बना?",
+    "options_en": ["Rajasthan", "Gujarat", "Karnataka", "Maharashtra"],
+    "options_hi": ["राजस्थान", "गुजरात", "कर्नाटक", "महाराष्ट्र"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":28,
+    "question_en": "Which Indian city hosted the 2025 Global Health Summit?",
+    "question_hi": "2025 में ग्लोबल हेल्थ समिट की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":29,
+    "question_en": "Which Indian athlete won bronze at the 2025 World Swimming Championship?",
+    "question_hi": "2025 में विश्व स्विमिंग चैंपियनशिप में कौन सा भारतीय एथलीट कांस्य पदक जीता?",
+    "options_en": ["Sajan Prakash", "Srihari Nataraj", "Maana Patel", "Virdhawal Khade"],
+    "options_hi": ["साजन प्रकाश", "स्रीहरी नटराज", "माना पटेल", "विर्धवाल खड़े"],
+    "answer_en": "Srihari Nataraj",
+    "answer_hi": "स्रीहरी नटराज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":30,
+    "question_en": "Which Indian state launched 'Digital Education for All' initiative in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'सभी के लिए डिजिटल शिक्षा' पहल शुरू की?",
+    "options_en": ["Karnataka", "Telangana", "Maharashtra", "Kerala"],
+    "options_hi": ["कर्नाटक", "तेलंगाना", "महाराष्ट्र", "केरल"],
+    "answer_en": "Karnataka",
+    "answer_hi": "कर्नाटक",
+    "attempted": false,
+    "selected": ""
+  },
     {
-       "num": 3,
-        "question_en": "What is 27 × 18?",
-        "question_hi": "27 × 18 कितना होगा?",
-        "options_en": [
-            "496",
-            "486",
-            "491",
-            "476"
-        ],
-        "options_hi": [
-            "496",
-            "486",
-            "491",
-            "476"
-        ],
-        "answer_en": "486",
-        "answer_hi": "486",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 4,
-        "question_en": "What is 94 × 2?",
-        "question_hi": "94 × 2 कितना होगा?",
-        "options_en": [
-            "178",
-            "193",
-            "188",
-            "198"
-        ],
-        "options_hi": [
-            "178",
-            "193",
-            "188",
-            "198"
-        ],
-        "answer_en": "188",
-        "answer_hi": "188",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 5,
-        "question_en": "What is 42 × 5?",
-        "question_hi": "42 × 5 कितना होगा?",
-        "options_en": [
-            "215",
-            "200",
-            "210",
-            "220"
-        ],
-        "options_hi": [
-            "215",
-            "200",
-            "210",
-            "220"
-        ],
-        "answer_en": "210",
-        "answer_hi": "210",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 6,
-        "question_en": "What is 67 × 13?",
-        "question_hi": "67 × 13 कितना होगा?",
-        "options_en": [
-            "861",
-            "876",
-            "871",
-            "881"
-        ],
-        "options_hi": [
-            "861",
-            "876",
-            "871",
-            "881"
-        ],
-        "answer_en": "871",
-        "answer_hi": "871",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 7,
-        "question_en": "What is 78 × 7?",
-        "question_hi": "78 × 7 कितना होगा?",
-        "options_en": [
-            "551",
-            "556",
-            "536",
-            "546"
-        ],
-        "options_hi": [
-            "551",
-            "556",
-            "536",
-            "546"
-        ],
-        "answer_en": "546",
-        "answer_hi": "546",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 8,
-        "question_en": "What is 35 × 17?",
-        "question_hi": "35 × 17 कितना होगा?",
-        "options_en": [
-            "600",
-            "595",
-            "585",
-            "605"
-        ],
-        "options_hi": [
-            "600",
-            "595",
-            "585",
-            "605"
-        ],
-        "answer_en": "595",
-        "answer_hi": "595",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 9,
-        "question_en": "What is 66 × 5?",
-        "question_hi": "66 × 5 कितना होगा?",
-        "options_en": [
-            "335",
-            "320",
-            "340",
-            "330"
-        ],
-        "options_hi": [
-            "335",
-            "320",
-            "340",
-            "330"
-        ],
-        "answer_en": "330",
-        "answer_hi": "330",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 10,
-        "question_en": "What is 39 × 6?",
-        "question_hi": "39 × 6 कितना होगा?",
-        "options_en": [
-            "224",
-            "234",
-            "244",
-            "239"
-        ],
-        "options_hi": [
-            "224",
-            "234",
-            "244",
-            "239"
-        ],
-        "answer_en": "234",
-        "answer_hi": "234",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 11,
-        "question_en": "What is 71 × 16?",
-        "question_hi": "71 × 16 कितना होगा?",
-        "options_en": [
-            "1136",
-            "1141",
-            "1126",
-            "1146"
-        ],
-        "options_hi": [
-            "1136",
-            "1141",
-            "1126",
-            "1146"
-        ],
-        "answer_en": "1136",
-        "answer_hi": "1136",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 12,
-        "question_en": "What is 41 × 17?",
-        "question_hi": "41 × 17 कितना होगा?",
-        "options_en": [
-            "702",
-            "697",
-            "687",
-            "707"
-        ],
-        "options_hi": [
-            "702",
-            "697",
-            "687",
-            "707"
-        ],
-        "answer_en": "697",
-        "answer_hi": "697",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 13,
-        "question_en": "What is 30 × 12?",
-        "question_hi": "30 × 12 कितना होगा?",
-        "options_en": [
-            "360",
-            "370",
-            "350",
-            "365"
-        ],
-        "options_hi": [
-            "360",
-            "370",
-            "350",
-            "365"
-        ],
-        "answer_en": "360",
-        "answer_hi": "360",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 14,
-        "question_en": "What is 95 × 11?",
-        "question_hi": "95 × 11 कितना होगा?",
-        "options_en": [
-            "1045",
-            "1035",
-            "1055",
-            "1050"
-        ],
-        "options_hi": [
-            "1045",
-            "1035",
-            "1055",
-            "1050"
-        ],
-        "answer_en": "1045",
-        "answer_hi": "1045",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 15,
-        "question_en": "What is 63 × 4?",
-        "question_hi": "63 × 4 कितना होगा?",
-        "options_en": [
-            "252",
-            "257",
-            "242",
-            "262"
-        ],
-        "options_hi": [
-            "252",
-            "257",
-            "242",
-            "262"
-        ],
-        "answer_en": "252",
-        "answer_hi": "252",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 16,
-        "question_en": "What is 91 × 2?",
-        "question_hi": "91 × 2 कितना होगा?",
-        "options_en": [
-            "192",
-            "187",
-            "172",
-            "182"
-        ],
-        "options_hi": [
-            "192",
-            "187",
-            "172",
-            "182"
-        ],
-        "answer_en": "182",
-        "answer_hi": "182",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 17,
-        "question_en": "What is 97 × 12?",
-        "question_hi": "97 × 12 कितना होगा?",
-        "options_en": [
-            "1169",
-            "1174",
-            "1154",
-            "1164"
-        ],
-        "options_hi": [
-            "1169",
-            "1174",
-            "1154",
-            "1164"
-        ],
-        "answer_en": "1164",
-        "answer_hi": "1164",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 18,
-        "question_en": "What is 72 × 6?",
-        "question_hi": "72 × 6 कितना होगा?",
-        "options_en": [
-            "422",
-            "442",
-            "437",
-            "432"
-        ],
-        "options_hi": [
-            "422",
-            "442",
-            "437",
-            "432"
-        ],
-        "answer_en": "432",
-        "answer_hi": "432",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 19,
-        "question_en": "What is 90 × 6?",
-        "question_hi": "90 × 6 कितना होगा?",
-        "options_en": [
-            "545",
-            "550",
-            "540",
-            "530"
-        ],
-        "options_hi": [
-            "545",
-            "550",
-            "540",
-            "530"
-        ],
-        "answer_en": "540",
-        "answer_hi": "540",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 20,
-        "question_en": "What is 53 × 17?",
-        "question_hi": "53 × 17 कितना होगा?",
-        "options_en": [
-            "901",
-            "891",
-            "906",
-            "911"
-        ],
-        "options_hi": [
-            "901",
-            "891",
-            "906",
-            "911"
-        ],
-        "answer_en": "901",
-        "answer_hi": "901",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 21,
-        "question_en": "What is 53 × 15?",
-        "question_hi": "53 × 15 कितना होगा?",
-        "options_en": [
-            "805",
-            "795",
-            "800",
-            "785"
-        ],
-        "options_hi": [
-            "805",
-            "795",
-            "800",
-            "785"
-        ],
-        "answer_en": "795",
-        "answer_hi": "795",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 22,
-        "question_en": "What is 47 × 11?",
-        "question_hi": "47 × 11 कितना होगा?",
-        "options_en": [
-            "517",
-            "522",
-            "527",
-            "507"
-        ],
-        "options_hi": [
-            "517",
-            "522",
-            "527",
-            "507"
-        ],
-        "answer_en": "517",
-        "answer_hi": "517",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 23,
-        "question_en": "What is 52 × 18?",
-        "question_hi": "52 × 18 कितना होगा?",
-        "options_en": [
-            "936",
-            "946",
-            "941",
-            "926"
-        ],
-        "options_hi": [
-            "936",
-            "946",
-            "941",
-            "926"
-        ],
-        "answer_en": "936",
-        "answer_hi": "936",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 24,
-        "question_en": "What is 36 × 17?",
-        "question_hi": "36 × 17 कितना होगा?",
-        "options_en": [
-            "602",
-            "617",
-            "622",
-            "612"
-        ],
-        "options_hi": [
-            "602",
-            "617",
-            "622",
-            "612"
-        ],
-        "answer_en": "612",
-        "answer_hi": "612",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 25,
-        "question_en": "What is 50 × 11?",
-        "question_hi": "50 × 11 कितना होगा?",
-        "options_en": [
-            "555",
-            "550",
-            "540",
-            "560"
-        ],
-        "options_hi": [
-            "555",
-            "550",
-            "540",
-            "560"
-        ],
-        "answer_en": "550",
-        "answer_hi": "550",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 26,
-        "question_en": "What is 15 × 14?",
-        "question_hi": "15 × 14 कितना होगा?",
-        "options_en": [
-            "220",
-            "210",
-            "200",
-            "215"
-        ],
-        "options_hi": [
-            "220",
-            "210",
-            "200",
-            "215"
-        ],
-        "answer_en": "210",
-        "answer_hi": "210",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 27,
-        "question_en": "What is 61 × 11?",
-        "question_hi": "61 × 11 कितना होगा?",
-        "options_en": [
-            "681",
-            "661",
-            "676",
-            "671"
-        ],
-        "options_hi": [
-            "681",
-            "661",
-            "676",
-            "671"
-        ],
-        "answer_en": "671",
-        "answer_hi": "671",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 28,
-        "question_en": "What is 34 × 17?",
-        "question_hi": "34 × 17 कितना होगा?",
-        "options_en": [
-            "583",
-            "588",
-            "568",
-            "578"
-        ],
-        "options_hi": [
-            "583",
-            "588",
-            "568",
-            "578"
-        ],
-        "answer_en": "578",
-        "answer_hi": "578",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 29,
-        "question_en": "What is 88 × 6?",
-        "question_hi": "88 × 6 कितना होगा?",
-        "options_en": [
-            "538",
-            "518",
-            "533",
-            "528"
-        ],
-        "options_hi": [
-            "538",
-            "518",
-            "533",
-            "528"
-        ],
-        "answer_en": "528",
-        "answer_hi": "528",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 30,
-        "question_en": "What is 95 × 16?",
-        "question_hi": "95 × 16 कितना होगा?",
-        "options_en": [
-            "1525",
-            "1510",
-            "1520",
-            "1530"
-        ],
-        "options_hi": [
-            "1525",
-            "1510",
-            "1520",
-            "1530"
-        ],
-        "answer_en": "1520",
-        "answer_hi": "1520",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 31,
-        "question_en": "What is 14 × 15?",
-        "question_hi": "14 × 15 कितना होगा?",
-        "options_en": [
-            "220",
-            "215",
-            "200",
-            "210"
-        ],
-        "options_hi": [
-            "220",
-            "215",
-            "200",
-            "210"
-        ],
-        "answer_en": "210",
-        "answer_hi": "210",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 32,
-        "question_en": "What is 57 × 6?",
-        "question_hi": "57 × 6 कितना होगा?",
-        "options_en": [
-            "342",
-            "352",
-            "347",
-            "332"
-        ],
-        "options_hi": [
-            "342",
-            "352",
-            "347",
-            "332"
-        ],
-        "answer_en": "342",
-        "answer_hi": "342",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 33,
-        "question_en": "What is 48 × 7?",
-        "question_hi": "48 × 7 कितना होगा?",
-        "options_en": [
-            "326",
-            "346",
-            "336",
-            "341"
-        ],
-        "options_hi": [
-            "326",
-            "346",
-            "336",
-            "341"
-        ],
-        "answer_en": "336",
-        "answer_hi": "336",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 34,
-        "question_en": "What is 12 × 15?",
-        "question_hi": "12 × 15 कितना होगा?",
-        "options_en": [
-            "170",
-            "185",
-            "190",
-            "180"
-        ],
-        "options_hi": [
-            "170",
-            "185",
-            "190",
-            "180"
-        ],
-        "answer_en": "180",
-        "answer_hi": "180",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 35,
-        "question_en": "What is 25 × 15?",
-        "question_hi": "25 × 15 कितना होगा?",
-        "options_en": [
-            "365",
-            "375",
-            "385",
-            "380"
-        ],
-        "options_hi": [
-            "365",
-            "375",
-            "385",
-            "380"
-        ],
-        "answer_en": "375",
-        "answer_hi": "375",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 36,
-        "question_en": "What is 11 × 14?",
-        "question_hi": "11 × 14 कितना होगा?",
-        "options_en": [
-            "154",
-            "144",
-            "159",
-            "164"
-        ],
-        "options_hi": [
-            "154",
-            "144",
-            "159",
-            "164"
-        ],
-        "answer_en": "154",
-        "answer_hi": "154",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 37,
-        "question_en": "What is 80 × 5?",
-        "question_hi": "80 × 5 कितना होगा?",
-        "options_en": [
-            "405",
-            "410",
-            "390",
-            "400"
-        ],
-        "options_hi": [
-            "405",
-            "410",
-            "390",
-            "400"
-        ],
-        "answer_en": "400",
-        "answer_hi": "400",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 38,
-        "question_en": "What is 37 × 6?",
-        "question_hi": "37 × 6 कितना होगा?",
-        "options_en": [
-            "212",
-            "227",
-            "232",
-            "222"
-        ],
-        "options_hi": [
-            "212",
-            "227",
-            "232",
-            "222"
-        ],
-        "answer_en": "222",
-        "answer_hi": "222",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 39,
-        "question_en": "What is 11 × 5?",
-        "question_hi": "11 × 5 कितना होगा?",
-        "options_en": [
-            "65",
-            "45",
-            "60",
-            "55"
-        ],
-        "options_hi": [
-            "65",
-            "45",
-            "60",
-            "55"
-        ],
-        "answer_en": "55",
-        "answer_hi": "55",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-      "num": 40,
-        "question_en": "What is 26 × 17?",
-        "question_hi": "26 × 17 कितना होगा?",
-        "options_en": [
-            "432",
-            "447",
-            "452",
-            "442"
-        ],
-        "options_hi": [
-            "432",
-            "447",
-            "452",
-            "442"
-        ],
-        "answer_en": "442",
-        "answer_hi": "442",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 41,
-        "question_en": "What is 67 × 7?",
-        "question_hi": "67 × 7 कितना होगा?",
-        "options_en": [
-            "459",
-            "474",
-            "479",
-            "469"
-        ],
-        "options_hi": [
-            "459",
-            "474",
-            "479",
-            "469"
-        ],
-        "answer_en": "469",
-        "answer_hi": "469",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 42,
-        "question_en": "What is 20 × 11?",
-        "question_hi": "20 × 11 कितना होगा?",
-        "options_en": [
-            "220",
-            "210",
-            "230",
-            "225"
-        ],
-        "options_hi": [
-            "220",
-            "210",
-            "230",
-            "225"
-        ],
-        "answer_en": "220",
-        "answer_hi": "220",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 43,
-        "question_en": "What is 16 × 3?",
-        "question_hi": "16 × 3 कितना होगा?",
-        "options_en": [
-            "58",
-            "38",
-            "53",
-            "48"
-        ],
-        "options_hi": [
-            "58",
-            "38",
-            "53",
-            "48"
-        ],
-        "answer_en": "48",
-        "answer_hi": "48",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 44,
-        "question_en": "What is 93 × 4?",
-        "question_hi": "93 × 4 कितना होगा?",
-        "options_en": [
-            "372",
-            "362",
-            "382",
-            "377"
-        ],
-        "options_hi": [
-            "372",
-            "362",
-            "382",
-            "377"
-        ],
-        "answer_en": "372",
-        "answer_hi": "372",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 45,
-        "question_en": "What is 86 × 7?",
-        "question_hi": "86 × 7 कितना होगा?",
-        "options_en": [
-            "612",
-            "602",
-            "592",
-            "607"
-        ],
-        "options_hi": [
-            "612",
-            "602",
-            "592",
-            "607"
-        ],
-        "answer_en": "602",
-        "answer_hi": "602",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 46,
-        "question_en": "What is 50 × 13?",
-        "question_hi": "50 × 13 कितना होगा?",
-        "options_en": [
-            "640",
-            "650",
-            "660",
-            "655"
-        ],
-        "options_hi": [
-            "640",
-            "650",
-            "660",
-            "655"
-        ],
-        "answer_en": "650",
-        "answer_hi": "650",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 47,
-        "question_en": "What is 28 × 5?",
-        "question_hi": "28 × 5 कितना होगा?",
-        "options_en": [
-            "150",
-            "140",
-            "145",
-            "130"
-        ],
-        "options_hi": [
-            "150",
-            "140",
-            "145",
-            "130"
-        ],
-        "answer_en": "140",
-        "answer_hi": "140",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 48,
-        "question_en": "What is 90 × 15?",
-        "question_hi": "90 × 15 कितना होगा?",
-        "options_en": [
-            "1350",
-            "1340",
-            "1360",
-            "1355"
-        ],
-        "options_hi": [
-            "1350",
-            "1340",
-            "1360",
-            "1355"
-        ],
-        "answer_en": "1350",
-        "answer_hi": "1350",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 49,
-        "question_en": "What is 44 × 20?",
-        "question_hi": "44 × 20 कितना होगा?",
-        "options_en": [
-            "880",
-            "885",
-            "890",
-            "870"
-        ],
-        "options_hi": [
-            "880",
-            "885",
-            "890",
-            "870"
-        ],
-        "answer_en": "880",
-        "answer_hi": "880",
-        "attempted": false,
-        "selected": ""
-    },
-    {
-       "num": 50,
-        "question_en": "What is 17 × 12?",
-        "question_hi": "17 × 12 कितना होगा?",
-        "options_en": [
-            "194",
-            "214",
-            "209",
-            "204"
-        ],
-        "options_hi": [
-            "194",
-            "214",
-            "209",
-            "204"
-        ],
-        "answer_en": "204",
-        "answer_hi": "204",
-        "attempted": false,
-        "selected": ""
-    }
-];
+    "num":31,
+    "question_en": "Which Indian city hosted the 2025 International Film Festival?",
+    "question_hi": "2025 में अंतरराष्ट्रीय फिल्म फेस्टिवल की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Mumbai", "Goa", "Kolkata", "New Delhi"],
+    "options_hi": ["मुंबई", "गोवा", "कोलकाता", "नई दिल्ली"],
+    "answer_en": "Goa",
+    "answer_hi": "गोवा",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":32,
+    "question_en": "Which Indian state launched the 'Smart Agriculture Mission' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट एग्रीकल्चर मिशन' शुरू किया?",
+    "options_en": ["Punjab", "Haryana", "Maharashtra", "Karnataka"],
+    "options_hi": ["पंजाब", "हरियाणा", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Punjab",
+    "answer_hi": "पंजाब",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":33,
+    "question_en": "Which Indian athlete won gold at the 2025 World Taekwondo Championship?",
+    "question_hi": "2025 में विश्व तायक्वोंडो चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Nishant Dev", "Avani Lekhara", "Arjun Lal Jat", "Jyoti"],
+    "options_hi": ["निशांत देव", "अवनि लेखरा", "अर्जुन लाल जाट", "ज्योति"],
+    "answer_en": "Nishant Dev",
+    "answer_hi": "निशांत देव",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":34,
+    "question_en": "Which Indian city became the first 'Smart Education City' in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर पहला 'स्मार्ट एजुकेशन सिटी' बना?",
+    "options_en": ["Bengaluru", "Hyderabad", "Pune", "Ahmedabad"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "पुणे", "अहमदाबाद"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":35,
+    "question_en": "Which Indian institute launched the National AI Research Center in 2025?",
+    "question_hi": "2025 में किस भारतीय संस्थान ने राष्ट्रीय AI रिसर्च सेंटर लॉन्च किया?",
+    "options_en": ["IIT Delhi", "IISc Bangalore", "IIT Bombay", "IIT Madras"],
+    "options_hi": ["आईआईटी दिल्ली", "आईआईएससी बैंगलोर", "आईआईटी बॉम्बे", "आईआईटी मद्रास"],
+    "answer_en": "IISc Bangalore",
+    "answer_hi": "आईआईएससी बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":36,
+    "question_en": "Which Indian state achieved 100% LED street lighting in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 100% LED स्ट्रीट लाइटिंग हासिल की?",
+    "options_en": ["Gujarat", "Rajasthan", "Maharashtra", "Karnataka"],
+    "options_hi": ["गुजरात", "राजस्थान", "महाराष्ट्र", "कर्नाटक"],
+    "answer_en": "Gujarat",
+    "answer_hi": "गुजरात",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":37,
+    "question_en": "Which Indian city hosted the 2025 International Startup Festival?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्टार्टअप फेस्टिवल की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["Bengaluru", "Hyderabad", "Mumbai", "Pune"],
+    "options_hi": ["बैंगलोर", "हैदराबाद", "मुंबई", "पुणे"],
+    "answer_en": "Bengaluru",
+    "answer_hi": "बैंगलोर",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":38,
+    "question_en": "Which Indian bank launched 'Green Loans' for sustainable projects in 2025?",
+    "question_hi": "2025 में किस भारतीय बैंक ने सतत परियोजनाओं के लिए 'ग्रीन लोन' लॉन्च किया?",
+    "options_en": ["SBI", "HDFC Bank", "ICICI Bank", "Axis Bank"],
+    "options_hi": ["एसबीआई", "एचडीएफसी बैंक", "आईसीआईसीआई बैंक", "एक्सिस बैंक"],
+    "answer_en": "HDFC Bank",
+    "answer_hi": "एचडीएफसी बैंक",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":39,
+    "question_en": "Which Indian city implemented drone-based delivery of medicines in 2025?",
+    "question_hi": "2025 में किस भारतीय शहर ने दवाओं की ड्रोन-आधारित डिलीवरी लागू की?",
+    "options_en": ["Hyderabad", "Ahmedabad", "Pune", "Bengaluru"],
+    "options_hi": ["हैदराबाद", "अहमदाबाद", "पुणे", "बैंगलोर"],
+    "answer_en": "Hyderabad",
+    "answer_hi": "हैदराबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":40,
+    "question_en": "Which Indian state launched 'Women Digital Entrepreneurs Scheme' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'महिला डिजिटल उद्यमी योजना' शुरू की?",
+    "options_en": ["Telangana", "Kerala", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "केरल", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":41,
+    "question_en": "Which Indian city hosted the 2025 International Health Conference?",
+    "question_hi": "2025 में अंतरराष्ट्रीय स्वास्थ्य सम्मेलन की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":42,
+    "question_en": "Which Indian athlete won gold at the 2025 World Shooting Championship?",
+    "question_hi": "2025 में विश्व शूटिंग चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Saurabh Chaudhary", "Elavenil Valarivan", "Apurvi Chandela", "Divyansh Singh Panwar"],
+    "options_hi": ["सौरभ चौधरी", "एलेवेनिल वालारिवन", "अपुर्वी चंदेला", "दिव्यांश सिंह पंवार"],
+    "answer_en": "Saurabh Chaudhary",
+    "answer_hi": "सौरभ चौधरी",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":43,
+    "question_en": "Which Indian state launched 'Smart Villages Initiative' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'स्मार्ट विलेजेस इनिशिएटिव' शुरू की?",
+    "options_en": ["Maharashtra", "Rajasthan", "Karnataka", "Gujarat"],
+    "options_hi": ["महाराष्ट्र", "राजस्थान", "कर्नाटक", "गुजरात"],
+    "answer_en": "Rajasthan",
+    "answer_hi": "राजस्थान",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":44,
+    "question_en": "Which Indian city became the first to implement blockchain-based education records in 2025?",
+    "question_hi": "2025 में कौन सा भारतीय शहर शिक्षा रिकॉर्ड के लिए ब्लॉकचेन लागू करने वाला पहला शहर बना?",
+    "options_en": ["Ahmedabad", "Bengaluru", "Hyderabad", "Pune"],
+    "options_hi": ["अहमदाबाद", "बैंगलोर", "हैदराबाद", "पुणे"],
+    "answer_en": "Ahmedabad",
+    "answer_hi": "अहमदाबाद",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":45,
+    "question_en": "Which Indian tech company developed the first AI-powered climate prediction system in 2025?",
+    "question_hi": "2025 में किस भारतीय टेक कंपनी ने पहला AI-आधारित जलवायु पूर्वानुमान सिस्टम विकसित किया?",
+    "options_en": ["TCS", "Infosys", "Wipro", "HCL"],
+    "options_hi": ["टाटा कंसल्टेंसी सर्विसेज", "इंफोसिस", "विप्रो", "एचसीएल"],
+    "answer_en": "TCS",
+    "answer_hi": "टाटा कंसल्टेंसी सर्विसेज",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":46,
+    "question_en": "Which Indian city hosted the 2025 Global Smart Cities Expo?",
+    "question_hi": "2025 में ग्लोबल स्मार्ट सिटीज़ एक्सपो की मेजबानी किस भारतीय शहर ने की?",
+    "options_en": ["New Delhi", "Bengaluru", "Ahmedabad", "Hyderabad"],
+    "options_hi": ["नई दिल्ली", "बैंगलोर", "अहमदाबाद", "हैदराबाद"],
+    "answer_en": "New Delhi",
+    "answer_hi": "नई दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":47,
+    "question_en": "Which Indian state launched 'Digital Healthcare for All' program in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'सभी के लिए डिजिटल हेल्थकेयर' कार्यक्रम शुरू किया?",
+    "options_en": ["Kerala", "Karnataka", "Telangana", "Maharashtra"],
+    "options_hi": ["केरल", "कर्नाटक", "तेलंगाना", "महाराष्ट्र"],
+    "answer_en": "Kerala",
+    "answer_hi": "केरल",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":48,
+    "question_en": "Which Indian athlete won gold at the 2025 World Weightlifting Championship?",
+    "question_hi": "2025 में विश्व भारोत्तोलन चैंपियनशिप में स्वर्ण पदक किस भारतीय एथलीट ने जीता?",
+    "options_en": ["Mirabai Chanu", "Sukhen Dey", "Vikas Thakur", "Sandeep Singh"],
+    "options_hi": ["मीराबाई चानू", "सुखेन देय", "विकास ठाकुर", "संदीप सिंह"],
+    "answer_en": "Mirabai Chanu",
+    "answer_hi": "मीराबाई चानू",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":49,
+    "question_en": "Which Indian city implemented AI-based traffic surveillance system in 2025?",
+    "question_hi": "2025 में किस भारतीय शहर ने AI-आधारित ट्रैफिक निगरानी प्रणाली लागू की?",
+    "options_en": ["Delhi", "Mumbai", "Bengaluru", "Hyderabad"],
+    "options_hi": ["दिल्ली", "मुंबई", "बैंगलोर", "हैदराबाद"],
+    "answer_en": "Delhi",
+    "answer_hi": "दिल्ली",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num":50,
+    "question_en": "Which Indian state launched 'National AI Innovation Hub' in 2025?",
+    "question_hi": "2025 में किस भारतीय राज्य ने 'राष्ट्रीय AI इनोवेशन हब' शुरू किया?",
+    "options_en": ["Telangana", "Karnataka", "Maharashtra", "Gujarat"],
+    "options_hi": ["तेलंगाना", "कर्नाटक", "महाराष्ट्र", "गुजरात"],
+    "answer_en": "Telangana",
+    "answer_hi": "तेलंगाना",
+    "attempted": false,
+    "selected": ""
+  }
+]
+
 
 // --------------------------- GLOBAL VARS -----------------------------
 // --------------------------- GLOBAL VARS -----------------------------

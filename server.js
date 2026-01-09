@@ -357,10 +357,20 @@ const configureRoutes = () => {
 // ========== CONFIGURE THE APPLICATION ==========
 configureMiddleware();
 configureViews();
+
+// ======= RTS AUTH ROUTES (MUST BE BEFORE 404) =======
+const signupRoutes = require("./RTS/routes/signupRoutes");
+const loginRoutes  = require("./RTS/routes/loginRoutes");
+const forgotPasswordRoutes = require("./RTS/routes/forgotPasswordRoutes");
+app.use("/api", signupRoutes);
+app.use("/api", loginRoutes);
+app.use("/api", forgotPasswordRoutes);
+
+
+// ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
 
 // ========== START SERVER ==========
 app.listen(port, () => {
   console.log(`\n✅ Server is running on http://localhost:${port}`);
-  
 });

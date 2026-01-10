@@ -46,10 +46,11 @@
             </div>
             <div class="menu" id="innerCont">
                 <div class="upperNav">
-                    <button class="nav-button" id="onlineTest1"> 
-                        <i class="fa-brands fa-servicestack"></i>
-                        RTS Online
-                    </button>
+                  <a href="/rts/Authentication/Signup.html" class="nav-button" id="onlineTest1">
+  <i class="fa-brands fa-servicestack"></i>
+  RTS Online
+</a>
+
 
                     <button class="nav-button" id="ebookBtn">
                         <i class="fa-solid fa-book"></i>
@@ -600,6 +601,19 @@
     
     // Initialize when page loads
     document.addEventListener('DOMContentLoaded', initializeRatingData);
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const rtsBtn = document.getElementById("onlineTest1");
+
+    if (rtsBtn) {
+      rtsBtn.addEventListener("click", function () {
+        window.location.href = "/rts/Authentication/Signup.html";
+      });
+    } else {
+      console.error("RTS Online button not found");
+    }
+  });
   </script>
 
   <script src="js/main.js"></script>

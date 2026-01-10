@@ -149,7 +149,7 @@
       <div class="nav-menu" id="navMenu">
         <!-- Search Box -->
         <div class="search-box">
-          <input type="text" placeholder="Search test series" id="searchInput">
+          <input type="text" placeholder="Search Technical Subject For Test" id="searchInput">
           <i class="fas fa-search"></i>
         </div>
 
@@ -601,83 +601,116 @@
 
   <!-- JavaScript Files -->
   <script>
-    // ==================== CONFIGURATION ====================
-    const API_BASE_URL = "http://localhost:9191/api/course";
+        /* ==================== CONFIG ==================== */
+const API_BASE_URL = "http://localhost:9191/api/course";
 
-    // ==================== VISIT COUNT SYSTEM ====================
-    // Load all visit counts on page load
-    document.addEventListener('DOMContentLoaded', function () {
-      loadAllVisitCounts();
-      
-      // Set up periodic refresh (every 30 seconds)
-      setInterval(loadAllVisitCounts, 30000);
-      
-      // Setup click tracking for all "More Details" buttons
-      setupVisitTracking();
-      
-      // Setup other event listeners
-      setupEventListeners();
+/* ==================== VISIT COUNT ==================== */
+
+// Load all visit counts from DATABASE
+async function loadAllVisitCounts() {
+  try {
+    const response = await fetch(`${API_BASE_URL}/visits`);
+    if (!response.ok) throw new Error("Failed to fetch visit counts");
+
+    const data = await response.json();
+
+    data.forEach(course => {
+      updateCount(course.courseId, course.visitCount);
     });
 
-    // Load visit counts from API
-    async function loadAllVisitCounts() {
-      try {
-        const response = await fetch(`${API_BASE_URL}/visits`);
-        if (!response.ok) throw new Error('Failed to fetch visit counts');
-        
-        const data = await response.json();
-        console.log('Loaded technical course visit counts:', data);
-        
-        // Update each course card with its visit count
-        data.forEach(course => {
-          updateCount(course.courseId, course.visitCount);
-        });
-      } catch (error) {
-        console.error('Error loading visit counts:', error);
-        // Fallback: Load from localStorage if available
-        loadFromLocalStorage();
-      }
-    }
+  } catch (error) {
+    console.error("❌ Error loading visit counts:", error);
+  }
+}
 
-    // Update UI with count for a specific course
-    function updateCount(courseId, newCount) {
-      const card = document.querySelector(`.course-card[data-course-id="${courseId}"]`);
-      if (!card) return;
-      
-      const countElement = card.querySelector('.visit-count .count');
-      if (!countElement) return;
-      
-      const oldCount = parseInt(countElement.textContent) || 0;
-      countElement.textContent = newCount;
-      
-      // Add animation if count increased
-      if (newCount > oldCount) {
-        countElement.classList.add('updated');
-        setTimeout(() => countElement.classList.remove('updated'), 800);
-      }
-      
-      // Save to localStorage
-      saveToLocalStorage(courseId, newCount);
-    }
+// Update count on UI
+function updateCount(courseId, newCount) {
+  const card = document.querySelector(
+    `.course-card[data-course-id="${courseId}"]`
+  );
+  if (!card) return;
 
-    // Setup click tracking for all course buttons
-    function setupVisitTracking() {
-      document.querySelectorAll(".track-visit").forEach(btn => {
-        btn.addEventListener("click", function(e) {
-          e.preventDefault();
-          
-          const card = this.closest(".course-card");
-          const courseId = card.dataset.courseId;
-          const courseName = card.dataset.courseName;
-          const href = this.getAttribute("href");
-          
-          // Track visit and then navigate
-          trackVisit(courseId, courseName).finally(() => {
-            window.location.href = href;
-          });
+  const countElement = card.querySelector(".visit-count .count");
+  if (!countElement) return;
+
+  const oldCount = parseInt(countElement.innerText) || 0;
+  countElement.innerText = newCount;
+
+  // Animation if count increased
+  if (newCount > oldCount) {
+    countElement.classList.add("updated");
+    setTimeout(() => {
+      countElement.classList.remove("updated");
+    }, 1000);
+  }
+}
+
+// Track visit on button click (DATABASE increment)
+async function trackVisit(courseId, courseName) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/visit`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ courseId, courseName })
+    });
+
+    if (!response.ok) throw new Error("Visit API failed");
+
+    const data = await response.json();
+    updateCount(courseId, data.visitCount);
+
+  } catch (error) {
+    console.error("❌ Error tracking visit:", error);
+  }
+}
+
+/* ==================== BADGE INIT ==================== */
+
+function initializeBadges() {
+  document.querySelectorAll(".course-card").forEach(card => {
+    const visitBox = card.querySelector(".visit-count");
+    if (!visitBox) return;
+
+    const oldBadge = visitBox.querySelector(
+      ".update-badge, .new-badge, .hot-badge"
+    );
+    if (oldBadge) oldBadge.remove();
+
+    const badge = document.createElement("span");
+    badge.className = "update-badge";
+    badge.innerText = "Updated";
+
+    visitBox.prepend(badge);
+  });
+}
+
+/* ==================== DOM READY ==================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  initializeBadges();
+  loadAllVisitCounts();
+
+  // Auto refresh visit count every 30 sec
+  setInterval(loadAllVisitCounts, 30000);
+
+  // Track visit on "Open Now"
+  document.querySelectorAll(".track-visit").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const card = this.closest(".course-card");
+      const courseId = card.dataset.courseId;
+      const courseName = card.dataset.courseName;
+      const redirectUrl = this.getAttribute("href");
+
+      trackVisit(courseId, courseName)
+        .finally(() => {
+          window.location.href = redirectUrl;
         });
-      });
-    }
+    });
+  });
+})
 
     // Track visit to API
     async function trackVisit(courseId, courseName) {
@@ -817,5 +850,9 @@
       }
     }
   </script>
+
+
+
+
 </body>
 </html>

@@ -156,7 +156,7 @@ app.use('/ebook', require('./routes/authebookRoutes'));
 // ========== WORKSHOP ROUTES (MOVE HERE) ==========
 const workshopRoutes = require('./routes/workshopRoutes');
 app.use('/api/workshop', workshopRoutes);
-
+app.use("/api/course", require("./RTS/routes/courseRoutes.js"));
 // ========== MAIN APPLICATION ROUTES ==========
 const configureRoutes = () => {
   // API Routes

@@ -196,7 +196,7 @@
       <div class="nav-menu" id="navMenu">
         <!-- Search Box -->
         <div class="search-box">
-          <input type="text" placeholder="Search test series" id="searchInput">
+          <input type="text" placeholder="Search Test Type (Eg:10th, 12th, RRB, NEET....)" id="searchInput">
           <i class="fas fa-search"></i>
         </div>
 
@@ -213,7 +213,7 @@
         <ul class="mobile-nav" id="mobileNav">
           <!-- Mobile Search Box -->
           <div class="mobile-search-box">
-            <input type="text" placeholder="Search test series " id="mobileSearchInput">
+            <input type="text" placeholder="Search Test Type (Eg:10th, 12th, RRB, NEET....)" id="mobileSearchInput">
             <i class="fas fa-search"></i>
           </div>
 
@@ -599,166 +599,117 @@
 
   <!-- JavaScript Files -->
   <script>
-    // ==================== CONFIGURATION ====================
-    const API_BASE_URL = "http://localhost:9191/api/course";
+    /* ==================== CONFIG ==================== */
+const API_BASE_URL = "http://localhost:9191/api/course";
 
-    // ==================== VISIT COUNT SYSTEM ====================
-    async function loadAllVisitCounts() {
-      try {
-        const response = await fetch(`${API_BASE_URL}/visits`);
-        if (!response.ok) throw new Error('Failed to fetch visit counts');
-        
-        const data = await response.json();
-        console.log('Loaded visit counts:', data);
-        
-        data.forEach(course => {
-          updateCount(course.courseId, course.visitCount);
+/* ==================== VISIT COUNT ==================== */
+
+// Load all visit counts from DATABASE
+async function loadAllVisitCounts() {
+  try {
+    const response = await fetch(`${API_BASE_URL}/visits`);
+    if (!response.ok) throw new Error("Failed to fetch visit counts");
+
+    const data = await response.json();
+
+    data.forEach(course => {
+      updateCount(course.courseId, course.visitCount);
+    });
+
+  } catch (error) {
+    console.error("❌ Error loading visit counts:", error);
+  }
+}
+
+// Update count on UI
+function updateCount(courseId, newCount) {
+  const card = document.querySelector(
+    `.course-card[data-course-id="${courseId}"]`
+  );
+  if (!card) return;
+
+  const countElement = card.querySelector(".visit-count .count");
+  if (!countElement) return;
+
+  const oldCount = parseInt(countElement.innerText) || 0;
+  countElement.innerText = newCount;
+
+  // Animation if count increased
+  if (newCount > oldCount) {
+    countElement.classList.add("updated");
+    setTimeout(() => {
+      countElement.classList.remove("updated");
+    }, 1000);
+  }
+}
+
+// Track visit on button click (DATABASE increment)
+async function trackVisit(courseId, courseName) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/visit`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ courseId, courseName })
+    });
+
+    if (!response.ok) throw new Error("Visit API failed");
+
+    const data = await response.json();
+    updateCount(courseId, data.visitCount);
+
+  } catch (error) {
+    console.error("❌ Error tracking visit:", error);
+  }
+}
+
+/* ==================== BADGE INIT ==================== */
+
+function initializeBadges() {
+  document.querySelectorAll(".course-card").forEach(card => {
+    const visitBox = card.querySelector(".visit-count");
+    if (!visitBox) return;
+
+    const oldBadge = visitBox.querySelector(
+      ".update-badge, .new-badge, .hot-badge"
+    );
+    if (oldBadge) oldBadge.remove();
+
+    const badge = document.createElement("span");
+    badge.className = "update-badge";
+    badge.innerText = "Updated";
+
+    visitBox.prepend(badge);
+  });
+}
+
+/* ==================== DOM READY ==================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  initializeBadges();
+  loadAllVisitCounts();
+
+  // Auto refresh visit count every 30 sec
+  setInterval(loadAllVisitCounts, 30000);
+
+  // Track visit on "Open Now"
+  document.querySelectorAll(".track-visit").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const card = this.closest(".course-card");
+      const courseId = card.dataset.courseId;
+      const courseName = card.dataset.courseName;
+      const redirectUrl = this.getAttribute("href");
+
+      trackVisit(courseId, courseName)
+        .finally(() => {
+          window.location.href = redirectUrl;
         });
-      } catch (error) {
-        console.error('Error loading visit counts:', error);
-        loadFromLocalStorage();
-      }
-    }
+    });
+  });
 
-    function updateCount(courseId, newCount) {
-      const card = document.querySelector(`.course-card[data-course-id="${courseId}"]`);
-      if (!card) return;
-      
-      const countElement = card.querySelector('.visit-count .count');
-      if (!countElement) return;
-      
-      const oldCount = parseInt(countElement.textContent) || 0;
-      countElement.textContent = newCount;
-      
-      if (newCount > oldCount) {
-        countElement.classList.add('updated');
-        setTimeout(() => countElement.classList.remove('updated'), 1000);
-      }
-      
-      saveToLocalStorage(courseId, newCount);
-    }
 
-    async function trackVisit(courseId, courseName) {
-      try {
-        console.log('Tracking visit for:', courseId, courseName);
-        
-        const response = await fetch(`${API_BASE_URL}/visit`, {
-          method: "POST",
-          headers: { 
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ 
-            courseId: courseId, 
-            courseName: courseName
-          })
-        });
-        
-        if (!response.ok) throw new Error('Failed to track visit');
-        
-        const data = await response.json();
-        console.log('Visit tracked:', data);
-        
-        if (data.visitCount !== undefined) {
-          updateCount(courseId, data.visitCount);
-        }
-        
-      } catch (error) {
-        console.error('Error tracking visit:', error);
-        incrementLocalCount(courseId);
-      }
-    }
-
-    // ==================== LOCAL STORAGE HELPERS ====================
-    function saveToLocalStorage(courseId, count) {
-      const counts = JSON.parse(localStorage.getItem('visitCounts') || '{}');
-      counts[courseId] = count;
-      localStorage.setItem('visitCounts', JSON.stringify(counts));
-    }
-
-    function loadFromLocalStorage() {
-      const counts = JSON.parse(localStorage.getItem('visitCounts') || '{}');
-      Object.keys(counts).forEach(courseId => {
-        updateCount(courseId, counts[courseId]);
-      });
-    }
-
-    function incrementLocalCount(courseId) {
-      const counts = JSON.parse(localStorage.getItem('visitCounts') || '{}');
-      const currentCount = counts[courseId] || 0;
-      counts[courseId] = currentCount + 1;
-      localStorage.setItem('visitCounts', JSON.stringify(counts));
-      updateCount(courseId, counts[courseId]);
-    }
-
-    // ==================== BADGE MANAGEMENT SYSTEM ====================
-    function initializeBadges() {
-      const badgeConfig = {
-        'technical_coding': 'Updated',
-        '10th_bihar': 'Updated',
-        '12th_bihar': 'Updated',
-        'jee': 'Updated',
-        'neet': 'Updated',
-        'ssc': 'Updated',
-        'mppsc': 'Updated',
-        'railway': 'Updated',
-        '10th_cbse': 'Updated',
-        '12th_cbse': 'Updated'
-      };
-
-      document.querySelectorAll('.course-card').forEach(card => {
-        const courseId = card.dataset.courseId;
-        const badgeType = badgeConfig[courseId];
-        
-        const visitCount = card.querySelector('.visit-count');
-        const oldBadge = visitCount.querySelector('.update-badge, .new-badge, .hot-badge');
-        if (oldBadge) oldBadge.remove();
-        
-        let badgeElement = null;
-        switch(badgeType) {
-          case 'Updated':
-            badgeElement = document.createElement('span');
-            badgeElement.className = 'update-badge';
-            badgeElement.textContent = 'Update';
-            break;
-          case 'Updated':
-            badgeElement = document.createElement('span');
-            badgeElement.className = 'new-badge';
-            badgeElement.textContent = 'New';
-            break;
-          case 'Updated':
-            badgeElement = document.createElement('span');
-            badgeElement.className = 'hot-badge';
-            badgeElement.textContent = 'Hot';
-            break;
-        }
-        
-        if (badgeElement) {
-          visitCount.insertBefore(badgeElement, visitCount.firstChild);
-        }
-      });
-    }
-
-    // ==================== MAIN INITIALIZATION ====================
-    document.addEventListener('DOMContentLoaded', function () {
-      initializeBadges();
-      loadAllVisitCounts();
-      setInterval(loadAllVisitCounts, 30000);
-
-      // Track visit on button click
-      document.querySelectorAll(".track-visit").forEach(btn => {
-        btn.addEventListener("click", function(e) {
-          e.preventDefault();
-          
-          const card = this.closest(".course-card");
-          const courseId = card.dataset.courseId;
-          const courseName = card.dataset.courseName;
-          const href = this.getAttribute("href");
-          
-          trackVisit(courseId, courseName).finally(() => {
-            window.location.href = href;
-          });
-        });
-      });
 
       // ==================== BANNER FUNCTIONALITY ====================
       const bannerTrack = document.querySelector('.banner-track');

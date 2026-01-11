@@ -1,0 +1,2594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTeach Pro - Complete Teacher Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <link rel="stylesheet" href="css/teacherDeshboard.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" id="toggleSidebar">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMobileSidebar()">☰</button>
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap fa-2x"></i>
+                <h2>Teacher / Faculty.</h2>
+            </div>
+            <p class="logo-text">My Dashboard</p>
+        </div>
+
+        <div class="user-profile">
+            <div class="user-avatar">
+                <%= teacher.name.split(' ').map(n=>n[0]).join('') %>
+            </div>
+                 <h4><%= teacher.name %></h4>
+                <p><%= teacher.subject %> Teacher</p>
+
+        </div>
+        
+        <div class="nav-menu">
+            <a class="nav-item active" data-page="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a class="nav-item" data-page="tests">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Tests & Assignments</span>
+            </a>
+            <a class="nav-item" data-page="students">
+                <i class="fas fa-users"></i>
+                <span>Students</span>
+            </a>
+            <a class="nav-item" data-page="messages">
+                <i class="fas fa-comments"></i>
+                <span>Messages</span>
+                <span class="message-badge" id="unreadMessagesCount">3</span>
+            </a>
+            <a class="nav-item" data-page="analytics">
+                <i class="fas fa-chart-bar"></i>
+                <span>Analytics</span>
+            </a>
+            <a class="nav-item" data-page="calendar">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Calendar</span>
+            </a>
+            <a class="nav-item" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="page-title" id="pageTitle">My Dashboard</h1>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <!-- Chrome Autofill Trap -->
+<input type="text" name="fakeusernameremembered" style="display:none">
+<input type="password" name="fakepasswordremembered" style="display:none">
+
+                    <input type="text" id="globalSearch" placeholder="Search..." autocomplete="off"name="dashboard-search"/>
+
+                </div>
+                <button class="btn btn-primary" id="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <button class="btn btn-outline" id="helpBtn">
+                    <i class="fas fa-question-circle"></i>
+                    Help
+                </button>
+            </div>
+        </div>
+        
+        <!-- Dashboard Page -->
+        <div class="dashboard-page active" id="dashboardPage">
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <div class="welcome-text">
+                    <h2>Welcome   <%= teacher.name %> Sir 💐</h2>
+
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn btn-primary" id="createTestDashboardBtn">
+                        <i class="fas fa-plus"></i>
+                        Create New Test
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon students">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>All Students (<%= students.length %>)</h3>
+
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+8% this month</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon tests">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>24</h3>
+                        <p>Active Tests</p>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+3 this week</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon average">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>87.5%</h3>
+                        <p>Average Score</p>
+                        <div class="trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+2.5% this month</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon time">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>15.3</h3>
+                        <p>Avg. Time (min)</p>
+                        <div class="trend down">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>-1.2min this week</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Left Column -->
+                <div>
+                    <!-- Performance Chart -->
+                    <div class="dashboard-card">
+                        <h3>Over AllPerformance  <a href="#" onclick="navigateTo(' analytics'); return false;">
+                    View Details</a></h3>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Test Submitted</h4>
+                            <p>Sarah Anderson submitted Algebra Mid-term</p>
+                        </div>
+                        <div class="activity-time">10 min ago</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-comment-alt"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>New Message</h4>
+                            <p>Michael Johnson sent you a message</p>
+                        </div>
+                        <div class="activity-time">45 min ago</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Assignment Uploaded</h4>
+                            <p>You uploaded new Geometry assignment</p>
+                        </div>
+                        <div class="activity-time">2 hours ago</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>New Student</h4>
+                            <p>Emily Davis joined class 10-B</p>
+                        </div>
+                        <div class="activity-time">1 day ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+            <!-- Quick Actions -->
+            <div class="dashboard-card">
+                <h3>Quick Actions</h3>
+                <div class="quick-actions">
+                    <a href="#" class="action-btn" id="createTestBtn">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Create Test</span>
+                    </a>
+                    <a href="#" class="action-btn" id="addStudentBtn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Add Student</span>
+                    </a>
+                    <a href="#" class="action-btn" id="scheduleClassBtn">
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Schedule Class</span>
+                    </a>
+                    <a href="#" class="action-btn" id="sendAnnouncementBtn">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Send Announcement</span>
+                    </a>
+                    <a href="#" class="action-btn" id="viewReportsBtn">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>View Reports</span>
+                    </a>
+                    <a href="#" class="action-btn" id="settingsBtn">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Upcoming Deadlines -->
+            <div class="dashboard-card">
+                <h3>Upcoming Deadlines</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #e74c3c;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Algebra Final Exam</h4>
+                            <p>Due: Tomorrow, 10:00 AM</p>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #f39c12;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Geometry Assignment</h4>
+                            <p>Due: Dec 15, 11:59 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #3498db;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4>Parent-Teacher Meeting</h4>
+                            <p>Dec 18, 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Tests Page -->
+    <div class="tests-page" id="testsPage">
+        <div class="tests-header">
+            <h1 class="page-title">Tests & Assignments</h1>
+            <div class="tests-actions">
+                <button class="btn btn-outline" id="filterTestsBtn">
+                    <i class="fas fa-filter"></i>
+                    Filter
+                </button>
+                <button class="btn btn-primary" id="createNewTestBtn">
+                    <i class="fas fa-plus"></i>
+                    Create New Test
+                </button>
+            </div>
+        </div>
+
+        <div class="tests-grid" id="testsGrid">
+            <!-- Tests will be populated by JavaScript -->
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Students Page -->
+    <div class="students-page" id="studentsPage">
+        <div class="students-header">
+            <h1 class="page-title">Students Management</h1>
+            <div class="students-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchStudents" placeholder="Search students...">
+                </div>
+                <button class="btn btn-outline" id="filterStudentsBtn">
+                    <i class="fas fa-filter"></i>
+                    Filter
+                </button>
+                <button class="btn btn-primary" id="addNewStudentBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Add Student
+                </button>
+            </div>
+        </div>
+
+        <div class="students-table-container">
+            <div class="table-header">
+                <h3>All Students (<%= students.length %>)</h3>
+
+                <div class="table-filters">
+                    <select class="filter-select" style="min-width: 120px;" id="classFilterSelect">
+                        <option>All Classes</option>
+                        <option>10-A</option>
+                        <option>10-B</option>
+                        <option>11-A</option>
+                        <option>11-B</option>
+                        <option>12-A</option>
+                    </select>
+                    <select class="filter-select" style="min-width: 120px;" id="statusFilterSelect">
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Pending</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="studentsTable">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Class</th>
+                            <th>Roll No.</th>
+                            <th>Average Score</th>
+                            <th>Tests Taken</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        <!-- Students will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+            <button class="page-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Messages Page -->
+    <div class="messages-page" id="messagesPage">
+        <div class="messages-header">
+            <h1 class="page-title">Messages</h1>
+            <div class="messages-actions">
+                <button class="btn btn-primary" id="newMessageBtn">
+                    <i class="fas fa-plus"></i>
+                    New Message
+                </button>
+            </div>
+        </div>
+
+        <div class="messages-container">
+            <!-- Conversations List -->
+            <div class="conversation-list">
+                <div class="conversation-header">
+                    <h3>
+                        <i class="fas fa-comments"></i>
+                        Conversations
+                    </h3>
+                </div>
+                <div class="conversation-search">
+                    <input type="text" id="searchConversations" placeholder="Search conversations...">
+                </div>
+                <div class="conversations" id="conversationsList">
+                    <!-- Conversations will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-container">
+                <div class="chat-header" id="chatHeader">
+                    <div class="chat-header-info">
+                        <div class="chat-header-avatar" id="chatAvatar">SA</div>
+                        <div class="chat-header-details">
+                            <h4 id="chatStudentName">Select a conversation</h4>
+                            <p id="chatStudentInfo">Click on a student to start messaging</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message-info" id="noConversationSelected">
+                        <div style="text-align: center; padding: 40px; color: #6c757d;">
+                            <i class="fas fa-comments fa-3x" style="margin-bottom: 20px; opacity: 0.5;"></i>
+                            <h3>No conversation selected</h3>
+                            <p>Select a student from the list to view messages</p>
+                        </div>
+                    </div>
+                    <!-- Messages will be populated by JavaScript -->
+                </div>
+
+                <div class="chat-input" id="chatInput" style="display: none;">
+                    <textarea id="messageInput" placeholder="Type your message here..." rows="1"></textarea>
+                    <button class="send-btn" id="sendMessageBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Page -->
+    <div class="analytics-page" id="analyticsPage">
+        <div class="analytics-header">
+            <h1 class="page-title">Analytics & Reports</h1>
+            <div class="analytics-filters">
+                <div class="filter-group">
+                    <label for="timeRange">Time Range</label>
+                    <select id="timeRange" class="filter-select">
+                        <option value="7days">Last 7 Days</option>
+                        <option value="30days" selected>Last 30 Days</option>
+                        <option value="3months">Last 3 Months</option>
+                        <option value="6months">Last 6 Months</option>
+                        <option value="year">Last Year</option>
+                        <option value="all">All Time</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="classFilter">Class</label>
+                    <select id="classFilter" class="filter-select">
+                        <option value="all">All Classes</option>
+                        <option value="10A">10-A</option>
+                        <option value="10B" selected>10-B</option>
+                        <option value="11A">11-A</option>
+                        <option value="11B">11-B</option>
+                        <option value="12A">12-A</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="subjectFilter">Subject</label>
+                    <select id="subjectFilter" class="filter-select">
+                        <option value="all">All Subjects</option>
+                        <option value="mathematics" selected>Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="english">English</option>
+                        <option value="history">History</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="applyFilters">
+                    <i class="fas fa-filter"></i>
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Analytics Cards -->
+        <div class="analytics-cards-grid">
+            <div class="dashboard-card">
+                <h3>Average Score <span class="badge">+5.2%</span></h3>
+                <div class="chart-container">
+                    <canvas id="scoreTrendChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Test Completion <span class="badge">94%</span></h3>
+                <div class="chart-container">
+                    <canvas id="completionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Performance Distribution</h3>
+                <div class="chart-container">
+                    <canvas id="distributionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Top Performing Topics</h3>
+                <div class="chart-container">
+                    <canvas id="topicsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rank Table -->
+        <div class="rank-table-container">
+            <div class="rank-table-header">
+                <h3>Student Rankings</h3>
+                <div>
+                    <button class="btn btn-outline" id="refreshRanks">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                    <button class="btn btn-primary" id="downloadRanks" style="margin-left: 10px;">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="rank-table">
+                    <thead>
+                        <tr>
+                            <th width="80">Rank</th>
+                            <th>Student</th>
+                            <th width="150">Class</th>
+                            <th width="200">Progress</th>
+                            <th width="100">Score</th>
+                            <th width="120">Trend</th>
+                            <th width="100">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankTableBody">
+                        <!-- Ranks will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detailed Analytics -->
+        <div class="detailed-analytics">
+            <div class="detailed-card">
+                <h3>Performance Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-value">87.5%</div>
+                        <div class="metric-label">Average Score</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">94.2%</div>
+                        <div class="metric-label">Completion Rate</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">15.3</div>
+                        <div class="metric-label">Avg Time (min)</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">3.8</div>
+                        <div class="metric-label">Avg Attempts</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-card">
+                <h3>Class Comparison</h3>
+                <div class="class-comparison">
+                    <div class="class-item">
+                        <div class="class-name">10-B</div>
+                        <div class="class-score">92.1%</div>
+                    </div>
+                    <div class="class-item">
+                        <div class="class-name">11-A</div>
+                        <div class="class-score">88.5%</div>
+                    </div>
+                    <div class="class-item">
+                        <div class="class-name">10-A</div>
+                        <div class="class-score">86.3%</div>
+                    </div>
+                    <div class="class-item">
+                        <div class="class-name">12-A</div>
+                        <div class="class-score">84.7%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Export Section -->
+        <div class="export-section">
+            <h3>Export Analytics Data</h3>
+            <p style="color: #6c757d; margin-bottom: 20px;">Download comprehensive analytics reports in various formats
+            </p>
+            <div class="export-options">
+                <button class="btn btn-primary" id="exportPDF">
+                    <i class="fas fa-file-pdf"></i>
+                    Export as PDF
+                </button>
+                <button class="btn btn-success" id="exportExcel">
+                    <i class="fas fa-file-excel"></i>
+                    Export as Excel
+                </button>
+                <button class="btn btn-info" id="exportCSV">
+                    <i class="fas fa-file-csv"></i>
+                    Export as CSV
+                </button>
+                <button class="btn btn-secondary" id="printReport">
+                    <i class="fas fa-print"></i>
+                    Print Report
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Page -->
+    <div class="calendar-page" id="calendarPage">
+        <div class="calendar-header">
+            <h1 class="page-title">Calendar</h1>
+            <div class="calendar-actions">
+                <button class="btn btn-outline" id="todayBtn">
+                    <i class="fas fa-calendar-day"></i>
+                    Today
+                </button>
+                <button class="btn btn-primary" id="addEventBtn">
+                    <i class="fas fa-plus"></i>
+                    Add Event
+                </button>
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <div id="calendar"></div>
+        </div>
+
+        <div class="calendar-sidebar">
+            <h3>Upcoming Events</h3>
+            <div class="upcoming-events" id="upcomingEvents">
+                <!-- Events will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div class="settings-page" id="settingsPage">
+        <div class="settings-header">
+            <h1 class="page-title">Settings</h1>
+        </div>
+
+        <div class="settings-tabs">
+            <button class="settings-tab active" data-tab="profile">Profile</button>
+            <button class="settings-tab" data-tab="account">Account</button>
+            <button class="settings-tab" data-tab="notifications">Notifications</button>
+            <button class="settings-tab" data-tab="privacy">Privacy</button>
+            <button class="settings-tab" data-tab="appearance">Appearance</button>
+        </div>
+
+        <div class="settings-content">
+            <!-- Profile Tab -->
+            <div class="settings-section" id="profileTab">
+                <h3>Profile Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" class="form-control"
+                            value="<%= teacher.name.split(' ')[0] %>">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" class="form-control"
+                            value="<%= teacher.name.split(' ').slice(1).join(' ') %>">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" class="form-control" value="<%= teacher.email %>">
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" value="<%= teacher.phone || '' %>">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Department</label>
+                        <select id="subject" class="form-control">
+                            <option <%=teacher.subject=="Mathematics" ?"selected":"" %>>Mathematics</option>
+                            <option <%=teacher.subject=="Science" ?"selected":"" %>>Science</option>
+                            <option <%=teacher.subject=="English" ?"selected":"" %>>English</option>
+                            <option <%=teacher.subject=="History" ?"selected":"" %>>History</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Bio</label>
+                    <textarea id="bio" class="form-control" rows="4"><%= teacher.bio || '' %></textarea>
+
+                </div>
+
+                <button class="btn btn-primary" id="saveProfileBtn">Save Changes</button>
+            </div>
+
+            <!-- Account Tab (hidden by default) -->
+            <div class="settings-section" id="accountTab" style="display: none;">
+                <h3>Account Settings</h3>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" value="john_doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Change Password</label>
+                    <input type="password" class="form-control" placeholder="Current Password">
+                    <input type="password" class="form-control" style="margin-top: 10px;" placeholder="New Password">
+                    <input type="password" class="form-control" style="margin-top: 10px;"
+                        placeholder="Confirm New Password">
+                </div>
+
+                <div class="form-group">
+                    <label>Two-Factor Authentication</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" checked>
+                            <span>Enable two-factor authentication</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="updateAccountBtn">Update Account</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal for Create Test -->
+    <div class="modal" id="createTestModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Test</h2>
+                <button class="close-btn" onclick="closeModal('createTestModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Test Title *</label>
+                    <input type="text" class="form-control" id="testTitle" placeholder="Enter test title">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Class/Branch *</label>
+                        <select class="form-control" id="testClass">
+                            <option>10-A</option>
+                            <option>10-B</option>
+                            <option>11-A</option>
+                            <option>11-B</option>
+                            <option>12-A</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject *</label>
+                        <select class="form-control" id="testSubject">
+                            <option>Mathematics</option>
+                            <option>Science</option>
+                            <option>English</option>
+                            <option>History</option>
+                            <option>Computer Science</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Start Date *</label>
+                        <input type="datetime-local" class="form-control" id="testStartDate">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date *</label>
+                        <input type="datetime-local" class="form-control" id="testEndDate">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Test Duration (minutes) *</label>
+                        <input type="number" class="form-control" id="testDuration" value="60">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Marks *</label>
+                        <input type="number" class="form-control" id="testTotalMarks" value="100">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Instructions</label>
+                    <textarea class="form-control" id="testInstructions" rows="4"
+                        placeholder="Enter test instructions..."></textarea>
+                </div>
+
+                <!-- Question Management Section -->
+                <div class="question-section">
+                    <h3> 👇🏻👇🏻 Create Test Questions 👇🏻👇🏻</h3>
+                    <div class="question-list" id="questionList">
+                        <!-- Questions will be added here -->
+                    </div>
+
+                    <div class="question-form">
+                        <h3><b>Select Question Types</b></h3>
+                        <div class="form-group">
+
+                            <select class="form-control" id="questionType">
+                                <option value="multiple-choice">Multiple Choice ( MCQ )</option>
+                                <option value="true-false">True/False</option>
+                                <option value="short-answer">Short Question</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><b>Write Your Question ✍️✍️ </b></label>
+                            <textarea class="form-control" id="questionText" rows="3"
+                                placeholder="Enter your question..."></textarea>
+                        </div>
+
+                        <div id="optionsContainer" style="display: block;">
+                            <div class="form-group">
+                                <label><b>Select Your Correct Choice</b></label>
+                                <div id="optionsList">
+                                    <div class="form-group" style="margin-bottom: 10px;">
+                                        <div class="question-option">
+                                            <input type="radio" name="correctOption" value="0">
+                                            <input type="text" class="form-control" placeholder="Option A" id="option0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 10px;">
+                                        <div class="question-option">
+                                            <input type="radio" name="correctOption" value="1">
+                                            <input type="text" class="form-control" placeholder="Option B" id="option1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 10px;">
+                                        <div class="question-option">
+                                            <input type="radio" name="correctOption" value="2">
+                                            <input type="text" class="form-control" placeholder="Option C" id="option2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom: 10px;">
+                                        <div class="question-option">
+                                            <input type="radio" name="correctOption" value="3">
+                                            <input type="text" class="form-control" placeholder="Option D" id="option3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline btn-sm" id="addOptionBtn"
+                                    style="margin-top: 10px;">
+                                    <i class="fas fa-plus"></i> Add Option
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Marks for this Question *</label>
+                                <input type="number" class="form-control" id="questionPoints" value="1">
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary" id="addQuestionBtn">
+                            <i class="fas fa-plus"></i>
+                            Add Question
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('createTestModal')">Cancel</button>
+                <button class="btn btn-primary" id="createTestSubmitBtn">Create Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Add Student -->
+    <div class="modal" id="addStudentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Student</h2>
+                <button class="close-btn" onclick="closeModal('addStudentModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" id="studentFirstName" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" id="studentLastName" placeholder="Enter last name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" id="studentEmail" placeholder="Enter email address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Class</label>
+                        <select class="form-control" id="studentClass">
+                            <option>10-A</option>
+                            <option>10-B</option>
+                            <option>11-A</option>
+                            <option>11-B</option>
+                            <option>12-A</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Roll Number</label>
+                        <input type="text" class="form-control" id="studentRoll" placeholder="Enter roll number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Parent/Guardian Contact</label>
+                    <input type="tel" class="form-control" id="studentParentContact" placeholder="Enter contact number">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('addStudentModal')">Cancel</button>
+                <button class="btn btn-primary" id="addStudentSubmitBtn">Add Student</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="viewStudentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Details</h2>
+                <button class="close-btn" onclick="closeModal('viewStudentModal')">&times;</button>
+            </div>
+            <div class="modal-body" id="viewStudentBody">
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer"></div>
+
+    <script>
+        let editingStudentId = null;
+        function sendTest(testId) {
+            window.location.href = "/teacher/send-test-page/" + testId;
+        }
+        async function loadTeacherTests() {
+            const res = await fetch("/teacher/my-tests");
+            const tests = await res.json();
+
+            appData.tests = tests.map(t => ({
+                id: t._id,
+                title: t.title,
+                subject: t.subject,
+                class: t.className,
+                duration: t.duration,
+                totalStudents: 0,
+                submissions: 0,
+                averageScore: 0,
+                status: "upcoming",
+                questions: []
+            }));
+
+            initializeTestsPage();
+        }
+
+        // Application Data
+        const appData = {
+            currentUser: {
+                name: "<%= teacher.name %>",
+                email: "<%= teacher.email %>",
+                role: "<%= teacher.subject %> Teacher",
+                avatar: "<%= (teacher.name || '').split(' ').map(n=>n[0]).join('') %>"
+
+            },
+
+            students: <%- JSON.stringify(students || []) %>,
+            tests: [],   // ✅ ADD THIS
+
+
+
+            analyticsData: {
+                students: [
+                    {
+                        id: 1,
+                        name: "Sarah Anderson",
+                        initials: "SA",
+                        class: "10-B",
+                        roll: "15",
+                        score: 95.5,
+                        progress: 95,
+                        trend: "up",
+                        trendValue: 5.2,
+                        testsTaken: 12,
+                        averageTime: 14.5
+                    },
+                    {
+                        id: 2,
+                        name: "Michael Johnson",
+                        initials: "MJ",
+                        class: "11-A",
+                        roll: "22",
+                        score: 92.3,
+                        progress: 92,
+                        trend: "up",
+                        trendValue: 3.8,
+                        testsTaken: 10,
+                        averageTime: 16.2
+                    }
+                ],
+                scoreTrend: [85, 86, 87, 88, 89, 90, 91, 92, 91, 92, 93, 94],
+                completionRate: [90, 91, 92, 93, 92, 93, 94, 93, 94, 95, 94, 95],
+                distribution: [5, 15, 25, 30, 20, 5],
+                topics: {
+                    "Algebra": 85,
+                    "Geometry": 88,
+                    "Calculus": 82,
+                    "Statistics": 90,
+                    "Trigonometry": 79
+                }
+            },
+
+            calendarEvents: [
+                {
+                    title: 'Algebra Final Exam',
+                    start: new Date(new Date().setDate(new Date().getDate() + 1)),
+                    end: new Date(new Date().setDate(new Date().getDate() + 1)),
+                    color: '#e74c3c',
+                    description: 'Final exam for Algebra course'
+                },
+                {
+                    title: 'Parent-Teacher Meeting',
+                    start: new Date(new Date().setDate(new Date().getDate() + 3)),
+                    end: new Date(new Date().setDate(new Date().getDate() + 3)),
+                    color: '#3498db',
+                    description: 'Meeting with parents of class 10-B'
+                }
+            ]
+        };
+
+        // Global Variables
+        let performanceChart, scoreTrendChart, completionChart, distributionChart, topicsChart;
+        let calendar;
+        let currentPage = 'dashboard';
+        let currentConversation = null;
+        let testQuestions = [];
+
+        // Toast Notification Function
+        function showToast(title, message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    ${type === 'success' ? '<i class="fas fa-check-circle"></i>' :
+                    type === 'error' ? '<i class="fas fa-exclamation-circle"></i>' :
+                        '<i class="fas fa-info-circle"></i>'}
+                </div>
+                <div class="toast-content">
+                    <h4>${title}</h4>
+                    <p>${message}</p>
+                </div>
+            `;
+
+            document.getElementById('toastContainer').appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // Navigation Function
+        function navigateTo(page) {
+            // Hide all pages
+            document.querySelectorAll('.dashboard-page, .tests-page, .students-page, .messages-page, .analytics-page, .calendar-page, .settings-page').forEach(pageEl => {
+                pageEl.classList.remove('active');
+            });
+
+            // Remove active class from all nav items
+            document.querySelectorAll('.nav-item').forEach(navItem => {
+                navItem.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(`${page}Page`).classList.add('active');
+
+            // Set active nav item
+            document.querySelector(`.nav-item[data-page="${page}"]`).classList.add('active');
+
+            // Update page title
+            const pageTitles = {
+                dashboard: 'Dashboard',
+                tests: 'Tests & Assignments',
+                students: 'Students Management',
+                messages: 'Messages',
+                analytics: 'Analytics & Reports',
+                calendar: 'Calendar',
+                settings: 'Settings'
+            };
+
+            document.getElementById('pageTitle').textContent = pageTitles[page];
+            currentPage = page;
+
+            // Initialize page if needed
+            if (page === 'dashboard') initializeDashboardPage();
+            if (page === 'tests') initializeTestsPage();
+            if (page === 'tests') loadTeacherTests();   // ✅ DB se load karega
+            if (page === 'students') initializeStudentsPage();
+            if (page === 'messages') initializeMessagesPage();
+            if (page === 'analytics') initializeAnalyticsPage();
+            if (page === 'calendar') initializeCalendarPage();
+            if (page === 'settings') initializeSettingsPage();
+
+            // Update message badge count
+            updateMessageBadge();
+            loadTeacherTests();
+
+            // Show toast for navigation
+            if (page !== 'dashboard') {
+                showToast('Page Loaded', `Navigated to ${pageTitles[page]}`, 'info');
+            }
+        }
+
+        // Update message badge
+        function updateMessageBadge() {
+            const unreadCount = appData.messages.filter(msg => msg.unread).length;
+            const badge = document.getElementById('unreadMessagesCount');
+            if (badge) {
+                badge.textContent = unreadCount;
+                badge.style.display = unreadCount > 0 ? 'block' : 'none';
+            }
+        }
+
+        // Dashboard Page Functions
+        function initializeDashboardPage() {
+            // Initialize performance chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            if (performanceChart) performanceChart.destroy();
+
+            performanceChart = new Chart(performanceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                    datasets: [
+                        {
+                            label: 'Class 10-A',
+                            data: [78, 82, 85, 83, 86, 88],
+                            borderColor: '#4a6fa5',
+                            backgroundColor: 'rgba(74, 111, 165, 0.1)',
+                            borderWidth: 2,
+                            fill: true
+                        },
+                        {
+                            label: 'Class 10-B',
+                            data: [85, 87, 89, 88, 90, 92],
+                            borderColor: '#4fc3a1',
+                            backgroundColor: 'rgba(79, 195, 161, 0.1)',
+                            borderWidth: 2,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 70,
+                            max: 100,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Set up quick action buttons
+            document.getElementById('createTestBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('createTestModal');
+            });
+
+            document.getElementById('createTestDashboardBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('createTestModal');
+            });
+
+            document.getElementById('addStudentBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal('addStudentModal');
+            });
+
+            document.getElementById('viewReportsBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo('analytics');
+            });
+
+            document.getElementById('settingsBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo('settings');
+            });
+
+            document.getElementById('scheduleClassBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo('calendar');
+            });
+
+            document.getElementById('sendAnnouncementBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('Announcement', 'Send announcement feature is coming soon!', 'info');
+            });
+        }
+        // Tests Page Functions
+        function initializeTestsPage() {
+            const testsGrid = document.getElementById('testsGrid');
+            testsGrid.innerHTML = '';
+
+            appData.tests.forEach(test => {
+                const progress = (test.submissions / test.totalStudents) * 100;
+                const statusColors = {
+                    active: '#28a745',
+                    completed: '#6c757d',
+                    upcoming: '#ffc107'
+                };
+
+                const testCard = document.createElement('div');
+                testCard.className = 'test-card';
+                testCard.innerHTML = `
+                    <div class="test-header">
+                        <div class="test-title">${test.title}</div>
+                        <div class="test-badge">${test.status.charAt(0).toUpperCase() + test.status.slice(1)}</div>
+                    </div>
+                    <div class="test-body">
+                        <div class="test-info">
+                            <div class="info-item">
+                                <div class="info-label">Subject</div>
+                                <div class="info-value">${test.subject}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Class</div>
+                                <div class="info-value">${test.class}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Date</div>
+                                <div class="info-value">${test.date}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">${test.duration} min</div>
+                            </div>
+                        </div>
+                        
+                        <div class="test-progress">
+                            <div class="progress-info">
+                                <span>Submissions: ${test.submissions}/${test.totalStudents}</span>
+                                <span>${progress.toFixed(0)}%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${progress}%; background: ${statusColors[test.status]};"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="test-info">
+                            <div class="info-item">
+                                <div class="info-label">Average Score</div>
+                                <div class="info-value">${test.averageScore > 0 ? test.averageScore.toFixed(1) + '%' : 'N/A'}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Questions</div>
+                                <div class="info-value">${test.questions ? test.questions.length : 0}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="test-actions">
+                            <a href="/student/test/${test.id}" class="btn btn-primary btn-sm">
+   <i class="fas fa-eye"></i> View
+</a>
+
+                            <button class="btn btn-outline btn-sm" onclick="editTest(${test.id})">
+                                <i class="fas fa-edit"></i>
+                                Edit
+                            </button>
+                            <button class="btn btn-outline btn-sm" onclick="viewTestResults(${test.id})">
+                                <i class="fas fa-chart-bar"></i>
+                                Results
+                            </button>
+
+                            <button class="btn btn-success btn-sm" onclick="sendTest(${test.id})">
+                                <i class="fas fa-paper-plane"></i> Send Test
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                testsGrid.appendChild(testCard);
+            });
+
+            // Create new test button
+            document.getElementById('createNewTestBtn').addEventListener('click', () => {
+                testQuestions = [];
+                document.getElementById('questionList').innerHTML = '';
+                openModal('createTestModal');
+            });
+
+            // Filter tests button
+            document.getElementById('filterTestsBtn').addEventListener('click', () => {
+                showToast('Filter Tests', 'Filter functionality is coming soon!', 'info');
+            });
+        }
+
+        function viewTestDetails(testId) {
+            const test = appData.tests.find(t => t.id === testId);
+            if (test) {
+                showToast('Test Details', `Viewing details for ${test.title}`, 'info');
+            }
+        }
+
+        function editTest(testId) {
+            const test = appData.tests.find(t => t.id === testId);
+            if (test) {
+                showToast('Edit Test', `Editing ${test.title}`, 'info');
+
+                // Pre-fill the create test modal with test data
+                document.getElementById('testTitle').value = test.title;
+                document.getElementById('testSubject').value = test.subject;
+                document.getElementById('testClass').value = test.class;
+                document.getElementById('testDuration').value = test.duration;
+
+                // Load questions if any
+                testQuestions = test.questions || [];
+                renderQuestionList();
+
+                // Open the modal
+                openModal('createTestModal');
+
+                // Change the button text
+                document.getElementById('createTestSubmitBtn').textContent = 'Update Test';
+            }
+        }
+
+        function viewTestResults(testId) {
+            const test = appData.tests.find(t => t.id === testId);
+            if (test) {
+                showToast('Test Results', `Viewing results for ${test.title}`, 'info');
+                navigateTo('analytics');
+            }
+        }
+
+        // Question Management Functions
+        function renderQuestionList() {
+            const questionList = document.getElementById('questionList');
+            questionList.innerHTML = '';
+
+            testQuestions.forEach((question, index) => {
+                const questionItem = document.createElement('div');
+                questionItem.className = 'question-item';
+                questionItem.innerHTML = `
+                    <div class="question-header">
+                        <div class="question-title">
+                            <span>Q${index + 1}: ${question.text.substring(0, 50)}${question.text.length > 50 ? '...' : ''}</span>
+                            <span class="question-type">${question.type.replace('-', ' ').toUpperCase()}</span>
+                            <span class="question-points">${question.points} points</span>
+                        </div>
+                        <div class="question-actions">
+                            <button class="btn btn-outline btn-sm" onclick="editQuestion(${index})">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-outline btn-sm" onclick="removeQuestion(${index})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="question-content">${question.text}</div>
+                    ${question.options ? `
+                    <div class="question-options">
+                        ${question.options.map((option, i) => `
+                            <div class="question-option ${i === question.correctAnswer ? 'correct-option' : ''}">
+                                ${String.fromCharCode(65 + i)}. ${option}
+                                ${i === question.correctAnswer ? ' <i class="fas fa-check"></i>' : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                    ` : ''}
+                `;
+                questionList.appendChild(questionItem);
+            });
+        }
+        function addQuestion() {
+            const type = document.getElementById('questionType').value;
+            const text = document.getElementById('questionText').value.trim();
+            const points = parseInt(document.getElementById('questionPoints').value);
+
+            if (!text) {
+                showToast('Error', 'Please enter question text', 'error');
+                return;
+            }
+
+            const question = {
+                id: testQuestions.length + 1,
+                type: type,
+                text: text,
+                points: points
+            };
+
+            if (type === 'multiple-choice' || type === 'true-false') {
+                const options = [];
+                const optionInputs = document.querySelectorAll('#optionsList input[type="text"]');
+
+                optionInputs.forEach(input => {
+                    if (input.value.trim()) {
+                        options.push(input.value.trim());
+                    }
+                });
+
+                if (options.length < 2) {
+                    showToast('Error', 'Please add at least 2 options', 'error');
+                    return;
+                }
+
+                const correctOption = document.querySelector('input[name="correctOption"]:checked');
+                if (!correctOption) {
+                    showToast('Error', 'Please select the correct answer', 'error');
+                    return;
+                }
+
+                question.options = options;
+                question.correctAnswer = parseInt(correctOption.value);
+            }
+
+            testQuestions.push(question);
+            renderQuestionList();
+
+            // Reset form safely
+            document.getElementById('questionText').value = '';
+            document.querySelectorAll('#optionsList input[type="text"]').forEach(input => {
+                input.value = '';
+            });
+
+            const firstRadio = document.querySelector('input[name="correctOption"]');
+            if (firstRadio) firstRadio.checked = true;
+
+            showToast('Question Added', 'Question successfully added', 'success');
+        }
+
+
+        function editQuestion(index) {
+            const question = testQuestions[index];
+            if (!question) return;
+
+            document.getElementById('questionType').value = question.type;
+            document.getElementById('questionText').value = question.text;
+            document.getElementById('questionPoints').value = question.points;
+            document.getElementById('questionDifficulty').value = question.difficulty;
+
+            if (question.options) {
+                const optionsList = document.getElementById('optionsList');
+                optionsList.innerHTML = '';
+                question.options.forEach((option, i) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'form-group';
+                    optionDiv.style.marginBottom = '10px';
+                    optionDiv.innerHTML = `
+                        <div class="question-option">
+                            <input type="radio" name="correctOption" value="${i}" ${i === question.correctAnswer ? 'checked' : ''}>
+                            <input type="text" class="form-control" value="${option}" id="option${i}">
+                        </div>
+                    `;
+                    optionsList.appendChild(optionDiv);
+                });
+            }
+
+            // Remove the question from the list
+            testQuestions.splice(index, 1);
+            renderQuestionList();
+
+            showToast('Edit Question', 'Question loaded for editing', 'info');
+        }
+
+        function removeQuestion(index) {
+            testQuestions.splice(index, 1);
+            renderQuestionList();
+            showToast('Question Removed', 'Question has been removed from the test', 'success');
+        }
+        async function deleteStudent(id) {
+            const confirmDelete = confirm("Are you sure you want to delete this student?");
+            if (!confirmDelete) return;
+
+            const res = await fetch("/teacher/delete-student/" + id, {
+                method: "DELETE",
+                credentials: "include"
+            });
+
+            const result = await res.json();
+
+
+            if (result.success) {
+                showToast("Deleted", "Student removed from database", "success");
+                location.reload();
+            } else {
+                showToast("Error", "Delete failed", "error");
+            }
+        }
+
+
+
+        async function createNewTest() {
+
+            const data = {
+                title: testTitle.value,
+                subject: testSubject.value,
+                className: testClass.value,
+                duration: testDuration.value,
+                totalMarks: testTotalMarks.value,
+                instructions: testInstructions.value,
+                questions: testQuestions
+            };
+
+            const res = await fetch("/teacher/create-test", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+                closeModal('createTestModal');
+                showToast("Success", "Test Saved in Database", "success");
+                loadTeacherTests();
+            } else {
+                showToast("Error", "Test Save Failed", "error");
+            }
+        }
+
+        // ================= Students Page Functions =================
+        function initializeStudentsPage() {
+            const studentsTableBody = document.getElementById('studentsTableBody');
+            studentsTableBody.innerHTML = '';
+
+            appData.students.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+            <td>
+                <div class="student-cell">
+                    <div class="student-avatar">
+                        ${student.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div class="student-details">
+                        <h4>${student.name}</h4>
+                        <p>${student.email}</p>
+                    </div>
+                </div>
+            </td>
+            <td>${student.class}</td>
+            <td>${student.roll}</td>
+
+            <!-- Default safe values -->
+            <td>0%</td>
+            <td>0</td>
+            <td>
+                <span class="status-badge status-active">Active</span>
+            </td>
+
+            <td>
+                <div class="action-buttons">
+                    <button class="btn-icon view" onclick="viewStudent('${student._id}')">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon message" onclick="messageStudent('${student._id}')">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                    <button class="btn-icon edit" onclick="editStudent('${student._id}')">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon delete" onclick="deleteStudent('${student._id}')">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        `;
+
+                studentsTableBody.appendChild(row);
+            });
+
+            // Add new student button
+            document.getElementById('addNewStudentBtn').addEventListener('click', () => {
+                openModal('addStudentModal');
+            });
+
+            // Filter students button
+            document.getElementById('filterStudentsBtn').addEventListener('click', () => {
+                showToast('Filter Students', 'Filter functionality is coming soon!', 'info');
+            });
+
+            // Search functionality
+            document.getElementById('searchStudents').addEventListener('input', function (e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const rows = studentsTableBody.querySelectorAll('tr');
+
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(searchTerm) ? '' : 'none';
+                });
+            });
+
+            // Class filter
+            document.getElementById('classFilterSelect').addEventListener('change', function (e) {
+                const selectedClass = e.target.value;
+                const rows = studentsTableBody.querySelectorAll('tr');
+
+                rows.forEach(row => {
+                    const classCell = row.cells[1];
+                    if (selectedClass === 'All Classes' || classCell.textContent === selectedClass) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+
+            // Status filter
+            document.getElementById('statusFilterSelect').addEventListener('change', function (e) {
+                const selectedStatus = e.target.value;
+                const rows = studentsTableBody.querySelectorAll('tr');
+
+                rows.forEach(row => {
+                    const statusCell = row.cells[5];
+                    if (selectedStatus === 'All Status' || statusCell.textContent.includes(selectedStatus)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+
+        function viewStudent(studentId) {
+            const student = appData.students.find(s => s._id === studentId);
+            if (!student) return;
+
+            document.getElementById("viewStudentBody").innerHTML = `
+      <p><b>Name:</b> ${student.name}</p>
+      <p><b>Email:</b> ${student.email}</p>
+      <p><b>Class:</b> ${student.class}</p>
+      <p><b>Roll:</b> ${student.roll}</p>
+      <p><b>Parent Contact:</b> ${student.parentContact || "N/A"}</p>
+   `;
+
+            openModal("viewStudentModal");
+        }
+
+        function messageStudent(studentId) {
+            const student = appData.students.find(s => s._id === studentId);
+
+            if (student) {
+                // Navigate to messages page
+                navigateTo('messages');
+
+                // Find or create conversation
+                let conversation = appData.messages.find(m => m.studentId === studentId);
+
+                if (!conversation) {
+                    // Create new conversation
+                    conversation = {
+                        id: appData.messages.length + 1,
+                        studentId: student._id,
+                        studentName: student.name,
+                        initials: student.name.split(' ').map(n => n[0]).join(''),
+                        lastMessage: "No messages yet",
+                        timestamp: new Date().toISOString(),
+                        unread: false,
+                        messages: []
+                    };
+                    appData.messages.push(conversation);
+                }
+
+                // Load conversation
+                setTimeout(() => {
+                    loadConversation(conversation.id);
+                }, 100);
+            }
+        }
+
+        function editStudent(studentId) {
+            const student = appData.students.find(s => s._id === studentId);
+
+            if (student) {
+                editingStudentId = studentId; // ⭐ store ID
+
+                const nameParts = student.name.split(' ');
+                document.getElementById('studentFirstName').value = nameParts[0] || '';
+                document.getElementById('studentLastName').value = nameParts.slice(1).join(' ');
+                document.getElementById('studentEmail').value = student.email;
+                document.getElementById('studentClass').value = student.class;
+                document.getElementById('studentRoll').value = student.roll;
+                document.getElementById('studentParentContact').value = student.parentContact || '';
+
+                openModal('addStudentModal');
+                document.getElementById('addStudentSubmitBtn').textContent = 'Update Student';
+            }
+        }
+
+
+        // Add Student Functionality
+        async function addNewStudent() {
+
+            const data = {
+                name: studentFirstName.value + " " + studentLastName.value,
+                email: studentEmail.value,
+                class: studentClass.value,
+                roll: studentRoll.value,
+                parentContact: studentParentContact.value
+            };
+
+            let url = "/teacher/add-student";
+            let method = "POST";
+
+            // ⭐ If editing mode ON
+            if (editingStudentId) {
+                url = "/teacher/update-student/" + editingStudentId;
+                method = "PUT";
+            }
+
+            const res = await fetch(url, {
+                method: method,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+                credentials: "include"
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+                showToast("Success", editingStudentId ? "Student Updated" : "Student Added", "success");
+                location.reload();
+            } else {
+                showToast("Error", "Operation Failed", "error");
+            }
+        }
+
+
+
+        // Messages Page Functions
+        async function initializeMessagesPage() {
+
+            const res = await fetch("/teacher/conversations", { credentials: "include" });
+            const conversations = await res.json();
+
+            const conversationsList = document.getElementById('conversationsList');
+            conversationsList.innerHTML = '';
+
+            conversations.forEach(c => {
+                const item = document.createElement("div");
+                item.className = "conversation-item";
+                item.onclick = () => loadRealMessages(c._id);
+
+
+                item.innerHTML = `
+       <div class="conversation-avatar">
+         ${c._id.name.split(' ').map(n => n[0]).join('')}
+       </div>
+       <div class="conversation-info">
+         <h4>${c._id.name}</h4>
+         <p>${c.lastMessage}</p>
+       </div>
+       <button onclick="deleteConversation('${c._id._id}')">🗑</button>
+     `;
+                conversationsList.appendChild(item);
+            });
+        }
+
+
+        function loadConversation(conversationId) {
+            const conversation = appData.messages.find(m => m.id === conversationId);
+            if (!conversation) return;
+
+            currentConversation = conversation;
+
+            // Update UI
+            document.getElementById('chatAvatar').textContent = conversation.initials;
+            document.getElementById('chatStudentName').textContent = conversation.studentName;
+            document.getElementById('chatStudentInfo').textContent = 'Online';
+
+            // Show chat input
+            document.getElementById('chatInput').style.display = 'flex';
+            document.getElementById('noConversationSelected').style.display = 'none';
+
+            // Load messages
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML = '';
+
+            conversation.messages.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${msg.sender}`;
+
+                const time = new Date(msg.timestamp);
+                const timeString = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                messageDiv.innerHTML = `
+                    <div class="message-content">${msg.text}</div>
+                    <div class="message-time">${timeString}</div>
+                `;
+
+                chatMessages.appendChild(messageDiv);
+            });
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Mark as read
+            if (conversation.unread) {
+                conversation.unread = false;
+                updateMessageBadge();
+                initializeMessagesPage(); // Refresh conversation list
+            }
+
+            // Highlight active conversation
+            document.querySelectorAll('.conversation-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`.conversation-item[onclick*="${conversationId}"]`)?.classList.add('active');
+
+            // Set up send message functionality
+            document.getElementById('sendMessageBtn').onclick = sendMessage;
+            document.getElementById('messageInput').onkeypress = function (e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            };
+        }
+
+        async function sendMessage() {
+            const text = messageInput.value.trim();
+            if (!text || !currentConversation) return;
+
+            await fetch("/teacher/send-message", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    studentId: currentConversation.studentId,
+                    text: text
+                }),
+                credentials: "include"
+            });
+
+            messageInput.value = "";
+            loadRealMessages(currentConversation.studentId);
+        }
+
+
+        function showNewMessageModal() {
+            showToast('New Message', 'Select a student from the students page to start a new conversation', 'info');
+            navigateTo('students');
+        }
+
+        // Analytics Page Functions
+        function initializeAnalyticsPage() {
+            // Sort students by score
+            appData.analyticsData.students.sort((a, b) => b.score - a.score);
+
+            // Populate rank table
+            populateRankTable();
+
+            // Initialize charts
+            initializeAnalyticsCharts();
+
+            // Set up event listeners
+            setupAnalyticsEventListeners();
+
+            // Apply initial filters
+            applyAnalyticsFilters();
+        }
+
+        function populateRankTable() {
+            const rankTableBody = document.getElementById('rankTableBody');
+            if (!rankTableBody) return;
+
+            rankTableBody.innerHTML = '';
+
+            appData.analyticsData.students.forEach((student, index) => {
+                const rank = index + 1;
+                const row = document.createElement('tr');
+
+                // Determine rank class
+                let rankClass = 'rank-4-plus';
+                if (rank === 1) rankClass = 'rank-1';
+                else if (rank === 2) rankClass = 'rank-2';
+                else if (rank === 3) rankClass = 'rank-3';
+
+                // Determine trend icon and class
+                let trendIcon, trendClass;
+                if (student.trend === 'up') {
+                    trendIcon = 'fas fa-arrow-up';
+                    trendClass = 'trend-up';
+                } else if (student.trend === 'down') {
+                    trendIcon = 'fas fa-arrow-down';
+                    trendClass = 'trend-down';
+                } else {
+                    trendIcon = 'fas fa-minus';
+                    trendClass = 'trend-neutral';
+                }
+
+                // Determine progress bar color based on score
+                let progressColor;
+                if (student.score >= 90) progressColor = 'var(--success-color)';
+                else if (student.score >= 80) progressColor = 'var(--accent-color)';
+                else if (student.score >= 70) progressColor = 'var(--warning-color)';
+                else progressColor = 'var(--danger-color)';
+
+                row.className = rankClass;
+                row.innerHTML = `
+                    <td>
+                        <div class="rank-number">
+                            <div class="rank-badge">${rank}</div>
+                            ${rank <= 3 ?
+                        `<i class="fas fa-trophy" style="color: ${rank === 1 ? '#FFD700' : rank === 2 ? '#C0C0C0' : '#CD7F32'}"></i>` :
+                        ''
+                    }
+                        </div>
+                    </td>
+                    <td>
+                        <div class="student-info">
+                            <div class="student-avatar-small">${student.initials}</div>
+                            <div>
+                                <div class="student-name">${student.name}</div>
+                                <div class="student-class">Roll #${student.roll}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>${student.class}</td>
+                    <td class="progress-cell">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${student.progress}%; background: ${progressColor};"></div>
+                        </div>
+                        <div class="progress-text">${student.progress}% complete</div>
+                    </td>
+                    <td class="score-cell">${student.score.toFixed(1)}%</td>
+                    <td class="trend-cell ${trendClass}">
+                        <i class="${trendIcon}"></i>
+                        <span>${student.trendValue > 0 ? '+' : ''}${student.trendValue}%</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" onclick="viewStudentAnalytics(${student.id})">
+                            <i class="fas fa-chart-line"></i>
+                            Details
+                        </button>
+                    </td>
+                `;
+
+                rankTableBody.appendChild(row);
+            });
+        }
+
+        function initializeAnalyticsCharts() {
+            // Destroy existing charts if they exist
+            if (scoreTrendChart) scoreTrendChart.destroy();
+            if (completionChart) completionChart.destroy();
+            if (distributionChart) distributionChart.destroy();
+            if (topicsChart) topicsChart.destroy();
+
+            // Score Trend Chart
+            const scoreTrendCtx = document.getElementById('scoreTrendChart').getContext('2d');
+            scoreTrendChart = new Chart(scoreTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Average Score',
+                        data: appData.analyticsData.scoreTrend,
+                        borderColor: 'var(--accent-color)',
+                        backgroundColor: 'rgba(79, 195, 161, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 80,
+                            max: 100,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Completion Chart
+            const completionCtx = document.getElementById('completionChart').getContext('2d');
+            completionChart = new Chart(completionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Completion Rate',
+                        data: appData.analyticsData.completionRate,
+                        backgroundColor: 'var(--primary-color)',
+                        borderColor: 'var(--secondary-color)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 85,
+                            max: 100,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Distribution Chart
+            const distributionCtx = document.getElementById('distributionChart').getContext('2d');
+            distributionChart = new Chart(distributionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Excellent (90-100)', 'Good (80-89)', 'Average (70-79)', 'Below Avg (60-69)', 'Poor (50-59)', 'Fail (<50)'],
+                    datasets: [{
+                        data: appData.analyticsData.distribution,
+                        backgroundColor: [
+                            'var(--success-color)',
+                            'var(--accent-color)',
+                            'var(--warning-color)',
+                            '#ff9966',
+                            '#ff6666',
+                            'var(--danger-color)'
+                        ],
+                        borderWidth: 2,
+                        borderColor: 'white'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Topics Chart
+            const topicsCtx = document.getElementById('topicsChart').getContext('2d');
+            topicsChart = new Chart(topicsCtx, {
+                type: 'radar',
+                data: {
+                    labels: Object.keys(appData.analyticsData.topics),
+                    datasets: [{
+                        label: 'Average Score by Topic',
+                        data: Object.values(appData.analyticsData.topics),
+                        backgroundColor: 'rgba(74, 111, 165, 0.2)',
+                        borderColor: 'var(--primary-color)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'var(--primary-color)',
+                        pointBorderColor: 'white',
+                        pointBorderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: false,
+                            min: 70,
+                            max: 100,
+                            ticks: {
+                                stepSize: 10
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function setupAnalyticsEventListeners() {
+            // Apply filters button
+            document.getElementById('applyFilters').addEventListener('click', applyAnalyticsFilters);
+
+            // Refresh ranks button
+            document.getElementById('refreshRanks').addEventListener('click', function () {
+                showToast('Ranks Refreshed', 'Student rankings have been updated', 'success');
+                initializeAnalyticsPage();
+            });
+
+            // Download ranks button
+            document.getElementById('downloadRanks').addEventListener('click', function () {
+                showToast('Export Started', 'Ranking data is being exported to CSV', 'info');
+            });
+
+            // Export buttons
+            document.getElementById('exportPDF').addEventListener('click', function () {
+                showToast('PDF Export', 'Analytics report is being generated as PDF', 'info');
+            });
+
+            document.getElementById('exportExcel').addEventListener('click', function () {
+                showToast('Excel Export', 'Analytics report is being exported to Excel', 'info');
+            });
+
+            document.getElementById('exportCSV').addEventListener('click', function () {
+                showToast('CSV Export', 'Analytics data is being exported to CSV', 'info');
+            });
+
+            document.getElementById('printReport').addEventListener('click', function () {
+                window.print();
+            });
+        }
+
+        function applyAnalyticsFilters() {
+            const classFilter = document.getElementById('classFilter').value;
+            const timeRange = document.getElementById('timeRange').value;
+            const subjectFilter = document.getElementById('subjectFilter').value;
+
+            showToast('Filters Applied', 'Analytics data updated based on selected filters', 'info');
+        }
+
+        function viewStudentAnalytics(studentId) {
+            const student = appData.analyticsData.students.find(s => s.id === studentId);
+            if (student) {
+                showToast('Student Analytics', `Viewing detailed analytics for ${student.name}`, 'info');
+            }
+        }
+
+        // Calendar Page Functions
+        function initializeCalendarPage() {
+            // Initialize FullCalendar
+            const calendarEl = document.getElementById('calendar');
+
+            if (calendar) {
+                calendar.destroy();
+            }
+
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: appData.calendarEvents,
+                eventClick: function (info) {
+                    showToast('Event Details', `${info.event.title} - ${info.event.extendedProps.description || 'No description'}`, 'info');
+                },
+                eventColor: '#4a6fa5',
+                height: 'auto'
+            });
+
+            calendar.render();
+
+            // Populate upcoming events
+            const upcomingEvents = document.getElementById('upcomingEvents');
+            upcomingEvents.innerHTML = '';
+
+            // Sort events by date
+            const sortedEvents = [...appData.calendarEvents].sort((a, b) => a.start - b.start);
+
+            // Show next 5 events
+            sortedEvents.slice(0, 5).forEach(event => {
+                const eventDate = event.start;
+                const eventItem = document.createElement('div');
+                eventItem.className = 'event-item';
+                eventItem.innerHTML = `
+                    <div class="event-date">
+                        <div class="day">${eventDate.getDate()}</div>
+                        <div class="month">${eventDate.toLocaleString('default', { month: 'short' })}</div>
+                    </div>
+                    <div class="event-details">
+                        <h4>${event.title}</h4>
+                        <p>${event.extendedProps.description || ''}</p>
+                    </div>
+                `;
+
+                upcomingEvents.appendChild(eventItem);
+            });
+
+            // Today button
+            document.getElementById('todayBtn').addEventListener('click', function () {
+                calendar.today();
+                showToast('Calendar', 'Navigated to today', 'info');
+            });
+
+            // Add event button
+            document.getElementById('addEventBtn').addEventListener('click', function () {
+                showToast('Add Event', 'Creating new calendar event', 'info');
+            });
+        }
+
+        // Settings Page Functions
+        function initializeSettingsPage() {
+            // Tab switching
+            document.querySelectorAll('.settings-tab').forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    document.querySelectorAll('.settings-tab').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Hide all tab content
+                    document.querySelectorAll('.settings-section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    // Activate clicked tab
+                    this.classList.add('active');
+
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}Tab`).style.display = 'block';
+                });
+            });
+
+            // Save profile button
+            document.getElementById("saveProfileBtn").addEventListener("click", async () => {
+
+                const fullName =
+                    document.getElementById("firstName").value + " " +
+                    document.getElementById("lastName").value;
+
+                const data = {
+                    name: fullName.trim(),
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    phone: document.getElementById("phone").value,
+                    bio: document.getElementById("bio").value
+                };
+
+                const res = await fetch("/teacher/update-profile", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+
+                if (result.success) {
+                    showToast("Saved", "Profile Updated Successfully", "success");
+                } else {
+                    showToast("Error", "Profile Update Failed", "error");
+                }
+            });
+
+
+            // Update account button
+            document.getElementById('updateAccountBtn').addEventListener('click', function () {
+                showToast('Account Updated', 'Your account settings have been updated', 'success');
+            });
+        }
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const toggleIcon = document.querySelector('#toggleSidebar i');
+
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
+
+            if (sidebar.classList.contains('collapsed')) {
+                toggleIcon.className = 'fas fa-chevron-right';
+            } else {
+                toggleIcon.className = 'fas fa-chevron-left';
+            }
+        }
+
+        // Global Search
+        function setupGlobalSearch() {
+            const searchInput = document.getElementById('globalSearch');
+
+            searchInput.addEventListener('input', function () {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                // Agar empty hai → current page normal reload
+                if (searchTerm === "") {
+                    if (currentPage === 'students') initializeStudentsPage();
+                    if (currentPage === 'tests') initializeTestsPage();
+                    if (currentPage === 'messages') initializeMessagesPage();
+                    return;
+                }
+
+                // ===== STUDENTS PAGE SEARCH =====
+                if (currentPage === 'students') {
+                    const rows = document.querySelectorAll('#studentsTableBody tr');
+                    rows.forEach(row => {
+                        row.style.display = row.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
+                    });
+                }
+
+                // ===== TESTS PAGE SEARCH =====
+                if (currentPage === 'tests') {
+                    const cards = document.querySelectorAll('.test-card');
+                    cards.forEach(card => {
+                        card.style.display = card.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
+                    });
+                }
+
+                // ===== MESSAGES PAGE SEARCH =====
+                if (currentPage === 'messages') {
+                    const chats = document.querySelectorAll('.conversation-item');
+                    chats.forEach(chat => {
+                        chat.style.display = chat.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
+                    });
+                }
+
+                // ===== DASHBOARD QUICK SEARCH =====
+                if (currentPage === 'dashboard') {
+                    const allCards = document.querySelectorAll('.dashboard-card, .stat-card, .activity-item');
+                    allCards.forEach(card => {
+                        card.style.display = card.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
+                    });
+                }
+            });
+        }
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set up navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    navigateTo(page);
+                });
+            });
+
+            // Set up sidebar toggle
+            document.getElementById('toggleSidebar').addEventListener('click', toggleSidebar);
+
+            // Set up global search
+            setupGlobalSearch();
+
+            // Set up notification button
+            document.getElementById('notifications').addEventListener('click', function () {
+                showToast('Notifications', 'You have 3 unread notifications', 'info');
+            });
+
+            // Set up help button
+            document.getElementById('helpBtn').addEventListener('click', function () {
+                showToast('Help Center', 'Opening help documentation', 'info');
+            });
+
+            // Create test form submission
+            document.getElementById('createTestSubmitBtn').addEventListener('click', createNewTest);
+
+            // Add student form submission
+            document.getElementById('addStudentSubmitBtn').addEventListener('click', addNewStudent);
+
+            // Add question button
+            document.getElementById('addQuestionBtn').addEventListener('click', addQuestion);
+
+            // Add option button for multiple choice questions
+            document.getElementById('addOptionBtn').addEventListener('click', function () {
+                const optionsList = document.getElementById('optionsList');
+                const optionCount = optionsList.children.length;
+
+                if (optionCount >= 6) {
+                    showToast('Maximum Options', 'You can only add up to 6 options', 'error');
+                    return;
+                }
+
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'form-group';
+                optionDiv.style.marginBottom = '10px';
+                optionDiv.innerHTML = `
+                    <div class="question-option">
+                        <input type="radio" name="correctOption" value="${optionCount}">
+                        <input type="text" class="form-control" placeholder="Option ${String.fromCharCode(65 + optionCount)}" id="option${optionCount}">
+                    </div>
+                `;
+                optionsList.appendChild(optionDiv);
+            });
+
+            // Question type change handler
+            document.getElementById('questionType').addEventListener('change', function () {
+                const type = this.value;
+                const optionsContainer = document.getElementById('optionsContainer');
+
+                if (type === 'multiple-choice' || type === 'true-false') {
+                    optionsContainer.style.display = 'block';
+
+                    if (type === 'true-false') {
+                        document.getElementById('optionsList').innerHTML = `
+                            <div class="form-group" style="margin-bottom: 10px;">
+                                <div class="question-option">
+                                    <input type="radio" name="correctOption" value="0" checked>
+                                    <input type="text" class="form-control" value="True" id="option0" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 10px;">
+                                <div class="question-option">
+                                    <input type="radio" name="correctOption" value="1">
+                                    <input type="text" class="form-control" value="False" id="option1" readonly>
+                                </div>
+                            </div>
+                        `;
+                        document.getElementById('addOptionBtn').style.display = 'none';
+                    } else {
+                        document.getElementById('optionsList').innerHTML = `
+                            <div class="form-group" style="margin-bottom: 10px;">
+                                <div class="question-option">
+                                    <input type="radio" name="correctOption" value="0" checked>
+                                    <input type="text" class="form-control" placeholder="Option A" id="option0">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 10px;">
+                                <div class="question-option">
+                                    <input type="radio" name="correctOption" value="1">
+                                    <input type="text" class="form-control" placeholder="Option B" id="option1">
+                                </div>
+                            </div>
+                        `;
+                        document.getElementById('addOptionBtn').style.display = 'block';
+                    }
+                } else {
+                    optionsContainer.style.display = 'none';
+                }
+            });
+
+            // Initialize current page
+            initializeDashboardPage();
+            updateMessageBadge();
+
+            // Show welcome message
+            setTimeout(() => {
+                showToast('Welcome!', `Welcome back, ${appData.currentUser.name}!`, 'success');
+            }, 1000);
+        });
+
+        async function loadRealMessages(studentId) {
+            const res = await fetch("/teacher/messages/" + studentId);
+            const messages = await res.json();
+
+            const chatMessages = document.getElementById("chatMessages");
+            chatMessages.innerHTML = "";
+
+            messages.forEach(msg => {
+                const div = document.createElement("div");
+                div.className = "message " + msg.sender;
+                div.innerHTML = `<div class="message-content">${msg.text}</div>`;
+                chatMessages.appendChild(div);
+            });
+        }
+        async function loadStudentMessages() {
+            const res = await fetch("/student/messages", {
+                credentials: "include"
+            });
+            const messages = await res.json();
+
+            const box = document.getElementById("studentMessageBox");
+            box.innerHTML = "";
+
+            messages.forEach(msg => {
+                const div = document.createElement("div");
+                div.innerHTML = `
+        <p><b>${msg.sender}:</b> ${msg.text}</p>
+     `;
+                box.appendChild(div);
+            });
+        }
+        window.addEventListener("load", () => {
+            document.getElementById("globalSearch").value = "";
+        });
+        function toggleMobileSidebar() {
+            document.querySelector(".sidebar").classList.toggle("mobile-show");
+        }
+
+        // page load
+        loadStudentMessages();
+    </script>
+</body>
+
+</html>

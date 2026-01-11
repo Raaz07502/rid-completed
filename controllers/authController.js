@@ -14,53 +14,48 @@ exports.login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Find user by email
-    const user = await User.findOne({ email });
+    // 🔹 Check in all collections
+    let user = await User.findOne({ email });
+    if (!user) user = await require("../models/Teacher").findOne({ email });
+    if (!user) user = await require("../models/Organisation").findOne({ email });
 
     if (!user) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    // Compare password
+    // 🔹 Compare password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    // Generate JWT token
+    // 🔹 Token
     const token = jwt.sign(
       { userId: user._id, role: user.role },
       process.env.JWT_SECRET,
-      {
-        expiresIn: "1h", // Token expires in 1 hour
-      }
+      { expiresIn: "1h" }
     );
 
-    // Set token as cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // Use secure cookies in production
-      maxAge: 3600000, // 1 hour in milliseconds
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 3600000,
     });
 
-    // Redirect based on user role
-    switch (user.role) {
-      case "student":
-        return res.redirect("/student");
-      case "teacher":
-        return res.redirect("/teacher");
-      case "organisation":
-        return res.redirect("/organisation");
-      case "admin":
-        return res.redirect("/admin");
-      default:
-        return res.status(400).json({ message: "Invalid user role" });
-    }
+    // 🔹 Redirect
+    if (user.role === "student") return res.redirect("/student-dashboard");
+    if (user.role === "teacher") return res.redirect("/teacher-dashboard");
+    if (user.role === "organisation") return res.redirect("/organisation-dashboard");
+    if (user.role === "admin") return res.redirect("/admin");
+
+    return res.status(400).json({ message: "Invalid role" });
+
   } catch (error) {
-    console.error("Error logging in:", error);
+    console.error("Login error:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 exports.logout = (req, res) => {
   res.clearCookie("token");
@@ -110,47 +105,18 @@ exports.forgotPassword = async (req, res) => {
 exports.resetPassword = async (req, res) => {
   const { email, otp, newPassword } = req.body;
 
-  if (!email || !otp || !newPassword) {
-    return res
-      .status(400)
-      .json({
-        success: false,
-        message: "Email, OTP, and new password are required",
-      });
-  }
+  const isValidOTP = await validateOTP(email, otp);  // ✅ await added
 
-  // Validate OTP
-  const isValidOTP = validateOTP(email, otp);
   if (!isValidOTP) {
-    return res
-      .status(400)
-      .json({ success: false, message: "Invalid or expired OTP" });
+    return res.status(400).json({ success:false, message:"Invalid or expired OTP" });
   }
 
-  try {
-    // Find user
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res
-        .status(404)
-        .json({ success: false, message: "User not found" });
-    }
+  const user = await User.findOne({ email });
+  if (!user) return res.status(404).json({message:"User not found"});
 
-    // Hash new password
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
+  const hashedPassword = await bcrypt.hash(newPassword, 10); // ✅ hash password
+  user.password = hashedPassword;
+  await user.save();
 
-    // Update password
-    user.password = hashedPassword;
-    await user.save();
-
-    // Respond with success
-    res
-      .status(200)
-      .json({ success: true, message: "Password reset successful" });
-  } catch (error) {
-    console.error("Error resetting password:", error);
-    res
-      .status(500)
-      .json({ success: false, message: "Error resetting password" });
-  }
+  res.json({ success:true, message:"Password reset successful" });
 };

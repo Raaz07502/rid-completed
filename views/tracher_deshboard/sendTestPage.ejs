@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Send Test</title>
+</head>
+<body>
+<h2>Select Students to Send Test</h2>
+
+<form id="sendTestForm">
+ <input type="hidden" id="testId" value="<%= testId %>">
+
+ <% students.forEach(st=>{ %>
+   <div>
+     <input type="checkbox" value="<%= st._id %>" class="studentCheck">
+     <%= st.name %> ( <%= st.class %> )
+   </div>
+ <% }) %>
+
+ <button type="submit">Send Test</button>
+</form>
+
+<script>
+document.getElementById("sendTestForm").addEventListener("submit", async(e)=>{
+ e.preventDefault();
+
+ const testId = document.getElementById("testId").value;
+ const studentIds = [];
+
+ document.querySelectorAll(".studentCheck:checked").forEach(ch=>{
+   studentIds.push(ch.value);
+ });
+
+ const res = await fetch("/teacher/send-test",{
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body: JSON.stringify({testId, studentIds})
+ });
+
+ const result = await res.json();
+ if(result.success) alert("Test Sent Successfully!");
+});
+</script>
+
+</body>
+</html>

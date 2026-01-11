@@ -362,6 +362,9 @@ const forgotPasswordRoutes = require("./RTS/routes/forgotPasswordRoutes.js");
 app.use("/api", signupRoutes);
 app.use("/api", loginRoutes);
 app.use("/api", forgotPasswordRoutes);
+const teacherRoutes = require("./routes/teacherRoutes");
+app.use("/", teacherRoutes);
+
 
 
 // ======= MAIN ROUTES (404 is inside this) =======

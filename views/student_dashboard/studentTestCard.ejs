@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>send test for student </title>
+</head>
+<body>
+    <h2><%= test.title %></h2>
+<p>Subject: <%= test.subject %></p>
+<p>Class: <%= test.class %></p>
+
+<button onclick="window.location.href='/student/start-test/<%= test._id %>'">
+ Start Test
+</button>
+
+</body>
+</html>

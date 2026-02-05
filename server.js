@@ -12,6 +12,7 @@ const crypto = require("crypto");
 const fs = require("fs");
 const fileUpload = require("express-fileupload");
 
+
 // Load environment variables
 dotenv.config();
 
@@ -399,6 +400,9 @@ const teacherRoutes = require("./routes/teacherRoutes");
 app.use("/", teacherRoutes);
 const studentRoutes = require("./routes/studentRoutes");
 app.use("/", studentRoutes);
+// 🔽 यहीं add करो
+const giftRoutes = require("./routes/giftRoutes");
+app.use("/", giftRoutes);
 // student ranks system ==============
 const authenticateJWT = require("./middleware/authMiddleware");
 const teacherAnalyticsRoutes = require("./routes/teacherAnalytics");

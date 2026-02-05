@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&family=Sacramento&family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Parisienne&family=Amatic+SC:wght@700&family=WindSong:wght@500&family=Rouge+Script&family=Mr+De+Haviland&family=Qwitcher+Grypen:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/journey.css">
+    <style>
+         /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(120, 0, 80, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 100, 120, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 80, 0, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a2a 0%, #1a0033 30%, #33001a 70%, #000d33 100%);
+        }
+        
+        /* ANIMATED NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 42, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid rgba(255, 102, 204, 0.3);
+            padding: 15px 0;
+            transform: translateY(-100%);
+            animation: slideDown 1s forwards 0.5s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        @keyframes slideDown {
+            to { transform: translateY(0); }
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            background: linear-gradient(to right, #ff66cc, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            position: relative;
+            padding-right: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-logo {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .nav-logo::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff66cc, #ffcc00);
+            animation: pulseGlow 2s infinite;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: rgba(10, 10, 42, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 100px 20px 20px;
+                gap: 15px;
+                transition: right 0.4s ease-in-out;
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-item {
+                width: 100%;
+            }
+        }
+        
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-link {
+                width: 100%;
+                justify-content: flex-start;
+                font-size: 1.1rem;
+                padding: 12px 20px;
+            }
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+        
+        .nav-link:hover::before {
+            left: 100%;
+        }
+        
+        .nav-link:hover {
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.2), rgba(255, 204, 0, 0.2));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 102, 204, 0.3);
+        }
+        
+        .nav-link.active {
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            box-shadow: 0 0 30px rgba(255, 102, 204, 0.5);
+        }
+        
+        .nav-icon {
+            font-size: 1.2rem;
+            animation: rotateIcon 3s infinite linear;
+        }
+        
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            z-index: 1001;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+        }
+        
+        /* OUR JOURNEY SECTION */
+        .journey-section {
+            min-height: 100vh;
+            padding: 120px 15px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-section {
+                padding: 100px 15px 60px;
+            }
+        }
+        
+        /* Animated Heart Background for Journey */
+        .journey-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .journey-heart {
+            position: absolute;
+            font-size: 20px;
+            color: #ff3366;
+            opacity: 0;
+            animation: journeyHeartFloat 20s infinite linear;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-heart {
+                font-size: 16px;
+            }
+        }
+        
+        /* Journey Title Container */
+        .journey-title-container {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-title-container {
+                margin-bottom: 40px;
+            }
+        }
+        
+        .journey-main-title {
+            font-family: 'Qwitcher Grypen', cursive;
+            font-size: 5rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            text-shadow: 
+                0 0 30px rgba(255, 204, 0, 0.8),
+                0 0 60px rgba(255, 204, 0, 0.5);
+            animation: journeyTitleGlow 4s infinite alternate;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-main-title {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .journey-main-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .journey-subtitle {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: #ffccff;
+            margin-bottom: 20px;
+            animation: subtitleFloat 6s infinite ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-subtitle {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .journey-subtitle {
+                font-size: 1.6rem;
+            }
+        }
+        
+        /* Heart Divider Animation */
+        .heart-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .heart-divider {
+                margin: 20px 0;
+            }
+        }
+        
+        .heart-divider-line {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ff66cc, transparent);
+            margin: 0 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .heart-divider-line {
+                width: 50px;
+            }
+        }
+        
+        .heart-divider-icon {
+            font-size: 2rem;
+            color: #ff3366;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        /* Photo Cards Container - IMPROVED FOR MOBILE */
+        .cards-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            gap: 60px;
+            padding: 20px 0;
+        }
+        
+        @media (min-width: 992px) {
+            .cards-container {
+                flex-direction: row;
+                height: 600px;
+                gap: 0;
+                padding: 0;
+            }
+        }
+        
+        /* Beating Heart in Center */
+        .center-heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #ff3366, #ff0066);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            z-index: 30;
+            box-shadow: 
+                0 0 40px #ff3366,
+                inset 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: 
+                centerHeartbeat 1.2s infinite ease-in-out,
+                centerHeartRotate 20s infinite linear;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 20px 0;
+            order: 1;
+        }
+        
+        @media (min-width: 992px) {
+            .center-heart {
+                position: absolute;
+                margin: 0;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                order: 0;
+            }
+        }
+        
+        .center-heart:hover {
+            transform: scale(1.1);
+            box-shadow: 
+                0 0 60px #ff3366,
+                inset 0 0 40px rgba(255, 255, 255, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .center-heart {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+        }
+        
+        /* Photo Cards - FIXED FOR MOBILE */
+        .photo-card {
+            width: 100%;
+            max-width: 320px;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.7),
+                0 0 30px rgba(255, 255, 255, 0.1);
+            z-index: 20;
+            border: 10px solid transparent;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        @media (min-width: 992px) {
+            .photo-card {
+                position: absolute;
+                width: 320px;
+                height: 450px;
+                max-width: none;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .photo-card {
+                width: 350px;
+                height: 500px;
+            }
+        }
+        
+        .photo-card.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .card-me {
+            border-image: linear-gradient(45deg, #66ccff, #9966ff, #66ffff) 1;
+            order: 2;
+        }
+        
+        @media (min-width: 992px) {
+            .card-me {
+                left: 20%;
+                animation: cardFloatLeft 6s infinite ease-in-out;
+                order: 0;
+            }
+        }
+        
+        .card-you {
+            border-image: linear-gradient(45deg, #ff66cc, #ff9966, #ffcc00) 1;
+            order: 3;
+        }
+        
+        @media (min-width: 992px) {
+            .card-you {
+                right: 20%;
+                animation: cardFloatRight 6s infinite ease-in-out 0.5s;
+                order: 0;
+            }
+        }
+        
+        /* DESKTOP CROSSING ANIMATION */
+        @media (min-width: 992px) {
+            .card-me.crossing {
+                animation: crossLeftToRight 3.5s infinite ease-in-out;
+            }
+            
+            .card-you.crossing {
+                animation: crossRightToLeft 3.5s infinite ease-in-out;
+            }
+        }
+        
+        /* MOBILE CROSSING ANIMATION - FIXED */
+        @media (max-width: 991px) {
+            .cards-container {
+                position: relative;
+                height: 1000px;
+                overflow: visible;
+            }
+            
+            .photo-card {
+                position: absolute !important;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%) !important;
+                width: 85%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            
+            .card-me {
+                top: 150px !important;
+                z-index: 25;
+            }
+            
+            .card-you {
+                top: 350px !important;
+                z-index: 20;
+            }
+            
+            .card-me.crossing {
+                animation: mobileCrossUp 4s infinite ease-in-out !important;
+            }
+            
+            .card-you.crossing {
+                animation: mobileCrossDown 4s infinite ease-in-out !important;
+            }
+            
+            @keyframes mobileCrossUp {
+                0%, 100% { 
+                    top: 150px;
+                    transform: translateX(-50%) scale(1);
+                    z-index: 25;
+                }
+                25% {
+                    top: 250px;
+                    transform: translateX(-50%) scale(1.05);
+                    z-index: 30;
+                }
+                50% {
+                    top: 150px;
+                    transform: translateX(-50%) scale(1);
+                    z-index: 25;
+                }
+                75% {
+                    top: 250px;
+                    transform: translateX(-50%) scale(1.05);
+                    z-index: 30;
+                }
+            }
+            
+            @keyframes mobileCrossDown {
+                0%, 100% { 
+                    top: 350px;
+                    transform: translateX(-50%) scale(1);
+                    z-index: 20;
+                }
+                25% {
+                    top: 250px;
+                    transform: translateX(-50%) scale(1.05);
+                    z-index: 35;
+                }
+                50% {
+                    top: 350px;
+                    transform: translateX(-50%) scale(1);
+                    z-index: 20;
+                }
+                75% {
+                    top: 250px;
+                    transform: translateX(-50%) scale(1.05);
+                    z-index: 35;
+                }
+            }
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(1.1) contrast(1.1);
+            transition: transform 0.5s;
+        }
+        
+        .photo-card:hover .card-img {
+            transform: scale(1.05);
+        }
+        
+        .card-content {
+            padding: 20px;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            text-align: center;
+        }
+        
+        .card-title {
+            font-family: 'Rouge Script', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #ffccff;
+            text-shadow: 0 0 20px rgba(255, 204, 255, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .card-subtitle {
+            color: #ccccff;
+            font-size: 1.1rem;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Memory Timeline - COMPLETELY REDESIGNED FOR MOBILE */
+        .timeline-container {
+            max-width: 1000px;
+            margin: 60px auto 40px;
+            position: relative;
+            z-index: 10;
+            padding: 0 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-container {
+                margin: 40px auto 30px;
+                padding: 0 20px;
+            }
+        }
+        
+        .timeline {
+            position: relative;
+            height: 400px;
+            overflow: visible;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline {
+                height: auto;
+                min-height: 600px;
+                padding-left: 70px;
+            }
+        }
+        
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #ff66cc, #ffcc00, #66ccff, transparent);
+            border-radius: 2px;
+            z-index: 5;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line {
+                width: 4px;
+                height: 90%;
+                left: 35px;
+                transform: translateY(-50%);
+                top: 50%;
+                background: linear-gradient(to bottom, transparent, #ff66cc, #ffcc00, #66ccff, transparent);
+            }
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            box-shadow: 0 0 20px rgba(255, 102, 204, 0.7);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .timeline-marker:hover {
+            transform: translateY(-50%) scale(1.2);
+            box-shadow: 0 0 40px rgba(255, 102, 204, 1);
+        }
+        
+        /* Desktop marker positions */
+        .timeline-marker:nth-child(1) {
+            left: 15%;
+        }
+        
+        .timeline-marker:nth-child(2) {
+            left: 35%;
+        }
+        
+        .timeline-marker:nth-child(3) {
+            left: 55%;
+        }
+        
+        .timeline-marker:nth-child(4) {
+            left: 75%;
+        }
+        
+        /* Mobile marker positions - COMPLETELY REDONE */
+        @media (max-width: 768px) {
+            .timeline-marker {
+                position: absolute !important;
+                left: 35px !important;
+                transform: translateX(-50%) !important;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                top: 0 !important;
+                margin-bottom: 0;
+            }
+            
+            .timeline-marker:nth-child(1) {
+                top: 10% !important;
+            }
+            
+            .timeline-marker:nth-child(2) {
+                top: 30% !important;
+            }
+            
+            .timeline-marker:nth-child(3) {
+                top: 50% !important;
+            }
+            
+            .timeline-marker:nth-child(4) {
+                top: 70% !important;
+            }
+            
+            .timeline-marker:hover {
+                transform: translateX(-50%) scale(1.2) !important;
+            }
+        }
+        
+        .timeline-content {
+            position: absolute;
+            top: -150px;
+            left: 0;
+            width: 300px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+          
+            border-radius: 15px;
+            border: 1px solid rgba(255, 102, 204, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s;
+            pointer-events: none;
+            z-index: 20;
+        }
+        
+        /* Desktop content positioning */
+        .timeline-marker:nth-child(1) .timeline-content {
+            left: -20px;
+        }
+        
+        .timeline-marker:nth-child(2) .timeline-content {
+            left: -140px;
+        }
+        
+        .timeline-marker:nth-child(3) .timeline-content {
+            left: -260px;
+        }
+        
+        .timeline-marker:nth-child(4) .timeline-content {
+            left: -380px;
+        }
+        
+        .timeline-marker:hover .timeline-content {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        /* MOBILE TIMELINE CONTENT - COMPLETELY REDESIGNED */
+       @media (max-width: 768px) {
+    .timeline-content {
+        position: absolute !important;
+        top: 50% !important;
+        left: 80px !important;
+        transform: translateY(-50%) !important;
+
+        width: calc(100vw - 120px) !important;
+        max-width: 400px !important;
+        margin: 0 !important;
+        padding: 20px !important;
+
+        background: rgba(15, 15, 40, 0.95) !important; /* ✅ solid bg */
+        backdrop-filter: none !important;              /* ❌ blur हटाया */
+        box-shadow: none !important;                    /* ❌ glow हटाया */
+
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 1000 !important;
+
+        transition: all 0.35s ease !important;
+    }
+
+    .timeline-marker.active .timeline-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: all !important;
+    }
+}
+
+        .timeline-content h4 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.7rem;
+            color: #ffcc00;
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 480px) {
+            .timeline-content h4 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .timeline-content p {
+            color: #ccccff;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Timeline Overlay for Mobile - IMPROVED */
+        .timeline-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter:none;
+            z-index: 999;
+        }
+        
+        .timeline-overlay.active {
+            display: block;
+        }
+        
+        /* Control Buttons */
+        .controls-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        @media (min-width: 768px) {
+            .controls-container {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+        }
+        
+        .control-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 250px;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 20;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .control-btn {
+                min-width: 100%;
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+        
+        .start-crossing-btn {
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            color: white;
+        }
+        
+        .stop-crossing-btn {
+            background: linear-gradient(135deg, #0066ff, #6600ff);
+            color: white;
+        }
+        
+        .music-toggle-btn {
+            background: linear-gradient(135deg, #00cc66, #00ff99);
+            color: white;
+        }
+        
+        .control-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .control-btn:hover {
+                transform: translateY(-5px) scale(1.02);
+            }
+        }
+        
+        .control-btn:active {
+            transform: translateY(-3px) scale(1.01);
+        }
+        
+        .control-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+        
+        .control-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* ANIMATIONS */
+        @keyframes journeyHeartFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes journeyTitleGlow {
+            0% { 
+                text-shadow: 0 0 30px rgba(255, 204, 0, 0.8),
+                            0 0 60px rgba(255, 204, 0, 0.5); 
+            }
+            100% { 
+                text-shadow: 0 0 50px rgba(255, 204, 0, 1),
+                            0 0 100px rgba(255, 204, 0, 0.8),
+                            0 0 150px rgba(255, 204, 0, 0.4); 
+            }
+        }
+        
+        @keyframes centerHeartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.05); }
+        }
+        
+        @keyframes centerHeartRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes cardFloatLeft {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-15px) translateY(-15px); }
+        }
+        
+        @keyframes cardFloatRight {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(15px) translateY(-15px); }
+        }
+        
+        /* DESKTOP CROSSING ANIMATIONS */
+        @keyframes crossLeftToRight {
+            0%, 100% { 
+                left: 20%;
+                z-index: 20;
+                transform: scale(1);
+            }
+            25% {
+                left: 50%;
+                transform: translateX(-50%) scale(1.1);
+                z-index: 30;
+            }
+            50% {
+                left: 20%;
+                transform: scale(1);
+                z-index: 20;
+            }
+            75% {
+                left: 50%;
+                transform: translateX(-50%) scale(1.1);
+                z-index: 30;
+            }
+        }
+        
+        @keyframes crossRightToLeft {
+            0%, 100% { 
+                right: 20%;
+                z-index: 20;
+                transform: scale(1);
+            }
+            25% {
+                right: 50%;
+                transform: translateX(50%) scale(1.1);
+                z-index: 30;
+            }
+            50% {
+                right: 20%;
+                transform: scale(1);
+                z-index: 20;
+            }
+            75% {
+                right: 50%;
+                transform: translateX(50%) scale(1.1);
+                z-index: 30;
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes rotateIcon {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.05); }
+        }
+        
+        @keyframes subtitleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* ENHANCED CREATIVE FOOTER */
+        .footer {
+            background: linear-gradient(to top, rgba(10, 10, 42, 0.98), rgba(26, 0, 51, 0.95));
+            padding: 60px 0 40px;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+            border-top: 3px solid transparent;
+            background-clip: padding-box;
+            border-image: linear-gradient(45deg, #ff0066, #ffcc00, #0066ff, #6600ff) 1;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                #ff0066, #ff6600, #ffcc00, #00cc66, 
+                #0066ff, #6600ff, #cc00ff);
+            background-size: 400% 400%;
+            animation: rainbowSlide 3s infinite linear;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+        
+        .footer-column {
+            position: relative;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 102, 204, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-column {
+                padding: 20px;
+            }
+        }
+        
+        .footer-column:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(255, 102, 204, 0.3);
+            border-color: rgba(255, 102, 204, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .footer-column:hover {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .footer-column h3 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2.5rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-column h3 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, #ff66cc, #ffcc00);
+            border-radius: 2px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .footer-links li::before {
+            content: '❥';
+            position: absolute;
+            left: 0;
+            color: #ff66cc;
+            font-size: 1rem;
+        }
+        
+        .footer-links a {
+            color: #ccccff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links a {
+                font-size: 0.95rem;
+            }
+        }
+        
+        .footer-links a:hover {
+            color: #ff66cc;
+            transform: translateX(8px);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.2), rgba(255, 204, 0, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+        
+        .social-icon:hover::before {
+            left: 100%;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.1);
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            box-shadow: 0 8px 25px rgba(255, 102, 204, 0.5);
+        }
+        
+        .love-meter {
+            width: 100%;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .love-fill {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #ff0066, #ffcc00);
+            border-radius: 8px;
+            animation: lovePulse 2s infinite alternate;
+            position: relative;
+        }
+        
+        .love-fill::after {
+            content: '∞';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+        }
+        
+        .countdown-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 102, 204, 0.3);
+        }
+        
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffcc00;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .countdown-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff66cc;
+            text-shadow: 0 0 8px rgba(255, 102, 204, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .countdown-value {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: #ccccff;
+            margin-top: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9999ff;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-bottom {
+                padding-top: 40px;
+                margin-top: 40px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .footer-heart {
+            color: #ff3366;
+            animation: heartbeat 1.5s infinite;
+            font-size: 2rem;
+            margin: 0 8px;
+            display: inline-block;
+            filter: drop-shadow(0 0 8px rgba(255, 51, 102, 0.5));
+        }
+        
+        /* STARS BACKGROUND */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes rainbowSlide {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 400% 50%; }
+        }
+        
+        @keyframes lovePulse {
+            0% { width: 95%; }
+            100% { width: 100%; }
+        }
+        
+        /* IMAGE FALLBACK STYLES */
+        .card-img {
+            background: linear-gradient(45deg, #ff66cc, #ffcc00, #66ccff);
+            background-size: 400% 400%;
+            animation: gradientBG 5s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Timeline Overlay for Mobile -->
+    <div class="timeline-overlay" id="timelineOverlay"></div>
+
+    <!-- Audio Element for Background Music -->
+    <% if (gift.song) { %>
+        <audio id="backgroundMusic" autoplay loop>
+            <source src="<%= gift.song %>" type="audio/mpeg">
+        </audio>
+        <% } %>
+
+
+
+            <!-- Navigation Bar -->
+             <%- include('Birthday_Celebration/navbar/navbar.ejs') %>
+
+
+                <!-- Our Journey Section -->
+                <section id="journey" class="route-section active journey-section">
+                    <!-- Animated Hearts Background -->
+                    <div class="journey-hearts" id="journeyHearts"></div>
+
+                    <!-- Journey Title -->
+                    <div class="journey-title-container">
+                        <h1 class="journey-main-title">हमारा खूबसूरत सफ़र</h1>
+                        <h2 class="journey-subtitle">एक रिश्ता, अनगिनत यादें</h2>
+
+                        <div class="heart-divider">
+                            <div class="heart-divider-line"></div>
+                            <div class="heart-divider-icon">❤</div>
+                            <div class="heart-divider-line"></div>
+                        </div>
+
+                        <p
+                            style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: #ccccff; padding: 0 15px;">
+                            यह सफ़र उन सभी प्यारे रिश्तों और यादों की कहानी है,
+                            जिन्होंने हमारी ज़िंदगी को खुशियों, प्यार और अपनापन से भर दिया।
+                            आपके साथ बिताया हर छोटा-बड़ा पल हमेशा दिल को मुस्कुराने की वजह देता है।
+                        </p>
+
+                    </div>
+
+
+                    <!-- Photo Cards Container -->
+                    <!-- Photo Cards Container -->
+                    <div class="cards-container">
+
+                        <!-- Center Heart -->
+                        <div class="center-heart" id="centerHeart">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <!-- Didi -->
+                        <div class="photo-card card-me" id="cardMe">
+                            <img class="card-img"
+                                src="<%= gift.didiImage || (gift.images && gift.images[0]) || '/images/placeholder-didi.jpg' %>"
+                                alt="Didi Photo">
+                            <div class="card-content">
+                                <h1 class="hero-title">
+                                    <%= gift.didiName %>
+                                </h1>
+                            </div>
+                        </div>
+
+                        <!-- Jija -->
+                        <div class="photo-card card-you" id="cardYou">
+                            <img class="card-img"
+                                src="<%= gift.jijaImage || (gift.images && gift.images[1]) || (gift.images && gift.images[0]) || '/images/placeholder-jija.jpg' %>"
+                                alt="Jija Photo">
+                            <div class="card-content">
+                                <h3 class="card-title">मेरे दिल के बहुत करीब</h3>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Memory Timeline - COMPLETELY REDESIGNED -->
+                    <div class="timeline-container">
+                        <h2
+                            style="text-align: center; font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #ffcc00; margin-bottom: 40px; padding: 0 15px;">
+                            हमारी यादों की समय-रेखा
+                        </h2>
+
+                        <div class="timeline">
+                            <div class="timeline-line"></div>
+
+                            <div class="timeline-marker">
+                                <i class="fas fa-star"></i>
+                                <div class="timeline-content">
+                                    <h4>शुभ शुरुआत</h4>
+                                    <p>
+                                        वह दिन जब हमारे परिवार में यह प्यारा रिश्ता जुड़ा
+                                        और खुशियों ने हमेशा के लिए घर बना लिया।
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-marker">
+                                <i class="fas fa-heart"></i>
+                                <div class="timeline-content">
+                                    <h4>साथ और समझ</h4>
+                                    <p>
+                                        समय के साथ यह रिश्ता और भी मजबूत होता गया,
+                                        जहाँ प्यार, सम्मान और अपनापन हर पल महसूस हुआ।
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-marker">
+                                <i class="fas fa-kiss-wink-heart"></i>
+                                <div class="timeline-content">
+                                    <h4>परिवार की खुशियाँ</h4>
+                                    <p>
+                                        हर त्योहार, हर मुस्कान और हर याद ने
+                                        इस रिश्ते को और भी खास बना दिया।
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-marker">
+                                <i class="fas fa-ring"></i>
+                                <div class="timeline-content">
+                                    <h4>आने वाला कल</h4>
+                                    <p>
+                                        आने वाले वर्षों में भी यह रिश्ता
+                                        ऐसे ही प्यार, विश्वास और खुशियों से भरा रहे।
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Control Buttons -->
+                    <div class="controls-container">
+                        <button class="control-btn start-crossing-btn" id="startCrossingBtn">
+                            <i class="fas fa-play-circle"></i>
+                            Start Cards Crossing
+                        </button>
+
+                        <button class="control-btn stop-crossing-btn" id="stopCrossingBtn">
+                            <i class="fas fa-pause-circle"></i>
+                            Stop Cards Crossing
+                        </button>
+
+                        <button class="control-btn music-toggle-btn" id="musicToggleBtn">
+                            <i class="fas fa-music"></i>
+                            Play Love Music
+                        </button>
+                    </div>
+
+                    <!-- Music Player -->
+                    <div class="music-player" id="musicPlayer" style="display: none;">
+                        <div class="player-header">
+                            <h3 class="player-title">Our Love Song</h3>
+                            <button class="close-player" id="closePlayer">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+
+                        <div class="player-controls">
+                            <button class="player-btn" id="playBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+
+                            <button class="player-btn" id="pauseBtn">
+                                <i class="fas fa-pause"></i>
+                            </button>
+
+                            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+
+                            <div style="color: #ff66cc; font-weight: 600; font-size: 0.9rem;">
+                                Volume
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 12px; color: #ccccff; font-size: 0.85rem; text-align: center;">
+                            "Romantic Love Music" - Our theme song
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Enhanced Creative Footer -->
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>हमारा प्यारा रिश्ता</h3>
+                            <p style="color: #ccccff; line-height: 1.6; font-size: 1rem; margin-bottom: 15px;">
+                                आपके साथ जुड़ी हर याद दिल में हमेशा के लिए बस गई है।
+                                यह छोटा सा डिजिटल संदेश हमारे प्यार, सम्मान और सच्ची भावनाओं का प्रतीक है।
+                            </p>
+                            <div class="love-meter">
+                                <div class="love-fill" id="loveFill"></div>
+                            </div>
+                            <p
+                                style="color: #ffcc00; font-family: 'Dancing Script', cursive; font-size: 1.3rem; text-align: center;">
+                                प्यार का स्तर: अनंत
+                            </p>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>यादों की राह</h3>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fas fa-heartbeat"></i> शुभकामनाओं का संदेश</a></li>
+                                <li><a href="#"><i class="fas fa-road"></i> साथ का सफ़र</a></li>
+                                <li><a href="#"><i class="fas fa-gift"></i> खास तोहफ़ा</a></li>
+                                <li><a href="#"><i class="fas fa-camera-retro"></i> अनमोल यादें</a></li>
+                                <li><a href="#"><i class="fas fa-hand-holding-heart"></i> दिल के विचार</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>दिलों का जुड़ाव</h3>
+                            <div class="footer-social">
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-heart"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-music"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-video"></i></a>
+                            </div>
+
+                            <div class="countdown-container">
+                                <div class="countdown-title">एक और खूबसूरत पल की ओर</div>
+                                <div class="countdown">
+                                    <div class="countdown-item">
+                                        <div class="countdown-value" id="days">365</div>
+                                        <div class="countdown-label">दिन</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-value" id="hours">23</div>
+                                        <div class="countdown-label">घंटे</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-value" id="minutes">59</div>
+                                        <div class="countdown-label">मिनट</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-value" id="seconds">59</div>
+                                        <div class="countdown-label">सेकंड</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p style="font-size: 1.2rem; margin-bottom: 15px;">
+                            <span class="footer-heart">❤</span> प्यार और भावनाओं के साथ खास लोगों के लिए बनाया गया
+                        </p>
+                        <p style="margin-bottom: 15px; font-size: 1rem; color: #ccccff;">
+                            आने वाला समय आपके जीवन में खुशियाँ, शांति और मुस्कान लेकर आए।
+                        </p>
+                        <div
+                            style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <p style="color: #9999ff; font-size: 0.9rem;">
+                                © 2026 यादों, रिश्तों और भावनाओं की कहानी।<br>
+                                स्नेह, सम्मान और सच्चे दिल से
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+
+
+                <script>
+                    // DOM Elements
+                    const hamburger = document.getElementById('hamburger');
+                    const navMenu = document.getElementById('navMenu');
+                    const navLinks = document.querySelectorAll('.nav-link');
+                    const starsContainer = document.getElementById('stars');
+                    const journeyHearts = document.getElementById('journeyHearts');
+                    const cardMe = document.getElementById('cardMe');
+                    const cardYou = document.getElementById('cardYou');
+                    const centerHeart = document.getElementById('centerHeart');
+                    const startCrossingBtn = document.getElementById('startCrossingBtn');
+                    const stopCrossingBtn = document.getElementById('stopCrossingBtn');
+                    const musicToggleBtn = document.getElementById('musicToggleBtn');
+                    const backgroundMusic = document.getElementById('backgroundMusic');
+                    const musicPlayer = document.getElementById('musicPlayer');
+                    const closePlayer = document.getElementById('closePlayer');
+                    const playBtn = document.getElementById('playBtn');
+                    const pauseBtn = document.getElementById('pauseBtn');
+                    const volumeSlider = document.getElementById('volumeSlider');
+                    const loveFill = document.getElementById('loveFill');
+                    const countdownDays = document.getElementById('days');
+                    const countdownHours = document.getElementById('hours');
+                    const countdownMinutes = document.getElementById('minutes');
+                    const countdownSeconds = document.getElementById('seconds');
+                    const timelineMarkers = document.querySelectorAll('.timeline-marker');
+                    const timelineContents = document.querySelectorAll('.timeline-content');
+                    const timelineOverlay = document.getElementById('timelineOverlay');
+
+                    // State Variables
+                    let isCrossing = false;
+                    let isMusicPlaying = false;
+                    let isMusicPlayerVisible = false;
+                    let activeTimelineMarker = null;
+
+                    // Create stars background
+                    function createStars() {
+                        const starCount = window.innerWidth < 768 ? 150 : 300;
+
+                        for (let i = 0; i < starCount; i++) {
+                            const star = document.createElement('div');
+                            star.classList.add('star');
+
+                            const size = Math.random() * 3;
+                            const left = Math.random() * 100;
+                            const top = Math.random() * 100;
+                            const opacity = 0.2 + Math.random() * 0.8;
+                            const twinkleDelay = Math.random() * 5;
+
+                            star.style.width = `${size}px`;
+                            star.style.height = `${size}px`;
+                            star.style.left = `${left}%`;
+                            star.style.top = `${top}%`;
+                            star.style.opacity = opacity;
+                            star.style.animationDelay = `${twinkleDelay}s`;
+
+                            starsContainer.appendChild(star);
+                        }
+                    }
+
+                    // Create floating hearts for journey section
+                    function createJourneyHearts() {
+                        const heartCount = window.innerWidth < 768 ? 40 : 80;
+                        const hearts = ['❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
+
+                        for (let i = 0; i < heartCount; i++) {
+                            setTimeout(() => {
+                                const heart = document.createElement('div');
+                                heart.classList.add('journey-heart');
+                                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+                                const size = window.innerWidth < 768 ? 15 + Math.random() * 20 : 20 + Math.random() * 40;
+                                const left = Math.random() * 100;
+                                const duration = 15 + Math.random() * 20;
+                                const delay = Math.random() * 5;
+                                const color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+
+                                heart.style.left = `${left}%`;
+                                heart.style.fontSize = `${size}px`;
+                                heart.style.color = color;
+                                heart.style.animationDelay = `${delay}s`;
+                                heart.style.animationDuration = `${duration}s`;
+
+                                journeyHearts.appendChild(heart);
+
+                                // Remove heart after animation
+                                setTimeout(() => {
+                                    if (heart.parentNode) {
+                                        heart.remove();
+                                    }
+                                }, (duration + delay) * 1000);
+                            }, i * 500);
+                        }
+                    }
+
+                    // Start cards crossing animation
+                    function startCrossing() {
+                        if (!isCrossing) {
+                            cardMe.classList.add('crossing');
+                            cardYou.classList.add('crossing');
+                            isCrossing = true;
+
+                            startCrossingBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Crossing...';
+                            startCrossingBtn.style.background = 'linear-gradient(135deg, #ff6600, #ffcc00)';
+
+                            // Create heart burst from center
+                            createHeartBurst(10,
+                                centerHeart.getBoundingClientRect().left + centerHeart.offsetWidth / 2,
+                                centerHeart.getBoundingClientRect().top + centerHeart.offsetHeight / 2
+                            );
+                        }
+                    }
+
+                    // Stop cards crossing animation
+                    function stopCrossing() {
+                        if (isCrossing) {
+                            cardMe.classList.remove('crossing');
+                            cardYou.classList.remove('crossing');
+                            isCrossing = false;
+
+                            startCrossingBtn.innerHTML = '<i class="fas fa-play-circle"></i> Start Cards Crossing';
+                            startCrossingBtn.style.background = 'linear-gradient(135deg, #ff0066, #ff6600)';
+                        }
+                    }
+
+                    // Toggle music player visibility
+                    function toggleMusicPlayer() {
+                        if (!isMusicPlayerVisible) {
+                            musicPlayer.style.display = 'block';
+                            isMusicPlayerVisible = true;
+                            musicToggleBtn.innerHTML = '<i class="fas fa-volume-up"></i> Hide Music Player';
+                        } else {
+                            musicPlayer.style.display = 'none';
+                            isMusicPlayerVisible = false;
+                            musicToggleBtn.innerHTML = '<i class="fas fa-music"></i> Show Music Player';
+                        }
+                    }
+
+                    // Play background music
+                    function playMusic() {
+                        if (!isMusicPlaying) {
+                            // Set volume before playing
+                            backgroundMusic.volume = volumeSlider.value / 100;
+
+                            backgroundMusic.play().then(() => {
+                                isMusicPlaying = true;
+                                musicToggleBtn.innerHTML = '<i class="fas fa-pause"></i> Pause Music';
+                                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+
+                                // Show music player if hidden
+                                if (!isMusicPlayerVisible) {
+                                    toggleMusicPlayer();
+                                }
+                            }).catch(error => {
+                                console.log("Autoplay prevented. User interaction required.");
+                                // Show alert only once
+                                if (!sessionStorage.getItem('musicAlertShown')) {
+                                    alert("Click the Play button in the music player to start the love song!");
+                                    sessionStorage.setItem('musicAlertShown', 'true');
+                                }
+                            });
+                        }
+                    }
+
+                    // Pause background music
+                    function pauseMusic() {
+                        if (isMusicPlaying) {
+                            backgroundMusic.pause();
+                            isMusicPlaying = false;
+                            musicToggleBtn.innerHTML = '<i class="fas fa-music"></i> Play Love Music';
+                            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                        }
+                    }
+
+                    function updateVolume() {
+                        backgroundMusic.volume = volumeSlider.value / 100;
+                    }
+
+                    // Create heart burst animation
+                    function createHeartBurst(count, originX, originY) {
+                        const hearts = ['❤', '💖', '💕', '💗', '💓', '💞'];
+
+                        for (let i = 0; i < count; i++) {
+                            setTimeout(() => {
+                                const heart = document.createElement('div');
+                                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                                heart.style.position = 'fixed';
+                                heart.style.left = `${originX}px`;
+                                heart.style.top = `${originY}px`;
+                                heart.style.fontSize = `${15 + Math.random() * 25}px`;
+                                heart.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                                heart.style.pointerEvents = 'none';
+                                heart.style.zIndex = '1000';
+                                heart.style.opacity = '0.8';
+                                heart.style.textShadow = '0 0 8px currentColor';
+
+                                document.body.appendChild(heart);
+
+                                // Random movement
+                                const angle = Math.random() * Math.PI * 2;
+                                const distance = 80 + Math.random() * 150;
+                                const duration = 800 + Math.random() * 800;
+
+                                const animation = heart.animate([
+                                    {
+                                        transform: 'translate(0, 0) scale(1)',
+                                        opacity: 0.8
+                                    },
+                                    {
+                                        transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(1.3)`,
+                                        opacity: 0
+                                    }
+                                ], {
+                                    duration: duration,
+                                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                                });
+
+                                animation.onfinish = () => heart.remove();
+                            }, i * 50);
+                        }
+                    }
+
+                    // Timeline functions for mobile - COMPLETELY REDONE
+                    function handleTimelineClick(marker) {
+                        if (window.innerWidth <= 768) {
+                            // Close any open timeline content
+                            if (activeTimelineMarker && activeTimelineMarker !== marker) {
+                                activeTimelineMarker.classList.remove('active');
+                            }
+
+                            // Toggle current marker
+                            marker.classList.toggle('active');
+
+                            // Update active marker
+                            if (marker.classList.contains('active')) {
+                                activeTimelineMarker = marker;
+                                // Show overlay
+                                timelineOverlay.classList.add('active');
+                            } else {
+                                activeTimelineMarker = null;
+                                // Hide overlay
+                                timelineOverlay.classList.remove('active');
+                            }
+
+                            // Close on overlay click
+                            timelineOverlay.onclick = () => {
+                                if (activeTimelineMarker) {
+                                    activeTimelineMarker.classList.remove('active');
+                                    activeTimelineMarker = null;
+                                }
+                                timelineOverlay.classList.remove('active');
+                            };
+
+                            // Close on content click (the × button)
+                            const content = marker.querySelector('.timeline-content');
+                            content.onclick = (e) => {
+                                if (e.target === content || e.target.tagName === 'H4' || e.target.tagName === 'P') {
+                                    return;
+                                }
+                                marker.classList.remove('active');
+                                activeTimelineMarker = null;
+                                timelineOverlay.classList.remove('active');
+                            };
+                        }
+                    }
+
+                    // Animate love meter
+                    function animateLoveMeter() {
+                        let width = 95;
+                        const interval = setInterval(() => {
+                            width = width === 95 ? 100 : 95;
+                            loveFill.style.width = `${width}%`;
+                        }, 2000);
+                    }
+
+                    // Update countdown timer
+                    function updateCountdown() {
+                        const now = new Date();
+                        const nextAnniversary = new Date(now.getFullYear() + 1, 0, 1);
+
+                        const diff = nextAnniversary - now;
+
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                        countdownDays.textContent = days.toString().padStart(2, '0');
+                        countdownHours.textContent = hours.toString().padStart(2, '0');
+                        countdownMinutes.textContent = minutes.toString().padStart(2, '0');
+                        countdownSeconds.textContent = seconds.toString().padStart(2, '0');
+                    }
+
+                    // Activate photo cards
+                    function activateCards() {
+                        setTimeout(() => {
+                            cardMe.classList.add('active');
+                        }, 300);
+
+                        setTimeout(() => {
+                            cardYou.classList.add('active');
+                        }, 600);
+
+                        // Auto start crossing on desktop
+                        if (window.innerWidth > 991) {
+                            setTimeout(() => {
+                                startCrossing();
+                            }, 1500);
+                        }
+                    }
+
+                    // Handle hamburger menu
+                    hamburger.addEventListener('click', () => {
+                        navMenu.classList.toggle('active');
+                        hamburger.innerHTML = navMenu.classList.contains('active')
+                            ? '<i class="fas fa-times"></i>'
+                            : '<i class="fas fa-bars"></i>';
+                    });
+
+                    // Close mobile menu when clicking a link
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            navMenu.classList.remove('active');
+                            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                        });
+                    });
+
+                    // Timeline marker click events - UPDATED
+                    timelineMarkers.forEach(marker => {
+                        marker.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            handleTimelineClick(marker);
+                        });
+                    });
+
+                    // Event Listeners
+                    startCrossingBtn.addEventListener('click', startCrossing);
+                    stopCrossingBtn.addEventListener('click', stopCrossing);
+                    musicToggleBtn.addEventListener('click', toggleMusicPlayer);
+                    centerHeart.addEventListener('click', () => {
+                        createHeartBurst(15,
+                            centerHeart.getBoundingClientRect().left + centerHeart.offsetWidth / 2,
+                            centerHeart.getBoundingClientRect().top + centerHeart.offsetHeight / 2
+                        );
+                    });
+
+                    closePlayer.addEventListener('click', toggleMusicPlayer);
+                    playBtn.addEventListener('click', playMusic);
+                    pauseBtn.addEventListener('click', pauseMusic);
+                    volumeSlider.addEventListener('input', updateVolume);
+
+                    // Handle image loading errors
+                    document.querySelectorAll('.card-img').forEach(img => {
+                        img.onerror = function () {
+                            // Fallback to Unsplash image
+                            if (this.alt.includes('My Photo')) {
+                                this.src = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+                            } else {
+                                this.src = 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+                            }
+                        };
+                    });
+
+                    // Initialize
+                    window.addEventListener('load', () => {
+                        createStars();
+                        createJourneyHearts();
+                        animateLoveMeter();
+                        updateCountdown();
+                        activateCards();
+
+                        // Try to play music automatically with user gesture
+                        musicToggleBtn.addEventListener('click', () => {
+                            if (!isMusicPlaying) {
+                                playMusic();
+                            } else {
+                                pauseMusic();
+                            }
+                        });
+
+                        // Update countdown every second
+                        setInterval(updateCountdown, 1000);
+
+                        // Replenish journey hearts periodically
+                        setInterval(() => {
+                            createJourneyHearts();
+                        }, 15000);
+                    });
+
+                    // Handle window resize
+                    window.addEventListener('resize', () => {
+                        // Update crossing animation based on screen size
+                        if (window.innerWidth <= 991 && isCrossing) {
+                            // On mobile, use different crossing animation
+                            cardMe.classList.remove('crossing');
+                            cardYou.classList.remove('crossing');
+                            setTimeout(() => {
+                                if (isCrossing) {
+                                    cardMe.classList.add('crossing');
+                                    cardYou.classList.add('crossing');
+                                }
+                            }, 50);
+                        }
+
+                        // Close mobile timeline content on resize to desktop
+                        if (window.innerWidth > 768 && activeTimelineMarker) {
+                            activeTimelineMarker.classList.remove('active');
+                            activeTimelineMarker = null;
+                            timelineOverlay.classList.remove('active');
+                        }
+                    });
+
+                    // Set initial volume
+                    updateVolume();
+                </script>
+</body>
+
+</html>

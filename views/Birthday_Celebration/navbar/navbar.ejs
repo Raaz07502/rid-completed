@@ -1,0 +1,49 @@
+<nav class="navbar">
+  <div class="nav-container">
+
+    <a href="/view/<%= gift.id %>" class="nav-logo">Birthday Celebration</a>
+
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+
+      <li class="nav-item">
+        <a href="/view/<%= gift.id %>"
+           class="nav-link <%= page === 'home' ? 'active' : '' %>">
+          <i class="fas fa-home nav-icon"></i> शुभकामनाओं का पत्र
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/view/<%= gift.id %>/journey"
+           class="nav-link <%= page === 'journey' ? 'active' : '' %>">
+          <i class="fas fa-heart nav-icon"></i> हमारा साथ
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/view/<%= gift.id %>/gift"
+           class="nav-link <%= page === 'gift' ? 'active' : '' %>">
+          <i class="fas fa-gift nav-icon"></i> आपके लिए खास तोहफा
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/view/<%= gift.id %>/memories"
+           class="nav-link <%= page === 'memories' ? 'active' : '' %>">
+          <i class="fas fa-images nav-icon"></i> अनमोल यादें
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/view/<%= gift.id %>/feedback"
+           class="nav-link <%= page === 'feedback' ? 'active' : '' %>">
+          <i class="fas fa-star nav-icon"></i> आपके विचार
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

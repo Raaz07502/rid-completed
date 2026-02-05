@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&family=Sacramento&family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Parisienne&family=Amatic+SC:wght@700&family=WindSong:wght@500&family=Rouge+Script&family=Mr+De+Haviland&family=Qwitcher+Grypen:wght@700&family=Caveat:wght@700&family=Pacifico&family=Marck+Script&family=Gloria+Hallelujah&family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(120, 0, 80, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 100, 120, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 80, 0, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a2a 0%, #1a0033 30%, #33001a 70%, #000d33 100%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ANIMATED NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 42, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 2px solid rgba(255, 102, 204, 0.3);
+            padding: 15px 0;
+            transform: translateY(-100%);
+            animation: slideDown 1s forwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #ff66cc, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            position: relative;
+            padding-right: 15px;
+            white-space: nowrap;
+        }
+
+        .nav-logo::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff66cc, #ffcc00);
+            animation: pulseGlow 2s infinite;
+        }
+
+        /* HAMBURGER MENU */
+.hamburger {
+    display: none; /* Desktop par hide */
+    cursor: pointer;
+    background: rgba(255, 102, 204, 0.1);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.hamburger:hover {
+    background: rgba(255, 102, 204, 0.2);
+    transform: scale(1.05);
+}
+
+/* Mobile par show */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.2), rgba(255, 204, 0, 0.2));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 102, 204, 0.3);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            box-shadow: 0 0 30px rgba(255, 102, 204, 0.5);
+        }
+
+        /* GIFT SECTION STYLES */
+        .gift-section {
+            padding-top: 100px;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Stars Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Gift Title Container */
+        .gift-title-container {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .gift-main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+        }
+
+        .gift-subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: #ff66cc;
+            margin-bottom: 30px;
+        }
+
+        .heart-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .heart-divider-line {
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff66cc, transparent);
+        }
+
+        .heart-divider-icon {
+            font-size: 2rem;
+            color: #ff3366;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* Gift Box Container */
+        .gift-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            perspective: 1000px;
+        }
+
+        .gift-box {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            transform-style: preserve-3d;
+            transform-origin: left center;
+            transition: transform 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            animation: giftFloat 8s infinite ease-in-out;
+        }
+
+        .gift-box.open {
+            transform: rotateY(-180deg);
+        }
+
+        .gift-cover, .gift-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .gift-cover {
+            background: linear-gradient(135deg, #ff0066, #ff6600, #ffcc00);
+            box-shadow: 0 30px 80px rgba(255, 51, 102, 0.5);
+        }
+
+        .gift-content {
+            background: linear-gradient(135deg, #1a0033, #33001a);
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+
+        .gift-lock {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #ffcc00, #ff6600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 50px #ffcc00;
+            animation: lockGlow 3s infinite alternate;
+            transition: all 0.3s ease;
+        }
+
+        .gift-lock-icon {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .gift-instruction {
+            margin-top: 30px;
+            color: white;
+            font-size: 1.2rem;
+            animation: pulseInstruction 2s infinite;
+        }
+
+        /* Message Grid */
+        .message-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .message-item {
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.2), rgba(255, 204, 0, 0.2));
+            border-radius: 15px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .message-item:hover {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.4), rgba(255, 204, 0, 0.4));
+            border-color: #ff66cc;
+            box-shadow: 0 10px 30px rgba(255, 102, 204, 0.4);
+        }
+
+        /* Message Modal */
+        .message-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .message-modal.active {
+            display: flex;
+        }
+
+        .message-modal-content {
+            background: linear-gradient(135deg, #1a0033, #33001a);
+            max-width: 500px;
+            width: 95%;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(255, 51, 102, 0.5);
+            border: 2px solid rgba(255, 102, 204, 0.3);
+            animation: popupSlideUp 0.5s ease;
+        }
+
+        .close-message {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-message:hover {
+            transform: scale(1.1) rotate(90deg);
+            background: linear-gradient(135deg, #ff6600, #ff0066);
+        }
+
+        .message-modal-content h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .message-modal-content p {
+            color: #ccccff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Permission Modal */
+        .gift-permission-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .gift-permission-modal.active {
+            display: flex;
+        }
+
+        .gift-permission-content {
+            background: linear-gradient(135deg, #1a0033, #33001a);
+            max-width: 600px;
+            width: 95%;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(255, 51, 102, 0.5);
+            border: 2px solid rgba(255, 102, 204, 0.3);
+            animation: popupSlideUp 0.5s ease;
+        }
+
+        .gift-permission-content h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .gift-permission-content p {
+            color: #ccccff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .gift-permission-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .gift-permission-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            min-width: 250px;
+            justify-content: center;
+        }
+
+        .gift-yes-btn {
+            background: linear-gradient(135deg, #00cc66, #00ff99);
+        }
+
+        .gift-no-btn {
+            background: linear-gradient(135deg, #6666ff, #9999ff);
+        }
+
+        .gift-permission-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        @keyframes giftFloat {
+            0%, 100% {
+                transform: translateY(0) rotateY(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotateY(5deg);
+            }
+        }
+
+        @keyframes lockGlow {
+            0% {
+                box-shadow: 0 0 30px #ffcc00;
+            }
+            100% {
+                box-shadow: 0 0 60px #ffcc00, 0 0 90px #ffcc00;
+            }
+        }
+
+        @keyframes pulseInstruction {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes popupSlideUp {
+            from {
+                transform: translateY(50px) scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.05); }
+        }
+
+        /* Celebration Effects */
+        .gift-celebration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1500;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .gift-celebration.active {
+            opacity: 1;
+        }
+
+        .gift-confetti {
+            position: absolute;
+            border-radius: 2px;
+            animation: confettiFall 3s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .gift-box {
+                height: 450px;
+            }
+
+            .gift-main-title {
+                font-size: 3.5rem;
+            }
+
+            .gift-subtitle {
+                font-size: 2rem;
+            }
+
+            .message-grid {
+                gap: 15px;
+            }
+
+            .message-item {
+                height: 100px;
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Menu Styles */
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 10, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                transform: translateX(100%);
+                transition: transform 0.5s ease;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .nav-item {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .nav-link {
+                width: 100%;
+                justify-content: center;
+                padding: 18px;
+                font-size: 1.2rem;
+                border-radius: 15px;
+            }
+
+            .gift-section {
+                padding-top: 80px;
+            }
+
+            .gift-main-title {
+                font-size: 3rem;
+            }
+
+            .gift-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .gift-box {
+                height: 400px;
+            }
+
+            .gift-cover, .gift-content {
+                padding: 25px;
+            }
+
+            .gift-lock {
+                width: 80px;
+                height: 80px;
+            }
+
+            .gift-lock-icon {
+                font-size: 2.5rem;
+            }
+
+            .message-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gift-permission-content {
+                padding: 30px 20px;
+            }
+
+            .gift-permission-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .gift-permission-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gift-permission-btn {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .gift-main-title {
+                font-size: 2.5rem;
+            }
+
+            .gift-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .gift-box {
+                height: 350px;
+            }
+
+            .gift-lock {
+                width: 70px;
+                height: 70px;
+            }
+
+            .gift-lock-icon {
+                font-size: 2rem;
+            }
+
+            .message-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .message-item {
+                height: 80px;
+                font-size: 1.5rem;
+            }
+
+            .gift-permission-content h2 {
+                font-size: 2rem;
+            }
+
+            .gift-permission-content p {
+                font-size: 1rem;
+            }
+
+            .message-modal-content {
+                padding: 30px 20px;
+            }
+
+            .message-modal-content h3 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mobile Touch Fixes */
+        @media (hover: none) and (pointer: coarse) {
+            .gift-lock {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .message-item {
+                min-height: 60px;
+            }
+            
+            .gift-permission-btn {
+                min-height: 44px;
+            }
+        }
+
+        /* iOS Safari Fixes */
+        @supports (-webkit-touch-callout: none) {
+            .gift-box {
+                -webkit-transform-style: preserve-3d;
+            }
+            
+            .gift-cover, .gift-content {
+                -webkit-backface-visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Gift Celebration Effects -->
+    <div class="gift-celebration" id="giftCelebration"></div>
+    
+    <!-- Audio Element -->
+    <% if (gift.song) { %>
+    <audio id="backgroundMusic" loop>
+        <source src="<%= gift.song %>" type="audio/mpeg">
+    </audio>
+    <% } %>
+
+    <!-- Navigation Bar -->
+    <%- include('Birthday_Celebration/navbar/navbar.ejs') %>
+
+    <!-- Gift Section -->
+    <section id="gift" class="gift-section">
+        <!-- Gift Title -->
+        <div class="gift-title-container">
+            <h1 class="gift-main-title">एक खास तोहफ़ा</h1>
+            <h2 class="gift-subtitle">दुआओं और प्यार से सजा वादा</h2>
+            
+            <div class="heart-divider">
+                <div class="heart-divider-line"></div>
+                <div class="heart-divider-icon">❤</div>
+                <div class="heart-divider-line"></div>
+            </div>
+            
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: #ccccff;">
+                यह तोहफ़ा दिल से निकली दुआओं, सम्मान और स्नेह से भरा है।
+                इसे मुस्कान के साथ खोलिए।
+            </p>
+        </div>
+        
+        <!-- Gift Box Container -->
+        <div class="gift-container">
+            <div class="gift-box" id="giftBox">
+                
+                <!-- Gift Cover -->
+                <div class="gift-cover">
+                    <div class="gift-lock">
+                        <i class="fas fa-lock gift-lock-icon"></i>
+                    </div>
+
+                    <h2 style="font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: white; margin-bottom: 20px;">
+                        जन्मदिन की एक खास सौग़ात 🎂
+                    </h2>
+
+                    <p style="color: white; font-size: 1.4rem; text-align: center;">
+                        यह तोहफ़ा सिर्फ़ आपके लिए है
+                    </p>
+
+                    <p class="gift-instruction">
+                        तोहफ़ा खोलने के लिए क्लिक करें
+                    </p>
+                </div>
+                
+                <!-- Gift Content -->
+                <div class="gift-content">
+                    <div class="message-grid">
+                        <div class="message-item" data-message="1">
+                            <i class="fas fa-heart"></i><br>
+                            <span style="font-size: 0.8rem;">दिल की बात</span>
+                        </div>
+                        <div class="message-item" data-message="2">
+                            <i class="fas fa-star"></i><br>
+                            <span style="font-size: 0.8rem;">आशीर्वाद</span>
+                        </div>
+                        <div class="message-item" data-message="3">
+                            <i class="fas fa-gift"></i><br>
+                            <span style="font-size: 0.8rem;">वादा</span>
+                        </div>
+                        <div class="message-item" data-message="4">
+                            <i class="fas fa-crown"></i><br>
+                            <span style="font-size: 0.8rem;">सम्मान</span>
+                        </div>
+                        <div class="message-item" data-message="5">
+                            <i class="fas fa-hands-heart"></i><br>
+                            <span style="font-size: 0.8rem;">समर्थन</span>
+                        </div>
+                        <div class="message-item" data-message="6">
+                            <i class="fas fa-infinity"></i><br>
+                            <span style="font-size: 0.8rem;">स्नेह</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Message Details Modal -->
+        <div class="message-modal" id="messageModal">
+            <div class="message-modal-content">
+                <button class="close-message" id="closeMessage">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <h3 id="messageTitle">एक खास संदेश</h3>
+                <p id="messageDescription">
+                    आपके लिए दिल से निकला एक प्यारा संदेश।
+                    यह तोहफ़ा मेरे प्यार और शुभकामनाओं का प्रतीक है।
+                </p>
+
+                <div style="margin-top: 30px; font-family: 'Caveat', cursive; font-size: 1.8rem; color: #ffcc00;">
+                    ❤ हमेशा खुश रहें और मुस्कुराते रहें ❤
+                </div>
+            </div>
+        </div>
+        
+        <!-- Permission Modal -->
+        <div class="gift-permission-modal" id="giftPermissionModal">
+            <div class="gift-permission-content">
+                <h2>एक छोटी सी अनुमति 🎁</h2>
+
+                <p>
+                    यह तोहफ़ा प्यार और शुभकामनाओं से भरा है,
+                    जिसे खोलने से पहले आपसे एक सवाल पूछना ज़रूरी है…
+                </p>
+
+                <p style="font-size: 2.2rem; color: #ffcc00; margin: 30px 0;">
+                    क्या आप इस जन्मदिन के तोहफ़े को
+                    मुस्कान और खुशी के साथ स्वीकार करेंगे?
+                </p>
+
+                <p>
+                    इसमें दिल से निकली दुआएँ,
+                    मीठी यादें और ढेर सारा अपनापन छुपा है —
+                    सिर्फ़ आपके लिए।
+                </p>
+                
+                <div class="gift-permission-buttons">
+                    <button class="gift-permission-btn gift-yes-btn" id="giftYesBtn">
+                        <i class="fas fa-heart"></i>
+                        हाँ, बहुत खुशी के साथ 🎉
+                    </button>
+
+                    <button class="gift-permission-btn gift-no-btn" id="giftNoBtn">
+                        <i class="fas fa-lock"></i>
+                        बाद में खोलेंगे 😊
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // DOM Elements
+        const starsContainer = document.getElementById('stars');
+        const giftBox = document.getElementById('giftBox');
+        const giftPermissionModal = document.getElementById('giftPermissionModal');
+        const giftYesBtn = document.getElementById('giftYesBtn');
+        const giftNoBtn = document.getElementById('giftNoBtn');
+        const giftCelebration = document.getElementById('giftCelebration');
+        const messageModal = document.getElementById('messageModal');
+        const closeMessage = document.getElementById('closeMessage');
+        const messageTitle = document.getElementById('messageTitle');
+        const messageDescription = document.getElementById('messageDescription');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // Message data - similar to memories
+        const messages = {
+            1: {
+                title: "दिल की बात ❤️",
+                description: "आप मेरे लिए हमेशा से सबसे खास रहे हैं। आपकी हर मुस्कान मेरी दुनिया को रोशन कर देती है। मैं हमेशा आपके साथ हूँ, हर पल, हर सफ़र में।"
+            },
+            2: {
+                title: "आशीर्वाद 🌟",
+                description: "ईश्वर आपको सदा खुश रखे, हर सपना पूरा करे, और आपकी ज़िंदगी में बस प्यार और सफलता हो। आप हमेशा सुरक्षित और समृद्ध रहें।"
+            },
+            3: {
+                title: "वादा 🎁",
+                description: "मैं वादा करता हूँ कि हमेशा आपका सम्मान करूँगा, आपकी हर बात ध्यान से सुनूँगा, और जीवन भर आपका साथ दूँगा। यह मेरा वचन है।"
+            },
+            4: {
+                title: "सम्मान 👑",
+                description: "आप जैसे हैं वैसे ही पूरी दुनिया के लिए एक मिसाल हैं। आपके संस्कार, आपकी सोच, और आपका व्यवहार हमेशा प्रेरणा देता रहेगा।"
+            },
+            5: {
+                title: "समर्थन 🤝",
+                description: "हर मुश्किल घड़ी में, हर खुशी के पल में, मैं हमेशा आपके साथ रहूँगा। आपका हर सपना मेरा सपना है, आपकी हर जीत मेरी जीत है।"
+            },
+            6: {
+                title: "स्नेह का बंधन ∞",
+                description: "यह रिश्ता सिर्फ़ खून का नहीं, दिलों का है। समय के साथ यह और भी मज़बूत होता जाएगा। मेरा प्यार हमेशा आपके साथ है।"
+            }
+        };
+
+        // State Variables
+        let isGiftOpened = false;
+        let hasGiftPermission = false;
+        let giftSongPlayed = false;
+        let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // Create stars background
+        function createStars() {
+            const starCount = 200;
+            starsContainer.innerHTML = '';
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const opacity = 0.2 + Math.random() * 0.8;
+                const twinkleDelay = Math.random() * 5;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${left}%`;
+                star.style.top = `${top}%`;
+                star.style.opacity = opacity;
+                star.style.animationDelay = `${twinkleDelay}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Show gift permission modal
+        function showGiftPermissionModal() {
+            giftPermissionModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Hide gift permission modal
+        function hideGiftPermissionModal() {
+            giftPermissionModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Create confetti celebration
+        function createConfetti() {
+            const confettiCount = 100;
+            const colors = ['#ff0066', '#ff6600', '#ffcc00', '#00cc66', '#0066ff', '#6600ff'];
+            
+            giftCelebration.innerHTML = '';
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('gift-confetti');
+                
+                const size = 5 + Math.random() * 10;
+                const left = Math.random() * 100;
+                const duration = 1 + Math.random() * 2;
+                const delay = Math.random() * 2;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                confetti.style.left = `${left}%`;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.animation = `confettiFall ${duration}s ease-in ${delay}s forwards`;
+                
+                giftCelebration.appendChild(confetti);
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.remove();
+                    }
+                }, (duration + delay) * 1000);
+            }
+        }
+
+        // Create celebration hearts
+        function createCelebrationHearts() {
+            const heartCount = 30;
+            const hearts = ['❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
+            
+            for (let i = 0; i < heartCount; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('gift-confetti');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    
+                    const size = 20 + Math.random() * 30;
+                    const left = Math.random() * 100;
+                    const duration = 3 + Math.random() * 4;
+                    const delay = Math.random() * 2;
+                    const color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                    
+                    heart.style.left = `${left}%`;
+                    heart.style.fontSize = `${size}px`;
+                    heart.style.color = color;
+                    heart.style.animation = `confettiFall ${duration}s ease-in ${delay}s forwards`;
+                    
+                    giftCelebration.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) {
+                            heart.remove();
+                        }
+                    }, (duration + delay) * 1000);
+                }, i * 100);
+            }
+        }
+
+        // Open gift with celebration
+        function openGift() {
+            if (!isGiftOpened && hasGiftPermission) {
+                // Start celebration
+                giftCelebration.classList.add('active');
+                createConfetti();
+                createCelebrationHearts();
+                
+                // Open gift box
+                giftBox.classList.add('open');
+                isGiftOpened = true;
+                
+                // Hide permission modal
+                hideGiftPermissionModal();
+                
+                // Play celebration sound
+                playCelebrationSound();
+                
+                // Play background song
+                playBackgroundSong();
+                
+                // Show welcome message
+                setTimeout(() => {
+                    // Create a welcome message
+                    const welcomeDiv = document.createElement('div');
+                    welcomeDiv.innerHTML = "🎉 तोहफ़ा स्वीकार करने के लिए धन्यवाद! 💝";
+                    welcomeDiv.style.position = 'fixed';
+                    welcomeDiv.style.top = '50%';
+                    welcomeDiv.style.left = '50%';
+                    welcomeDiv.style.transform = 'translate(-50%, -50%)';
+                    welcomeDiv.style.backgroundColor = 'rgba(255, 102, 204, 0.9)';
+                    welcomeDiv.style.color = 'white';
+                    welcomeDiv.style.padding = '20px 30px';
+                    welcomeDiv.style.borderRadius = '20px';
+                    welcomeDiv.style.zIndex = '3000';
+                    welcomeDiv.style.fontSize = '1.5rem';
+                    welcomeDiv.style.textAlign = 'center';
+                    welcomeDiv.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+                    welcomeDiv.style.border = '3px solid #ffcc00';
+                    
+                    document.body.appendChild(welcomeDiv);
+                    
+                    setTimeout(() => {
+                        welcomeDiv.style.opacity = '0';
+                        welcomeDiv.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            if (welcomeDiv.parentNode) {
+                                welcomeDiv.remove();
+                            }
+                        }, 500);
+                    }, 3000);
+                }, 1000);
+            }
+        }
+
+        // Show message details
+        function showMessageDetails(messageId) {
+            if (messages[messageId]) {
+                messageTitle.textContent = messages[messageId].title;
+                messageDescription.textContent = messages[messageId].description;
+                messageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close message details
+        function closeMessageDetails() {
+            messageModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Play celebration sound
+        function playCelebrationSound() {
+            try {
+                // Create simple beep sounds
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        try {
+                            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                            const oscillator = audioContext.createOscillator();
+                            const gainNode = audioContext.createGain();
+                            
+                            oscillator.connect(gainNode);
+                            gainNode.connect(audioContext.destination);
+                            
+                            oscillator.frequency.value = 440 + (i * 100);
+                            oscillator.type = 'sine';
+                            
+                            gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                            
+                            oscillator.start(audioContext.currentTime);
+                            oscillator.stop(audioContext.currentTime + 0.3);
+                        } catch (e) {
+                            console.log("AudioContext not supported");
+                        }
+                    }, i * 200);
+                }
+            } catch (e) {
+                console.log("Celebration sound not supported");
+            }
+        }
+
+        // Play background song
+        function playBackgroundSong() {
+            if (!giftSongPlayed && backgroundMusic) {
+                backgroundMusic.currentTime = 0;
+                backgroundMusic.loop = true;
+                backgroundMusic.volume = 0.7;
+                
+                // Handle autoplay restrictions
+                const playPromise = backgroundMusic.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        giftSongPlayed = true;
+                        console.log("Gift song playing...");
+                    }).catch(error => {
+                        console.log("Audio play failed, waiting for interaction");
+                        
+                        // Show instruction for user
+                        setTimeout(() => {
+                            const hintDiv = document.createElement('div');
+                            hintDiv.innerHTML = "🎵 संगीत सुनने के लिए स्क्रीन को टैप करें";
+                            hintDiv.style.position = 'fixed';
+                            hintDiv.style.bottom = '20px';
+                            hintDiv.style.left = '50%';
+                            hintDiv.style.transform = 'translateX(-50%)';
+                            hintDiv.style.backgroundColor = 'rgba(255, 102, 204, 0.9)';
+                            hintDiv.style.color = 'white';
+                            hintDiv.style.padding = '10px 20px';
+                            hintDiv.style.borderRadius = '25px';
+                            hintDiv.style.zIndex = '3000';
+                            hintDiv.style.fontSize = '1rem';
+                            hintDiv.style.textAlign = 'center';
+                            hintDiv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+                            hintDiv.style.animation = 'pulse 2s infinite';
+                            
+                            document.body.appendChild(hintDiv);
+                            
+                            // Remove hint after 5 seconds
+                            setTimeout(() => {
+                                hintDiv.style.opacity = '0';
+                                hintDiv.style.transition = 'opacity 0.5s ease';
+                                setTimeout(() => {
+                                    if (hintDiv.parentNode) {
+                                        hintDiv.remove();
+                                    }
+                                }, 500);
+                            }, 5000);
+                        }, 1000);
+                    });
+                }
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            
+            // Event Listeners
+            giftBox.addEventListener('click', function(e) {
+                if (!isGiftOpened) {
+                    showGiftPermissionModal();
+                }
+            });
+
+            // Touch event for mobile
+            giftBox.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                if (!isGiftOpened) {
+                    showGiftPermissionModal();
+                }
+            }, { passive: false });
+
+            // Message item click handlers
+            document.querySelectorAll('.message-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isGiftOpened) {
+                        const messageId = item.getAttribute('data-message');
+                        showMessageDetails(messageId);
+                    }
+                });
+
+                // Touch event for mobile
+                item.addEventListener('touchstart', function(e) {
+                    e.stopPropagation();
+                    if (isGiftOpened) {
+                        const messageId = this.getAttribute('data-message');
+                        showMessageDetails(messageId);
+                    }
+                }, { passive: false });
+            });
+
+            // Yes button - Accept gift
+            giftYesBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                hasGiftPermission = true;
+                openGift();
+            });
+
+            giftYesBtn.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                hasGiftPermission = true;
+                openGift();
+            }, { passive: false });
+
+            // No button - Keep gift locked
+            giftNoBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                hideGiftPermissionModal();
+                
+                // Make the gift box shake to indicate it's staying locked
+                giftBox.style.animation = 'none';
+                setTimeout(() => {
+                    giftBox.style.animation = 'giftFloat 8s infinite ease-in-out';
+                }, 10);
+                
+                // Show a sweet message
+                setTimeout(() => {
+                    const reminderDiv = document.createElement('div');
+                    reminderDiv.innerHTML = "❤ मैं इंतज़ार करूँगा, जब तक आप तैयार न हों। यह तोहफ़ा आपके लिए ही है!";
+                    reminderDiv.style.position = 'fixed';
+                    reminderDiv.style.bottom = '50px';
+                    reminderDiv.style.left = '50%';
+                    reminderDiv.style.transform = 'translateX(-50%)';
+                    reminderDiv.style.backgroundColor = 'rgba(102, 0, 204, 0.9)';
+                    reminderDiv.style.color = '#ffccff';
+                    reminderDiv.style.padding = '15px 25px';
+                    reminderDiv.style.borderRadius = '15px';
+                    reminderDiv.style.zIndex = '2000';
+                    reminderDiv.style.fontSize = '1.1rem';
+                    reminderDiv.style.textAlign = 'center';
+                    reminderDiv.style.boxShadow = '0 5px 20px rgba(0,0,0,0.4)';
+                    
+                    document.body.appendChild(reminderDiv);
+                    
+                    setTimeout(() => {
+                        reminderDiv.style.opacity = '0';
+                        reminderDiv.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            if (reminderDiv.parentNode) {
+                                reminderDiv.remove();
+                            }
+                        }, 500);
+                    }, 3000);
+                }, 500);
+            });
+
+            giftNoBtn.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                hideGiftPermissionModal();
+                giftBox.style.animation = 'none';
+                setTimeout(() => {
+                    giftBox.style.animation = 'giftFloat 8s infinite ease-in-out';
+                }, 10);
+                
+                setTimeout(() => {
+                    const reminderDiv = document.createElement('div');
+                    reminderDiv.innerHTML = "❤ मैं इंतज़ार करूँगा, जब तक आप तैयार न हों। यह तोहफ़ा आपके लिए ही है!";
+                    reminderDiv.style.position = 'fixed';
+                    reminderDiv.style.bottom = '50px';
+                    reminderDiv.style.left = '50%';
+                    reminderDiv.style.transform = 'translateX(-50%)';
+                    reminderDiv.style.backgroundColor = 'rgba(102, 0, 204, 0.9)';
+                    reminderDiv.style.color = '#ffccff';
+                    reminderDiv.style.padding = '15px 25px';
+                    reminderDiv.style.borderRadius = '15px';
+                    reminderDiv.style.zIndex = '2000';
+                    reminderDiv.style.fontSize = '1.1rem';
+                    reminderDiv.style.textAlign = 'center';
+                    reminderDiv.style.boxShadow = '0 5px 20px rgba(0,0,0,0.4)';
+                    
+                    document.body.appendChild(reminderDiv);
+                    
+                    setTimeout(() => {
+                        reminderDiv.style.opacity = '0';
+                        reminderDiv.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            if (reminderDiv.parentNode) {
+                                reminderDiv.remove();
+                            }
+                        }, 500);
+                    }, 3000);
+                }, 500);
+            }, { passive: false });
+
+            // Close message modal
+            closeMessage.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeMessageDetails();
+            });
+
+            // Close modal when clicking outside
+            giftPermissionModal.addEventListener('click', (e) => {
+                if (e.target === giftPermissionModal) {
+                    hideGiftPermissionModal();
+                }
+            });
+
+            messageModal.addEventListener('click', (e) => {
+                if (e.target === messageModal) {
+                    closeMessageDetails();
+                }
+            });
+
+            // Close modals with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (messageModal.classList.contains('active')) {
+                        closeMessageDetails();
+                    }
+                    if (giftPermissionModal.classList.contains('active')) {
+                        hideGiftPermissionModal();
+                    }
+                }
+            });
+
+            // Enable audio on any user interaction
+            let userInteracted = false;
+            const enableAudio = () => {
+                if (!userInteracted) {
+                    userInteracted = true;
+                    console.log("User interaction detected, audio enabled");
+                    
+                    // Try to play music if gift is opened
+                    if (isGiftOpened && !giftSongPlayed) {
+                        playBackgroundSong();
+                    }
+                }
+            };
+            
+            document.addEventListener('click', enableAudio);
+            document.addEventListener('touchstart', enableAudio);
+            document.addEventListener('keydown', enableAudio);
+
+            // Welcome message
+            setTimeout(() => {
+                console.log(`
+                ================================================
+                🎁 GIFT CARD - MEMORIES SECTION STYLE 🎁
+                ================================================
+                अब तोहफ़ा बिल्कुल मेमोरी सेक्शन की तरह काम करेगा!
+                ================================================
+                `);
+            }, 1000);
+        });
+
+        // Handle window resize and orientation change
+        window.addEventListener('resize', createStars);
+        window.addEventListener('orientationchange', function() {
+            setTimeout(createStars, 100);
+        });
+    </script>
+</body>
+</html>

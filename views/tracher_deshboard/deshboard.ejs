@@ -12,6 +12,99 @@
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <link rel="stylesheet" href="css\teacherDeshboard.css">
 </head>
+<style>
+ 
+/* Birthday Form Styling */
+.calendar-container {
+    animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    background: linear-gradient(135deg, #ffffff, #f8f9ff);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #ff6b81, #ff9f43, #1dd1a1);
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px 15px;
+    border: 2px solid #e6e6e6;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff6b81;
+    box-shadow: 0 0 0 3px rgba(255,107,129,0.15);
+}
+
+.form-group input[type="file"] {
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Button Animation */
+.calendar-page .btn-primary {
+    background: linear-gradient(135deg, #ff6b81, #ff9f43);
+    border: none;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.calendar-page .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,107,129,0.3);
+}
+
+/* Result box animation */
+#result {
+    animation: popUp 0.5s ease;
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+
 
 
 <body>
@@ -56,18 +149,19 @@
                 <i class="fas fa-users"></i>
                 <span>Students</span>
             </a>
+             <a class="nav-item" data-page="analytics">
+                <i class="fas fa-chart-bar"></i>
+                <span>Analytics</span>
+            </a>
             <a class="nav-item" data-page="messages">
                 <i class="fas fa-comments"></i>
                 <span>Messages</span>
                 <span class="message-badge" id="unreadMessagesCount">3</span>
             </a>
-            <a class="nav-item" data-page="analytics">
-                <i class="fas fa-chart-bar"></i>
-                <span>Analytics</span>
-            </a>
+           
             <a class="nav-item" data-page="calendar">
-                <i class="fas fa-calendar-alt"></i>
-                <span>Calendar</span>
+                <i class="fas fa-calendar-plus"></i>
+                <span>Create Birthday Website</span>
             </a>
             <a class="nav-item" data-page="settings">
                 <i class="fas fa-cog"></i>
@@ -257,7 +351,7 @@
                             </a>
                             <a href="#" class="action-btn" id="scheduleClassBtn">
                                 <i class="fas fa-calendar-plus"></i>
-                                <span>Schedule Class</span>
+                                <span>Create Birthday Website</span>
                             </a>
                             <a href="#" class="action-btn" id="sendAnnouncementBtn">
                                 <i class="fas fa-bullhorn"></i>
@@ -583,32 +677,59 @@
         </div>
 
         <!-- Calendar Page -->
-        <div class="calendar-page" id="calendarPage">
-            <div class="calendar-header">
-                <h1 class="page-title">Calendar</h1>
-                <div class="calendar-actions">
-                    <button class="btn btn-outline" id="todayBtn">
-                        <i class="fas fa-calendar-day"></i>
-                        Today
-                    </button>
-                    <button class="btn btn-primary" id="addEventBtn">
-                        <i class="fas fa-plus"></i>
-                        Add Event
-                    </button>
-                </div>
-            </div>
+       <!-- Birthday Website Page (Replaced Calendar) -->
+<div class="calendar-page" id="calendarPage">
+    <div class="calendar-header">
+        <h1 class="page-title">Create Birthday Website</h1>
+    </div>
+<div style="text-align:center; margin-bottom:25px;">
+    <h2 style="color:#ff6b81;">🎂 Create a Beautiful Birthday Website</h2>
+    <p style="color:#666;">Fill the details below and generate a surprise birthday page</p>
+</div>
 
-            <div class="calendar-container">
-                <div id="calendar"></div>
-            </div>
-
-            <div class="calendar-sidebar">
-                <h3>Upcoming Events</h3>
-                <div class="upcoming-events" id="upcomingEvents">
-                    <!-- Events will be populated by JavaScript -->
+    <div class="calendar-container" style="max-width:700px; margin:auto;">
+        <div class="form-container">
+            <form id="giftForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Birthday Person's Name</label>
+                    <input type="text" name="didiName" class="form-control" required>
                 </div>
+
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea name="message" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Birthday Person Photo</label>
+                    <input type="file" name="didiImage" class="form-control" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Photo (Optional)</label>
+                    <input type="file" name="jijaImage" class="form-control" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label>Birthday Song (Optional)</label>
+                    <input type="file" name="song" class="form-control" accept="audio/*">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;">
+                    Create Birthday Website
+                </button>
+            </form>
+
+            <div id="result" style="display:none; margin-top:20px;">
+                <h3>🎉 Website Ready!</h3>
+                <input type="text" id="generatedLink" class="form-control" readonly>
+                <button onclick="copyLink()" class="btn btn-outline" style="margin-top:10px;">
+                    Copy Link
+                </button>
             </div>
         </div>
+    </div>
+</div>
 
         <!-- Settings Page -->
         <div class="settings-page" id="settingsPage">
@@ -916,6 +1037,10 @@
     <div id="toastContainer"></div>
 
     <script>
+        function getStudentClass(student) {
+  return (student.className || student.class || "").trim();
+}
+
         // Application Data
          const appData = {
             currentUser: {
@@ -926,8 +1051,8 @@
 
             },
 
-            students: <%- JSON.stringify(students || []) %>,
-            allStudents: <%- JSON.stringify(students || []) %>,
+            students: "<%- JSON.stringify(students || []) %>",
+            allStudents: "<%- JSON.stringify(students || []) %>",
             tests: [],   // ✅ ADD THIS
             messages: [],
 
@@ -1065,7 +1190,8 @@
                 students: 'Students Management',
                 messages: 'Messages',
                 analytics: 'Analytics & Reports',
-                calendar: 'Calendar',
+                calendar: 'Create Birthday Website',
+
                 settings: 'Settings'
             };
 
@@ -1097,7 +1223,7 @@
 
             if (page === 'messages') initializeMessagesPage();
             if (page === 'analytics') initializeAnalyticsPage();
-            if (page === 'calendar') initializeCalendarPage();
+           
             if (page === 'settings') initializeSettingsPage();
 
             // Update message badge count
@@ -1595,7 +1721,8 @@
                             </div>
                         </div>
                     </td>
-                   <td>${student.class || student.className || '-'}</td>
+                   <td>${getStudentClass(student) || '-'}</td>
+
 
                     <td>${student.roll}</td>
                     <td>0%</td>
@@ -1652,7 +1779,8 @@
             document.getElementById("viewStudentBody").innerHTML = `
                 <p><b>Name:</b> ${student.name}</p>
                 <p><b>Email:</b> ${student.email}</p>
-                <p><b>Class:</b> ${student.class}</p>
+                <p><b>Class:</b> ${getStudentClass(student) || '-'}</p>
+
                 <p><b>Roll:</b> ${student.roll}</p>
                 <p><b>Parent Contact:</b> ${student.parentContact || "N/A"}</p>
             `;
@@ -1679,7 +1807,8 @@
                 document.getElementById('studentFirstName').value = nameParts[0] || '';
                 document.getElementById('studentLastName').value = nameParts.slice(1).join(' ');
                 document.getElementById('studentEmail').value = student.email;
-                document.getElementById('studentClass').value = student.class;
+                document.getElementById('studentClass').value = getStudentClass(student);
+
                 document.getElementById('studentRoll').value = student.roll;
                 document.getElementById('studentParentContact').value = student.parentContact || '';
 
@@ -2480,11 +2609,34 @@ document.getElementById("classFilterSelect").addEventListener("change", function
     appData.students = [...appData.allStudents];
   } else {
     appData.students = appData.allStudents.filter(s =>
-      (s.class || s.className) === selectedClass
-    );
+  getStudentClass(s) === selectedClass
+);
+
   }
 
   initializeStudentsPage();
+});
+document.addEventListener("submit", async function (e) {
+    if (e.target.id === "giftForm") {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const res = await fetch("/create-gift", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await res.json();
+
+        const link = window.location.origin + data.url;
+
+        document.getElementById("generatedLink").value = link;
+        document.getElementById("result").style.display = "block";
+
+        // ❌ auto open removed
+        // window.open(link, "_blank");
+    }
 });
 
 

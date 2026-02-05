@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&family=Sacramento&family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Parisienne&family=Amatic+SC:wght@700&family=WindSong:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(120, 0, 80, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 100, 120, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 80, 0, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a2a 0%, #1a0033 30%, #33001a 70%, #000d33 100%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ANIMATED NAVBAR - SAME AS HOME PAGE */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 42, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 2px solid rgba(255, 102, 204, 0.3);
+            padding: 15px 0;
+            transform: translateY(-100%);
+            animation: slideDown 1s forwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #ff66cc, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            position: relative;
+            padding-right: 15px;
+            white-space: nowrap;
+        }
+
+        .nav-logo::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ff66cc, #ffcc00);
+            animation: pulseGlow 2s infinite;
+        }
+
+        /* HAMBURGER MENU */
+       /* HAMBURGER MENU */
+.hamburger {
+    display: none; /* Desktop par hide */
+    cursor: pointer;
+    background: rgba(255, 102, 204, 0.1);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.hamburger:hover {
+    background: rgba(255, 102, 204, 0.2);
+    transform: scale(1.05);
+}
+
+/* Mobile par show */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, rgba(255, 102, 204, 0.2), rgba(255, 204, 0, 0.2));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 102, 204, 0.3);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            box-shadow: 0 0 30px rgba(255, 102, 204, 0.5);
+        }
+
+        .nav-icon {
+            font-size: 1.3rem;
+            animation: rotateIcon 3s infinite linear;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateIcon {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* FEEDBACK SECTION STYLES */
+        .feedback-section {
+            padding-top: 120px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 60px;
+        }
+
+        .feedback-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
+            animation: titleSparkle 4s infinite alternate;
+        }
+
+        .feedback-subtitle {
+            font-size: 1.3rem;
+            color: #ccccff;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Feedback Form */
+        .feedback-form {
+            background: rgba(26, 0, 51, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 102, 204, 0.3);
+            position: relative;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 102, 204, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 150px;
+            transition: all 0.3s ease;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: #ff66cc;
+            box-shadow: 0 0 20px rgba(255, 102, 204, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-textarea::placeholder {
+            color: #ccccff;
+            opacity: 0.7;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: linear-gradient(135deg, #ff0066, #ff6600);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 102, 204, 0.5);
+            background: linear-gradient(135deg, #ff6600, #ff0066);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(0, 204, 102, 0.2), rgba(0, 255, 153, 0.2));
+            border-radius: 15px;
+            margin-top: 20px;
+            border: 2px solid rgba(0, 204, 102, 0.5);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-icon {
+            font-size: 3rem;
+            color: #00ff99;
+            margin-bottom: 15px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .success-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #00ff99;
+            margin-bottom: 10px;
+        }
+
+        .success-desc {
+            color: #ccccff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes titleSparkle {
+            0% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+                    0 0 60px rgba(255, 102, 204, 0.6);
+            }
+            100% {
+                text-shadow: 0 0 50px rgba(255, 255, 255, 1),
+                    0 0 100px rgba(255, 102, 204, 0.8),
+                    0 0 150px rgba(255, 102, 204, 0.4);
+            }
+        }
+
+        /* Background Elements */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .heart-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .heart-particle {
+            position: absolute;
+            font-size: 20px;
+            color: #ff3366;
+            opacity: 0;
+            animation: floatHeart 15s infinite linear;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .feedback-title {
+                font-size: 3.5rem;
+            }
+            
+            .feedback-form {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Mobile Menu Styles */
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(10, 10, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                transform: translateX(100%);
+                transition: transform 0.5s ease;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .nav-item {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .nav-link {
+                width: 100%;
+                justify-content: center;
+                padding: 18px;
+                font-size: 1.2rem;
+                border-radius: 15px;
+            }
+
+            .feedback-section {
+                padding-top: 100px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .feedback-title {
+                font-size: 3rem;
+            }
+
+            .feedback-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .feedback-form {
+                width: 100%;
+                padding: 25px;
+            }
+
+            .form-label {
+                font-size: 1.1rem;
+            }
+
+            .submit-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .feedback-title {
+                font-size: 2.5rem;
+            }
+
+            .feedback-subtitle {
+                font-size: 1rem;
+            }
+
+            .feedback-form {
+                padding: 20px;
+            }
+
+            .success-text {
+                font-size: 2rem;
+            }
+
+            .success-desc {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Heart Particles Background -->
+    <div class="heart-bg" id="heartBg"></div>
+
+    <!-- Navigation Bar -->
+    <%- include('Birthday_Celebration/navbar/navbar.ejs') %>
+    <!-- Feedback Form Section -->
+    <section class="feedback-section" id="feedback">
+        <h1 class="feedback-title">अपने विचार साझा करें</h1>
+        <p class="feedback-subtitle">
+            आपके विचार हमारे लिए बहुत मायने रखते हैं। कृपया अपने अनुभव साझा करें और
+            इस खूबसूरत रिश्ते को और भी खास बनाने में हमारी मदद करें।
+        </p>
+
+        <div class="feedback-form">
+            <div class="form-group">
+                <label for="feedbackText" class="form-label">
+                    <i class="fas fa-comment-dots"></i> आपके विचार
+                </label>
+                <textarea id="feedbackText" class="form-textarea"
+                    placeholder="यहाँ अपने विचार लिखें... आपको क्या अच्छा लगा, कोई सुझाव या कोई खास पल जिसे आप साझा करना चाहें..."
+                    rows="6"></textarea>
+            </div>
+
+            <button type="button" class="submit-btn" id="submitFeedback">
+                <span id="btnText">विचार भेजें</span>
+                <div class="loading-spinner" id="loadingSpinner"></div>
+            </button>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="success-text">आपके विचारों के लिए धन्यवाद!</h3>
+                <p class="success-desc">
+                    आपके शब्द हमें बहुत खुशी देते हैं। ये इस रिश्ते के सफ़र को
+                    और भी यादगार बनाने में मदद करेंगे। 💖
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // DOM Elements
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const starsContainer = document.getElementById('stars');
+        const heartBg = document.getElementById('heartBg');
+        const submitBtn = document.getElementById('submitFeedback');
+        const feedbackText = document.getElementById('feedbackText');
+        const btnText = document.getElementById('btnText');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const successMessage = document.getElementById('successMessage');
+
+        // State Variables
+        let isMenuOpen = false;
+
+        // Create stars background
+        function createStars() {
+            const starCount = 200;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+
+                const size = Math.random() * 3;
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const opacity = 0.2 + Math.random() * 0.8;
+                const twinkleDelay = Math.random() * 5;
+
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${left}%`;
+                star.style.top = `${top}%`;
+                star.style.opacity = opacity;
+                star.style.animationDelay = `${twinkleDelay}s`;
+
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create floating hearts
+        function createFloatingHearts() {
+            const heartCount = 30;
+            const hearts = ['❤', '💖', '💕', '💗', '💓', '💞', '💘', '💝'];
+
+            for (let i = 0; i < heartCount; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart-particle');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+                    const size = 20 + Math.random() * 30;
+                    const left = Math.random() * 100;
+                    const duration = 15 + Math.random() * 20;
+                    const delay = Math.random() * 5;
+                    const color = `hsl(${Math.random() * 60 + 300}, 100%, 70%)`;
+
+                    heart.style.left = `${left}%`;
+                    heart.style.fontSize = `${size}px`;
+                    heart.style.color = color;
+                    heart.style.animationDelay = `${delay}s`;
+                    heart.style.animationDuration = `${duration}s`;
+
+                    heartBg.appendChild(heart);
+
+                    setTimeout(() => {
+                        if (heart.parentNode) {
+                            heart.remove();
+                        }
+                    }, (duration + delay) * 1000);
+                }, i * 500);
+            }
+        }
+
+        // Create heart burst effect
+        function createHeartBurst(count, originX, originY) {
+            const hearts = ['❤', '💖', '💕', '💗', '💓', '💞'];
+
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.position = 'fixed';
+                    heart.style.left = `${originX}px`;
+                    heart.style.top = `${originY}px`;
+                    heart.style.fontSize = `${20 + Math.random() * 30}px`;
+                    heart.style.color = `hsl(${Math.random() * 60 + 300}, 100%, 70%)`;
+                    heart.style.pointerEvents = 'none';
+                    heart.style.zIndex = '1000';
+                    heart.style.opacity = '0.8';
+                    heart.style.textShadow = '0 0 10px currentColor';
+
+                    document.body.appendChild(heart);
+
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = 100 + Math.random() * 200;
+                    const duration = 1000 + Math.random() * 1000;
+
+                    const animation = heart.animate([
+                        {
+                            transform: 'translate(0, 0) scale(1)',
+                            opacity: 0.8
+                        },
+                        {
+                            transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(1.5)`,
+                            opacity: 0
+                        }
+                    ], {
+                        duration: duration,
+                        easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                    });
+
+                    animation.onfinish = () => heart.remove();
+                }, i * 50);
+            }
+        }
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                navMenu.classList.add('active');
+                hamburger.innerHTML = '<i class="fas fa-times"></i>';
+                hamburger.setAttribute('aria-expanded', 'true');
+                hamburger.style.background = 'rgba(255, 102, 204, 0.3)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.style.background = 'rgba(255, 102, 204, 0.1)';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Handle feedback submission
+        submitBtn.addEventListener('click', () => {
+            const feedback = feedbackText.value.trim();
+
+            // Simple validation
+            if (feedback.length < 5) {
+                feedbackText.style.animation = 'shake 0.5s';
+                setTimeout(() => feedbackText.style.animation = '', 500);
+                feedbackText.focus();
+                return;
+            }
+
+            // Loading UI
+            btnText.style.display = 'none';
+            loadingSpinner.style.display = 'block';
+            submitBtn.disabled = true;
+
+            // Fake submit delay (for nice UX)
+            setTimeout(() => {
+                // Show success message
+                successMessage.style.display = 'block';
+                feedbackText.value = '';
+
+                // Create celebration hearts
+                const rect = submitBtn.getBoundingClientRect();
+                createHeartBurst(
+                    20,
+                    rect.left + rect.width / 2,
+                    rect.top + rect.height / 2
+                );
+
+                // Scroll to show success message
+                successMessage.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Hide success after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+
+                // Reset button
+                btnText.style.display = 'block';
+                loadingSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+
+            }, 1200);
+        });
+
+        // Add shake animation for empty feedback
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize
+        window.addEventListener('load', () => {
+            createStars();
+            createFloatingHearts();
+            
+            // Event Listeners
+            hamburger.addEventListener('click', toggleMenu);
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Close menu with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+
+            // Auto-focus on textarea
+            setTimeout(() => {
+                feedbackText.focus();
+            }, 1000);
+
+            // Replenish floating hearts periodically
+            setInterval(() => {
+                createFloatingHearts();
+            }, 15000);
+        });
+    </script>
+</body>
+</html>

@@ -426,23 +426,29 @@ router.get("/teacher/analytics", ensureTeacher, (req, res) => {
 // ================= UPDATE CLASS =================
 router.put("/teacher/update-class/:id", ensureTeacher, async (req, res) => {
   try {
-    const updated = await ClassModel.findOneAndUpdate(
-      {
-        _id: req.params.id,
-        teacherId: req.user._id
-      },
-      { name: req.body.name },
-      { new: true }
-    );
+    const oldClass = await ClassModel.findOne({
+      _id: req.params.id,
+      teacherId: req.user._id
+    });
 
-    if (!updated) return res.json({ success: false });
+    if (!oldClass) return res.json({ success: false });
+
+    // 🔥 update students also
+   await Student.updateMany(
+  { teacherId: req.user._id, class: deleted.name },
+  { $set: { class: "Unassigned" } }
+);
+
+    oldClass.name = req.body.name;
+    await oldClass.save();
 
     res.json({ success: true });
   } catch (err) {
-    console.log("Update Class Error:", err);
+    console.log(err);
     res.json({ success: false });
   }
 });
+
 // ================= DELETE CLASS =================
 router.delete("/teacher/delete-class/:id", ensureTeacher, async (req, res) => {
   try {

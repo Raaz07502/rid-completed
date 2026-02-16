@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const ensureTeacher = require("../middleware/authMiddleware");
+
 const TeacherTest = require("../models/teacherTestModel");
 const TestAttempt = require("../models/TestAttempt");
 const Student = require("../models/Student");
@@ -7,9 +9,12 @@ const Student = require("../models/Student");
 // ===============================
 // GET ALL TEST ANALYTICS CARDS
 // ===============================
-router.get("/tests-summary", async (req, res) => {
+router.get("/tests-summary", ensureTeacher, async (req, res) => {
     try {
-        const tests = await TeacherTest.find({});
+        // ✅ only current teacher tests
+        const tests = await TeacherTest.find({
+            teacher: req.user._id
+        });
 
         const result = [];
 
@@ -41,10 +46,10 @@ router.get("/tests-summary", async (req, res) => {
             result.push({
                 testId: test._id,
                 testName: test.name,
-                subject: test.subject,   // 👈 subject added
+                subject: test.subject,
                 students: totalStudents,
                 avgScore,
-                lastTime                 // 👈 last submit time added
+                lastTime
             });
         }
 
@@ -54,16 +59,30 @@ router.get("/tests-summary", async (req, res) => {
         res.status(500).json({ error: "Server error" });
     }
 });
+
 /* =========================================================
    STUDENT RANKING DETAILS (TIME BASED RANKING)
 ========================================================= */
-router.get("/api/teacher/analytics/test/:testId/details", async (req, res) => {
+router.get(
+  "/api/teacher/analytics/test/:testId/details",
+  ensureTeacher,
+  async (req, res) => {
     try {
         const { testId } = req.params;
 
+        // ✅ ensure test belongs to teacher
+        const test = await TeacherTest.findOne({
+            _id: testId,
+            teacher: req.user._id
+        });
+
+        if (!test) {
+            return res.json([]);
+        }
+
         const attempts = await TestAttempt.find({ testId })
             .populate("studentId", "name email roll parentContact")
-            .sort({ score: -1, submittedAt: 1 }); // ⭐ main logic
+            .sort({ score: -1, submittedAt: 1 });
 
         const result = attempts.map((a, index) => ({
             rank: index + 1,

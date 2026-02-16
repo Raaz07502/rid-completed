@@ -465,7 +465,9 @@ app.use("/ai", aiRoutes);
 const AddvanceAnalyticsRoutes = require("./routes/Add-versionAnalyticsRoutes.js");
 app.use("/api/teacher/analytics", AddvanceAnalyticsRoutes);
 app.use("/dashboard", dashboardRoutes);
-
+app.get("/research-papper",(req,res)=>{
+  res.render("tracher_deshboard/advance-version/Research-papper/index.ejs")
+})
 // ======= MAIN ROUTES (404 is inside this) =======
 configureRoutes();
 

@@ -625,6 +625,7 @@
   
   <!-- Dashboard Container -->
   <div class="dashboard-container">
+    
     <!-- Header -->
     <div class="header">
       <div class="header-content">
@@ -635,7 +636,16 @@
         <p>Test ID: <span id="testIdDisplay">Loading...</span></p>
       </div>
     </div>
-    
+     <!-- Export Section -->
+    <div class="export-section">
+      <h3><i class="fas fa-file-export"></i> Export Analytics Data</h3>
+      <div class="button-group">
+        <button class="btn btn-back" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Dashboard</button>
+        <button class="btn btn-pdf" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> Export as PDF</button>
+        <button class="btn btn-excel" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Export as Excel</button>
+        <button class="btn btn-print" onclick="printReport()"><i class="fas fa-print"></i> Print Report</button>
+      </div>
+    </div>
     <!-- Search Bar -->
     <div class="search-container">
       <div class="search-header">
@@ -659,9 +669,9 @@
           <tr>
             <th>Rank</th>
             <th>Name</th>
-            <th>Roll</th>
+            <th>Roll No.</th>
             <th>Email</th>
-            <th>Parent</th>
+            <th>Contact No.</th>
             <th>Marks</th>
             <th>Status</th>
           </tr>
@@ -675,16 +685,7 @@
       </table>
     </div>
     
-    <!-- Export Section -->
-    <div class="export-section">
-      <h3><i class="fas fa-file-export"></i> Export Analytics Data</h3>
-      <div class="button-group">
-        <button class="btn btn-back" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Dashboard</button>
-        <button class="btn btn-pdf" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> Export as PDF</button>
-        <button class="btn btn-excel" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Export as Excel</button>
-        <button class="btn btn-print" onclick="printReport()"><i class="fas fa-print"></i> Print Report</button>
-      </div>
-    </div>
+   
   </div>
 
 <script>
@@ -834,7 +835,7 @@
     
     searchInput.addEventListener('blur', function() {
       if (this.value.trim() === '') {
-        searchHelp.textContent = "Type to filter student records";
+        searchHelp.textContent = "";
       }
     });
   }

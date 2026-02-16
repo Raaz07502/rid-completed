@@ -1891,8 +1891,6 @@ function showTestServicesPage(courseName) {
     }
 }
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', initApp);
 
 // Universal translator (question + all options)
 async function translateAuto() {
@@ -1958,7 +1956,8 @@ async function translateAuto() {
 }
 async function loadTestsFromDB() {
     try {
-        const res = await fetch("/api/teacher-tests/my-tests");
+        const res = await fetch("/teacher-tests/api/my-tests");
+;
         const tests = await res.json();
 
         coursesData.length = 0;
@@ -2399,33 +2398,11 @@ async function loadDashboardStats() {
 }
 
 
-function updateProgress(type, value, max) {
-    let percent = Math.min((value / max) * 100, 90);
-    percent = Math.floor(percent);
-
-    document.getElementById(`${type}-progress`).style.width = percent + "%";
-    document.getElementById(`${type}-progress-value`).textContent = percent + "%";
-    document.getElementById(`${type}-progress-text`).textContent = percent + "%";
-}
-document.addEventListener("DOMContentLoaded", () => {
-    loadDashboardStats();
-});
-
-
-
-function updateProgress(type, value, max) {
-    let percent = Math.min((value / max) * 100, 90);
-    percent = Math.floor(percent);
-
-    document.getElementById(`${type}-progress`).style.width = percent + "%";
-    document.getElementById(`${type}-progress-value`).textContent = percent + "%";
-    document.getElementById(`${type}-progress-text`).textContent = percent + "%";
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     initApp();
     loadDashboardStats();
 });
+// ===== THEME SYSTEM =====
 // ===== THEME SYSTEM =====
 function applyTheme(theme) {
     const body = document.body;
@@ -2441,6 +2418,25 @@ function applyTheme(theme) {
 
     localStorage.setItem("dashboardTheme", theme);
 }
+
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem("dashboardTheme") || "light";
+    applyTheme(savedTheme);
+
+    const radio = document.querySelector(`input[name="theme"][value="${savedTheme}"]`);
+    if (radio) radio.checked = true;
+}
+
+function setupThemeControls() {
+    const themeRadios = document.querySelectorAll('input[name="theme"]');
+
+    themeRadios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            applyTheme(radio.value);
+        });
+    });
+}
+
 
 // Load saved theme
 function loadSavedTheme() {
@@ -2462,5 +2458,9 @@ function setupThemeControls() {
     });
 }
 
+//=================================================research papper sections 
 
+function research(){
+    window.location.href="/research-papper"
+}
  

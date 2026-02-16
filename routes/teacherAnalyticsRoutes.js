@@ -4,7 +4,7 @@ const ensureTeacher = require("../middleware/authMiddleware");
 
 const TestAttempt = require("../models/TestAttempt");
 const Student = require("../models/Student");
-
+const TeacherTest = require("../models/teacherTestModel");
 
 const ExcelJS = require("exceljs");
 const PDFDocument = require("pdfkit");
@@ -18,6 +18,16 @@ router.get(
   async (req, res) => {
     try {
       const { testId } = req.params;
+
+      // ✅ Check test belongs to teacher
+      const test = await TeacherTest.findOne({
+        _id: testId,
+        teacher: req.user._id
+      });
+
+      if (!test) {
+        return res.json([]);
+      }
 
       const attempts = await TestAttempt.find({ testId })
         .populate("studentId", "name email roll parentContact")
@@ -50,6 +60,18 @@ router.get(
   ensureTeacher,
   async (req, res) => {
     try {
+      const { testId } = req.params;
+
+      // ✅ Check ownership
+      const test = await TeacherTest.findOne({
+        _id: testId,
+        teacher: req.user._id
+      });
+
+      if (!test) {
+        return res.status(403).send("Unauthorized");
+      }
+
       const workbook = new ExcelJS.Workbook();
       const sheet = workbook.addWorksheet("Student Analytics");
 
@@ -63,7 +85,7 @@ router.get(
         { header: "Status", key: "status", width: 10 }
       ];
 
-      const attempts = await TestAttempt.find({ testId: req.params.testId })
+      const attempts = await TestAttempt.find({ testId })
         .populate("studentId", "name email roll parentContact")
         .sort({ score: -1 });
 
@@ -105,6 +127,18 @@ router.get(
   ensureTeacher,
   async (req, res) => {
     try {
+      const { testId } = req.params;
+
+      // ✅ Check ownership
+      const test = await TeacherTest.findOne({
+        _id: testId,
+        teacher: req.user._id
+      });
+
+      if (!test) {
+        return res.status(403).send("Unauthorized");
+      }
+
       const doc = new PDFDocument({ size: "A4", margin: 30 });
 
       res.setHeader("Content-Type", "application/pdf");
@@ -115,70 +149,26 @@ router.get(
 
       doc.pipe(res);
 
-      // ===== TITLE =====
       doc.fontSize(18).text("Student Ranking (Analytics)", {
         align: "center"
       });
       doc.moveDown(1.5);
 
-      // ===== COLUMN SETUP =====
-      const tableTop = doc.y;
+      let y = 120;
       const rowHeight = 20;
 
-      const columns = [
-        { label: "Rank", x: 30, width: 30 },
-        { label: "Name", x: 65, width: 90 },
-        { label: "Roll", x: 160, width: 40 },
-        { label: "Email", x: 205, width: 150 },
-        { label: "Parent", x: 360, width: 80 },
-        { label: "Marks", x: 445, width: 40 },
-        { label: "Status", x: 490, width: 60 }
-      ];
-
-      // ===== HEADER =====
-      doc.font("Helvetica-Bold").fontSize(10);
-      columns.forEach(col => {
-        doc.text(col.label, col.x, tableTop, {
-          width: col.width,
-          align: "center"
-        });
-      });
-
-      let y = tableTop + rowHeight;
-
-      // header line
-      doc.moveTo(30, y - 5).lineTo(560, y - 5).stroke();
-
-      // ===== DATA =====
-      const attempts = await TestAttempt.find({ testId: req.params.testId })
+      const attempts = await TestAttempt.find({ testId })
         .populate("studentId", "name email roll parentContact")
         .sort({ score: -1 });
 
-      doc.font("Helvetica").fontSize(9);
+      doc.fontSize(10);
 
       attempts.forEach((a, index) => {
-        if (y > 760) {
-          doc.addPage();
-          y = 50;
-        }
-
-        const row = {
-          rank: index + 1,
-          name: a.studentId?.name || "-",
-          roll: a.studentId?.roll || "-",
-          email: a.studentId?.email || "-",
-          parent: a.studentId?.parentContact || "-",
-          marks: a.score ?? 0,
-          status: "completed" // 🔥 EXACT like UI
-        };
-
-        columns.forEach(col => {
-          doc.text(row[col.label.toLowerCase()], col.x, y, {
-            width: col.width,
-            align: "center"
-          });
-        });
-
+        doc.text(
+          `${index + 1}. ${a.studentId?.name || "-"} | Marks: ${a.score || 0}`,
+          40,
+          y
+        );
         y += rowHeight;
       });
 
@@ -189,6 +179,5 @@ router.get(
     }
   }
 );
-
 
 module.exports = router;
